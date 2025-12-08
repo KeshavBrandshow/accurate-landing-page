@@ -1,22 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Accurate – Hero Slider</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+        <meta charset="UTF-8" />
+        <title>Accurate – Hero Slider</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- <style>
+        <!-- <style>
       :root {
         --accurate-primary: #0057a3;
         --accurate-primary-dark: #003c73;
@@ -277,7 +272,7 @@
       }
     </style> -->
 
-    <!-- <style>
+        <!-- <style>
       :root {
   --accurate-primary: #0057a3;
   --accurate-primary-dark: #003c73;
@@ -560,1895 +555,1432 @@ body {
 
     </style> -->
 
-    <style>
-      :root {
-        --accurate-primary: #0057a3; /* Blue */
-        --accurate-primary-dark: #003c73; /* Darker blue */
-        --accent-gold: #ffc107; /* Yellow */
-        --bg-light: #f4f7fb;
-
-        /* for the alumini section */
-
-        --primary-yellow: #ffd700;
-        --primary-blue: #1e3a8a;
-        --light-blue: #dbeafe;
-        --white: #ffffff;
-        --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        /* Soft white/grey */
-      }
-
-      /* Global */
-
-      body {
-        margin: 0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, sans-serif;
-        background-color: var(--bg-light);
-        color: #10263f;
-      }
-
-      #banner {
-        background-color: var(--bg-light);
-        min-height: 80vh;
-      }
-
-      /* Hero carousel */
-
-      .hero-carousel {
-        position: relative;
-        width: 100%;
-        color: #10263f;
-        overflow: hidden;
-      }
-
-      .hero-carousel .carousel-item {
-        min-height: 80vh; /* ensure height so bg + indicators show */
-        background-size: cover;
-        background-position: center center;
-        position: relative;
-      }
-
-      /* Blue + white overlay (no dark/black) */
-
-      .hero-overlay {
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(
-            circle at top left,
-            rgba(0, 87, 163, 0.35),
-            transparent 55%
-          ),
-          linear-gradient(
-            135deg,
-            rgba(244, 247, 251, 0.9),
-            rgba(0, 58, 120, 0.8)
-          );
-      }
-
-      /* Glass card – light with blue accents */
-
-      .hero-content-wrapper {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 1.75rem;
-        border: 1px solid rgba(0, 87, 163, 0.16);
-        box-shadow: 0 18px 45px rgba(0, 87, 163, 0.18);
-        padding: 2.5rem 2.25rem;
-        max-width: 640px;
-        animation: heroFadeIn 0.9s ease-out;
-      }
-
-      .hero-content {
-        position: relative;
-        z-index: 2;
-        padding-top: 5.5rem;
-        padding-bottom: 5.5rem;
-      }
-
-      .hero-tagline {
-        text-transform: uppercase;
-        letter-spacing: 0.22em;
-        font-size: 0.78rem;
-        color: var(--accent-gold); /* yellow */
-        margin-bottom: 0.85rem;
-        font-weight: 600;
-      }
-
-      .hero-heading {
-        font-size: clamp(1.6rem, 3vw, 2.4rem);
-        font-weight: 800;
-        line-height: 1.15;
-        margin-bottom: 1rem;
-        color: var(--accurate-primary-dark); /* blue */
-      }
-
-      .hero-subtext {
-        font-size: 1.02rem;
-        line-height: 1.7;
-        color: #42556b; /* blue-grey */
-      }
-
-      /* Badges (blue chips with yellow dot) */
-
-      .hero-badges span {
-        display: inline-flex;
-        align-items: center;
-        margin: 0.2rem 0.35rem 0.2rem 0;
-        padding: 0.22rem 0.8rem;
-        border-radius: 999px;
-        font-size: 0.78rem;
-        background: rgba(0, 87, 163, 0.06);
-        border: 1px solid rgba(0, 87, 163, 0.25);
-        color: var(--accurate-primary-dark);
-      }
-
-      .hero-badges span::before {
-        content: "";
-        display: inline-block;
-        width: 6px;
-        height: 6px;
-        border-radius: 999px;
-        margin-right: 0.4rem;
-        background: var(--accent-gold); /* yellow dot */
-      }
-
-      /* Lists */
-
-      .hero-list {
-        list-style: none;
-        padding-left: 0;
-        margin-bottom: 1rem;
-      }
-
-      .hero-list li {
-        position: relative;
-        padding-left: 1.1rem;
-        font-size: 0.97rem;
-        margin-bottom: 0.3rem;
-        color: #344966;
-      }
-
-      .hero-list li::before {
-        content: "•";
-        color: var(--accent-gold); /* yellow bullet */
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-
-      /* Buttons – blue primary, white/blue outline, yellow accent only via text */
-
-      .btn-accurate-primary {
-        background: linear-gradient(135deg, var(--accurate-primary), #00a1ff);
-        border: none;
-        color: #fff;
-        padding-inline: 1.8rem;
-        border-radius: 999px;
-        box-shadow: 0 10px 24px rgba(0, 87, 163, 0.45);
-      }
-
-      .btn-accurate-primary:hover {
-        background: linear-gradient(
-          135deg,
-          var(--accurate-primary-dark),
-          #0085d4
-        );
-        color: #fff;
-      }
-
-      .btn-accurate-outline {
-        border-radius: 999px;
-        border-color: var(--accurate-primary);
-        color: var(--accurate-primary-dark);
-        background: #ffffff;
-      }
-
-      .btn-accurate-outline:hover {
-        background-color: var(--accurate-primary);
-        color: #ffffff;
-      }
-
-      /* Stat pills – white with blue border and yellow key number */
-
-      .hero-stat-pill {
-        background: linear-gradient(
-          135deg,
-          rgba(255, 255, 255, 0.98),
-          rgba(228, 238, 252, 0.9)
-        );
-        border-radius: 0.85rem;
-        padding: 0.75rem 1.1rem;
-        margin-bottom: 0.65rem;
-        font-size: 0.9rem;
-        border: 1px solid rgba(0, 87, 163, 0.25);
-        color: #1a365d;
-      }
-
-      .hero-stat-pill strong {
-        font-size: 1.02rem;
-        color: var(--accent-gold); /* highlight number in yellow */
-      }
-
-      /* Controls – white with blue border */
-
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        width: 2.6rem;
-        height: 2.6rem;
-        background-color: #e2c801;
-        border-radius: 50%;
-        background-size: 55% 55%;
-        border: 1px solid rgba(0, 87, 163, 0.4);
-      }
-
-      .carousel-control-prev,
-      .carousel-control-next {
-        width: 10%;
-      }
-
-      /* Indicators – blue bar, active in yellow or strong blue */
-
-      .carousel-indicators {
-        bottom: 1.8rem;
-      }
-
-      .carousel-indicators [data-bs-target] {
-        width: 14px;
-        height: 4px;
-        border-radius: 999px;
-        background-color: rgba(0, 87, 163, 0.35);
-        border: none;
-        transition: all 0.25s ease;
-      }
-
-      .carousel-indicators .active {
-        width: 28px;
-        background-color: var(--accent-gold); /* yellow active dot */
-      }
-
-      /* Animation */
-
-      @keyframes heroFadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(18px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Responsive */
-
-      @media (max-width: 991.98px) {
-        .hero-content {
-          padding-top: 4.5rem;
-          padding-bottom: 4.5rem;
-        }
-
-        .hero-content-wrapper {
-          margin-inline: auto;
-          padding: 2rem 1.8rem;
-          border-radius: 1.5rem;
-        }
-      }
-
-      @media (max-width: 767.98px) {
-        .hero-content {
-          text-align: center;
-        }
-
-        .hero-badges span {
-          margin-bottom: 0.3rem;
-        }
-
-        .hero-content-wrapper {
-          padding: 1.8rem 1.5rem;
-        }
-
-        .hero-carousel .carousel-item {
-          min-height: 95vh;
-        }
-      }
-
-      /* About section css  */
-
-      :root {
-        --acc-blue: #0057a3;
-        --acc-blue-dark: #003c73;
-        --acc-gold: #ffc107;
-        --acc-bg-light: #f4f7fb;
-      }
-
-      /* Global fonts */
-      body {
-        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", Roboto, sans-serif;
-      }
-
-      /* Section background with soft shapes */
-      .bg-section-light.about-section {
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(
-          135deg,
-          #ffffff 0%,
-          #f7f9ff 45%,
-          #e3efff 100%
-        );
-      }
-
-      .bg-section-light.about-section::before,
-      .bg-section-light.about-section::after {
-        content: "";
-        position: absolute;
-        border-radius: 999px;
-        pointer-events: none;
-        opacity: 0.18;
-      }
-
-      /* blue blob left */
-      .bg-section-light.about-section::before {
-        width: 320px;
-        height: 320px;
-        top: -120px;
-        left: -60px;
-        background: radial-gradient(
-          circle,
-          rgba(0, 87, 163, 0.32),
-          transparent 65%
-        );
-      }
-
-      /* yellow blob right */
-      .bg-section-light.about-section::after {
-        width: 260px;
-        height: 260px;
-        bottom: -80px;
-        right: -40px;
-        background: radial-gradient(
-          circle,
-          rgba(255, 193, 7, 0.35),
-          transparent 65%
-        );
-      }
-
-      /* Heading area */
-      .section-heading {
-        color: var(--acc-blue-dark);
-        font-family: "Poppins", system-ui, sans-serif;
-      }
-
-      .about-text {
-        color: #43536a;
-        font-size: 1rem;
-        max-width: 52rem;
-        margin-inline: auto;
-      }
-
-      .about-pill {
-        padding: 0.35rem 0.9rem;
-        font-size: 0.72rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        border-radius: 999px;
-        background-color: rgba(255, 193, 7, 0.18);
-        color: #8a6a02;
-        border: 1px solid rgba(255, 193, 7, 0.5);
-      }
-
-      /* Stat cards */
-      .stat-card {
-        background: #ffffff;
-        border-radius: 1.25rem;
-        padding: 1.7rem 1.3rem 1.5rem;
-        border: 1px solid rgba(0, 87, 163, 0.12);
-        box-shadow: 0 14px 32px rgba(0, 87, 163, 0.12);
-        transition: transform 0.24s ease, box-shadow 0.24s ease,
-          border-color 0.24s ease, background 0.24s ease;
-        position: relative;
-        overflow: hidden;
-      }
-
-      /* diagonal highlight bar on hover */
-      .stat-card::before {
-        content: "";
-        position: absolute;
-        width: 140%;
-        height: 40px;
-        top: -40px;
-        left: -20%;
-        background: linear-gradient(
-          90deg,
-          rgba(0, 87, 163, 0.09),
-          rgba(255, 193, 7, 0.35),
-          rgba(0, 87, 163, 0.09)
-        );
-        transform: translateY(0);
-        opacity: 0;
-        transition: opacity 0.25s ease, transform 0.25s ease;
-      }
-
-      .stat-card:hover {
-        transform: translateY(-6px);
-        border-color: rgba(0, 87, 163, 0.4);
-        box-shadow: 0 20px 40px rgba(0, 87, 163, 0.22);
-        background: linear-gradient(
-          135deg,
-          #ffffff 0%,
-          #f3f7ff 60%,
-          #eaf2ff 100%
-        );
-      }
-
-      .stat-card:hover::before {
-        opacity: 1;
-        transform: translateY(12px);
-      }
-
-      /* Number + labels */
-      .stat-number {
-        font-size: 2.1rem;
-        font-weight: 800;
-        color: var(--acc-blue);
-        line-height: 1;
-        margin-bottom: 0.35rem;
-      }
-
-      .stat-plus {
-        font-size: 1.35rem;
-        color: var(--acc-gold);
-      }
-
-      .stat-label {
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.09em;
-        color: #50627b;
-        margin-bottom: 0.35rem;
-      }
-
-      .stat-desc {
-        font-size: 0.85rem;
-        color: #6c7a90;
-        margin-bottom: 0;
-      }
-
-      /* Keyframe animations */
-      .about-header {
-        animation: fadeDown 0.7s ease-out both;
-      }
-
-      .fade-up {
-        opacity: 0;
-        animation: fadeUp 0.7s ease-out forwards;
-      }
-
-      .delay-1 {
-        animation-delay: 0.25s;
-      }
-      .delay-2 {
-        animation-delay: 0.4s;
-      }
-      .delay-3 {
-        animation-delay: 0.55s;
-      }
-      .delay-4 {
-        animation-delay: 0.7s;
-      }
-
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(16px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes fadeDown {
-        from {
-          opacity: 0;
-          transform: translateY(-10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Responsive tweaks */
-      @media (max-width: 767.98px) {
-        .stat-card {
-          padding: 1.5rem 1.1rem;
-        }
-
-        .stat-number {
-          font-size: 1.8rem;
-        }
-
-        .stat-label {
-          font-size: 0.86rem;
-        }
-      }
-
-      /* Ranking - Section */
-
-      :root {
-        --acc-blue: #0057a3;
-        --acc-blue-dark: #003c73;
-        --acc-gold: #ffc107;
-        --acc-bg-soft: #f4f7fb;
-      }
-
-      /* Section background */
-      .rankings-section {
-        background: linear-gradient(
-          135deg,
-          #ffffff 0%,
-          #f7f9ff 40%,
-          #e3efff 100%
-        );
-        position: relative;
-        overflow: hidden;
-      }
-
-      /* Decorative circles */
-      .rankings-section::before,
-      .rankings-section::after {
-        content: "";
-        position: absolute;
-        border-radius: 999px;
-        opacity: 0.16;
-        pointer-events: none;
-      }
-      .rankings-section::before {
-        width: 260px;
-        height: 260px;
-        top: -90px;
-        right: -60px;
-        background: radial-gradient(
-          circle,
-          rgba(0, 87, 163, 0.42),
-          transparent 65%
-        );
-      }
-      .rankings-section::after {
-        width: 220px;
-        height: 220px;
-        bottom: -80px;
-        left: -40px;
-        background: radial-gradient(
-          circle,
-          rgba(255, 193, 7, 0.45),
-          transparent 65%
-        );
-      }
-
-      /* Left block */
-      .ranking-left-card {
-        background: #ffffff;
-        border-radius: 1.5rem;
-        padding: 1.9rem 1.7rem;
-        border: 1px solid rgba(0, 87, 163, 0.12);
-        box-shadow: 0 16px 40px rgba(0, 87, 163, 0.2);
-        position: relative;
-        z-index: 1;
-      }
-
-      .section-subheading {
-        font-family: "Poppins", system-ui, sans-serif;
-        color: var(--acc-blue-dark);
-        font-size: 1.45rem;
-      }
-
-      .tracking-wide {
-        letter-spacing: 0.16em;
-        font-weight: 600;
-        font-size: 0.7rem;
-      }
-
-      /* Logo / medal */
-      .ranking-badge-icon .ranking-medal {
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-        background: radial-gradient(circle, var(--acc-gold), #ffde7a);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 10px 25px rgba(255, 193, 7, 0.45);
-      }
-      .ranking-badge-icon .ranking-medal i {
-        color: #674100;
-        font-size: 1.6rem;
-      }
-
-      /* Text list */
-      .ranking-text {
-        color: #43536a;
-        font-size: 0.98rem;
-      }
-
-      .ranking-list {
-        margin-top: 1rem;
-      }
-
-      .ranking-list li {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.4rem;
-        font-size: 0.9rem;
-        color: #4c5b73;
-        margin-bottom: 0.4rem;
-      }
-
-      .bullet-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 999px;
-        background: var(--acc-gold);
-        margin-top: 0.35rem;
-      }
-
-      /* Right stats cards */
-      .ranking-stat-card {
-        background: #ffffff;
-        border-radius: 1.25rem;
-        padding: 1.3rem 1.4rem 1.2rem;
-        border: 1px solid rgba(0, 87, 163, 0.14);
-        box-shadow: 0 12px 30px rgba(0, 87, 163, 0.16);
-        position: relative;
-        overflow: hidden;
-        transition: transform 0.22s ease, box-shadow 0.22s ease,
-          border-color 0.22s ease, background 0.22s ease;
-      }
-
-      /* subtle stripe */
-      .ranking-stat-card::before {
-        content: "";
-        position: absolute;
-        width: 150%;
-        height: 32px;
-        top: -36px;
-        left: -20%;
-        background: linear-gradient(
-          90deg,
-          rgba(0, 87, 163, 0.08),
-          rgba(255, 193, 7, 0.3),
-          rgba(0, 87, 163, 0.08)
-        );
-        opacity: 0;
-        transform: translateY(0);
-        transition: opacity 0.22s ease, transform 0.22s ease;
-      }
-
-      .ranking-stat-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(0, 87, 163, 0.5);
-        box-shadow: 0 18px 40px rgba(0, 87, 163, 0.22);
-        background: linear-gradient(
-          135deg,
-          #ffffff 0%,
-          #f0f5ff 55%,
-          #e3efff 100%
-        );
-      }
-
-      .ranking-stat-card:hover::before {
-        opacity: 1;
-        transform: translateY(10px);
-      }
-
-      .ranking-stat-caption {
-        text-transform: uppercase;
-        letter-spacing: 0.16em;
-        font-size: 0.7rem;
-        color: #6c7a90;
-        font-weight: 600;
-      }
-
-      .ranking-stat-main {
-        font-size: 2.1rem;
-        font-weight: 800;
-        color: var(--acc-blue);
-        line-height: 1;
-      }
-
-      .ranking-stat-label {
-        font-size: 0.95rem;
-        color: #43536a;
-      }
-
-      /* small pill on right */
-      .ranking-pill {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.28rem 0.9rem;
-        border-radius: 999px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        background-color: rgba(0, 87, 163, 0.08);
-        color: var(--acc-blue-dark);
-      }
-
-      .ranking-pill.pill-gold {
-        background-color: rgba(255, 193, 7, 0.16);
-        color: #7a5a00;
-      }
-
-      /* Animations */
-      .rankings-section .ranking-left-card {
-        animation: fadeRight 0.7s ease-out both;
-      }
-
-      .rankings-section .ranking-stat-card:nth-child(1) {
-        animation: fadeLeft 0.7s ease-out 0.25s both;
-      }
-      .rankings-section .ranking-stat-card:nth-child(2) {
-        animation: fadeLeft 0.7s ease-out 0.4s both;
-      }
-
-      @keyframes fadeRight {
-        from {
-          opacity: 0;
-          transform: translateX(-18px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes fadeLeft {
-        from {
-          opacity: 0;
-          transform: translateX(18px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      /* Responsive tweaks */
-      @media (max-width: 991.98px) {
-        .ranking-left-card {
-          margin-bottom: 1.5rem;
-        }
-      }
-
-      @media (max-width: 575.98px) {
-        .ranking-stat-card {
-          padding: 1.15rem 1.1rem 1.05rem;
-        }
-
-        .ranking-stat-main {
-          font-size: 1.8rem;
-        }
-      }
-
-      /* Placements section css */
-
-      /* Overall section */
-      .placement-section {
-        background: #014b90;
-        color: #ffffff;
-        min-height: 60vh;
-      }
-
-      .placement-heading {
-        letter-spacing: 0.03em;
-      }
-
-      .placement-text {
-        font-size: 0.98rem;
-        line-height: 1.7;
-        opacity: 0.9;
-      }
-
-      /* Top stats strip cards */
-      .placement-main-card {
-        background: #281c4c;
-        border-radius: 18px;
-        padding: 1.5rem 1.25rem;
-        text-align: center;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
-        transition: transform 0.25s ease, box-shadow 0.25s ease,
-          background 0.25s ease;
-      }
-
-      .placement-main-card .big-number {
-        font-size: 2rem;
-        font-weight: 700;
-      }
-
-      .placement-main-card .label {
-        font-size: 0.78rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        margin-top: 0.4rem;
-        opacity: 0.85;
-      }
-
-      .placement-main-card .subtext {
-        font-size: 0.75rem;
-        margin-top: 0.45rem;
-        opacity: 0.8;
-      }
-
-      /* Hover effect for top cards */
-      .placement-main-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
-        background: #342361;
-      }
-
-      /* Bottom supporting stat boxes */
-      .placement-support-card {
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        padding: 1.25rem 0.75rem;
-        text-align: center;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        backdrop-filter: blur(2px);
-        -webkit-backdrop-filter: blur(2px);
-        background: rgba(255, 255, 255, 0.02);
-        transition: transform 0.2s ease, box-shadow 0.2s ease,
-          border-color 0.2s ease, background 0.2s ease;
-      }
-
-      .placement-support-card .big-number {
-        font-size: 1.5rem;
-        font-weight: 700;
-      }
-
-      .placement-support-card .label {
-        font-size: 0.8rem;
-        margin-top: 0.3rem;
-        line-height: 1.4;
-      }
-
-      /* Hover effect for bottom boxes */
-      .placement-support-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-        border-color: rgba(255, 255, 255, 0.6);
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      /* Responsive tweaks */
-      @media (max-width: 991.98px) {
-        .placement-main-card .big-number {
-          font-size: 1.7rem;
-        }
-      }
-
-      @media (max-width: 575.98px) {
-        .placement-heading {
-          font-size: 1.55rem;
-        }
-
-        .placement-text {
-          font-size: 0.9rem;
-        }
-
-        .placement-main-card,
-        .placement-support-card {
-          padding: 1rem 0.75rem;
-        }
-      }
-
-
-
-
-
-/* Ranked section  */
-
-
-.ranked-wrapper {
-  border-radius: 0 40px 40px 0;
-  overflow: hidden;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
-}
-
-.ranked-left {
-  background-color: #f7f2ef;
-}
-
-.ranked-right {
-  background-color: #003c73;
-}
-
-.ranked-logo {
-  width: 70px;
-  height: 70px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #facc15, #f97316);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.badge-icon {
-  font-size: 1.8rem;
-  color: #ffffff;
-}
-
-.ranked-kicker {
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  font-weight: 600;
-  color: #7a7a7a;
-}
-
-.ranked-heading {
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: #222222;
-}
-
-.ranked-list {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 1.25rem;
-}
-
-.ranked-list li {
-  position: relative;
-  padding-left: 1.4rem;
-  margin-bottom: 0.4rem;
-  font-size: 0.98rem;
-  color: #444444;
-}
-
-.ranked-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #f97316;
-  font-size: 1.1rem;
-}
-
-.ranked-text {
-  font-size: 0.95rem;
-  color: #555555;
-}
-
-.ranked-label {
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  font-weight: 600;
-  opacity: 0.8;
-}
-
-.ranked-number {
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.ranked-support {
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
-/* responsive tweaks */
-@media (max-width: 991.98px) {
-  .ranked-wrapper {
-    border-radius: 24px;
-  }
-  .ranked-right {
-    border-radius: 0 0 24px 24px;
-  }
-  .ranked-number {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .ranked-heading {
-    font-size: 1.15rem;
-  }
-  .ranked-number {
-    font-size: 2.6rem;
-  }
-}
-
-
-
-
-
-      /* Alumini section  */
-
-
-
-
-      :root {
-  --acc-blue: #0057a3;
-  --acc-blue-dark: #003c73;
-  --acc-gold: #ffc107;
-}
-
-.testimonials-section {
-  background: #f3f4f6;
-}
-
-.testimonials-title {
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  font-weight: 700;
-  color: var(--acc-blue-dark);
-}
-
-.testimonials-subtitle {
-  font-size: 0.98rem;
-  color: #6b7280;
-}
-
-/* card */
-.testimonial-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 1.5rem 1.6rem;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 10px 25px rgba(0, 60, 115, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0, 60, 115, 0.18);
-  border-color: rgba(0, 87, 163, 0.4);
-}
-
-/* avatar */
-.testimonial-avatar {
-  width: 52px;
-  height: 52px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--acc-blue), var(--acc-gold));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-weight: 700;
-  margin-right: 0.85rem;
-  overflow: hidden;
-  font-size: 1rem;
-}
-
-.testimonial-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* text */
-.testimonial-name {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--acc-blue-dark);
-}
-
-.testimonial-meta {
-  font-size: 0.8rem;
-  color: #6b7280;
-}
-
-.testimonial-text {
-  font-size: 0.95rem;
-  color: #4b5563;
-  line-height: 1.7;
-}
-
-/* company badge */
-.testimonial-company {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.badge-company {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--acc-blue-dark);
-  background: rgba(255, 193, 7, 0.15);
-  border: 1px solid rgba(255, 193, 7, 0.7);
-}
-
-/* carousel controls */
-#testimonialCarousel {
-  position: relative;
-}
-
-.testimonial-control {
-  width: 40px;
-  height: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #ffffff;
-  border-radius: 999px;
-  border: 1px solid rgba(0, 87, 163, 0.25);
-  box-shadow: 0 8px 20px rgba(0, 60, 115, 0.25);
-}
-
-.testimonial-control.carousel-control-prev {
-  left: -78px;
-}
-
-.testimonial-control.carousel-control-next {
-  right: -78px;
-}
-
-.testimonial-control:hover {
-  background-color: var(--acc-blue);
-  border-color: var(--acc-blue);
-}
-
-.testimonial-control .carousel-control-prev-icon,
-.testimonial-control .carousel-control-next-icon {
-  filter: invert(0) grayscale(1);
-}
-
-/* responsive */
-@media (max-width: 991.98px) {
-  .testimonial-control.carousel-control-prev {
-    left: 4px;
-  }
-
-  .testimonial-control.carousel-control-next {
-    right: 4px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .testimonial-card {
-    padding: 1.25rem 1.3rem;
-  }
-}
-
-:root {
-  --acc-blue: #0057a3;
-  --acc-blue-dark: #003c73;
-  --acc-gold: #ffc107;
-}
-
-
-
-
-      .alumni-section {
-  background-color: #ffffff;
-  min-height: 60vh;
-  margin-top: 25px;
-}
-
-.alumni-title {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 700;
-  color: var(--acc-blue-dark);
-  margin-bottom: 5px;
-}
-
-.alumni-subtitle {
-  font-size: 1rem;
-  color: #4b5563;
-}
-
-/* card */
-.alumni-card {
-  background: #f9fafb;
-  border-radius: 18px;
-  padding: 1.25rem 1.5rem;
-  box-shadow: 0 10px 25px rgba(0, 60, 115, 0.15);
-  border: 1px solid #e5e7eb;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.alumni-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0, 60, 115, 0.25);
-  border-color: rgba(0, 87, 163, 0.35);
-}
-
-/* photo */
-.alumni-photo {
-  width: 110px;
-  height: 110px;
-  border-radius: 16px;
-  background: #e5e7eb;
-  overflow: hidden;
-  margin-bottom: 0.75rem;
-  margin-right: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.alumni-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.alumni-initials {
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: var(--acc-blue-dark);
-}
-
-/* text */
-.alumni-batch {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #6b7280;
-  font-weight: 600;
-}
-
-.alumni-name {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--acc-blue-dark);
-}
-
-.alumni-role {
-  font-size: 0.95rem;
-  color: #4b5563;
-}
-
-.alumni-role span {
-  font-weight: 600;
-  color: var(--acc-blue);
-}
-
-/* company */
-.alumni-company-name {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--acc-blue-dark);
-}
-
-.alumni-logo-placeholder {
-  width: 70px;
-  height: 32px;
-  border-radius: 8px;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  color: #9ca3af;
-}
-
-/* controls */
-#alumniCarousel {
-  position: relative;
-}
-
-.alumni-control {
-  width: 44px;
-  height: 44px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #014b90;
-  border-radius: 999px;
-  border: 1px solid rgba(0, 87, 163, 0.25);
-  box-shadow: 0 8px 20px rgba(0, 60, 115, 0.25);
-  z-index: 3;
-}
-
-/* desktop: arrows slightly outside */
-.alumni-control.carousel-control-prev {
-  left: -72px;
-}
-
-.alumni-control.carousel-control-next {
-  right: -72px;
-}
-
-.alumni-control:hover {
-  background-color: var(--acc-blue);
-  border-color: var(--acc-blue);
-}
-
-.alumni-control .carousel-control-prev-icon,
-.alumni-control .carousel-control-next-icon {
-  filter: invert(0) grayscale(1);
-}
-
-/* small gold accent on hover card border or logo if you want */
-.alumni-card:hover .alumni-logo-placeholder {
-  border-color: var(--acc-gold);
-}
-
-/* responsive */
-@media (max-width: 767.98px) {
-  .alumni-card {
-    padding: 1rem;
-  }
-  .alumni-photo {
-    margin-right: 0;
-  }
-
-  .alumni-control.carousel-control-prev {
-    left: 4px;
-  }
-
-  .alumni-control.carousel-control-next {
-    right: 4px;
-  }
-}
-
-    </style>
-  </head>
-  <body>
-    <!-- HERO CAROUSEL -->
-    <section id="banner">
-      <div
-        id="heroCarousel"
-        class="carousel slide hero-carousel"
-        data-bs-ride="carousel"
-        data-bs-interval="7000"
-      >
-        <div class="carousel-inner">
-          <!-- SLIDE 1 -->
-          <div
-            class="carousel-item active"
-            style="
-              background-image: url('https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp');
-            "
-          >
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-              <div class="row justify-content-start">
-                <div class="col-xl-6 col-lg-7">
-                  <div class="hero-content-wrapper">
-                    <div class="hero-tagline">Welcome To Accurate</div>
-                    <h2 class="hero-heading">
-                      Discover Your Potential with Accurate
-                    </h2>
-                    <p class="hero-subtext mb-4">
-                      Unleash your potential with diverse programs and endless
-                      opportunities for transformative learning.
-                    </p>
-                    <div class="hero-badges mb-4">
-                      <span>Management</span>
-                      <span>Engineering</span>
-                      <span>Pharmacy</span>
-                      <span>Architecture</span>
+        <style>
+            :root {
+                --accurate-primary: #0057a3; /* Blue */
+                --accurate-primary-dark: #003c73; /* Darker blue */
+                --accent-gold: #ffc107; /* Yellow */
+                --bg-light: #f4f7fb;
+
+                /* for the alumini section */
+
+                --primary-yellow: #ffd700;
+                --primary-blue: #1e3a8a;
+                --light-blue: #dbeafe;
+                --white: #ffffff;
+                --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                /* Soft white/grey */
+            }
+
+            /* Global */
+
+            body {
+                margin: 0;
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Roboto,
+                    sans-serif;
+                background-color: var(--bg-light);
+                color: #10263f;
+            }
+
+            #banner {
+                background-color: var(--bg-light);
+                min-height: 80vh;
+            }
+
+            /* Hero carousel */
+
+            .hero-carousel {
+                position: relative;
+                width: 100%;
+                color: #10263f;
+                overflow: hidden;
+            }
+
+            .hero-carousel .carousel-item {
+                min-height: 80vh; /* ensure height so bg + indicators show */
+                background-size: cover;
+                background-position: center center;
+                position: relative;
+            }
+
+            /* Blue + white overlay (no dark/black) */
+
+            .hero-overlay {
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(circle at top left, rgba(0, 87, 163, 0.35), transparent 55%),
+                    linear-gradient(135deg, rgba(244, 247, 251, 0.9), rgba(0, 58, 120, 0.8));
+            }
+
+            /* Glass card – light with blue accents */
+
+            .hero-content-wrapper {
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-radius: 1.75rem;
+                border: 1px solid rgba(0, 87, 163, 0.16);
+                box-shadow: 0 18px 45px rgba(0, 87, 163, 0.18);
+                padding: 2.5rem 2.25rem;
+                max-width: 640px;
+                animation: heroFadeIn 0.9s ease-out;
+            }
+
+            .hero-content {
+                position: relative;
+                z-index: 2;
+                padding-top: 5.5rem;
+                padding-bottom: 5.5rem;
+            }
+
+            .hero-tagline {
+                text-transform: uppercase;
+                letter-spacing: 0.22em;
+                font-size: 0.78rem;
+                color: var(--accent-gold); /* yellow */
+                margin-bottom: 0.85rem;
+                font-weight: 600;
+            }
+
+            .hero-heading {
+                font-size: clamp(1.6rem, 3vw, 2.4rem);
+                font-weight: 800;
+                line-height: 1.15;
+                margin-bottom: 1rem;
+                color: var(--accurate-primary-dark); /* blue */
+            }
+
+            .hero-subtext {
+                font-size: 1.02rem;
+                line-height: 1.7;
+                color: #42556b; /* blue-grey */
+            }
+
+            /* Badges (blue chips with yellow dot) */
+
+            .hero-badges span {
+                display: inline-flex;
+                align-items: center;
+                margin: 0.2rem 0.35rem 0.2rem 0;
+                padding: 0.22rem 0.8rem;
+                border-radius: 999px;
+                font-size: 0.78rem;
+                background: rgba(0, 87, 163, 0.06);
+                border: 1px solid rgba(0, 87, 163, 0.25);
+                color: var(--accurate-primary-dark);
+            }
+
+            .hero-badges span::before {
+                content: "";
+                display: inline-block;
+                width: 6px;
+                height: 6px;
+                border-radius: 999px;
+                margin-right: 0.4rem;
+                background: var(--accent-gold); /* yellow dot */
+            }
+
+            /* Lists */
+
+            .hero-list {
+                list-style: none;
+                padding-left: 0;
+                margin-bottom: 1rem;
+            }
+
+            .hero-list li {
+                position: relative;
+                padding-left: 1.1rem;
+                font-size: 0.97rem;
+                margin-bottom: 0.3rem;
+                color: #344966;
+            }
+
+            .hero-list li::before {
+                content: "•";
+                color: var(--accent-gold); /* yellow bullet */
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            /* Buttons – blue primary, white/blue outline, yellow accent only via text */
+
+            .btn-accurate-primary {
+                background: linear-gradient(135deg, var(--accurate-primary), #00a1ff);
+                border: none;
+                color: #fff;
+                padding-inline: 1.8rem;
+                border-radius: 999px;
+                box-shadow: 0 10px 24px rgba(0, 87, 163, 0.45);
+            }
+
+            .btn-accurate-primary:hover {
+                background: linear-gradient(135deg, var(--accurate-primary-dark), #0085d4);
+                color: #fff;
+            }
+
+            .btn-accurate-outline {
+                border-radius: 999px;
+                border-color: var(--accurate-primary);
+                color: var(--accurate-primary-dark);
+                background: #ffffff;
+            }
+
+            .btn-accurate-outline:hover {
+                background-color: var(--accurate-primary);
+                color: #ffffff;
+            }
+
+            /* Stat pills – white with blue border and yellow key number */
+
+            .hero-stat-pill {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(228, 238, 252, 0.9));
+                border-radius: 0.85rem;
+                padding: 0.75rem 1.1rem;
+                margin-bottom: 0.65rem;
+                font-size: 0.9rem;
+                border: 1px solid rgba(0, 87, 163, 0.25);
+                color: #1a365d;
+            }
+
+            .hero-stat-pill strong {
+                font-size: 1.02rem;
+                color: var(--accent-gold); /* highlight number in yellow */
+            }
+
+            /* Controls – white with blue border */
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                width: 2.6rem;
+                height: 2.6rem;
+                background-color: #e2c801;
+                border-radius: 50%;
+                background-size: 55% 55%;
+                border: 1px solid rgba(0, 87, 163, 0.4);
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 10%;
+            }
+
+            /* Indicators – blue bar, active in yellow or strong blue */
+
+            .carousel-indicators {
+                bottom: 1.8rem;
+            }
+
+            .carousel-indicators [data-bs-target] {
+                width: 14px;
+                height: 4px;
+                border-radius: 999px;
+                background-color: rgba(0, 87, 163, 0.35);
+                border: none;
+                transition: all 0.25s ease;
+            }
+
+            .carousel-indicators .active {
+                width: 28px;
+                background-color: var(--accent-gold); /* yellow active dot */
+            }
+
+            /* Animation */
+
+            @keyframes heroFadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(18px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Responsive */
+
+            @media (max-width: 991.98px) {
+                .hero-content {
+                    padding-top: 4.5rem;
+                    padding-bottom: 4.5rem;
+                }
+
+                .hero-content-wrapper {
+                    margin-inline: auto;
+                    padding: 2rem 1.8rem;
+                    border-radius: 1.5rem;
+                }
+            }
+
+            @media (max-width: 767.98px) {
+                .hero-content {
+                    text-align: center;
+                }
+
+                .hero-badges span {
+                    margin-bottom: 0.3rem;
+                }
+
+                .hero-content-wrapper {
+                    padding: 1.8rem 1.5rem;
+                }
+
+                .hero-carousel .carousel-item {
+                    min-height: 95vh;
+                }
+            }
+
+            /* About section css  */
+
+            :root {
+                --acc-blue: #0057a3;
+                --acc-blue-dark: #003c73;
+                --acc-gold: #ffc107;
+                --acc-bg-light: #f4f7fb;
+            }
+
+            /* Global fonts */
+            body {
+                font-family:
+                    "Inter",
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Roboto,
+                    sans-serif;
+            }
+
+            /* Section background with soft shapes */
+            .bg-section-light.about-section {
+                position: relative;
+                overflow: hidden;
+                background: linear-gradient(135deg, #ffffff 0%, #f7f9ff 45%, #e3efff 100%);
+            }
+
+            .bg-section-light.about-section::before,
+            .bg-section-light.about-section::after {
+                content: "";
+                position: absolute;
+                border-radius: 999px;
+                pointer-events: none;
+                opacity: 0.18;
+            }
+
+            /* blue blob left */
+            .bg-section-light.about-section::before {
+                width: 320px;
+                height: 320px;
+                top: -120px;
+                left: -60px;
+                background: radial-gradient(circle, rgba(0, 87, 163, 0.32), transparent 65%);
+            }
+
+            /* yellow blob right */
+            .bg-section-light.about-section::after {
+                width: 260px;
+                height: 260px;
+                bottom: -80px;
+                right: -40px;
+                background: radial-gradient(circle, rgba(255, 193, 7, 0.35), transparent 65%);
+            }
+
+            /* Heading area */
+            .section-heading {
+                color: var(--acc-blue-dark);
+                font-family: "Poppins", system-ui, sans-serif;
+            }
+
+            .about-text {
+                color: #43536a;
+                font-size: 1rem;
+                max-width: 52rem;
+                margin-inline: auto;
+            }
+
+            .about-pill {
+                padding: 0.35rem 0.9rem;
+                font-size: 0.72rem;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                border-radius: 999px;
+                background-color: rgba(255, 193, 7, 0.18);
+                color: #8a6a02;
+                border: 1px solid rgba(255, 193, 7, 0.5);
+            }
+
+            /* Stat cards */
+            .stat-card {
+                background: #ffffff;
+                border-radius: 1.25rem;
+                padding: 1.7rem 1.3rem 1.5rem;
+                border: 1px solid rgba(0, 87, 163, 0.12);
+                box-shadow: 0 14px 32px rgba(0, 87, 163, 0.12);
+                transition:
+                    transform 0.24s ease,
+                    box-shadow 0.24s ease,
+                    border-color 0.24s ease,
+                    background 0.24s ease;
+                position: relative;
+                overflow: hidden;
+            }
+
+            /* diagonal highlight bar on hover */
+            .stat-card::before {
+                content: "";
+                position: absolute;
+                width: 140%;
+                height: 40px;
+                top: -40px;
+                left: -20%;
+                background: linear-gradient(
+                    90deg,
+                    rgba(0, 87, 163, 0.09),
+                    rgba(255, 193, 7, 0.35),
+                    rgba(0, 87, 163, 0.09)
+                );
+                transform: translateY(0);
+                opacity: 0;
+                transition:
+                    opacity 0.25s ease,
+                    transform 0.25s ease;
+            }
+
+            .stat-card:hover {
+                transform: translateY(-6px);
+                border-color: rgba(0, 87, 163, 0.4);
+                box-shadow: 0 20px 40px rgba(0, 87, 163, 0.22);
+                background: linear-gradient(135deg, #ffffff 0%, #f3f7ff 60%, #eaf2ff 100%);
+            }
+
+            .stat-card:hover::before {
+                opacity: 1;
+                transform: translateY(12px);
+            }
+
+            /* Number + labels */
+            .stat-number {
+                font-size: 2.1rem;
+                font-weight: 800;
+                color: var(--acc-blue);
+                line-height: 1;
+                margin-bottom: 0.35rem;
+            }
+
+            .stat-plus {
+                font-size: 1.35rem;
+                color: var(--acc-gold);
+            }
+
+            .stat-label {
+                font-size: 0.9rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.09em;
+                color: #50627b;
+                margin-bottom: 0.35rem;
+            }
+
+            .stat-desc {
+                font-size: 0.85rem;
+                color: #6c7a90;
+                margin-bottom: 0;
+            }
+
+            /* Keyframe animations */
+            .about-header {
+                animation: fadeDown 0.7s ease-out both;
+            }
+
+            .fade-up {
+                opacity: 0;
+                animation: fadeUp 0.7s ease-out forwards;
+            }
+
+            .delay-1 {
+                animation-delay: 0.25s;
+            }
+            .delay-2 {
+                animation-delay: 0.4s;
+            }
+            .delay-3 {
+                animation-delay: 0.55s;
+            }
+            .delay-4 {
+                animation-delay: 0.7s;
+            }
+
+            @keyframes fadeUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(16px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Responsive tweaks */
+            @media (max-width: 767.98px) {
+                .stat-card {
+                    padding: 1.5rem 1.1rem;
+                }
+
+                .stat-number {
+                    font-size: 1.8rem;
+                }
+
+                .stat-label {
+                    font-size: 0.86rem;
+                }
+            }
+
+            /* Ranking - Section */
+
+            :root {
+                --acc-blue: #0057a3;
+                --acc-blue-dark: #003c73;
+                --acc-gold: #ffc107;
+                --acc-bg-soft: #f4f7fb;
+            }
+
+            /* Section background */
+            .rankings-section {
+                background: linear-gradient(135deg, #ffffff 0%, #f7f9ff 40%, #e3efff 100%);
+                position: relative;
+                overflow: hidden;
+            }
+
+            /* Decorative circles */
+            .rankings-section::before,
+            .rankings-section::after {
+                content: "";
+                position: absolute;
+                border-radius: 999px;
+                opacity: 0.16;
+                pointer-events: none;
+            }
+            .rankings-section::before {
+                width: 260px;
+                height: 260px;
+                top: -90px;
+                right: -60px;
+                background: radial-gradient(circle, rgba(0, 87, 163, 0.42), transparent 65%);
+            }
+            .rankings-section::after {
+                width: 220px;
+                height: 220px;
+                bottom: -80px;
+                left: -40px;
+                background: radial-gradient(circle, rgba(255, 193, 7, 0.45), transparent 65%);
+            }
+
+            /* Left block */
+            .ranking-left-card {
+                background: #ffffff;
+                border-radius: 1.5rem;
+                padding: 1.9rem 1.7rem;
+                border: 1px solid rgba(0, 87, 163, 0.12);
+                box-shadow: 0 16px 40px rgba(0, 87, 163, 0.2);
+                position: relative;
+                z-index: 1;
+            }
+
+            .section-subheading {
+                font-family: "Poppins", system-ui, sans-serif;
+                color: var(--acc-blue-dark);
+                font-size: 1.45rem;
+            }
+
+            .tracking-wide {
+                letter-spacing: 0.16em;
+                font-weight: 600;
+                font-size: 0.7rem;
+            }
+
+            /* Logo / medal */
+            .ranking-badge-icon .ranking-medal {
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                background: radial-gradient(circle, var(--acc-gold), #ffde7a);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 10px 25px rgba(255, 193, 7, 0.45);
+            }
+            .ranking-badge-icon .ranking-medal i {
+                color: #674100;
+                font-size: 1.6rem;
+            }
+
+            /* Text list */
+            .ranking-text {
+                color: #43536a;
+                font-size: 0.98rem;
+            }
+
+            .ranking-list {
+                margin-top: 1rem;
+            }
+
+            .ranking-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.4rem;
+                font-size: 0.9rem;
+                color: #4c5b73;
+                margin-bottom: 0.4rem;
+            }
+
+            .bullet-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 999px;
+                background: var(--acc-gold);
+                margin-top: 0.35rem;
+            }
+
+            /* Right stats cards */
+            .ranking-stat-card {
+                background: #ffffff;
+                border-radius: 1.25rem;
+                padding: 1.3rem 1.4rem 1.2rem;
+                border: 1px solid rgba(0, 87, 163, 0.14);
+                box-shadow: 0 12px 30px rgba(0, 87, 163, 0.16);
+                position: relative;
+                overflow: hidden;
+                transition:
+                    transform 0.22s ease,
+                    box-shadow 0.22s ease,
+                    border-color 0.22s ease,
+                    background 0.22s ease;
+            }
+
+            /* subtle stripe */
+            .ranking-stat-card::before {
+                content: "";
+                position: absolute;
+                width: 150%;
+                height: 32px;
+                top: -36px;
+                left: -20%;
+                background: linear-gradient(
+                    90deg,
+                    rgba(0, 87, 163, 0.08),
+                    rgba(255, 193, 7, 0.3),
+                    rgba(0, 87, 163, 0.08)
+                );
+                opacity: 0;
+                transform: translateY(0);
+                transition:
+                    opacity 0.22s ease,
+                    transform 0.22s ease;
+            }
+
+            .ranking-stat-card:hover {
+                transform: translateY(-4px);
+                border-color: rgba(0, 87, 163, 0.5);
+                box-shadow: 0 18px 40px rgba(0, 87, 163, 0.22);
+                background: linear-gradient(135deg, #ffffff 0%, #f0f5ff 55%, #e3efff 100%);
+            }
+
+            .ranking-stat-card:hover::before {
+                opacity: 1;
+                transform: translateY(10px);
+            }
+
+            .ranking-stat-caption {
+                text-transform: uppercase;
+                letter-spacing: 0.16em;
+                font-size: 0.7rem;
+                color: #6c7a90;
+                font-weight: 600;
+            }
+
+            .ranking-stat-main {
+                font-size: 2.1rem;
+                font-weight: 800;
+                color: var(--acc-blue);
+                line-height: 1;
+            }
+
+            .ranking-stat-label {
+                font-size: 0.95rem;
+                color: #43536a;
+            }
+
+            /* small pill on right */
+            .ranking-pill {
+                display: inline-flex;
+                align-items: center;
+                padding: 0.28rem 0.9rem;
+                border-radius: 999px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                background-color: rgba(0, 87, 163, 0.08);
+                color: var(--acc-blue-dark);
+            }
+
+            .ranking-pill.pill-gold {
+                background-color: rgba(255, 193, 7, 0.16);
+                color: #7a5a00;
+            }
+
+            /* Animations */
+            .rankings-section .ranking-left-card {
+                animation: fadeRight 0.7s ease-out both;
+            }
+
+            .rankings-section .ranking-stat-card:nth-child(1) {
+                animation: fadeLeft 0.7s ease-out 0.25s both;
+            }
+            .rankings-section .ranking-stat-card:nth-child(2) {
+                animation: fadeLeft 0.7s ease-out 0.4s both;
+            }
+
+            @keyframes fadeRight {
+                from {
+                    opacity: 0;
+                    transform: translateX(-18px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            @keyframes fadeLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(18px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            /* Responsive tweaks */
+            @media (max-width: 991.98px) {
+                .ranking-left-card {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            @media (max-width: 575.98px) {
+                .ranking-stat-card {
+                    padding: 1.15rem 1.1rem 1.05rem;
+                }
+
+                .ranking-stat-main {
+                    font-size: 1.8rem;
+                }
+            }
+
+            /* Placements section css */
+
+            /* Overall section */
+            .placement-section {
+                background: #014b90;
+                color: #ffffff;
+                min-height: 60vh;
+            }
+
+            .placement-heading {
+                letter-spacing: 0.03em;
+            }
+
+            .placement-text {
+                font-size: 0.98rem;
+                line-height: 1.7;
+                opacity: 0.9;
+            }
+
+            /* Top stats strip cards */
+            .placement-main-card {
+                background: #281c4c;
+                border-radius: 18px;
+                padding: 1.5rem 1.25rem;
+                text-align: center;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+                transition:
+                    transform 0.25s ease,
+                    box-shadow 0.25s ease,
+                    background 0.25s ease;
+            }
+
+            .placement-main-card .big-number {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+            .placement-main-card .label {
+                font-size: 0.78rem;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                margin-top: 0.4rem;
+                opacity: 0.85;
+            }
+
+            .placement-main-card .subtext {
+                font-size: 0.75rem;
+                margin-top: 0.45rem;
+                opacity: 0.8;
+            }
+
+            /* Hover effect for top cards */
+            .placement-main-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+                background: #342361;
+            }
+
+            /* Bottom supporting stat boxes */
+            .placement-support-card {
+                border-radius: 14px;
+                border: 1px solid rgba(255, 255, 255, 0.25);
+                padding: 1.25rem 0.75rem;
+                text-align: center;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                backdrop-filter: blur(2px);
+                -webkit-backdrop-filter: blur(2px);
+                background: rgba(255, 255, 255, 0.02);
+                transition:
+                    transform 0.2s ease,
+                    box-shadow 0.2s ease,
+                    border-color 0.2s ease,
+                    background 0.2s ease;
+            }
+
+            .placement-support-card .big-number {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+            .placement-support-card .label {
+                font-size: 0.8rem;
+                margin-top: 0.3rem;
+                line-height: 1.4;
+            }
+
+            /* Hover effect for bottom boxes */
+            .placement-support-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+                border-color: rgba(255, 255, 255, 0.6);
+                background: rgba(255, 255, 255, 0.04);
+            }
+
+            /* Responsive tweaks */
+            @media (max-width: 991.98px) {
+                .placement-main-card .big-number {
+                    font-size: 1.7rem;
+                }
+            }
+
+            @media (max-width: 575.98px) {
+                .placement-heading {
+                    font-size: 1.55rem;
+                }
+
+                .placement-text {
+                    font-size: 0.9rem;
+                }
+
+                .placement-main-card,
+                .placement-support-card {
+                    padding: 1rem 0.75rem;
+                }
+            }
+
+            /* Ranked section  */
+
+            .ranked-wrapper {
+                border-radius: 0 40px 40px 0;
+                overflow: hidden;
+                box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+            }
+
+            .ranked-left {
+                background-color: #f7f2ef;
+            }
+
+            .ranked-right {
+                background-color: #003c73;
+            }
+
+            .ranked-logo {
+                width: 70px;
+                height: 70px;
+                border-radius: 12px;
+                background: linear-gradient(135deg, #facc15, #f97316);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .badge-icon {
+                font-size: 1.8rem;
+                color: #ffffff;
+            }
+
+            .ranked-kicker {
+                font-size: 0.85rem;
+                letter-spacing: 0.12em;
+                font-weight: 600;
+                color: #7a7a7a;
+            }
+
+            .ranked-heading {
+                font-size: 1.35rem;
+                font-weight: 700;
+                color: #222222;
+            }
+
+            .ranked-list {
+                list-style: none;
+                padding-left: 0;
+                margin-bottom: 1.25rem;
+            }
+
+            .ranked-list li {
+                position: relative;
+                padding-left: 1.4rem;
+                margin-bottom: 0.4rem;
+                font-size: 0.98rem;
+                color: #444444;
+            }
+
+            .ranked-list li::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: #f97316;
+                font-size: 1.1rem;
+            }
+
+            .ranked-text {
+                font-size: 0.95rem;
+                color: #555555;
+            }
+
+            .ranked-label {
+                font-size: 0.8rem;
+                letter-spacing: 0.18em;
+                font-weight: 600;
+                opacity: 0.8;
+            }
+
+            .ranked-number {
+                font-size: 3.5rem;
+                font-weight: 700;
+                line-height: 1;
+            }
+
+            .ranked-support {
+                font-size: 1rem;
+                opacity: 0.9;
+            }
+
+            /* responsive tweaks */
+            @media (max-width: 991.98px) {
+                .ranked-wrapper {
+                    border-radius: 24px;
+                }
+                .ranked-right {
+                    border-radius: 0 0 24px 24px;
+                }
+                .ranked-number {
+                    font-size: 3rem;
+                }
+            }
+
+            @media (max-width: 575.98px) {
+                .ranked-heading {
+                    font-size: 1.15rem;
+                }
+                .ranked-number {
+                    font-size: 2.6rem;
+                }
+            }
+
+            /* Alumini section  */
+
+            :root {
+                --acc-blue: #0057a3;
+                --acc-blue-dark: #003c73;
+                --acc-gold: #ffc107;
+            }
+
+            .testimonials-section {
+                background: #f3f4f6;
+            }
+
+            .testimonials-title {
+                font-size: clamp(2rem, 4vw, 2.5rem);
+                font-weight: 700;
+                color: var(--acc-blue-dark);
+            }
+
+            .testimonials-subtitle {
+                font-size: 0.98rem;
+                color: #6b7280;
+            }
+
+            /* card */
+            .testimonial-card {
+                background: #ffffff;
+                border-radius: 18px;
+                padding: 1.5rem 1.6rem;
+                border: 1px solid #e5e7eb;
+                box-shadow: 0 10px 25px rgba(0, 60, 115, 0.08);
+                transition:
+                    transform 0.25s ease,
+                    box-shadow 0.25s ease,
+                    border-color 0.25s ease;
+            }
+
+            .testimonial-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 18px 40px rgba(0, 60, 115, 0.18);
+                border-color: rgba(0, 87, 163, 0.4);
+            }
+
+            /* avatar */
+            .testimonial-avatar {
+                width: 52px;
+                height: 52px;
+                border-radius: 999px;
+                background: linear-gradient(135deg, var(--acc-blue), var(--acc-gold));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #ffffff;
+                font-weight: 700;
+                margin-right: 0.85rem;
+                overflow: hidden;
+                font-size: 1rem;
+            }
+
+            .testimonial-avatar img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* text */
+            .testimonial-name {
+                font-size: 1.05rem;
+                font-weight: 700;
+                color: var(--acc-blue-dark);
+            }
+
+            .testimonial-meta {
+                font-size: 0.8rem;
+                color: #6b7280;
+            }
+
+            .testimonial-text {
+                font-size: 0.95rem;
+                color: #4b5563;
+                line-height: 1.7;
+            }
+
+            /* company badge */
+            .testimonial-company {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .badge-company {
+                display: inline-flex;
+                align-items: center;
+                padding: 0.3rem 0.7rem;
+                border-radius: 999px;
+                font-size: 0.78rem;
+                font-weight: 600;
+                color: var(--acc-blue-dark);
+                background: rgba(255, 193, 7, 0.15);
+                border: 1px solid rgba(255, 193, 7, 0.7);
+            }
+
+            /* carousel controls */
+            #testimonialCarousel {
+                position: relative;
+            }
+
+            .testimonial-control {
+                width: 40px;
+                height: 40px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: #ffffff;
+                border-radius: 999px;
+                border: 1px solid rgba(0, 87, 163, 0.25);
+                box-shadow: 0 8px 20px rgba(0, 60, 115, 0.25);
+            }
+
+            .testimonial-control.carousel-control-prev {
+                left: -78px;
+            }
+
+            .testimonial-control.carousel-control-next {
+                right: -78px;
+            }
+
+            .testimonial-control:hover {
+                background-color: var(--acc-blue);
+                border-color: var(--acc-blue);
+            }
+
+            .testimonial-control .carousel-control-prev-icon,
+            .testimonial-control .carousel-control-next-icon {
+                filter: invert(0) grayscale(1);
+            }
+
+            /* responsive */
+            @media (max-width: 991.98px) {
+                .testimonial-control.carousel-control-prev {
+                    left: 4px;
+                }
+
+                .testimonial-control.carousel-control-next {
+                    right: 4px;
+                }
+            }
+
+            @media (max-width: 767.98px) {
+                .testimonial-card {
+                    padding: 1.25rem 1.3rem;
+                }
+            }
+
+            :root {
+                --acc-blue: #0057a3;
+                --acc-blue-dark: #003c73;
+                --acc-gold: #ffc107;
+            }
+
+            .alumni-section {
+                background-color: #ffffff;
+                min-height: 60vh;
+                margin-top: 25px;
+            }
+
+            .alumni-title {
+                font-size: clamp(2rem, 4vw, 2.8rem);
+                font-weight: 700;
+                color: var(--acc-blue-dark);
+                margin-bottom: 5px;
+            }
+
+            .alumni-subtitle {
+                font-size: 1rem;
+                color: #4b5563;
+            }
+
+            /* card */
+            .alumni-card {
+                background: #f9fafb;
+                border-radius: 18px;
+                padding: 1.25rem 1.5rem;
+                box-shadow: 0 10px 25px rgba(0, 60, 115, 0.15);
+                border: 1px solid #e5e7eb;
+                transition:
+                    transform 0.25s ease,
+                    box-shadow 0.25s ease,
+                    border-color 0.25s ease;
+            }
+
+            .alumni-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 18px 40px rgba(0, 60, 115, 0.25);
+                border-color: rgba(0, 87, 163, 0.35);
+            }
+
+            /* photo */
+            .alumni-photo {
+                width: 110px;
+                height: 110px;
+                border-radius: 16px;
+                background: #e5e7eb;
+                overflow: hidden;
+                margin-bottom: 0.75rem;
+                margin-right: 1.25rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .alumni-photo img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .alumni-initials {
+                font-size: 1.9rem;
+                font-weight: 700;
+                color: var(--acc-blue-dark);
+            }
+
+            /* text */
+            .alumni-batch {
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 0.12em;
+                color: #6b7280;
+                font-weight: 600;
+            }
+
+            .alumni-name {
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: var(--acc-blue-dark);
+            }
+
+            .alumni-role {
+                font-size: 0.95rem;
+                color: #4b5563;
+            }
+
+            .alumni-role span {
+                font-weight: 600;
+                color: var(--acc-blue);
+            }
+
+            /* company */
+            .alumni-company-name {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: var(--acc-blue-dark);
+            }
+
+            .alumni-logo-placeholder {
+                width: 70px;
+                height: 32px;
+                border-radius: 8px;
+                background: #ffffff;
+                border: 1px solid #e5e7eb;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.7rem;
+                color: #9ca3af;
+            }
+
+            /* controls */
+            #alumniCarousel {
+                position: relative;
+            }
+
+            .alumni-control {
+                width: 44px;
+                height: 44px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: #014b90;
+                border-radius: 999px;
+                border: 1px solid rgba(0, 87, 163, 0.25);
+                box-shadow: 0 8px 20px rgba(0, 60, 115, 0.25);
+                z-index: 3;
+            }
+
+            /* desktop: arrows slightly outside */
+            .alumni-control.carousel-control-prev {
+                left: -72px;
+            }
+
+            .alumni-control.carousel-control-next {
+                right: -72px;
+            }
+
+            .alumni-control:hover {
+                background-color: var(--acc-blue);
+                border-color: var(--acc-blue);
+            }
+
+            .alumni-control .carousel-control-prev-icon,
+            .alumni-control .carousel-control-next-icon {
+                filter: invert(0) grayscale(1);
+            }
+
+            /* small gold accent on hover card border or logo if you want */
+            .alumni-card:hover .alumni-logo-placeholder {
+                border-color: var(--acc-gold);
+            }
+
+            /* responsive */
+            @media (max-width: 767.98px) {
+                .alumni-card {
+                    padding: 1rem;
+                }
+                .alumni-photo {
+                    margin-right: 0;
+                }
+
+                .alumni-control.carousel-control-prev {
+                    left: 4px;
+                }
+
+                .alumni-control.carousel-control-next {
+                    right: 4px;
+                }
+            }
+        </style>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            verdana: ["Verdana"],
+                            sansserif: ["sans-serif"],
+                            geneva: ["Geneva"],
+                            cinzel: ["Cinzel"],
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body>
+        <nav class="w-full bg-white shadow">
+            <div class="max-w-[1600px] mx-auto px-4 py-3 flex items-center justify-between">
+                <!-- LEFT: LOGO & TEXT -->
+                <div class="flex items-center gap-2">
+                    <img src="images/accurate-logo.webp" alt="Logo" class="h-14 w-auto" />
+
+                    <div>
+                        <h3 class="text-4xl font-bold text-blue-800 font-cinzel uppercase">Accurate</h3>
+                        <h3 class="text-lg font-medium text-blue-800 font-cinzel -mt-1 uppercase">
+                            Group of Institutions
+                        </h3>
                     </div>
-                    <div class="d-flex flex-wrap gap-2">
-                      <a
-                        href="#programs"
-                        class="btn btn-lg btn-accurate-primary"
-                      >
-                        Explore Programs
-                      </a>
-                      <a href="#about" class="btn btn-lg btn-accurate-outline">
-                        Learn About Accurate
-                      </a>
+                </div>
+
+                <!-- RIGHT: MENU -->
+                <div class="hidden md:flex items-center space-x-8 font-medium text-[17px]">
+                    <!-- ABOUT WITH SUBMENU -->
+                    <div class="relative group">
+                        <button class="hover:text-blue-600">About</button>
+
+                        <!-- SUBMENU -->
+                        <div
+                            class="absolute left-0 top-6 hidden group-hover:block bg-white shadow-lg rounded-md py-1.5 w-48 z-[999]"
+                        >
+                            <a href="#" class="block px-3 py-2 hover:bg-blue-50">About Accurate</a>
+                            <a href="#" class="block px-3 py-2 hover:bg-blue-50">Leadership</a>
+                            <a href="#" class="block px-3 py-2 hover:bg-blue-50">Vision & Mission</a>
+                            <a href="#" class="block px-3 py-2 hover:bg-blue-50">Why Accurate?</a>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- SLIDE 2 -->
-          <div
-            class="carousel-item"
-            style="
-              background-image: url('https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp');
-            "
-          >
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-              <div class="row justify-content-start">
-                <div class="col-xl-6 col-lg-7">
-                  <div class="hero-content-wrapper">
-                    <div class="hero-tagline">Nationally Ranked</div>
-                    <h2 class="hero-heading">
-                      Ranked Among India&apos;s Best B‑Schools
-                    </h2>
-                    <p class="hero-subtext mb-3">
-                      Consistently recognized for academic excellence and
-                      management education, making Accurate a trusted choice for
-                      future leaders.
-                    </p>
-                    <ul class="hero-list mb-4">
-                      <li>A+ Top 20 B‑School in India</li>
-                      <li>Excellence in Management Education in North India</li>
-                      <li>AAA+ Institute in U.P</li>
-                    </ul>
-                    <a href="#rankings" class="btn btn-lg btn-accurate-primary">
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                    <div class="relative group">
+                        <button class="hover:text-blue-600">Group Institutions</button>
 
-          <!-- SLIDE 3: Placement Excellence -->
-          <div
-            class="carousel-item"
-            style="
-              background-image: url('https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp');
-            "
-          >
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-              <div class="row align-items-center">
-                <div class="col-lg-7">
-                  <div class="hero-tagline">Career Outcomes</div>
-                  <h2 class="display-5 fw-bold mb-3">
-                    100% Placement Track Record
-                  </h2>
-                  <p class="mb-3">
-                    Strong industry interface, dedicated placement cell, and
-                    global opportunities help students launch rewarding careers.
-                  </p>
+                        <!-- SUBMENU -->
+                        <div
+                            class="absolute left-0 top-6 hidden group-hover:block bg-white shadow-lg rounded-md py-1.5 w-64 z-[999]"
+                        >
+                            <a href="#" class="block px-3 py-2 hover:bg-blue-50"
+                                >Accurate Institute of Advanced Management</a
+                            >
+                            <a href="#" class="block px-3 py-2 hover:bg-blue-50"
+                                >Accurate Institute of Management & Technology</a
+                            >
+                            <a href="#" class="block px-3 py-2 hover:bg-blue-50">Accurate Business School</a>
+                            <a href="#" class="block px-3 py-2 hover:bg-blue-50">Accurate College of Law</a>
+                            <a href="#" class="block px-3 py-2 hover:bg-blue-50">Accurate College of Pharmacy</a>
+                            <a href="#" class="block px-3 py-2 hover:bg-blue-50">Accurate Institute of Polytechnic</a>
+                        </div>
+                    </div>
 
-                  <div class="hero-stat-pill">
-                    <strong>₹1.30 Crore</strong> – Highest Package (Dubai, SAAS
-                    Group)
-                  </div>
-                  <div class="hero-stat-pill">
-                    <strong>₹7 LPA</strong> – Average Salary (Domestic)
-                  </div>
-                  <div class="hero-stat-pill">
-                    International opportunities with recruiters in Dubai, UK and
-                    more.
-                  </div>
+                    <a href="#" class="hover:text-blue-600">Program</a>
+                    <a href="#" class="hover:text-blue-600">Admission</a>
+                    <a href="#" class="hover:text-blue-600">Placement</a>
+                    <a href="#" class="hover:text-blue-600">Life@Accurate</a>
+                    <a href="#" class="hover:text-blue-600">More</a>
 
-                  <div class="hero-badges mb-4">
-                    <span>Oppo</span>
-                    <span>Genpact</span>
-                    <span>Bajaj Capital</span>
-                    <span>Teleperformance</span>
-                  </div>
-
-                  <a href="#placements" class="btn btn-lg btn-accurate-primary">
-                    View Placements
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- SLIDE 4: Campus Facilities & Holistic Learning -->
-          <div
-            class="carousel-item"
-            style="
-              background-image: url('https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp');
-            "
-          >
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-              <div class="row align-items-center">
-                <div class="col-lg-7">
-                  <div class="hero-tagline">Campus & Life</div>
-                  <h2 class="display-5 fw-bold mb-3">
-                    Thrive in a 16‑Acre Green Campus
-                  </h2>
-                  <p class="mb-3">
-                    Modern facilities, expert faculty, and a vibrant campus
-                    culture create an ecosystem for holistic development.
-                  </p>
-                  <ul class="hero-list mb-3">
-                    <li>Auditorium, Seminar Hall &amp; Well‑equipped Labs</li>
-                    <li>Rich Library &amp; Sports Facilities</li>
-                    <li>Soft Skills &amp; Industrial Exposure Programs</li>
-                    <li>Scholarships to support deserving students</li>
-                  </ul>
-                  <a href="#campus" class="btn btn-lg btn-accurate-primary">
-                    Explore Campus
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- SLIDE 5: Orientation & Expert Speakers -->
-          <div
-            class="carousel-item"
-            style="
-              background-image: url('https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp');
-            "
-          >
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-              <div class="row align-items-center">
-                <div class="col-lg-7">
-                  <div class="hero-tagline">Orientation 2025</div>
-                  <h2 class="display-5 fw-bold mb-3">
-                    Meet Industry &amp; Excellence Leaders
-                  </h2>
-                  <p class="mb-3">
-                    Orientation 2025 features renowned academicians, corporate
-                    leaders and achievers who inspire students to aim higher.
-                  </p>
-                  <ul class="hero-list mb-3">
-                    <li>Padma Shri Anand Kumar – Super 30</li>
-                    <li>Ms. Pinki Singh – Arjuna Awardee, CWG Gold Medalist</li>
-                    <li>
-                      Dr. Rajat Aggarwal – Professor &amp; HOD, IIT Roorkee
-                    </li>
-                    <li>Leaders from Accenture, HCL Tech and more</li>
-                  </ul>
-                  <div class="d-flex flex-wrap gap-2">
                     <a
-                      href="#orientation"
-                      class="btn btn-lg btn-accurate-primary"
+                        href="tel:+911234567890"
+                        class="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition"
                     >
-                      Know More
+                        Helpline: 1234567890
                     </a>
-                    <a href="#register" class="btn btn-lg btn-accurate-outline">
-                      Register
-                    </a>
-                  </div>
                 </div>
-              </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button class="md:hidden flex flex-col space-y-1">
+                    <span class="w-6 h-[3px] bg-black"></span>
+                    <span class="w-6 h-[3px] bg-black"></span>
+                    <span class="w-6 h-[3px] bg-black"></span>
+                </button>
             </div>
-          </div>
-        </div>
+        </nav>
 
-        <!-- Controls -->
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#heroCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#heroCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-
-        <!-- Indicators -->
-        <div class="carousel-indicators mb-4">
-          <button
-            type="button"
-            data-bs-target="#heroCarousel"
-            data-bs-slide-to="0"
-            class="active"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#heroCarousel"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#heroCarousel"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#heroCarousel"
-            data-bs-slide-to="3"
-            aria-label="Slide 4"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#heroCarousel"
-            data-bs-slide-to="4"
-            aria-label="Slide 5"
-          ></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: ABOUT + KEY STATS -->
-
-    <section class="py-5 py-lg-6 bg-section-light about-section" id="about">
-      <div class="container">
-        <!-- Heading + Paragraph -->
-        <div class="row justify-content-center mb-4 mb-lg-5">
-          <div class="col-lg-10 col-xl-9 text-center about-header">
-            <span class="badge rounded-pill mb-2 about-pill">
-              About Accurate Group
-            </span>
-            <h2 class="fw-bold section-heading mb-3">
-              Committed to Academic Excellence &amp; Holistic Development Since
-              2006
-            </h2>
-            <p class="lead about-text">
-              Established in 2006 under the Accurate Education &amp; Research
-              Society, Accurate Group of Institutions has grown into a leading
-              higher‑education group in Greater Noida and Delhi&nbsp;NCR. It
-              offers programs in Management, Engineering, Pharmacy,
-              Architecture, Law, and Diploma studies, with a strong focus on
-              academic excellence, holistic development, and industry‑oriented
-              learning that empowers future leaders.
-            </p>
-          </div>
-        </div>
-
-        <!-- Stats Cards -->
-        <div class="row g-3 g-md-4 about-stats-row">
-          <!-- Box 1 – Years of Excellence -->
-          <div class="col-6 col-lg-3">
-            <div class="stat-card h-100 text-center fade-up delay-1">
-              <div class="stat-number">20<span class="stat-plus">+</span></div>
-              <div class="stat-label">Years of Excellence</div>
-              <p class="stat-desc">
-                Building futures with quality education since 2006.
-              </p>
-            </div>
-          </div>
-
-          <!-- Box 2 – Programs / Disciplines -->
-          <div class="col-6 col-lg-3">
-            <div class="stat-card h-100 text-center fade-up delay-2">
-              <div class="stat-number">20<span class="stat-plus">+</span></div>
-              <div class="stat-label">Programs &amp; Disciplines</div>
-              <p class="stat-desc">
-                Management, Engineering, Pharmacy, Architecture, Law &amp;
-                Diploma.
-              </p>
-            </div>
-          </div>
-
-          <!-- Box 3 – Recruiters / Placement Drives -->
-          <div class="col-6 col-lg-3">
-            <div class="stat-card h-100 text-center fade-up delay-3">
-              <div class="stat-number">200<span class="stat-plus">+</span></div>
-              <div class="stat-label">Recruiting Partners</div>
-              <p class="stat-desc">
-                Leading corporates visiting for campus drives and placements.
-              </p>
-            </div>
-          </div>
-
-          <!-- Box 4 – Placement & Salary (use 100% Track Record) -->
-          <div class="col-6 col-lg-3">
-            <div class="stat-card h-100 text-center fade-up delay-4">
-              <div class="stat-number">100<span class="stat-plus">%</span></div>
-              <div class="stat-label">Placement Track Record</div>
-              <p class="stat-desc">
-                Strong outcomes with dedicated placement support and global
-                offers.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: NATIONAL RANKINGS -->
-    
-
-
-
-    <section class="ranked-section py-5">
-  <div class="container">
-    <div class="row align-items-stretch g-0 ranked-wrapper">
-      <!-- Left block -->
-      <div class="col-lg-6 bg-light ranked-left p-4 p-md-5">
-        <div class="d-flex align-items-center mb-4">
-          <!-- Placeholder logo / badge -->
-          <div class="ranked-logo me-3">
-            <span class="badge-icon">★</span>
-          </div>
-          <div>
-            <p class="ranked-kicker mb-1 text-uppercase">Awarded &amp; Recognized B‑School</p>
-            <h3 class="ranked-heading mb-0">Nationally Ranked. Globally Recognized.</h3>
-          </div>
-        </div>
-
-        <ul class="ranked-list mb-3">
-          <li>Ranked A+ Top 20 B‑School in India</li>
-          <li>Excellence in Management Education in North India</li>
-          <li>Ranked AAA+ Institute in U.P</li>
-          <li>Ranked A+++ Best B‑School</li>
-        </ul>
-
-        <p class="ranked-text mb-0">
-          Accurate Institute has been consistently recognized for its quality in management education,
-          earning strong national rankings and premium ratings across India.
-        </p>
-      </div>
-
-      <!-- Right block -->
-      <div class="col-lg-6 ranked-right text-white d-flex flex-column justify-content-center p-4 p-md-5">
-        <div class="ranked-item mb-5 mb-lg-4">
-          <p class="ranked-label text-uppercase mb-2">Among</p>
-          <div class="d-flex align-items-baseline flex-wrap">
-            <span class="ranked-number me-2">Top 20</span>
-            <span class="ranked-support">B‑Schools in India</span>
-          </div>
-        </div>
-
-        <div class="ranked-item">
-          <p class="ranked-label text-uppercase mb-2">Awarded as</p>
-          <div class="d-flex align-items-baseline flex-wrap">
-            <span class="ranked-number me-2">A+++</span>
-            <span class="ranked-support">Best B‑School Rating</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <!-- Outstanding Placement Records Section -->
-    <section class="placement-section py-5">
-      <div class="container">
-        <!-- Top heading + paragraph -->
-        <div class="row justify-content-center text-center mb-4">
-          <div class="col-lg-10">
-            <h2 class="placement-heading fw-bold mb-3">
-              Outstanding Placement Records
-            </h2>
-            <p class="placement-text mb-0 py-3">
-              Accurate Group of Institutions maintains a consistent 100%
-              placement track record, backed by strong industry interface,
-              value-added programs, and dedicated placement support, enabling
-              students to secure excellent national and international
-              opportunities.
-            </p>
-          </div>
-        </div>
-
-        <!-- Top wide strip - 4 main placement stats -->
-        <div class="row g-3 mb-4">
-          <div class="col-12">
-            <div class="row g-3 align-items-stretch">
-              <!-- Card 1 -->
-              <div class="col-6 col-lg-3">
-                <div class="placement-main-card">
-                  <div class="big-number">100%</div>
-                  <div class="label">Placement Track Record</div>
-                </div>
-              </div>
-              <!-- Card 2 -->
-              <div class="col-6 col-lg-3">
-                <div class="placement-main-card">
-                  <div class="big-number">₹1.30 Cr</div>
-                  <div class="label">Highest International Package</div>
-                  <div class="subtext">Randhir Kumar – SAAS Group, Dubai</div>
-                </div>
-              </div>
-              <!-- Card 3 -->
-              <div class="col-6 col-lg-3">
-                <div class="placement-main-card">
-                  <div class="big-number">₹17 LPA</div>
-                  <div class="label">Highest Domestic Package</div>
-                </div>
-              </div>
-              <!-- Card 4 -->
-              <div class="col-6 col-lg-3">
-                <div class="placement-main-card">
-                  <div class="big-number">₹7 LPA</div>
-                  <div class="label">Average Package</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom row - 4 supporting stats -->
-        <div class="row g-3">
-          <!-- Box 1 -->
-          <div class="col-6 col-lg-3">
-            <div class="placement-support-card">
-              <div class="big-number">200+</div>
-              <div class="label">Companies for Campus Drives</div>
-            </div>
-          </div>
-          <!-- Box 2 -->
-          <div class="col-6 col-lg-3">
-            <div class="placement-support-card">
-              <div class="big-number">Multiple</div>
-              <div class="label">International Placements (Dubai, UK etc.)</div>
-            </div>
-          </div>
-          <!-- Box 3 -->
-          <div class="col-6 col-lg-3">
-            <div class="placement-support-card">
-              <div class="big-number">Advanced</div>
-              <div class="label">Training in Excel &amp; Power BI</div>
-            </div>
-          </div>
-          <!-- Box 4 -->
-          <div class="col-6 col-lg-3">
-            <div class="placement-support-card">
-              <div class="big-number">Campus to Corporate</div>
-              <div class="label">Workshops &amp; Mentoring</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- Section 5 - Alumni -->
-
-
-     <section class="alumni-section py-5">
-        <div class="container">
-            <!-- Heading -->
-            <div class="text-center mb-5">
-                <h2 class="alumni-title mb-2">Our Alumni. Your Future</h2>
-                <p class="alumni-subtitle mb-0">
-                    Successful careers across leading companies in India and abroad
-                </p>
-            </div>
-
-            <!-- Slider -->
-            <div id="alumniCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- HERO CAROUSEL -->
+        <section id="banner">
+            <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="7000">
                 <div class="carousel-inner">
-
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <!-- Aman -->
-                            <div class="col-md-6">
-                                <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
-                                    <div class="alumni-photo">
-                                        <img src="./images/Aman_BCA.png" alt="Aman Kumar">
-                                    </div>
-                                    <div class="alumni-content flex-grow-1">
-                                        <p class="alumni-batch mb-1">BCA Batch 2022</p>
-                                        <h3 class="alumni-name mb-1">Aman Kumar</h3>
-                                        <p class="alumni-role mb-2">Placed at <span>First Point Creations</span></p>
-                                        <div class="alumni-company d-flex align-items-center">
-                                            <div class="alumni-logo-placeholder me-2">
-                                                <!-- company logo here -->
-                                                <span>Logo</span>
-                                            </div>
-                                            <span class="alumni-company-name">First Point Creations</span>
+                    <!-- SLIDE 1 -->
+                    <div
+                        class="carousel-item active"
+                        style="
+                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
+                        "
+                    >
+                        <div class="hero-overlay"></div>
+                        <div class="container hero-content">
+                            <div class="row justify-content-start">
+                                <div class="col-xl-6 col-lg-7">
+                                    <div class="hero-content-wrapper">
+                                        <div class="hero-tagline">Welcome To Accurate</div>
+                                        <h2 class="hero-heading">Discover Your Potential with Accurate</h2>
+                                        <p class="hero-subtext mb-4">
+                                            Unleash your potential with diverse programs and endless opportunities for
+                                            transformative learning.
+                                        </p>
+                                        <div class="hero-badges mb-4">
+                                            <span>Management</span>
+                                            <span>Engineering</span>
+                                            <span>Pharmacy</span>
+                                            <span>Architecture</span>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Deepak -->
-                            <div class="col-md-6">
-                                <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
-                                    <div class="alumni-photo">
-                                        <img src="./images/DEEPAK-1.png" alt="Deepak Pratap">
-                                    </div>
-                                    <div class="alumni-content flex-grow-1">
-                                        <p class="alumni-batch mb-1">BCA Batch 2022</p>
-                                        <h3 class="alumni-name mb-1">Deepak Pratap</h3>
-                                        <p class="alumni-role mb-2">Placed at <span>First Point Creations</span></p>
-                                        <div class="alumni-company d-flex align-items-center">
-                                            <div class="alumni-logo-placeholder me-2">
-                                                <span>Logo</span>
-                                            </div>
-                                            <span class="alumni-company-name">First Point Creations</span>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <a href="#programs" class="btn btn-lg btn-accurate-primary">
+                                                Explore Programs
+                                            </a>
+                                            <a href="#about" class="btn btn-lg btn-accurate-outline">
+                                                Learn About Accurate
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -2456,345 +1988,1012 @@ body {
                         </div>
                     </div>
 
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                        <div class="row g-4">
-                            <!-- Monika -->
-                            <div class="col-md-6">
-                                <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
-                                    <div class="alumni-photo">
-                                        <img src="./images/monika-baghel.png" alt="Monika Baghel">
-                                    </div>
-                                    <div class="alumni-content flex-grow-1">
-                                        <p class="alumni-batch mb-1">BCA Batch 2022</p>
-                                        <h3 class="alumni-name mb-1">Monika Baghel</h3>
-                                        <p class="alumni-role mb-2">Placed at <span>First Point Creations</span></p>
-                                        <div class="alumni-company d-flex align-items-center">
-                                            <div class="alumni-logo-placeholder me-2">
-                                                <span>Logo</span>
-                                            </div>
-                                            <span class="alumni-company-name">First Point Creations</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Shobhika -->
-                            <div class="col-md-6">
-                                <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
-                                    <div class="alumni-photo">
-                                        <img src="./images/Shobhika Rajput2.jpeg" alt="Shobhika Rajput">
-                                    </div>
-                                    <div class="alumni-content flex-grow-1">
-                                        <p class="alumni-batch mb-1">BCA Batch 2022</p>
-                                        <h3 class="alumni-name mb-1">Shobhika Rajput</h3>
-                                        <p class="alumni-role mb-2">Placed at <span>Suwasthi Intense Healthcare Pvt.
-                                                Ltd.</span></p>
-                                        <div class="alumni-company d-flex align-items-center">
-                                            <div class="alumni-logo-placeholder me-2">
-                                                <span>Logo</span>
-                                            </div>
-                                            <span class="alumni-company-name">Suwasthi Intense Healthcare Pvt.
-                                                Ltd.</span>
-                                        </div>
+                    <!-- SLIDE 2 -->
+                    <div
+                        class="carousel-item"
+                        style="
+                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
+                        "
+                    >
+                        <div class="hero-overlay"></div>
+                        <div class="container hero-content">
+                            <div class="row justify-content-start">
+                                <div class="col-xl-6 col-lg-7">
+                                    <div class="hero-content-wrapper">
+                                        <div class="hero-tagline">Nationally Ranked</div>
+                                        <h2 class="hero-heading">Ranked Among India&apos;s Best B‑Schools</h2>
+                                        <p class="hero-subtext mb-3">
+                                            Consistently recognized for academic excellence and management education,
+                                            making Accurate a trusted choice for future leaders.
+                                        </p>
+                                        <ul class="hero-list mb-4">
+                                            <li>A+ Top 20 B‑School in India</li>
+                                            <li>Excellence in Management Education in North India</li>
+                                            <li>AAA+ Institute in U.P</li>
+                                        </ul>
+                                        <a href="#rankings" class="btn btn-lg btn-accurate-primary"> Learn More </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 3 -->
-                    <div class="carousel-item">
-                        <div class="row g-4">
-                            <!-- Yasha -->
-                            <div class="col-md-6">
-                                <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
-                                    <div class="alumni-photo">
-                                        <img src="./images/yasha.jpg" alt="Yasha">
-                                    </div>
-                                    <div class="alumni-content flex-grow-1">
-                                        <p class="alumni-batch mb-1">BCA Batch 2022</p>
-                                        <h3 class="alumni-name mb-1">Yasha</h3>
-                                        <p class="alumni-role mb-2">Placed at <span>Capital Boon</span></p>
-                                        <div class="alumni-company d-flex align-items-center">
-                                            <div class="alumni-logo-placeholder me-2">
-                                                <span>Logo</span>
-                                            </div>
-                                            <span class="alumni-company-name">Capital Boon</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- SLIDE 3: Placement Excellence -->
+                    <div
+                        class="carousel-item"
+                        style="
+                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
+                        "
+                    >
+                        <div class="hero-overlay"></div>
+                        <div class="container hero-content">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7">
+                                    <div class="hero-tagline">Career Outcomes</div>
+                                    <h2 class="display-5 fw-bold mb-3">100% Placement Track Record</h2>
+                                    <p class="mb-3">
+                                        Strong industry interface, dedicated placement cell, and global opportunities
+                                        help students launch rewarding careers.
+                                    </p>
 
-                            <!-- Sanjeev -->
-                            <div class="col-md-6">
-                                <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
-                                    <div class="alumni-photo">
-                                        <img src="./images/sanjeev Kumar Singh (2).jpeg" alt="Sanjeev Kumar Singh">
+                                    <div class="hero-stat-pill">
+                                        <strong>₹1.30 Crore</strong> – Highest Package (Dubai, SAAS Group)
                                     </div>
-                                    <div class="alumni-content flex-grow-1">
-                                        <p class="alumni-batch mb-1">BCA Batch 2022</p>
-                                        <h3 class="alumni-name mb-1">Sanjeev Kumar Singh</h3>
-                                        <p class="alumni-role mb-2">Placed at <span>Oppo India</span></p>
-                                        <div class="alumni-company d-flex align-items-center">
-                                            <div class="alumni-logo-placeholder me-2">
-                                                <span>Logo</span>
-                                            </div>
-                                            <span class="alumni-company-name">Oppo India</span>
-                                        </div>
+                                    <div class="hero-stat-pill">
+                                        <strong>₹7 LPA</strong> – Average Salary (Domestic)
                                     </div>
+                                    <div class="hero-stat-pill">
+                                        International opportunities with recruiters in Dubai, UK and more.
+                                    </div>
+
+                                    <div class="hero-badges mb-4">
+                                        <span>Oppo</span>
+                                        <span>Genpact</span>
+                                        <span>Bajaj Capital</span>
+                                        <span>Teleperformance</span>
+                                    </div>
+
+                                    <a href="#placements" class="btn btn-lg btn-accurate-primary"> View Placements </a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 4 -->
-                    <div class="carousel-item">
-                        <div class="row g-4">
-                            <!-- Komal -->
-                            <div class="col-md-6">
-                                <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
-                                    <div class="alumni-photo">
-                                        <img src="./images/komal-maurya.png" alt="komal-maurya">
-                                    </div>
-                                    <div class="alumni-content flex-grow-1">
-                                        <p class="alumni-batch mb-1">BCA Batch 2022</p>
-                                        <h3 class="alumni-name mb-1">Komal Maurya</h3>
-                                        <p class="alumni-role mb-2">Placed at <span>Genpact</span></p>
-                                        <div class="alumni-company d-flex align-items-center">
-                                            <div class="alumni-logo-placeholder me-2">
-                                                <span>Logo</span>
-                                            </div>
-                                            <span class="alumni-company-name">Genpact</span>
-                                        </div>
-                                    </div>
+                    <!-- SLIDE 4: Campus Facilities & Holistic Learning -->
+                    <div
+                        class="carousel-item"
+                        style="
+                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
+                        "
+                    >
+                        <div class="hero-overlay"></div>
+                        <div class="container hero-content">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7">
+                                    <div class="hero-tagline">Campus & Life</div>
+                                    <h2 class="display-5 fw-bold mb-3">Thrive in a 16‑Acre Green Campus</h2>
+                                    <p class="mb-3">
+                                        Modern facilities, expert faculty, and a vibrant campus culture create an
+                                        ecosystem for holistic development.
+                                    </p>
+                                    <ul class="hero-list mb-3">
+                                        <li>Auditorium, Seminar Hall &amp; Well‑equipped Labs</li>
+                                        <li>Rich Library &amp; Sports Facilities</li>
+                                        <li>Soft Skills &amp; Industrial Exposure Programs</li>
+                                        <li>Scholarships to support deserving students</li>
+                                    </ul>
+                                    <a href="#campus" class="btn btn-lg btn-accurate-primary"> Explore Campus </a>
                                 </div>
                             </div>
-
-                            <!-- empty spacer on large screens, hides on mobile -->
-                            <div class="col-md-6 d-none d-md-block"></div>
                         </div>
                     </div>
 
+                    <!-- SLIDE 5: Orientation & Expert Speakers -->
+                    <div
+                        class="carousel-item"
+                        style="
+                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
+                        "
+                    >
+                        <div class="hero-overlay"></div>
+                        <div class="container hero-content">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7">
+                                    <div class="hero-tagline">Orientation 2025</div>
+                                    <h2 class="display-5 fw-bold mb-3">Meet Industry &amp; Excellence Leaders</h2>
+                                    <p class="mb-3">
+                                        Orientation 2025 features renowned academicians, corporate leaders and achievers
+                                        who inspire students to aim higher.
+                                    </p>
+                                    <ul class="hero-list mb-3">
+                                        <li>Padma Shri Anand Kumar – Super 30</li>
+                                        <li>Ms. Pinki Singh – Arjuna Awardee, CWG Gold Medalist</li>
+                                        <li>Dr. Rajat Aggarwal – Professor &amp; HOD, IIT Roorkee</li>
+                                        <li>Leaders from Accenture, HCL Tech and more</li>
+                                    </ul>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <a href="#orientation" class="btn btn-lg btn-accurate-primary"> Know More </a>
+                                        <a href="#register" class="btn btn-lg btn-accurate-outline"> Register </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- controls -->
-                <button class="carousel-control-prev alumni-control" type="button" data-bs-target="#alumniCarousel"
-                    data-bs-slide="prev">
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next alumni-control" type="button" data-bs-target="#alumniCarousel"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+
+                <!-- Indicators -->
+                <div class="carousel-indicators mb-4">
+                    <button
+                        type="button"
+                        data-bs-target="#heroCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-label="Slide 1"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#heroCarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#heroCarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#heroCarousel"
+                        data-bs-slide-to="3"
+                        aria-label="Slide 4"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#heroCarousel"
+                        data-bs-slide-to="4"
+                        aria-label="Slide 5"
+                    ></button>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-    <section class="testimonials-section py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="testimonials-title mb-2">What Our Students Say</h2>
-      <p class="testimonials-subtitle mb-0">
-        Real stories from learners building successful careers with Accurate
-      </p>
-    </div>
-
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <div class="testimonial-card h-100">
-                <div class="testimonial-header d-flex align-items-center mb-3">
-                  <div class="testimonial-avatar">
-                    <span>AV</span>
-                  </div>
-                  <div>
-                    <h3 class="testimonial-name mb-0">Aman Verma</h3>
-                    <p class="testimonial-meta mb-0">BCA, Batch 2022 · Placed at Genpact</p>
-                  </div>
+        <!-- SECTION 2: ABOUT + KEY STATS -->
+        <section class="py-5 py-lg-6 bg-section-light about-section" id="about">
+            <div class="container">
+                <!-- Heading + Paragraph -->
+                <div class="row justify-content-center mb-4 mb-lg-5">
+                    <div class="col-lg-10 col-xl-9 text-center about-header">
+                        <span class="badge rounded-pill mb-2 about-pill"> About Accurate Group </span>
+                        <h2 class="fw-bold section-heading mb-3">
+                            Committed to Academic Excellence &amp; Holistic Development Since 2006
+                        </h2>
+                        <p class="lead about-text">
+                            Established in 2006 under the Accurate Education &amp; Research Society, Accurate Group of
+                            Institutions has grown into a leading higher‑education group in Greater Noida and
+                            Delhi&nbsp;NCR. It offers programs in Management, Engineering, Pharmacy, Architecture, Law,
+                            and Diploma studies, with a strong focus on academic excellence, holistic development, and
+                            industry‑oriented learning that empowers future leaders.
+                        </p>
+                    </div>
                 </div>
-                <p class="testimonial-text mb-3">
-                  “The industry‑oriented curriculum and supportive faculty at Accurate
-                  helped me gain confidence in both technical skills and communication.”
-                </p>
-                <div class="testimonial-company">
-                  <span class="badge-company">Genpact</span>
+
+                <!-- Stats Cards -->
+                <div class="row g-3 g-md-4 about-stats-row">
+                    <!-- Box 1 – Years of Excellence -->
+                    <div class="col-6 col-lg-3">
+                        <div class="stat-card h-100 text-center fade-up delay-1">
+                            <div class="stat-number">20<span class="stat-plus">+</span></div>
+                            <div class="stat-label">Years of Excellence</div>
+                            <p class="stat-desc">Building futures with quality education since 2006.</p>
+                        </div>
+                    </div>
+
+                    <!-- Box 2 – Programs / Disciplines -->
+                    <div class="col-6 col-lg-3">
+                        <div class="stat-card h-100 text-center fade-up delay-2">
+                            <div class="stat-number">20<span class="stat-plus">+</span></div>
+                            <div class="stat-label">Programs &amp; Disciplines</div>
+                            <p class="stat-desc">Management, Engineering, Pharmacy, Architecture, Law &amp; Diploma.</p>
+                        </div>
+                    </div>
+
+                    <!-- Box 3 – Recruiters / Placement Drives -->
+                    <div class="col-6 col-lg-3">
+                        <div class="stat-card h-100 text-center fade-up delay-3">
+                            <div class="stat-number">200<span class="stat-plus">+</span></div>
+                            <div class="stat-label">Recruiting Partners</div>
+                            <p class="stat-desc">Leading corporates visiting for campus drives and placements.</p>
+                        </div>
+                    </div>
+
+                    <!-- Box 4 – Placement & Salary (use 100% Track Record) -->
+                    <div class="col-6 col-lg-3">
+                        <div class="stat-card h-100 text-center fade-up delay-4">
+                            <div class="stat-number">100<span class="stat-plus">%</span></div>
+                            <div class="stat-label">Placement Track Record</div>
+                            <p class="stat-desc">Strong outcomes with dedicated placement support and global offers.</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
+        </section>
 
-            <div class="col-md-6 col-lg-4">
-              <div class="testimonial-card h-100">
-                <div class="testimonial-header d-flex align-items-center mb-3">
-                  <div class="testimonial-avatar">
-                    <span>MK</span>
-                  </div>
-                  <div>
-                    <h3 class="testimonial-name mb-0">Monika Kumar</h3>
-                    <p class="testimonial-meta mb-0">MBA, Batch 2023 · Placed at Oppo India</p>
-                  </div>
+        <!-- SECTION 3: NATIONAL RANKINGS -->
+        <section class="ranked-section py-5">
+            <div class="container">
+                <div class="row align-items-stretch g-0 ranked-wrapper">
+                    <!-- Left block -->
+                    <div class="col-lg-6 bg-light ranked-left p-4 p-md-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <!-- Placeholder logo / badge -->
+                            <div class="ranked-logo me-3">
+                                <span class="badge-icon">★</span>
+                            </div>
+                            <div>
+                                <p class="ranked-kicker mb-1 text-uppercase">Awarded &amp; Recognized B‑School</p>
+                                <h3 class="ranked-heading mb-0">Nationally Ranked. Globally Recognized.</h3>
+                            </div>
+                        </div>
+
+                        <ul class="ranked-list mb-3">
+                            <li>Ranked A+ Top 20 B‑School in India</li>
+                            <li>Excellence in Management Education in North India</li>
+                            <li>Ranked AAA+ Institute in U.P</li>
+                            <li>Ranked A+++ Best B‑School</li>
+                        </ul>
+
+                        <p class="ranked-text mb-0">
+                            Accurate Institute has been consistently recognized for its quality in management education,
+                            earning strong national rankings and premium ratings across India.
+                        </p>
+                    </div>
+
+                    <!-- Right block -->
+                    <div class="col-lg-6 ranked-right text-white d-flex flex-column justify-content-center p-4 p-md-5">
+                        <div class="ranked-item mb-5 mb-lg-4">
+                            <p class="ranked-label text-uppercase mb-2">Among</p>
+                            <div class="d-flex align-items-baseline flex-wrap">
+                                <span class="ranked-number me-2">Top 20</span>
+                                <span class="ranked-support">B‑Schools in India</span>
+                            </div>
+                        </div>
+
+                        <div class="ranked-item">
+                            <p class="ranked-label text-uppercase mb-2">Awarded as</p>
+                            <div class="d-flex align-items-baseline flex-wrap">
+                                <span class="ranked-number me-2">A+++</span>
+                                <span class="ranked-support">Best B‑School Rating</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="testimonial-text mb-3">
-                  “Regular placement training sessions, mock interviews and aptitude
-                  classes made my campus placement journey smooth and structured.”
-                </p>
-                <div class="testimonial-company">
-                  <span class="badge-company">Oppo India</span>
-                </div>
-              </div>
             </div>
+        </section>
 
-            <div class="col-md-6 col-lg-4 d-none d-lg-block">
-              <div class="testimonial-card h-100">
-                <div class="testimonial-header d-flex align-items-center mb-3">
-                  <div class="testimonial-avatar">
-                    <span>SR</span>
-                  </div>
-                  <div>
-                    <h3 class="testimonial-name mb-0">Shobhika Rajput</h3>
-                    <p class="testimonial-meta mb-0">BBA, Batch 2021 · Placed at First Point Creations</p>
-                  </div>
+        <!-- Outstanding Placement Records Section -->
+        <section class="placement-section py-5">
+            <div class="container">
+                <!-- Top heading + paragraph -->
+                <div class="row justify-content-center text-center mb-4">
+                    <div class="col-lg-10">
+                        <h2 class="placement-heading fw-bold mb-3">Outstanding Placement Records</h2>
+                        <p class="placement-text mb-0 py-3">
+                            Accurate Group of Institutions maintains a consistent 100% placement track record, backed by
+                            strong industry interface, value-added programs, and dedicated placement support, enabling
+                            students to secure excellent national and international opportunities.
+                        </p>
+                    </div>
                 </div>
-                <p class="testimonial-text mb-3">
-                  “Exposure to live projects and internships helped me understand how
-                  classroom concepts are applied in real companies.”
-                </p>
-                <div class="testimonial-company">
-                  <span class="badge-company">First Point Creations</span>
+
+                <!-- Top wide strip - 4 main placement stats -->
+                <div class="row g-3 mb-4">
+                    <div class="col-12">
+                        <div class="row g-3 align-items-stretch">
+                            <!-- Card 1 -->
+                            <div class="col-6 col-lg-3">
+                                <div class="placement-main-card">
+                                    <div class="big-number">100%</div>
+                                    <div class="label">Placement Track Record</div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="col-6 col-lg-3">
+                                <div class="placement-main-card">
+                                    <div class="big-number">₹1.30 Cr</div>
+                                    <div class="label">Highest International Package</div>
+                                    <div class="subtext">Randhir Kumar – SAAS Group, Dubai</div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="col-6 col-lg-3">
+                                <div class="placement-main-card">
+                                    <div class="big-number">₹17 LPA</div>
+                                    <div class="label">Highest Domestic Package</div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="col-6 col-lg-3">
+                                <div class="placement-main-card">
+                                    <div class="big-number">₹7 LPA</div>
+                                    <div class="label">Average Package</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
+                <!-- Bottom row - 4 supporting stats -->
+                <div class="row g-3">
+                    <!-- Box 1 -->
+                    <div class="col-6 col-lg-3">
+                        <div class="placement-support-card">
+                            <div class="big-number">200+</div>
+                            <div class="label">Companies for Campus Drives</div>
+                        </div>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="col-6 col-lg-3">
+                        <div class="placement-support-card">
+                            <div class="big-number">Multiple</div>
+                            <div class="label">International Placements (Dubai, UK etc.)</div>
+                        </div>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="col-6 col-lg-3">
+                        <div class="placement-support-card">
+                            <div class="big-number">Advanced</div>
+                            <div class="label">Training in Excel &amp; Power BI</div>
+                        </div>
+                    </div>
+                    <!-- Box 4 -->
+                    <div class="col-6 col-lg-3">
+                        <div class="placement-support-card">
+                            <div class="big-number">Campus to Corporate</div>
+                            <div class="label">Workshops &amp; Mentoring</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
+        </section>
 
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <div class="testimonial-card h-100">
-                <div class="testimonial-header d-flex align-items-center mb-3">
-                  <div class="testimonial-avatar">
-                    <span>YK</span>
-                  </div>
-                  <div>
-                    <h3 class="testimonial-name mb-0">Yashika Kapoor</h3>
-                    <p class="testimonial-meta mb-0">BCA, Batch 2022 · Placed at Capital Boon</p>
-                  </div>
+        <!-- Section 5 - Alumni -->
+        <section class="alumni-section py-5">
+            <div class="container">
+                <!-- Heading -->
+                <div class="text-center mb-5">
+                    <h2 class="alumni-title mb-2">Our Alumni. Your Future</h2>
+                    <p class="alumni-subtitle mb-0">Successful careers across leading companies in India and abroad</p>
                 </div>
-                <p class="testimonial-text mb-3">
-                  “The mentoring from faculty and alumni gave me clarity about career
-                  options in finance and analytics.”
-                </p>
-                <div class="testimonial-company">
-                  <span class="badge-company">Capital Boon</span>
+
+                <!-- Slider -->
+                <div id="alumniCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-4">
+                                <!-- Aman -->
+                                <div class="col-md-6">
+                                    <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
+                                        <div class="alumni-photo">
+                                            <img src="./images/Aman_BCA.png" alt="Aman Kumar" />
+                                        </div>
+                                        <div class="alumni-content flex-grow-1">
+                                            <p class="alumni-batch mb-1">BCA Batch 2022</p>
+                                            <h3 class="alumni-name mb-1">Aman Kumar</h3>
+                                            <p class="alumni-role mb-2">Placed at <span>First Point Creations</span></p>
+                                            <div class="alumni-company d-flex align-items-center">
+                                                <div class="alumni-logo-placeholder me-2">
+                                                    <!-- company logo here -->
+                                                    <span>Logo</span>
+                                                </div>
+                                                <span class="alumni-company-name">First Point Creations</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Deepak -->
+                                <div class="col-md-6">
+                                    <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
+                                        <div class="alumni-photo">
+                                            <img src="./images/DEEPAK-1.png" alt="Deepak Pratap" />
+                                        </div>
+                                        <div class="alumni-content flex-grow-1">
+                                            <p class="alumni-batch mb-1">BCA Batch 2022</p>
+                                            <h3 class="alumni-name mb-1">Deepak Pratap</h3>
+                                            <p class="alumni-role mb-2">Placed at <span>First Point Creations</span></p>
+                                            <div class="alumni-company d-flex align-items-center">
+                                                <div class="alumni-logo-placeholder me-2">
+                                                    <span>Logo</span>
+                                                </div>
+                                                <span class="alumni-company-name">First Point Creations</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <!-- Monika -->
+                                <div class="col-md-6">
+                                    <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
+                                        <div class="alumni-photo">
+                                            <img src="./images/monika-baghel.png" alt="Monika Baghel" />
+                                        </div>
+                                        <div class="alumni-content flex-grow-1">
+                                            <p class="alumni-batch mb-1">BCA Batch 2022</p>
+                                            <h3 class="alumni-name mb-1">Monika Baghel</h3>
+                                            <p class="alumni-role mb-2">Placed at <span>First Point Creations</span></p>
+                                            <div class="alumni-company d-flex align-items-center">
+                                                <div class="alumni-logo-placeholder me-2">
+                                                    <span>Logo</span>
+                                                </div>
+                                                <span class="alumni-company-name">First Point Creations</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Shobhika -->
+                                <div class="col-md-6">
+                                    <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
+                                        <div class="alumni-photo">
+                                            <img src="./images/Shobhika Rajput2.jpeg" alt="Shobhika Rajput" />
+                                        </div>
+                                        <div class="alumni-content flex-grow-1">
+                                            <p class="alumni-batch mb-1">BCA Batch 2022</p>
+                                            <h3 class="alumni-name mb-1">Shobhika Rajput</h3>
+                                            <p class="alumni-role mb-2">
+                                                Placed at <span>Suwasthi Intense Healthcare Pvt. Ltd.</span>
+                                            </p>
+                                            <div class="alumni-company d-flex align-items-center">
+                                                <div class="alumni-logo-placeholder me-2">
+                                                    <span>Logo</span>
+                                                </div>
+                                                <span class="alumni-company-name"
+                                                    >Suwasthi Intense Healthcare Pvt. Ltd.</span
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <!-- Yasha -->
+                                <div class="col-md-6">
+                                    <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
+                                        <div class="alumni-photo">
+                                            <img src="./images/yasha.jpg" alt="Yasha" />
+                                        </div>
+                                        <div class="alumni-content flex-grow-1">
+                                            <p class="alumni-batch mb-1">BCA Batch 2022</p>
+                                            <h3 class="alumni-name mb-1">Yasha</h3>
+                                            <p class="alumni-role mb-2">Placed at <span>Capital Boon</span></p>
+                                            <div class="alumni-company d-flex align-items-center">
+                                                <div class="alumni-logo-placeholder me-2">
+                                                    <span>Logo</span>
+                                                </div>
+                                                <span class="alumni-company-name">Capital Boon</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sanjeev -->
+                                <div class="col-md-6">
+                                    <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
+                                        <div class="alumni-photo">
+                                            <img
+                                                src="./images/sanjeev Kumar Singh (2).jpeg"
+                                                alt="Sanjeev Kumar Singh"
+                                            />
+                                        </div>
+                                        <div class="alumni-content flex-grow-1">
+                                            <p class="alumni-batch mb-1">BCA Batch 2022</p>
+                                            <h3 class="alumni-name mb-1">Sanjeev Kumar Singh</h3>
+                                            <p class="alumni-role mb-2">Placed at <span>Oppo India</span></p>
+                                            <div class="alumni-company d-flex align-items-center">
+                                                <div class="alumni-logo-placeholder me-2">
+                                                    <span>Logo</span>
+                                                </div>
+                                                <span class="alumni-company-name">Oppo India</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <!-- Komal -->
+                                <div class="col-md-6">
+                                    <div class="alumni-card d-flex flex-column flex-md-row align-items-center">
+                                        <div class="alumni-photo">
+                                            <img src="./images/komal-maurya.png" alt="komal-maurya" />
+                                        </div>
+                                        <div class="alumni-content flex-grow-1">
+                                            <p class="alumni-batch mb-1">BCA Batch 2022</p>
+                                            <h3 class="alumni-name mb-1">Komal Maurya</h3>
+                                            <p class="alumni-role mb-2">Placed at <span>Genpact</span></p>
+                                            <div class="alumni-company d-flex align-items-center">
+                                                <div class="alumni-logo-placeholder me-2">
+                                                    <span>Logo</span>
+                                                </div>
+                                                <span class="alumni-company-name">Genpact</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- empty spacer on large screens, hides on mobile -->
+                                <div class="col-md-6 d-none d-md-block"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- controls -->
+                    <button
+                        class="carousel-control-prev alumni-control"
+                        type="button"
+                        data-bs-target="#alumniCarousel"
+                        data-bs-slide="prev"
+                    >
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next alumni-control"
+                        type="button"
+                        data-bs-target="#alumniCarousel"
+                        data-bs-slide="next"
+                    >
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-              </div>
             </div>
+        </section>
 
-            <div class="col-md-6 col-lg-4">
-              <div class="testimonial-card h-100">
-                <div class="testimonial-header d-flex align-items-center mb-3">
-                  <div class="testimonial-avatar">
-                    <span>SK</span>
-                  </div>
-                  <div>
-                    <h3 class="testimonial-name mb-0">Sanjeev Kumar</h3>
-                    <p class="testimonial-meta mb-0">MBA, Batch 2021 · Placed at Oppo India</p>
-                  </div>
+        <section class="testimonials-section py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="testimonials-title mb-2">What Our Students Say</h2>
+                    <p class="testimonials-subtitle mb-0">
+                        Real stories from learners building successful careers with Accurate
+                    </p>
                 </div>
-                <p class="testimonial-text mb-3">
-                  “From soft skills to group discussions, the training team prepared us
-                  thoroughly for company interviews.”
-                </p>
-                <div class="testimonial-company">
-                  <span class="badge-company">Oppo India</span>
+
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="testimonial-card h-100">
+                                        <div class="testimonial-header d-flex align-items-center mb-3">
+                                            <div class="testimonial-avatar">
+                                                <span>AV</span>
+                                            </div>
+                                            <div>
+                                                <h3 class="testimonial-name mb-0">Aman Verma</h3>
+                                                <p class="testimonial-meta mb-0">BCA, Batch 2022 · Placed at Genpact</p>
+                                            </div>
+                                        </div>
+                                        <p class="testimonial-text mb-3">
+                                            “The industry‑oriented curriculum and supportive faculty at Accurate helped
+                                            me gain confidence in both technical skills and communication.”
+                                        </p>
+                                        <div class="testimonial-company">
+                                            <span class="badge-company">Genpact</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="testimonial-card h-100">
+                                        <div class="testimonial-header d-flex align-items-center mb-3">
+                                            <div class="testimonial-avatar">
+                                                <span>MK</span>
+                                            </div>
+                                            <div>
+                                                <h3 class="testimonial-name mb-0">Monika Kumar</h3>
+                                                <p class="testimonial-meta mb-0">
+                                                    MBA, Batch 2023 · Placed at Oppo India
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p class="testimonial-text mb-3">
+                                            “Regular placement training sessions, mock interviews and aptitude classes
+                                            made my campus placement journey smooth and structured.”
+                                        </p>
+                                        <div class="testimonial-company">
+                                            <span class="badge-company">Oppo India</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-4 d-none d-lg-block">
+                                    <div class="testimonial-card h-100">
+                                        <div class="testimonial-header d-flex align-items-center mb-3">
+                                            <div class="testimonial-avatar">
+                                                <span>SR</span>
+                                            </div>
+                                            <div>
+                                                <h3 class="testimonial-name mb-0">Shobhika Rajput</h3>
+                                                <p class="testimonial-meta mb-0">
+                                                    BBA, Batch 2021 · Placed at First Point Creations
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p class="testimonial-text mb-3">
+                                            “Exposure to live projects and internships helped me understand how
+                                            classroom concepts are applied in real companies.”
+                                        </p>
+                                        <div class="testimonial-company">
+                                            <span class="badge-company">First Point Creations</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="testimonial-card h-100">
+                                        <div class="testimonial-header d-flex align-items-center mb-3">
+                                            <div class="testimonial-avatar">
+                                                <span>YK</span>
+                                            </div>
+                                            <div>
+                                                <h3 class="testimonial-name mb-0">Yashika Kapoor</h3>
+                                                <p class="testimonial-meta mb-0">
+                                                    BCA, Batch 2022 · Placed at Capital Boon
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p class="testimonial-text mb-3">
+                                            “The mentoring from faculty and alumni gave me clarity about career options
+                                            in finance and analytics.”
+                                        </p>
+                                        <div class="testimonial-company">
+                                            <span class="badge-company">Capital Boon</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="testimonial-card h-100">
+                                        <div class="testimonial-header d-flex align-items-center mb-3">
+                                            <div class="testimonial-avatar">
+                                                <span>SK</span>
+                                            </div>
+                                            <div>
+                                                <h3 class="testimonial-name mb-0">Sanjeev Kumar</h3>
+                                                <p class="testimonial-meta mb-0">
+                                                    MBA, Batch 2021 · Placed at Oppo India
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p class="testimonial-text mb-3">
+                                            “From soft skills to group discussions, the training team prepared us
+                                            thoroughly for company interviews.”
+                                        </p>
+                                        <div class="testimonial-company">
+                                            <span class="badge-company">Oppo India</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-4 d-none d-lg-block">
+                                    <div class="testimonial-card h-100">
+                                        <div class="testimonial-header d-flex align-items-center mb-3">
+                                            <div class="testimonial-avatar">
+                                                <span>KM</span>
+                                            </div>
+                                            <div>
+                                                <h3 class="testimonial-name mb-0">Komal Maurya</h3>
+                                                <p class="testimonial-meta mb-0">BCA, Batch 2022 · Placed at Genpact</p>
+                                            </div>
+                                        </div>
+                                        <p class="testimonial-text mb-3">
+                                            “Accurate’s focus on practical learning, presentations and labs made me
+                                            placement‑ready by the final semester.”
+                                        </p>
+                                        <div class="testimonial-company">
+                                            <span class="badge-company">Genpact</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- controls -->
+                    <button
+                        class="carousel-control-prev testimonial-control"
+                        type="button"
+                        data-bs-target="#testimonialCarousel"
+                        data-bs-slide="prev"
+                    >
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next testimonial-control"
+                        type="button"
+                        data-bs-target="#testimonialCarousel"
+                        data-bs-slide="next"
+                    >
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-              </div>
             </div>
+        </section>
 
-            <div class="col-md-6 col-lg-4 d-none d-lg-block">
-              <div class="testimonial-card h-100">
-                <div class="testimonial-header d-flex align-items-center mb-3">
-                  <div class="testimonial-avatar">
-                    <span>KM</span>
-                  </div>
-                  <div>
-                    <h3 class="testimonial-name mb-0">Komal Maurya</h3>
-                    <p class="testimonial-meta mb-0">BCA, Batch 2022 · Placed at Genpact</p>
-                  </div>
+        <footer class="bg-[#0052cc] text-white">
+            <div class="max-w-6xl mx-auto px-4 py-10">
+                <!-- Columns wrapper -->
+                <div class="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
+                    <!-- Column 1 -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Courses Offered</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Bachelor of Business Administration (BBA)</a></li>
+                            <li><a href="#" class="hover:underline">Bachelor of Computer Applications (BCA)</a></li>
+                            <li><a href="#" class="hover:underline">Bachelor of Commerce (B.Com)</a></li>
+                            <li><a href="#" class="hover:underline">MBA</a></li>
+                            <li><a href="#" class="hover:underline">MCA</a></li>
+                            <li><a href="#" class="hover:underline">B.Tech</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Grievance Redressal Cell</a></li>
+                            <li><a href="#" class="hover:underline">Admission Procedure</a></li>
+                            <li><a href="#" class="hover:underline">Apply Online</a></li>
+                            <li><a href="#" class="hover:underline">Articles / Blogs</a></li>
+                            <li><a href="#" class="hover:underline">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Placements</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Placement Highlights</a></li>
+                            <li><a href="#" class="hover:underline">Placement Record</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4 -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Our Institutions</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Group Website</a></li>
+                            <li><a href="#" class="hover:underline">MBA Website</a></li>
+                            <li><a href="#" class="hover:underline">Polytechnic Website</a></li>
+                            <li><a href="#" class="hover:underline">Pharmacy Website</a></li>
+                            <li><a href="#" class="hover:underline">Law Website</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="testimonial-text mb-3">
-                  “Accurate’s focus on practical learning, presentations and labs made
-                  me placement‑ready by the final semester.”
-                </p>
-                <div class="testimonial-company">
-                  <span class="badge-company">Genpact</span>
-                </div>
-              </div>
+
+                <!-- Bottom bar -->
+                <section class="bg-[#0052cc] text-white mt-5">
+                    <div class="max-w-6xl mx-auto px-4 py-10 border-y border-white/20">
+                        <div class="grid gap-8 md:grid-cols-[2fr,2fr,1.5fr] items-start">
+                            <!-- About group -->
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">About Group</h3>
+                                <p class="text-sm leading-relaxed mb-4">
+                                    The Accurate Group of Institutions was incepted in the year 2006 under Accurate
+                                    Education &amp; Research Society. Demonstrating growth since beginning, it has
+                                    become one of the prominent educational groups devoted to management, engineering,
+                                    technology, architecture and diploma courses.
+                                </p>
+
+                                <ul class="mt-4 space-y-2 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="mt-1">📍</span>
+                                        <span>49, Knowledge Park III, Greater Noida, UP</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="mt-1">✉️</span>
+                                        <a href="mailto:admissions@example.com" class="hover:underline">
+                                            admissions@example.com
+                                        </a>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="mt-1">📞</span>
+                                        <a href="tel:+919999999999" class="hover:underline">+91 99999 99999</a>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="mt-1">📞</span>
+                                        <a href="tel:+919888888888" class="hover:underline">+91 98888 88888</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Awarded by logos -->
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">Awarded By</h3>
+
+                                <div class="grid grid-cols-3 gap-3 bg-white/5 p-3 rounded">
+                                    <!-- Replace src with your logo images -->
+                                    <img
+                                        src="/logos/jagran-josh.png"
+                                        alt="Jagran Josh"
+                                        class="bg-white rounded object-contain h-12 w-full"
+                                    />
+                                    <img
+                                        src="/logos/assocham.png"
+                                        alt="ASSOCHAM"
+                                        class="bg-white rounded object-contain h-12 w-full"
+                                    />
+                                    <img
+                                        src="/logos/xyz.png"
+                                        alt="Award"
+                                        class="bg-white rounded object-contain h-12 w-full"
+                                    />
+
+                                    <img
+                                        src="/logos/education-post.png"
+                                        alt="Education Post"
+                                        class="bg-white rounded object-contain h-12 w-full"
+                                    />
+                                    <img
+                                        src="/logos/bw-businessworld.png"
+                                        alt="BW Businessworld"
+                                        class="bg-white rounded object-contain h-12 w-full"
+                                    />
+                                    <img
+                                        src="/logos/another.png"
+                                        alt="Award"
+                                        class="bg-white rounded object-contain h-12 w-full"
+                                    />
+
+                                    <img
+                                        src="/logos/aiu.png"
+                                        alt="AIU"
+                                        class="bg-white rounded object-contain h-12 w-full"
+                                    />
+                                    <img
+                                        src="/logos/forbes.png"
+                                        alt="Forbes"
+                                        class="bg-white rounded object-contain h-12 w-full"
+                                    />
+                                    <img
+                                        src="/logos/other.png"
+                                        alt="Award"
+                                        class="bg-white rounded object-contain h-12 w-full"
+                                    />
+                                </div>
+
+                                <button class="mt-3 text-sm font-medium hover:underline">&amp; Many More</button>
+                            </div>
+
+                            <!-- Social + placement badges -->
+                            <div class="space-y-6">
+                                <!-- Social -->
+                                <div>
+                                    <h3 class="text-lg font-semibold mb-4">Follow us on Social Media</h3>
+                                    <div class="flex flex-wrap gap-3">
+                                        <a
+                                            href="#"
+                                            class="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition"
+                                        >
+                                            <span class="text-lg">f</span>
+                                        </a>
+                                        <a
+                                            href="#"
+                                            class="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition"
+                                        >
+                                            <span class="text-lg">in</span>
+                                        </a>
+                                        <a
+                                            href="#"
+                                            class="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition"
+                                        >
+                                            <span class="text-lg">▶</span>
+                                        </a>
+                                        <a
+                                            href="#"
+                                            class="h-9 w-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition"
+                                        >
+                                            <span class="text-lg">📷</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Placement badges -->
+                                <div>
+                                    <h3 class="text-lg font-semibold mb-4">Award &amp; Placement Track Record</h3>
+                                    <div class="flex flex-wrap gap-4">
+                                        <!-- Replace src with real badge images -->
+                                        <img
+                                            src="/badges/100-placement.png"
+                                            alt="100% Placement"
+                                            class="h-20 object-contain"
+                                        />
+                                        <img
+                                            src="/badges/top-institute.png"
+                                            alt="Top Institute"
+                                            class="h-20 object-contain"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- bottom credit bar -->
+                        <p class="mt-8 text-center text-xs md:text-sm">
+                            Designed &amp; Developed By <a href="https://brandshow.in/" class="font-semibold hover:underline" target="_blank">@Brandshow</a>
+                        </p>
+                    </div>
+                </section>
             </div>
-          </div>
-        </div>
+        </footer>
 
-      </div>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Small inline script to explicitly initialize and debug the carousel -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                try {
+                    const el = document.getElementById("heroCarousel");
+                    if (!el) {
+                        console.warn("heroCarousel element not found");
+                        return;
+                    }
 
-      <!-- controls -->
-      <button class="carousel-control-prev testimonial-control" type="button"
-              data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next testimonial-control" type="button"
-              data-bs-target="#testimonialCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-</section>
+                    // Ensure bootstrap namespace exists
+                    if (typeof bootstrap === "undefined") {
+                        console.error("Bootstrap JS not loaded; carousel cannot initialize");
+                        return;
+                    }
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Small inline script to explicitly initialize and debug the carousel -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        try {
-          const el = document.getElementById("heroCarousel");
-          if (!el) {
-            console.warn("heroCarousel element not found");
-            return;
-          }
+                    // Get or create instance and start automatic cycling
+                    const carousel = bootstrap.Carousel.getOrCreateInstance(el, {
+                        interval: parseInt(el.getAttribute("data-bs-interval")) || 5000,
+                        ride: el.getAttribute("data-bs-ride") || "carousel",
+                    });
 
-          // Ensure bootstrap namespace exists
-          if (typeof bootstrap === "undefined") {
-            console.error(
-              "Bootstrap JS not loaded; carousel cannot initialize"
-            );
-            return;
-          }
+                    // If not already cycling, call cycle()
+                    if (typeof carousel.cycle === "function") {
+                        carousel.cycle();
+                    }
 
-          // Get or create instance and start automatic cycling
-          const carousel = bootstrap.Carousel.getOrCreateInstance(el, {
-            interval: parseInt(el.getAttribute("data-bs-interval")) || 5000,
-            ride: el.getAttribute("data-bs-ride") || "carousel",
-          });
-
-          // If not already cycling, call cycle()
-          if (typeof carousel.cycle === "function") {
-            carousel.cycle();
-          }
-
-          console.info("Carousel initialized:", carousel);
-        } catch (err) {
-          console.error("Error initializing carousel:", err);
-        }
-      });
-    </script>
-  </body>
+                    console.info("Carousel initialized:", carousel);
+                } catch (err) {
+                    console.error("Error initializing carousel:", err);
+                }
+            });
+        </script>
+    </body>
 </html>
