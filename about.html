@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Placements - Premium Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+:root {
+  --acc-blue: #0057a3;
+  --acc-blue-dark: #003c73;
+  --acc-gold: #ffc107;
+}
+
+.testimonials-section {
+  background: #f3f4f6;
+}
+
+.testimonials-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--acc-blue-dark);
+}
+
+.testimonials-subtitle {
+  font-size: 0.98rem;
+  color: #6b7280;
+}
+
+/* card */
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0, 60, 115, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 60, 115, 0.18);
+  border-color: rgba(0, 87, 163, 0.4);
+}
+
+/* avatar */
+.testimonial-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--acc-blue), var(--acc-gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  margin-right: 0.85rem;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* text */
+.testimonial-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--acc-blue-dark);
+}
+
+.testimonial-meta {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+/* company badge */
+.testimonial-company {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.badge-company {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--acc-blue-dark);
+  background: rgba(255, 193, 7, 0.15);
+  border: 1px solid rgba(255, 193, 7, 0.7);
+}
+
+/* carousel controls */
+#testimonialCarousel {
+  position: relative;
+}
+
+.testimonial-control {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 87, 163, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 60, 115, 0.25);
+}
+
+.testimonial-control.carousel-control-prev {
+  left: -78px;
+}
+
+.testimonial-control.carousel-control-next {
+  right: -78px;
+}
+
+.testimonial-control:hover {
+  background-color: var(--acc-blue);
+  border-color: var(--acc-blue);
+}
+
+.testimonial-control .carousel-control-prev-icon,
+.testimonial-control .carousel-control-next-icon {
+  filter: invert(0) grayscale(1);
+}
+
+/* responsive */
+@media (max-width: 991.98px) {
+  .testimonial-control.carousel-control-prev {
+    left: 4px;
+  }
+
+  .testimonial-control.carousel-control-next {
+    right: 4px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .testimonial-card {
+    padding: 1.25rem 1.3rem;
+  }
+}
+
+
+    </style>
+</head>
+
+<body>
+ <section class="testimonials-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="testimonials-title mb-2">What Our Students Say</h2>
+      <p class="testimonials-subtitle mb-0">
+        Real stories from learners building successful careers with Accurate
+      </p>
+    </div>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="testimonial-card h-100">
+                <div class="testimonial-header d-flex align-items-center mb-3">
+                  <div class="testimonial-avatar">
+                    <span>AV</span>
+                  </div>
+                  <div>
+                    <h3 class="testimonial-name mb-0">Aman Verma</h3>
+                    <p class="testimonial-meta mb-0">BCA, Batch 2022 · Placed at Genpact</p>
+                  </div>
+                </div>
+                <p class="testimonial-text mb-3">
+                  “The industry‑oriented curriculum and supportive faculty at Accurate
+                  helped me gain confidence in both technical skills and communication.”
+                </p>
+                <div class="testimonial-company">
+                  <span class="badge-company">Genpact</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="testimonial-card h-100">
+                <div class="testimonial-header d-flex align-items-center mb-3">
+                  <div class="testimonial-avatar">
+                    <span>MK</span>
+                  </div>
+                  <div>
+                    <h3 class="testimonial-name mb-0">Monika Kumar</h3>
+                    <p class="testimonial-meta mb-0">MBA, Batch 2023 · Placed at Oppo India</p>
+                  </div>
+                </div>
+                <p class="testimonial-text mb-3">
+                  “Regular placement training sessions, mock interviews and aptitude
+                  classes made my campus placement journey smooth and structured.”
+                </p>
+                <div class="testimonial-company">
+                  <span class="badge-company">Oppo India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-none d-lg-block">
+              <div class="testimonial-card h-100">
+                <div class="testimonial-header d-flex align-items-center mb-3">
+                  <div class="testimonial-avatar">
+                    <span>SR</span>
+                  </div>
+                  <div>
+                    <h3 class="testimonial-name mb-0">Shobhika Rajput</h3>
+                    <p class="testimonial-meta mb-0">BBA, Batch 2021 · Placed at First Point Creations</p>
+                  </div>
+                </div>
+                <p class="testimonial-text mb-3">
+                  “Exposure to live projects and internships helped me understand how
+                  classroom concepts are applied in real companies.”
+                </p>
+                <div class="testimonial-company">
+                  <span class="badge-company">First Point Creations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="testimonial-card h-100">
+                <div class="testimonial-header d-flex align-items-center mb-3">
+                  <div class="testimonial-avatar">
+                    <span>YK</span>
+                  </div>
+                  <div>
+                    <h3 class="testimonial-name mb-0">Yashika Kapoor</h3>
+                    <p class="testimonial-meta mb-0">BCA, Batch 2022 · Placed at Capital Boon</p>
+                  </div>
+                </div>
+                <p class="testimonial-text mb-3">
+                  “The mentoring from faculty and alumni gave me clarity about career
+                  options in finance and analytics.”
+                </p>
+                <div class="testimonial-company">
+                  <span class="badge-company">Capital Boon</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="testimonial-card h-100">
+                <div class="testimonial-header d-flex align-items-center mb-3">
+                  <div class="testimonial-avatar">
+                    <span>SK</span>
+                  </div>
+                  <div>
+                    <h3 class="testimonial-name mb-0">Sanjeev Kumar</h3>
+                    <p class="testimonial-meta mb-0">MBA, Batch 2021 · Placed at Oppo India</p>
+                  </div>
+                </div>
+                <p class="testimonial-text mb-3">
+                  “From soft skills to group discussions, the training team prepared us
+                  thoroughly for company interviews.”
+                </p>
+                <div class="testimonial-company">
+                  <span class="badge-company">Oppo India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-none d-lg-block">
+              <div class="testimonial-card h-100">
+                <div class="testimonial-header d-flex align-items-center mb-3">
+                  <div class="testimonial-avatar">
+                    <span>KM</span>
+                  </div>
+                  <div>
+                    <h3 class="testimonial-name mb-0">Komal Maurya</h3>
+                    <p class="testimonial-meta mb-0">BCA, Batch 2022 · Placed at Genpact</p>
+                  </div>
+                </div>
+                <p class="testimonial-text mb-3">
+                  “Accurate’s focus on practical learning, presentations and labs made
+                  me placement‑ready by the final semester.”
+                </p>
+                <div class="testimonial-company">
+                  <span class="badge-company">Genpact</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- controls -->
+      <button class="carousel-control-prev testimonial-control" type="button"
+              data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next testimonial-control" type="button"
+              data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
