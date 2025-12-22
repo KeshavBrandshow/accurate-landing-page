@@ -482,9 +482,9 @@
 
                     <!-- HELPLINE -->
                     <a
-                        href="tel:+911234567890"
+                        href="tel:+91 9899569090"
                         class="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition"
-                        >Helpline: 1234567890</a
+                        >Helpline: +91 9899569090</a
                     >
                 </div>
 
@@ -1155,7 +1155,7 @@
             <div class="relative max-w-[1600px] mx-auto px-4">
                 <!-- LEFT BUTTON -->
                 <button
-                    id="prevBtn"
+                    id="alumniPrevBtn"
                     class="absolute -left-10 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-[#dddddd] border border-[#6aa2d8] shadow-[0_0_20px_3px_rgba(255,255,255,0.7)] transition-all duration-300 hover:shadow-[0_0_25px_6px_rgba(106,162,216,0.65)] hover:border-[#5b97d5]"
                 >
                     <svg
@@ -1177,7 +1177,7 @@
 
                 <!-- RIGHT BUTTON -->
                 <button
-                    id="nextBtn"
+                    id="alumniNextBtn"
                     class="absolute -right-10 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-[#dddddd] border border-[#6aa2d8] shadow-[0_0_20px_3px_rgba(255,255,255,0.7)] transition-all duration-300 hover:shadow-[0_0_25px_6px_rgba(106,162,216,0.65)] hover:border-[#5b97d5]"
                 >
                     <svg
@@ -1209,7 +1209,7 @@
             <div class="relative">
                 <!-- LEFT BUTTON -->
                 <button
-                    id="prevBtn"
+                    id="testimonialPrevBtn"
                     class="absolute -left-10 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-[#dddddd] border border-[#6aa2d8] shadow-[0_0_20px_3px_rgba(255,255,255,0.7)] hover:shadow-[0_0_25px_6px_rgba(106,162,216,0.65)] hover:border-[#5b97d5] transition-all duration-300"
                 >
                     <svg
@@ -1396,7 +1396,7 @@
 
                 <!-- RIGHT BUTTON -->
                 <button
-                    id="nextBtn"
+                    id="testimonialNextBtn"
                     class="absolute -right-10 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-[#dddddd] border border-[#6aa2d8] shadow-[0_0_20px_3px_rgba(255,255,255,0.7)] hover:shadow-[0_0_25px_6px_rgba(106,162,216,0.65)] hover:border-[#5b97d5] transition-all duration-300"
                 >
                     <svg
@@ -1426,6 +1426,7 @@
                             <li><a href="#" class="hover:underline">Bachelor of Business Administration (BBA)</a></li>
                             <li><a href="#" class="hover:underline">Bachelor of Computer Applications (BCA)</a></li>
                             <li><a href="#" class="hover:underline">Bachelor of Commerce (B.Com)</a></li>
+                            <li><a href="#" class="hover:underline">Post Graduate Diploma in Management (PGDM)</a></li>
                             <li><a href="#" class="hover:underline">MBA</a></li>
                             <li><a href="#" class="hover:underline">MCA</a></li>
                             <li><a href="#" class="hover:underline">B.Tech</a></li>
@@ -1843,12 +1844,12 @@
                 }, 700);
             }
 
-            document.getElementById("nextBtn").onclick = () => {
+            document.getElementById("alumniNextBtn").onclick = () => {
                 moveNext();
                 // restart timer so user has full interval after manual nav
                 restartAutoIfRunning();
             };
-            document.getElementById("prevBtn").onclick = () => {
+            document.getElementById("alumniPrevBtn").onclick = () => {
                 movePrev();
                 restartAutoIfRunning();
             };
@@ -1926,8 +1927,8 @@
                 renderThree();
             }
 
-            document.getElementById("nextBtn").onclick = next;
-            document.getElementById("prevBtn").onclick = prev;
+            document.getElementById("testimonialNextBtn").onclick = next;
+            document.getElementById("testimonialPrevBtn").onclick = prev;
 
             setInterval(next, 3000);
 
