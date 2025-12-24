@@ -1,34 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Accurate Group of Institutions</title>
-        <script src="https://cdn.tailwindcss.com"></script>
 
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        fontFamily: {
-                            verdana: ["Verdana"],
-                            sansserif: ["sans-serif"],
-                            geneva: ["Geneva"],
-                            cinzel: ["Cinzel"],
-                        },
-                    },
-                },
-            };
-        </script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accurate Institute - Modern Landing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    <body class="bg-white">
-        <!-- NavBar Starts Here -->
-        <nav class="w-full bg-white shadow">
+    <style>
+        /* Maintaining your specific font style */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .text-primary {
+            color: #1e40af;
+        }
+
+        /* Your deep blue */
+        .bg-primary {
+            background-color: #2563eb;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #2563eb !important;
+        }
+
+        /* Custom shape for the right background decoration */
+        .blue-blob {
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .gradient-1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .gradient-2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .gradient-3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .gradient-4 {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 overflow-x-hidden">
+
+
+
+<nav class="w-full bg-white shadow sticky top-0 z-50">
             <div class="max-w-[1600px] mx-auto px-4 py-3 flex items-center justify-between">
                 <!-- LOGO -->
                 <div class="flex items-center gap-2">
-                    <img src="images/accurate-logo.webp" alt="Logo" class="h-14 w-auto" />
+                    <img src="https://www.accurate.in/img/accurate-logo.webp" alt="Logo" class="h-14 w-auto" />
                     <div>
                         <h3 class="text-4xl font-bold text-blue-800 font-cinzel uppercase">Accurate</h3>
                         <h3 class="text-lg font-medium text-blue-800 font-cinzel -mt-1 uppercase">
@@ -496,926 +539,1177 @@
                 </button>
             </div>
         </nav>
-        <!-- NavBar Ends Here -->
-
-        <!-- Hero Section Starts Here -->
-        <section id="banner" class="relative w-full h-[80vh] overflow-hidden">
-            <div id="heroCarousel" class="relative h-full">
-                <div class="relative h-full">
-                    <!-- Slide 0 -->
-                    <div
-                        class="absolute inset-0 opacity-0 pointer-events-none bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out"
-                        style="
-                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
-                        "
-                        data-index="0"
-                        aria-hidden="true"
-                    >
-                        <!-- Blue Overlay -->
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,87,163,0.35),transparent_55%),linear-gradient(135deg,rgba(244,247,251,0.9),rgba(0,58,120,0.8))]">
-                        </div>
 
 
-                        <div class="w-[1550PX] mx-auto h-full flex items-center px-6 lg:px-12">
-                            <div class="max-w-2xl">
-                                <!-- White Glass Box -->
-                                <div class="bg-white/90 backdrop-blur-xl shadow-2xl p-10 rounded-[35px] space-y-6">
-                                    <div class="text-amber-400 tracking-wider text-sm font-semibold">
-                                        WELCOME TO ACCURATE
-                                    </div>
+    <div class="fixed left-0 top-1/2 -translate-y-1/2 z-50 hidden md:block">
+        <button
+            class="bg-blue-800 text-white px-4 py-8 rounded-l-lg text-sm font-bold uppercase [writing-mode:vertical-lr] rotate-180 hover:bg-blue-700 transition-all shadow-lg">Enquiry
+            Now</button>
+    </div>
+    <div class="fixed right-0 top-1/2 -translate-y-1/2 z-50 hidden md:block">
+        <button
+            class="bg-blue-600 text-white px-4 py-8 rounded-l-lg text-sm font-bold uppercase [writing-mode:vertical-lr] hover:bg-blue-500 transition-all shadow-lg">Online
+            Application</button>
+    </div>
 
-                                    <h2 class="text-4xl font-extrabold text-[#003c73] leading-tight">
-                                        Discover Your Potential with <br />
-                                        Accurate
-                                    </h2>
+    <section class="relative h-[80vh] flex items-center pt-10 pb-20 px-6 lg:px-20 overflow-hidden">
 
-                                    <p class="text-slate-600 max-w-xl">
-                                        Unleash your potential with diverse programs and endless opportunities for
-                                        transformative learning.
-                                    </p>
 
-                                    <!-- Badges -->
-                                    <div class="flex flex-wrap gap-3">
-                                        <span
-                                            class="flex items-center gap-2 border border-blue-200 bg-white px-4 py-1.5 rounded-full text-sm text-slate-700"
-                                        >
-                                            <span class="w-2 h-2 bg-yellow-400 rounded-full"></span> Management
-                                        </span>
+        <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
 
-                                        <span
-                                            class="flex items-center gap-2 border border-blue-200 bg-white px-4 py-1.5 rounded-full text-sm text-slate-700"
-                                        >
-                                            <span class="w-2 h-2 bg-yellow-400 rounded-full"></span> Engineering
-                                        </span>
-
-                                        <span
-                                            class="flex items-center gap-2 border border-blue-200 bg-white px-4 py-1.5 rounded-full text-sm text-slate-700"
-                                        >
-                                            <span class="w-2 h-2 bg-yellow-400 rounded-full"></span> Pharmacy
-                                        </span>
-
-                                        <span
-                                            class="flex items-center gap-2 border border-blue-200 bg-white px-4 py-1.5 rounded-full text-sm text-slate-700"
-                                        >
-                                            <span class="w-2 h-2 bg-yellow-400 rounded-full"></span> Architecture
-                                        </span>
-                                    </div>
-
-                                    <!-- Buttons -->
-                                    <div class="flex gap-4 flex-wrap">
-                                        <a
-                                            href="#programs"
-                                            class="px-8 py-3 bg-gradient-to-r from-sky-500 to-blue-700 text-white rounded-full shadow-lg text-lg font-medium hover:shadow-blue-500/40 transition"
-                                        >
-                                            Explore Programs
-                                        </a>
-
-                                        <a
-                                            href="#about"
-                                            class="px-8 py-3 rounded-full text-blue-800 border border-blue-300 bg-white text-lg font-medium hover:bg-blue-50 transition"
-                                        >
-                                            Learn About Accurate
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 1 -->
-                    <div
-                        class="absolute inset-0 opacity-0 pointer-events-none bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out"
-                        style="
-                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
-                        "
-                        data-index="1"
-                        aria-hidden="true"
-                    >
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,87,163,0.35),transparent_55%),linear-gradient(135deg,rgba(244,247,251,0.9),rgba(0,58,120,0.8))]">
-                        </div>
-
-                        <div class="w-[1550PX] mx-auto h-full flex items-center">
-                            <div class="max-w-3xl px-6 lg:px-12">
-                                <div class="bg-white/90 backdrop-blur-xl shadow-2xl p-10 rounded-[35px] space-y-6">
-                                    <div class="text-amber-400 tracking-wider text-sm font-semibold mb-4">
-                                        NATIONALLY RANKED
-                                    </div>
-
-                                    <h2 class="text-4xl lg:text-5xl font-extrabold text-[#003c73] mb-4 leading-tight">
-                                        Ranked Among India's Best B-Schools
-                                    </h2>
-
-                                    <p class="text-slate-600 max-w-xl mb-4">
-                                        Consistently recognized for academic excellence and management education.
-                                    </p>
-
-                                    <ul class="list-disc pl-5 text-slate-600 space-y-2 mb-6">
-                                        <li>A+ Top 20 B-School in India</li>
-                                        <li>Excellence in Management Education</li>
-                                        <li>AAA+ Institute in U.P</li>
-                                    </ul>
-
-                                    <a
-                                        href="#rankings"
-                                        class="inline-flex items-center justify-center px-6 py-3 rounded-full text-white text-lg font-medium shadow-lg bg-gradient-to-b from-sky-400 to-blue-700"
-                                    >
-                                        Learn More
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div
-                        class="absolute inset-0 opacity-0 pointer-events-none bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out"
-                        style="
-                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
-                        "
-                        data-index="2"
-                        aria-hidden="true"
-                    >
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,87,163,0.35),transparent_55%),linear-gradient(135deg,rgba(244,247,251,0.9),rgba(0,58,120,0.8))]">
-                        </div>
-
-                        <div class="relative z-20 w-[1550PX] mx-auto h-full flex items-center">
-                            <div class="max-w-3xl px-6 lg:px-12">
-                                <div class="p-6 lg:p-0">
-                                    <div class="text-amber-400 tracking-wider text-sm font-semibold mb-4">
-                                        CAREER OUTCOMES
-                                    </div>
-
-                                    <h2 class="text-3xl lg:text-4xl font-extrabold text-[#003c73] mb-4 leading-tight">
-                                        100% Placement Track Record
-                                    </h2>
-
-                                    <p class="text-slate-600 max-w-xl mb-4">
-                                        Strong industry interface and global opportunities help students launch
-                                        rewarding careers.
-                                    </p>
-
-                                    <div class="space-y-3 mb-4">
-                                        <div class="bg-white/90 rounded-xl px-4 py-2 shadow-xl text-slate-800">
-                                            <strong class="text-amber-600">₹1.30 Crore</strong> – Highest Package
-                                            (Dubai, SAAS Group)
-                                        </div>
-
-                                        <div class="bg-white/90 rounded-xl px-4 py-2 shadow-xl text-slate-800">
-                                            <strong class="text-amber-600">₹7 LPA</strong> – Average Salary (Domestic)
-                                        </div>
-
-                                        <div class="bg-white/90 rounded-xl px-4 py-2 shadow-xl text-slate-800">
-                                            International opportunities with recruiters in Dubai, UK and more.
-                                        </div>
-                                    </div>
-
-                                    <div class="flex flex-wrap gap-3 mb-6">
-                                        <span
-                                            class="inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm bg-white/10 text-[#003c73]"
-                                            >Oppo</span
-                                        >
-                                        <span
-                                            class="inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm bg-white/10 text-[#003c73]"
-                                            >Genpact</span
-                                        >
-                                        <span
-                                            class="inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm bg-white/10 text-[#003c73]"
-                                            >Bajaj Capital</span
-                                        >
-                                        <span
-                                            class="inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm bg-white/10 text-[#003c73]"
-                                            >Teleperformance</span
-                                        >
-                                    </div>
-
-                                    <a
-                                        href="#placements"
-                                        class="inline-flex items-center justify-center px-6 py-3 rounded-full text-white text-lg font-medium shadow-lg bg-gradient-to-b from-sky-400 to-blue-700"
-                                    >
-                                        View Placements
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div
-                        class="absolute inset-0 opacity-0 pointer-events-none bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out"
-                        style="
-                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
-                        "
-                        data-index="3"
-                        aria-hidden="true"
-                    >
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,87,163,0.35),transparent_55%),linear-gradient(135deg,rgba(244,247,251,0.9),rgba(0,58,120,0.8))]">
-                        </div>
-
-                        <div class="relative z-20 w-[1550PX] mx-auto h-full flex items-center">
-                            <div class="max-w-3xl px-6 lg:px-12">
-                                <div class="p-6 lg:p-0">
-                                    <div class="text-amber-400 tracking-wider text-sm font-semibold mb-4">
-                                        CAMPUS & LIFE
-                                    </div>
-
-                                    <h2 class="text-3xl lg:text-4xl font-extrabold text-black/75 mb-4 leading-tight">
-                                        Thrive in a 16-Acre Green Campus
-                                    </h2>
-
-                                    <p class="text-slate-700 max-w-xl mb-4">
-                                        Modern facilities and a vibrant campus culture support holistic development.
-                                    </p>
-
-                                    <ul class="list-disc pl-5 text-slate-800 space-y-2 mb-6">
-                                        <li>Auditorium, Seminar Hall & Modern Labs</li>
-                                        <li>Rich Library & Sports Facilities</li>
-                                        <li>Soft Skills & Industrial Exposure Programs</li>
-                                        <li>Scholarships for deserving students</li>
-                                    </ul>
-
-                                    <a
-                                        href="#campus"
-                                        class="inline-flex items-center justify-center px-6 py-3 rounded-full text-white text-lg font-medium shadow-lg bg-gradient-to-b from-sky-400 to-blue-700"
-                                    >
-                                        Explore Campus
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 4 -->
-                    <div
-                        class="absolute inset-0 opacity-0 pointer-events-none bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out"
-                        style="
-                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
-                        "
-                        data-index="4"
-                        aria-hidden="true"
-                    >
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,87,163,0.35),transparent_55%),linear-gradient(135deg,rgba(244,247,251,0.9),rgba(0,58,120,0.8))]">
-                        </div>
-
-                        <div class="relative z-20 w-[1550PX] mx-auto h-full flex items-center">
-                            <div class="max-w-3xl px-6 lg:px-12">
-                                <div class="p-6 lg:p-0">
-                                    <div class="text-amber-400 tracking-wider text-sm font-semibold mb-4">
-                                        ORIENTATION 2025
-                                    </div>
-
-                                    <h2 class="text-3xl lg:text-4xl font-extrabold text-black/75 mb-4 leading-tight">
-                                        Meet Industry & Excellence Leaders
-                                    </h2>
-
-                                    <p class="text-slate-700 max-w-xl mb-4">
-                                        Renowned academicians, leaders, and achievers inspire students to aim higher.
-                                    </p>
-
-                                    <ul class="list-disc pl-5 space-y-2 mb-6 text-slate-800 marker:text-amber-400">
-                                        <li>Padma Shri Anand Kumar – Super 30</li>
-                                        <li>Ms. Pinki Singh – Arjuna Awardee</li>
-                                        <li>Dr. Rajat Aggarwal – IIT Roorkee</li>
-                                        <li>Leaders from Accenture, HCL Tech & more</li>
-                                    </ul>
-
-                                    <div class="flex gap-3">
-                                        <a
-                                            href="#orientation"
-                                            class="inline-flex items-center justify-center px-6 py-3 rounded-full text-white text-lg font-medium shadow-lg bg-gradient-to-b from-sky-400 to-blue-700"
-                                        >
-                                            Know More
-                                        </a>
-
-                                        <a
-                                            href="#register"
-                                            class="inline-flex items-center justify-center px-6 py-3 rounded-full text-slate-800 ring-1 ring-white/40 bg-white/10 text-lg font-medium"
-                                        >
-                                            Register
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PREV BUTTON -->
-                <button
-                    id="prevBtn"
-                    class="absolute left-8 top-1/2 -translate-y-1/2 z-30 w-14 h-14 rounded-full backdrop-blur-sm flex items-center justify-center bg-yellow-400/70 ring-1 ring-white/30 shadow-md"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 text-slate-900"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-
-                <!-- NEXT BUTTON -->
-                <button
-                    id="nextBtn"
-                    class="absolute right-8 top-1/2 -translate-y-1/2 z-30 w-14 h-14 rounded-full backdrop-blur-sm flex items-center justify-center bg-yellow-400/70 ring-1 ring-white/30 shadow-md"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 text-slate-900"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-
-                <!-- INDICATORS -->
-                <div class="absolute left-1/2 -translate-x-1/2 bottom-12 z-30 flex items-center gap-2">
-                    <button class="w-10 h-1 rounded-full bg-slate-400/40" data-slide-to="0"></button>
-                    <button class="w-10 h-1 rounded-full bg-slate-400/40" data-slide-to="1"></button>
-                    <button class="w-10 h-1 rounded-full bg-slate-400/40" data-slide-to="2"></button>
-                    <button class="w-10 h-1 rounded-full bg-slate-400/40" data-slide-to="3"></button>
-                    <button class="w-10 h-1 rounded-full bg-slate-400/40" data-slide-to="4"></button>
-                </div>
-            </div>
-        </section>
-        <!-- Hero Section Ends Here -->
-
-        <!-- About Section Starts Here -->
-        <section
-            id="about"
-            class="relative overflow-hidden py-8 bg-gradient-to-br from-white via-[#f7f9ff] to-[#e3efff]"
-        >
-            <!-- decorative blobs (no inline styles) -->
-            <div
-                aria-hidden="true"
-                class="absolute -top-28 -left-16 w-[320px] h-[320px] rounded-full opacity-20 pointer-events-none blur-0 bg-[radial-gradient(circle,_rgba(0,87,163,0.32),_transparent_65%)]"
-            ></div>
-            <div
-                aria-hidden="true"
-                class="absolute -bottom-20 -right-10 w-[260px] h-[260px] rounded-full opacity-20 pointer-events-none blur-0 bg-[radial-gradient(circle,_rgba(255,193,7,0.35),_transparent_65%)]"
-            ></div>
-
-            <div class="max-w-7xl mx-auto px-4">
-                <!-- Heading + Paragraph -->
-                <div class="flex justify-center mb-8 lg:mb-12">
-                    <div class="w-full lg:w-3/4 text-center">
-                        <span
-                            class="inline-block rounded-full px-4 py-1 text-xs tracking-widest uppercase bg-[rgba(255,193,7,0.18)] text-[#8a6a02] border border-[rgba(255,193,7,0.5)] mb-3"
-                            >About Accurate Group</span
-                        >
-                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#003c73] mb-4">
-                            Committed to Academic Excellence &amp; Holistic Development Since 2006
-                        </h2>
-                        <p class="text-base sm:text-lg text-[#43536a] mx-auto max-w-3xl">
-                            Established in 2006 under the Accurate Education &amp; Research Society, Accurate Group of
-                            Institutions has grown into a leading higher‑education group in Greater Noida and
-                            Delhi&nbsp;NCR. It offers programs in Management, Engineering, Pharmacy, Architecture, Law,
-                            and Diploma studies, with a strong focus on academic excellence, holistic development, and
-                            industry‑oriented learning that empowers future leaders.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Stats Cards -->
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
-                    <!-- Card 1 -->
-                    <div class="group">
-                        <div
-                            class="relative bg-white rounded-2xl p-6 border border-[rgba(0,87,163,0.12)] shadow-[0_14px_32px_rgba(0,87,163,0.12)] hover:shadow-[0_20px_40px_rgba(0,87,163,0.22)] transition-transform duration-200 hover:-translate-y-1 overflow-hidden"
-                        >
-                            <!-- diagonal highlight -->
-                            <div
-                                class="absolute -top-10 -left-[20%] w-[140%] h-10 bg-[linear-gradient(90deg,_rgba(0,87,163,0.09),_rgba(255,193,7,0.35),_rgba(0,87,163,0.09))] opacity-0 group-hover:opacity-100 transform group-hover:translate-y-3 transition-all duration-250"
-                            ></div>
-                            <div class="text-center">
-                                <div class="text-3xl sm:text-4xl font-extrabold text-[#0057a3] leading-none">
-                                    20<span class="text-xl text-[#ffc107]">+</span>
-                                </div>
-                                <div class="text-sm font-semibold uppercase tracking-wide text-[#50627b] mt-2">
-                                    Years of Excellence
-                                </div>
-                                <p class="text-sm text-[#6c7a90] mt-3">
-                                    Building futures with quality education since 2006.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="group">
-                        <div
-                            class="relative bg-white rounded-2xl p-6 border border-[rgba(0,87,163,0.12)] shadow-[0_14px_32px_rgba(0,87,163,0.12)] hover:shadow-[0_20px_40px_rgba(0,87,163,0.22)] transition-transform duration-200 hover:-translate-y-1 overflow-hidden"
-                        >
-                            <div
-                                class="absolute -top-10 -left-[20%] w-[140%] h-10 bg-[linear-gradient(90deg,_rgba(0,87,163,0.09),_rgba(255,193,7,0.35),_rgba(0,87,163,0.09))] opacity-0 group-hover:opacity-100 transform group-hover:translate-y-3 transition-all duration-250"
-                            ></div>
-                            <div class="text-center">
-                                <div class="text-3xl sm:text-4xl font-extrabold text-[#0057a3] leading-none">
-                                    20<span class="text-xl text-[#ffc107]">+</span>
-                                </div>
-                                <div class="text-sm font-semibold uppercase tracking-wide text-[#50627b] mt-2">
-                                    Programs &amp; Disciplines
-                                </div>
-                                <p class="text-sm text-[#6c7a90] mt-3">
-                                    Management, Engineering, Pharmacy, Architecture, Law &amp; Diploma.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="group">
-                        <div
-                            class="relative bg-white rounded-2xl p-6 border border-[rgba(0,87,163,0.12)] shadow-[0_14px_32px_rgba(0,87,163,0.12)] hover:shadow-[0_20px_40px_rgba(0,87,163,0.22)] transition-transform duration-200 hover:-translate-y-1 overflow-hidden"
-                        >
-                            <div
-                                class="absolute -top-10 -left-[20%] w-[140%] h-10 bg-[linear-gradient(90deg,_rgba(0,87,163,0.09),_rgba(255,193,7,0.35),_rgba(0,87,163,0.09))] opacity-0 group-hover:opacity-100 transform group-hover:translate-y-3 transition-all duration-250"
-                            ></div>
-                            <div class="text-center">
-                                <div class="text-3xl sm:text-4xl font-extrabold text-[#0057a3] leading-none">
-                                    200<span class="text-xl text-[#ffc107]">+</span>
-                                </div>
-                                <div class="text-sm font-semibold uppercase tracking-wide text-[#50627b] mt-2">
-                                    Recruiting Partners
-                                </div>
-                                <p class="text-sm text-[#6c7a90] mt-3">
-                                    Leading corporates visiting for campus drives and placements.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="group">
-                        <div
-                            class="relative bg-white rounded-2xl p-6 border border-[rgba(0,87,163,0.12)] shadow-[0_14px_32px_rgba(0,87,163,0.12)] hover:shadow-[0_20px_40px_rgba(0,87,163,0.22)] transition-transform duration-200 hover:-translate-y-1 overflow-hidden"
-                        >
-                            <div
-                                class="absolute -top-10 -left-[20%] w-[140%] h-10 bg-[linear-gradient(90deg,_rgba(0,87,163,0.09),_rgba(255,193,7,0.35),_rgba(0,87,163,0.09))] opacity-0 group-hover:opacity-100 transform group-hover:translate-y-3 transition-all duration-250"
-                            ></div>
-                            <div class="text-center">
-                                <div class="text-3xl sm:text-4xl font-extrabold text-[#0057a3] leading-none">
-                                    100<span class="text-xl text-[#ffc107]">%</span>
-                                </div>
-                                <div class="text-sm font-semibold uppercase tracking-wide text-[#50627b] mt-2">
-                                    Placement Track Record
-                                </div>
-                                <p class="text-sm text-[#6c7a90] mt-3">
-                                    Strong outcomes with dedicated placement support and global offers.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About Section Ends Here -->
-
-        <!-- Awards Section Starts Here -->
-        <section class="py-10">
-            <div class="max-w-[1550px] mx-auto px-4">
-                <div class="bg-white shadow-[0_15px_40px_rgba(0,0,0,0.12)] overflow-hidden flex flex-col lg:flex-row">
-                    <!-- LEFT SIDE -->
-                    <div class="flex-1 bg-white p-12">
-                        <!-- Icon + Heading -->
-                        <div class="flex items-start gap-4 mb-6">
-                            <div
-                                class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#ffb341] to-[#ff8800] flex items-center justify-center text-white text-2xl shadow-lg"
-                            >
-                                ★
-                            </div>
-                            <div>
-                                <p class="uppercase tracking-wide text-xs text-gray-500 font-semibold">
-                                    Awarded & Recognized B-School
-                                </p>
-                                <h3 class="text-2xl font-bold text-gray-900">
-                                    Nationally Ranked. Globally Recognized.
-                                </h3>
-                            </div>
-                        </div>
-
-                        <!-- Bullet list -->
-                        <ul class="space-y-2 mb-5">
-                            <li class="flex items-start gap-2 text-gray-700">
-                                <span class="text-orange-500 text-lg leading-none">•</span>
-                                Ranked A+ Top 20 B-School in India
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-700">
-                                <span class="text-orange-500 text-lg leading-none">•</span>
-                                Excellence in Management Education in North India
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-700">
-                                <span class="text-orange-500 text-lg leading-none">•</span>
-                                Ranked AAA+ Institute in U.P
-                            </li>
-                            <li class="flex items-start gap-2 text-gray-700">
-                                <span class="text-orange-500 text-lg leading-none">•</span>
-                                Ranked A+++ Best B-School
-                            </li>
-                        </ul>
-
-                        <p class="text-gray-600 text-base leading-relaxed max-w-xl">
-                            Accurate Institute has been consistently recognized for its quality in management education,
-                            earning strong national rankings and premium ratings across India.
-                        </p>
-                    </div>
-
-                    <!-- RIGHT SIDE -->
-                    <div
-                        class="flex-1 bg-[#003f7f] text-white p-10 flex flex-col justify-center rounded-t-3xl lg:rounded-none lg:rounded-r-3xl"
-                    >
-                        <!-- Top 20 -->
-                        <div class="mb-10">
-                            <p class="uppercase tracking-wide text-xs opacity-80 mb-1">Among</p>
-                            <div class="flex items-end gap-3">
-                                <h3 class="text-5xl font-extrabold leading-tight">Top 20</h3>
-                                <p class="text-sm opacity-80 mt-1">B-Schools in India</p>
-                            </div>
-                        </div>
-
-                        <!-- A+++ -->
-                        <div>
-                            <p class="uppercase tracking-wide text-xs opacity-80 mb-1">Awarded As</p>
-                            <div class="flex items-end gap-3">
-                                <h3 class="text-5xl font-extrabold leading-tight">A+++</h3>
-                                <p class="text-sm opacity-80 mt-1">Best B-School Rating</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Awards Section Ends Here -->
-
-        <!-- Placement Section Starts Here -->
-        <section class="bg-[#014b90] text-white py-12">
-            <div class="max-w-7xl mx-auto px-4">
-                <!-- Heading -->
-                <div class="text-center max-w-3xl mx-auto mb-8">
-                    <h2 class="text-3xl font-bold tracking-wide mb-3">Outstanding Placement Records</h2>
-                    <p class="text-[0.98rem] leading-7 opacity-90 py-3">
-                        Accurate Group of Institutions maintains a consistent 100% placement track record, backed by
-                        strong industry interface, value-added programs, and dedicated placement support, enabling
-                        students to secure excellent national and international opportunities.
+            <div class="space-y-8 animate-fade-in">
+                <div class="space-y-4">
+                    <h1 class="text-4xl lg:text-6xl font-extrabold text-primary leading-tight">
+                        Discover Your Potential <br> <span class="text-blue-500">with Accurate</span>
+                    </h1>
+                    <p class="text-gray-600 text-lg max-w-lg leading-relaxed">
+                        Unleash your potential with Accurate Institute. Choose from a diverse range of programs and
+                        discover endless opportunities for transformative learning.
                     </p>
                 </div>
 
-                <!-- Top 4 Main Placement Cards -->
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                    <!-- Card 1 -->
+                <div class="relative max-w-xl group">
                     <div
-                        class="bg-[#281c4c] rounded-2xl p-6 text-center shadow-[0_10px_25px_rgba(0,0,0,0.18)] flex flex-col justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_35px_rgba(0,0,0,0.25)] hover:bg-[#342361]"
-                    >
-                        <div class="text-2xl font-bold">100%</div>
-                        <div class="text-[0.78rem] uppercase tracking-wider mt-2 opacity-85">
-                            Placement Track Record
-                        </div>
+                        class="absolute -inset-1 bg-gradient-to-r from-blue-100 to-transparent rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000">
                     </div>
-
-                    <!-- Card 2 -->
                     <div
-                        class="bg-[#281c4c] rounded-2xl p-6 text-center shadow-[0_10px_25px_rgba(0,0,0,0.18)] flex flex-col justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_35px_rgba(0,0,0,0.25)] hover:bg-[#342361]"
-                    >
-                        <div class="text-2xl font-bold">₹1.30 Cr</div>
-                        <div class="text-[0.78rem] uppercase tracking-wider mt-2 opacity-85">
-                            Highest International Package
-                        </div>
-                        <div class="text-[0.75rem] mt-2 opacity-80">Randhir Kumar – SAAS Group, Dubai</div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div
-                        class="bg-[#281c4c] rounded-2xl p-6 text-center shadow-[0_10px_25px_rgba(0,0,0,0.18)] flex flex-col justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_35px_rgba(0,0,0,0.25)] hover:bg-[#342361]"
-                    >
-                        <div class="text-2xl font-bold">₹17 LPA</div>
-                        <div class="text-[0.78rem] uppercase tracking-wider mt-2 opacity-85">
-                            Highest Domestic Package
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div
-                        class="bg-[#281c4c] rounded-2xl p-6 text-center shadow-[0_10px_25px_rgba(0,0,0,0.18)] flex flex-col justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_35px_rgba(0,0,0,0.25)] hover:bg-[#342361]"
-                    >
-                        <div class="text-2xl font-bold">₹7 LPA</div>
-                        <div class="text-[0.78rem] uppercase tracking-wider mt-2 opacity-85">Average Package</div>
+                        class="relative flex items-center bg-white border border-gray-200 rounded-full p-2 shadow-xl focus-within:ring-2 ring-blue-400 transition-all">
+                        <input type="text" placeholder="Search what you looking for..."
+                            class="w-full pl-6 pr-4 py-3 bg-transparent outline-none text-gray-700">
+                        <button
+                            class="bg-primary text-white p-4 rounded-full hover:bg-blue-700 transition-all shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Bottom 4 Supporting Cards -->
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                    <!-- Support Card 1 -->
-                    <div
-                        class="rounded-xl border border-white/25 p-5 text-center backdrop-blur-sm bg-white/5 flex flex-col justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,0.25)] hover:bg-white/10 hover:border-white/60"
-                    >
-                        <div class="text-xl font-bold">200+</div>
-                        <div class="text-[0.8rem] mt-1 leading-5">Companies for Campus Drives</div>
-                    </div>
-
-                    <!-- Support Card 2 -->
-                    <div
-                        class="rounded-xl border border-white/25 p-5 text-center backdrop-blur-sm bg-white/5 flex flex-col justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,0.25)] hover:bg-white/10 hover:border-white/60"
-                    >
-                        <div class="text-xl font-bold">Multiple</div>
-                        <div class="text-[0.8rem] mt-1 leading-5">International Placements (Dubai, UK etc.)</div>
-                    </div>
-
-                    <!-- Support Card 3 -->
-                    <div
-                        class="rounded-xl border border-white/25 p-5 text-center backdrop-blur-sm bg-white/5 flex flex-col justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,0.25)] hover:bg-white/10 hover:border-white/60"
-                    >
-                        <div class="text-xl font-bold">Advanced</div>
-                        <div class="text-[0.8rem] mt-1 leading-5">Training in Excel & Power BI</div>
-                    </div>
-
-                    <!-- Support Card 4 -->
-                    <div
-                        class="rounded-xl border border-white/25 p-5 text-center backdrop-blur-sm bg-white/5 flex flex-col justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,0.25)] hover:bg-white/10 hover:border-white/60"
-                    >
-                        <div class="text-xl font-bold">Campus to Corporate</div>
-                        <div class="text-[0.8rem] mt-1 leading-5">Workshops & Mentoring</div>
+                <div class="flex items-center gap-6">
+                    <button
+                        class="bg-primary hover:bg-blue-800 text-white px-10 py-4 rounded-lg font-bold shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        Call Now
+                    </button>
+                    <div class="text-sm text-gray-500">
+                        <p class="font-semibold text-gray-700">Feel free to</p>
+                        <p>call any time</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Placement Section Ends Here -->
+        </div>
+        <div class="absolute top-0 right-0 w-1/2 h-full blue-blob hidden lg:block overflow-hidden">
+            <div
+                class="absolute inset-0 z-10 pointer-events-none ">
+            </div>
 
-        <!-- Alumni Section Starts Here -->
-        <section class="py-12">
-            <h2 class="text-center text-4xl font-bold text-[#0057a3]">Our Alumni. Your Future</h2>
-            <p class="text-center text-gray-500 mb-10">
-                Successful careers across leading companies in India and abroad
-            </p>
+            <div class="flex justify-center h-full w-full gap-4 px-4">
 
-            <div class="relative max-w-[1600px] mx-auto px-4">
-                <!-- LEFT BUTTON -->
-                <button
-                    id="prevBtn"
-                    class="absolute -left-10 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-[#dddddd] border border-[#6aa2d8] shadow-[0_0_20px_3px_rgba(255,255,255,0.7)] transition-all duration-300 hover:shadow-[0_0_25px_6px_rgba(106,162,216,0.65)] hover:border-[#5b97d5]"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="w-5 h-5 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path d="M15 18l-6-6 6-6" />
-                    </svg>
-                </button>
+                <div class="relative flex flex-col overflow-hidden w-64 border-x border-slate-100 bg-slate-50/50">
+                    <div class="animate-marquee-vertical-reverse flex flex-col gap-4 py-4">
+                        <img src="https://www.accurate.in/img/devi-award.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/most-admired-law-college.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/global-immersion-program-2025.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/accurate-naac-banner.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
 
-                <!-- TRACK -->
-                <div class="overflow-hidden">
-                    <div id="slider" class="flex transition-transform duration-700 ease-in-out"></div>
+                        <img src="https://www.accurate.in/img/devi-award.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/most-admired-law-college.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/global-immersion-program-2025.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/accurate-naac-banner.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                    </div>
                 </div>
 
-                <!-- RIGHT BUTTON -->
-                <button
-                    id="nextBtn"
-                    class="absolute -right-10 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-[#dddddd] border border-[#6aa2d8] shadow-[0_0_20px_3px_rgba(255,255,255,0.7)] transition-all duration-300 hover:shadow-[0_0_25px_6px_rgba(106,162,216,0.65)] hover:border-[#5b97d5]"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="w-5 h-5 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path d="M9 6l6 6-6 6" />
-                    </svg>
-                </button>
-            </div>
-        </section>
-        <!-- Alumni Section Ends Here -->
+                <div class="relative flex flex-col overflow-hidden w-64 border-x border-slate-100 bg-slate-50/50">
+                    <div class="animate-marquee-vertical flex flex-col gap-4 py-4">
+                        <img src="https://www.accurate.in/img/global-immersion-program-2025.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/accurate-naac-banner.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/devi-award.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/most-admired-law-college.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
 
-        <!-- Testimonial Section Starts Here -->
-        <section class="max-w-[1550px] mx-auto px-4 my-4">
+                        <img src="https://www.accurate.in/img/global-immersion-program-2025.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/accurate-naac-banner.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/devi-award.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/most-admired-law-college.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                    </div>
+                </div>
+                <div class="relative flex flex-col overflow-hidden w-64 border-x border-slate-100 bg-slate-50/50">
+                    <div class="animate-marquee-vertical-reverse flex flex-col gap-4 py-4">
+                        <img src="https://www.accurate.in/img/devi-award.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/most-admired-law-college.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/global-immersion-program-2025.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/accurate-naac-banner.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+
+                        <img src="https://www.accurate.in/img/devi-award.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/most-admired-law-college.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/global-immersion-program-2025.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                        <img src="https://www.accurate.in/img/accurate-naac-banner.webp"
+                            class="w-full h-48 object-cover shadow-sm rounded-xl">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <style>
+            /* UPWARD MOTION: Travels from 0 to -50% (the height of one set) */
+            @keyframes marquee-vertical {
+                0% {
+                    transform: translateY(0);
+                }
+
+                100% {
+                    transform: translateY(-50%);
+                }
+            }
+
+            /* DOWNWARD MOTION: Travels from -50% back to 0 */
+            @keyframes marquee-vertical-reverse {
+                0% {
+                    transform: translateY(-50%);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            .animate-marquee-vertical {
+                animation: marquee-vertical 40s linear infinite;
+            }
+
+            .animate-marquee-vertical-reverse {
+                animation: marquee-vertical-reverse 40s linear infinite;
+            }
+
+            /* Pause animation on hover for better user experience */
+            .animate-marquee-vertical:hover,
+            .animate-marquee-vertical-reverse:hover {
+                animation-play-state: paused;
+            }
+        </style>
+
+
+
+
+        <!--  <div class="absolute top-0 right-0 w-1/2 h-full blue-blob  hidden lg:block">
+                        <div class="flex justify-center h-full w-full">
+
+                                <div                    
+                    class="relative flex flex-col overflow-hidden w-72 border border-slate-100 bg-slate-50">
+                                        <div class="animate-marquee-vertical flex flex-col">
+                                                <img src="https://www.accurate.in/img/devi-award.webp"                  
+                                      class="w-full h-48 object-cover shadow-md">
+                                                <img src="https://www.accurate.in/img/most-admired-law-college.webp"    
+                                                    class="w-full h-48 object-cover shadow-md">
+                                                <img
+                            src="https://www.accurate.in/img/global-immersion-program-2025.webp"                        
+                                class="w-full h-48 object-cover shadow-md">
+                                                <img
+                            src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"                
+                                        class="w-full h-48 object-cover shadow-md">
+                                                <img src="https://www.accurate.in/img/accurate-naac-banner.webp"        
+                                                class="w-full h-48 object-cover shadow-md">
+                                            </div>
+                                    </div>
+
+                                <div                    
+                    class="relative flex flex-col overflow-hidden w-72 border border-slate-100 bg-slate-50">
+                                        <div class="animate-marquee-vertical-reverse flex flex-col">
+                                                  <img src="https://www.accurate.in/img/devi-award.webp"                
+                                        class="w-full h-48 object-cover shadow-md">
+                                                <img src="https://www.accurate.in/img/most-admired-law-college.webp"    
+                                                    class="w-full h-48 object-cover shadow-md">
+                                                <img
+                            src="https://www.accurate.in/img/global-immersion-program-2025.webp"                        
+                                class="w-full h-48 object-cover shadow-md">
+                                                <img
+                            src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"                
+                                        class="w-full h-48 object-cover shadow-md">
+                                                <img src="https://www.accurate.in/img/accurate-naac-banner.webp"        
+                                                class="w-full h-48 object-cover shadow-md">
+                                            </div>
+                                    </div>
+
+                                <div                    
+                    class="relative flex flex-col overflow-hidden w-72 border border-slate-100  bg-slate-50">
+                                        <div class="animate-marquee-vertical flex flex-col">
+                                            <img src="https://www.accurate.in/img/devi-award.webp"                      
+                                  class="w-full h-48 object-cover shadow-md">
+                                                <img src="https://www.accurate.in/img/most-admired-law-college.webp"    
+                                                    class="w-full h-48 object-cover shadow-md">
+                                                <img
+                            src="https://www.accurate.in/img/global-immersion-program-2025.webp"                        
+                                class="w-full h-48 object-cover shadow-md">
+                                                <img
+                            src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"                
+                                        class="w-full h-48 object-cover shadow-md">
+                                                <img src="https://www.accurate.in/img/accurate-naac-banner.webp"        
+                                                class="w-full h-48 object-cover shadow-md">
+                                            </div>
+                                    </div>
+                                <div                    
+                    class="relative flex flex-col overflow-hidden w-72 border border-slate-100  bg-slate-50">
+                                        <div class="animate-marquee-vertical-reverse flex flex-col">
+                                              <img src="https://www.accurate.in/img/devi-award.webp"                    
+                                    class="w-full h-48 object-cover shadow-md">
+                                                <img src="https://www.accurate.in/img/most-admired-law-college.webp"    
+                                                    class="w-full h-48 object-cover shadow-md">
+                                                <img
+                            src="https://www.accurate.in/img/global-immersion-program-2025.webp"                        
+                                class="w-full h-48 object-cover shadow-md">
+                                                <img
+                            src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"                
+                                        class="w-full h-48 object-cover shadow-md">
+                                                <img src="https://www.accurate.in/img/accurate-naac-banner.webp"        
+                                                class="w-full h-48 object-cover shadow-md">
+                                            </div>
+                                    </div>
+                               
+
+                            </div>
+                    </div> -->
+
+
+    </section>
+
+
+
+
+    <section class="bg-slate-50 py-20 px-6 lg:px-24 relative overflow-hidden">
+
+        <div class="absolute -top-20 -left-20 w-96 h-96 bg-blue-100 rounded-full blur-[120px] opacity-40"></div>
+        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-[100px] opacity-60">
+        </div>
+
+        <div class="container mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <div class="space-y-12">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <span class="w-12 h-1 bg-blue-600 rounded-full"></span>
+                            <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Our Legacy</span>
+                        </div>
+                        <h2 class="text-5xl font-black text-[#1e40af] leading-tight">
+                            Why Choose <br />
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">Accurate?</span>
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed text-lg max-w-xl">
+                            Nestled in a <span class="text-blue-700 font-semibold">16-acre green campus</span>, we offer
+                            a tranquil environment for holistic learning. Our expert faculty blend theory with practical
+                            insights, supported by a dedicated Placement Cell that empowers future leaders.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div
+                            class="group bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-white shadow-sm hover:shadow-xl hover:shadow-blue-100 transition-all duration-300 hover:-translate-y-1">
+                            <div
+                                class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
+                                <svg class="w-5 h-5 text-blue-600 group-hover:text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-[#1e40af] font-bold leading-tight">Ranked # A+ Top 20 B-School In India</h4>
+                        </div>
+
+                        <div
+                            class="group bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-white shadow-sm hover:shadow-xl hover:shadow-blue-100 transition-all duration-300 hover:-translate-y-1">
+                            <div
+                                class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
+                                <svg class="w-5 h-5 text-blue-600 group-hover:text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-[#1e40af] font-bold leading-tight">Excellence In Management Education</h4>
+                        </div>
+
+                        <div
+                            class="group bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-white shadow-sm hover:shadow-xl hover:shadow-blue-100 transition-all duration-300 hover:-translate-y-1">
+                            <div
+                                class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
+                                <svg class="w-5 h-5 text-blue-600 group-hover:text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-[#1e40af] font-bold leading-tight">Ranked AAA+ Institute In U.P</h4>
+                        </div>
+
+                        <div
+                            class="group bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-white shadow-sm hover:shadow-xl hover:shadow-blue-100 transition-all duration-300 hover:-translate-y-1">
+                            <div
+                                class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
+                                <svg class="w-5 h-5 text-blue-600 group-hover:text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-[#1e40af] font-bold leading-tight">Ranked # A+++ Best B-School</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div
+                        class="absolute -top-10 -left-10 z-20 bg-white p-6 rounded-3xl shadow-2xl border border-blue-50 animate-bounce-slow">
+                        <div class="text-right">
+                            <p class="text-blue-500 italic font-serif text-xl">Ranked</p>
+                            <h3 class="text-6xl font-black text-[#1e40af] tracking-tighter">A+++</h3>
+                            <div
+                                class="bg-red-600 text-white px-3 py-1 inline-block font-bold text-xs uppercase tracking-widest mt-1">
+                                Business India
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-4 bg-blue-600/10 rounded-[2rem] transform rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                        </div>
+                        <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white">
+                            <img src="https://www.accurate.in/sandbox/img/buildi.webp" alt="Accurate Campus"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
+                        </div>
+
+                        <div
+                            class="absolute -bottom-6 -right-6 w-24 h-24 bg-[radial-gradient(#2563eb_2px,transparent_2px)] [background-size:12px_12px] opacity-30">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes bounce-slow {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 4s ease-in-out infinite;
+        }
+    </style>
+
+
+
+
+
+
+
+    <!-- About Section Starts Here -->
+    <section id="about" class="relative overflow-hidden py-8 bg-gradient-to-br from-white via-[#f7f9ff] to-[#e3efff]">
+        <!-- decorative blobs (no inline styles) -->
+        <div aria-hidden="true"
+            class="absolute -top-28 -left-16 w-[320px] h-[320px] rounded-full opacity-20 pointer-events-none blur-0 bg-[radial-gradient(circle,_rgba(0,87,163,0.32),_transparent_65%)]">
+        </div>
+        <div aria-hidden="true"
+            class="absolute -bottom-20 -right-10 w-[260px] h-[260px] rounded-full opacity-20 pointer-events-none blur-0 bg-[radial-gradient(circle,_rgba(255,193,7,0.35),_transparent_65%)]">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Heading + Paragraph -->
+            <div class="flex justify-center mb-8 lg:mb-12">
+                <div class="w-full lg:w-3/4 text-center">
+                    <span
+                        class="inline-block rounded-full px-4 py-1 text-xs tracking-widest uppercase bg-[rgba(255,193,7,0.18)] text-[#8a6a02] border border-[rgba(255,193,7,0.5)] mb-3">About
+                        Accurate Group</span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#003c73] mb-4">
+                        Committed to Academic Excellence &amp; Holistic Development Since 2006
+                    </h2>
+                    <p class="text-base sm:text-lg text-[#43536a] mx-auto max-w-3xl">
+                        Established in 2006 under the Accurate Education &amp; Research Society, Accurate Group of
+                        Institutions has grown into a leading higher‑education group in Greater Noida and
+                        Delhi&nbsp;NCR. It offers programs in Management, Engineering, Pharmacy, Architecture, Law,
+                        and Diploma studies, with a strong focus on academic excellence, holistic development, and
+                        industry‑oriented learning that empowers future leaders.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+                <!-- Card 1 -->
+                <div class="group">
+                    <div
+                        class="relative bg-white rounded-2xl p-3 border border-[rgba(0,87,163,0.12)] shadow-[0_14px_32px_rgba(0,87,163,0.12)] hover:shadow-[0_20px_40px_rgba(0,87,163,0.22)] transition-transform duration-200 hover:-translate-y-1 overflow-hidden">
+                        <!-- diagonal highlight -->
+                        <div
+                            class="absolute -top-10 -left-[20%] w-[140%] h-10 bg-[linear-gradient(90deg,_rgba(0,87,163,0.09),_rgba(255,193,7,0.35),_rgba(0,87,163,0.09))] opacity-0 group-hover:opacity-100 transform group-hover:translate-y-3 transition-all duration-250">
+                        </div>
+                        <div class="text-center h-26">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-[#0057a3] leading-none">
+                                20<span class="text-xl text-[#ffc107]">+</span>
+                            </div>
+                            <div class="text-sm font-semibold uppercase tracking-wide text-[#50627b] mt-2">
+                                Years of Excellence
+                            </div>
+                            <p class="text-sm text-[#6c7a90] mt-3">
+                                Building futures with quality education since 2006.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group">
+                    <div
+                        class="relative bg-white rounded-2xl p-3 border border-[rgba(0,87,163,0.12)] shadow-[0_14px_32px_rgba(0,87,163,0.12)] hover:shadow-[0_20px_40px_rgba(0,87,163,0.22)] transition-transform duration-200 hover:-translate-y-1 overflow-hidden">
+                        <div
+                            class="absolute -top-10 -left-[20%] w-[140%] h-10 bg-[linear-gradient(90deg,_rgba(0,87,163,0.09),_rgba(255,193,7,0.35),_rgba(0,87,163,0.09))] opacity-0 group-hover:opacity-100 transform group-hover:translate-y-3 transition-all duration-250">
+                        </div>
+                        <div class="text-center h-26">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-[#0057a3] leading-none">
+                                20<span class="text-xl text-[#ffc107]">+</span>
+                            </div>
+                            <div class="text-sm font-semibold uppercase tracking-wide text-[#50627b] mt-2">
+                                Programs &amp; Disciplines
+                            </div>
+                            <p class="text-sm text-[#6c7a90] mt-3">
+                                Management, Engineering, Pharmacy, Architecture, Law &amp; Diploma.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group">
+                    <div
+                        class="relative bg-white rounded-2xl p-3 border border-[rgba(0,87,163,0.12)] shadow-[0_14px_32px_rgba(0,87,163,0.12)] hover:shadow-[0_20px_40px_rgba(0,87,163,0.22)] transition-transform duration-200 hover:-translate-y-1 overflow-hidden">
+                        <div
+                            class="absolute -top-10 -left-[20%] w-[140%] h-10 bg-[linear-gradient(90deg,_rgba(0,87,163,0.09),_rgba(255,193,7,0.35),_rgba(0,87,163,0.09))] opacity-0 group-hover:opacity-100 transform group-hover:translate-y-3 transition-all duration-250">
+                        </div>
+                        <div class="text-center h-26">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-[#0057a3] leading-none">
+                                200<span class="text-xl text-[#ffc107]">+</span>
+                            </div>
+                            <div class="text-sm font-semibold uppercase tracking-wide text-[#50627b] mt-2">
+                                Recruiting Partners
+                            </div>
+                            <p class="text-sm text-[#6c7a90] mt-3">
+                                Leading corporates visiting for campus drives and placements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group">
+                    <div
+                        class="relative bg-white rounded-2xl p-3 border border-[rgba(0,87,163,0.12)] shadow-[0_14px_32px_rgba(0,87,163,0.12)] hover:shadow-[0_20px_40px_rgba(0,87,163,0.22)] transition-transform duration-200 hover:-translate-y-1 overflow-hidden">
+                        <div
+                            class="absolute -top-10 -left-[20%] w-[140%] h-10 bg-[linear-gradient(90deg,_rgba(0,87,163,0.09),_rgba(255,193,7,0.35),_rgba(0,87,163,0.09))] opacity-0 group-hover:opacity-100 transform group-hover:translate-y-3 transition-all duration-250">
+                        </div>
+                        <div class="text-center h-26">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-[#0057a3] leading-none">
+                                100<span class="text-xl text-[#ffc107]">%</span>
+                            </div>
+                            <div class="text-sm font-semibold uppercase tracking-wide text-[#50627b] mt-2">
+                                Placement Track Record
+                            </div>
+                            <p class="text-sm text-[#6c7a90] mt-3">
+                                Strong outcomes with dedicated placement support and global offers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section Ends Here -->
+
+    <!-- Awards Section Starts Here -->
+    <section class="py-10">
+        <div class="max-w-[1550px] mx-auto px-4">
+            <div class="bg-white shadow-[0_15px_40px_rgba(0,0,0,0.12)] overflow-hidden flex flex-col lg:flex-row">
+                <!-- LEFT SIDE -->
+                <div class="flex-1 bg-white p-12">
+                    <!-- Icon + Heading -->
+                    <div class="flex items-start gap-4 mb-6">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#ffb341] to-[#ff8800] flex items-center justify-center text-white text-2xl shadow-lg">
+                            ★
+                        </div>
+                        <div>
+                            <p class="uppercase tracking-wide text-xs text-gray-500 font-semibold">
+                                Awarded & Recognized B-School
+                            </p>
+                            <h3 class="text-2xl font-bold text-gray-900">
+                                Nationally Ranked. Globally Recognized.
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Bullet list -->
+                    <ul class="space-y-2 mb-5">
+                        <li class="flex items-start gap-2 text-gray-700">
+                            <span class="text-orange-500 text-lg leading-none">•</span>
+                            Ranked A+ Top 20 B-School in India
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-700">
+                            <span class="text-orange-500 text-lg leading-none">•</span>
+                            Excellence in Management Education in North India
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-700">
+                            <span class="text-orange-500 text-lg leading-none">•</span>
+                            Ranked AAA+ Institute in U.P
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-700">
+                            <span class="text-orange-500 text-lg leading-none">•</span>
+                            Ranked A+++ Best B-School
+                        </li>
+                    </ul>
+
+                    <p class="text-gray-600 text-base leading-relaxed max-w-xl">
+                        Accurate Institute has been consistently recognized for its quality in management education,
+                        earning strong national rankings and premium ratings across India.
+                    </p>
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div
+                    class="flex-1 bg-[#003f7f] text-white p-10 flex flex-col justify-center rounded-t-3xl lg:rounded-none lg:rounded-r-3xl">
+                    <!-- Top 20 -->
+                    <div class="mb-10">
+                        <p class="uppercase !text-white tracking-wide text-xs opacity-80 mb-1">Among</p>
+                        <div class="flex items-end gap-3">
+                            <h3 class="text-5xl font-extrabold leading-tight !text-white">Top 20</h3>
+                            <p class="text-sm opacity-80 mt-1 !text-white">B-Schools in India</p>
+                        </div>
+                    </div>
+
+                    <!-- A+++ -->
+                    <div>
+                        <p class="uppercase tracking-wide text-xs opacity-80 mb-1 !text-white">Awarded As</p>
+                        <div class="flex items-end gap-3">
+                            <h3 class="text-5xl font-extrabold leading-tight !text-white">A+++</h3>
+                            <p class="text-sm opacity-80 mt-1 !text-white">Best B-School Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Awards Section Ends Here -->
+
+    <!-- Placement Section Starts Here -->
+    <section class="bg-[#014b90] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
             <!-- Heading -->
-            <div class="text-center mb-10">
-                <h2 class="text-[clamp(2rem,4vw,2.5rem)] font-bold text-[#003c73] mb-2">What Our Students Say</h2>
-                <p class="text-[0.98rem] text-gray-500">
-                    Real stories from learners building successful careers with Accurate
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <h2 class="text-3xl font-bold tracking-wide mb-3 !text-white">Outstanding Placement Records</h2>
+                <p class="text-[0.98rem] leading-7 opacity-90 py-3 !text-white">
+                    Accurate Group of Institutions maintains a consistent 100% placement track record, backed by
+                    strong industry interface, value-added programs, and dedicated placement support, enabling
+                    students to secure excellent national and international opportunities.
                 </p>
             </div>
 
-            <!-- Carousel Wrapper -->
-            <div class="relative">
-                <!-- LEFT BUTTON -->
-                <button
-                    id="prevBtn"
-                    class="absolute -left-10 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-[#dddddd] border border-[#6aa2d8] shadow-[0_0_20px_3px_rgba(255,255,255,0.7)] hover:shadow-[0_0_25px_6px_rgba(106,162,216,0.65)] hover:border-[#5b97d5] transition-all duration-300"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="w-5 h-5 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path d="M15 18l-6-6 6-6" />
-                    </svg>
-                </button>
+            <!-- Top 4 Main Placement Cards -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <!-- Card 1 -->
+                <div
+                    class="bg-[#281c4c] rounded-2xl p-6 text-center shadow-[0_10px_25px_rgba(0,0,0,0.18)] flex flex-col justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_35px_rgba(0,0,0,0.25)] hover:bg-[#342361]">
+                    <div class="text-2xl font-bold">100%</div>
+                    <div class="text-[0.78rem] uppercase tracking-wider mt-2 opacity-85">
+                        Placement Track Record
+                    </div>
+                </div>
 
-                <!-- VISIBLE CARDS AREA -->
-                <div class="overflow-hidden">
-                    <div id="carouselTrack" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- CARD 1 -->
-                        <div
-                            class="testimonial-card bg-white rounded-2xl p-6 border border-gray-200 shadow-[0_10px_25px_rgba(0,60,115,0.08)] hover:-translate-y-1.5 hover:shadow-[0_18px_40px_rgba(0,60,115,0.18)] hover:border-[rgba(0,87,163,0.4)] transition-all duration-300"
-                        >
-                            <div class="flex items-center mb-4">
-                                <div
-                                    class="w-14 h-14 rounded-full bg-[linear-gradient(135deg,#0057a3,#ffc107)] flex items-center justify-center text-white font-bold text-lg mr-3"
-                                >
-                                    AV
-                                </div>
-                                <div>
-                                    <h3 class="text-[1.05rem] font-bold text-[#003c73] mb-0">Aman Verma</h3>
-                                    <p class="text-[0.8rem] text-gray-500">BCA · Genpact</p>
+                <!-- Card 2 -->
+                <div
+                    class="bg-[#281c4c] rounded-2xl p-6 text-center shadow-[0_10px_25px_rgba(0,0,0,0.18)] flex flex-col justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_35px_rgba(0,0,0,0.25)] hover:bg-[#342361]">
+                    <div class="text-2xl font-bold">₹1.30 Cr</div>
+                    <div class="text-[0.78rem] uppercase tracking-wider mt-2 opacity-85">
+                        Highest International Package
+                    </div>
+                    <div class="text-[0.75rem] mt-2 opacity-80">Randhir Kumar – SAAS Group, Dubai</div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-[#281c4c] rounded-2xl p-6 text-center shadow-[0_10px_25px_rgba(0,0,0,0.18)] flex flex-col justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_35px_rgba(0,0,0,0.25)] hover:bg-[#342361]">
+                    <div class="text-2xl font-bold">₹17 LPA</div>
+                    <div class="text-[0.78rem] uppercase tracking-wider mt-2 opacity-85">
+                        Highest Domestic Package
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-[#281c4c] rounded-2xl p-6 text-center shadow-[0_10px_25px_rgba(0,0,0,0.18)] flex flex-col justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_35px_rgba(0,0,0,0.25)] hover:bg-[#342361]">
+                    <div class="text-2xl font-bold">₹7 LPA</div>
+                    <div class="text-[0.78rem] uppercase tracking-wider mt-2 opacity-85">Average Package</div>
+                </div>
+            </div>
+
+            <!-- Bottom 4 Supporting Cards -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Support Card 1 -->
+                <div
+                    class="rounded-xl border border-white/25 p-5 text-center backdrop-blur-sm bg-white/5 flex flex-col justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,0.25)] hover:bg-white/10 hover:border-white/60">
+                    <div class="text-xl font-bold">200+</div>
+                    <div class="text-[0.8rem] mt-1 leading-5">Companies for Campus Drives</div>
+                </div>
+
+                <!-- Support Card 2 -->
+                <div
+                    class="rounded-xl border border-white/25 p-5 text-center backdrop-blur-sm bg-white/5 flex flex-col justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,0.25)] hover:bg-white/10 hover:border-white/60">
+                    <div class="text-xl font-bold">Multiple</div>
+                    <div class="text-[0.8rem] mt-1 leading-5">International Placements (Dubai, UK etc.)</div>
+                </div>
+
+                <!-- Support Card 3 -->
+                <div
+                    class="rounded-xl border border-white/25 p-5 text-center backdrop-blur-sm bg-white/5 flex flex-col justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,0.25)] hover:bg-white/10 hover:border-white/60">
+                    <div class="text-xl font-bold">Advanced</div>
+                    <div class="text-[0.8rem] mt-1 leading-5">Training in Excel & Power BI</div>
+                </div>
+
+                <!-- Support Card 4 -->
+                <div
+                    class="rounded-xl border border-white/25 p-5 text-center backdrop-blur-sm bg-white/5 flex flex-col justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(0,0,0,0.25)] hover:bg-white/10 hover:border-white/60">
+                    <div class="text-xl font-bold">Campus to Corporate</div>
+                    <div class="text-[0.8rem] mt-1 leading-5">Workshops & Mentoring</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Placement Section Ends Here -->
+
+
+
+
+
+
+
+
+    <section class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <span
+                    class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-sm font-semibold uppercase tracking-wider mb-4 px-4 py-1 rounded-full bg-blue-50">
+                    <i class="fas fa-bolt mr-2"></i>Latest Updates
+                </span>
+                <h2
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 bg-clip-text text-transparent mb-6">
+                    News & Events
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Stay updated with the latest achievements from Accurate Group of Institutions, Greater Noida
+                </p>
+            </div>
+
+            <!-- Featured News: Record Placements 2024 -->
+            <div class="mb-16">
+                <div class="relative group">
+                    <div
+                        class="glass-effect rounded-3xl shadow-2xl border border-white/50 overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+                        <div class="relative h-64 lg:h-80 xl:h-96 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                                alt="Accurate Institute Placements 2024"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                loading="lazy" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                            </div>
+                            <div class="absolute top-6 left-6 z-10">
+                                <span class="px-4 py-2 gradient-1 text-white text-sm font-bold rounded-full shadow-lg">
+                                    <i class="fas fa-star mr-1"></i>Featured
+                                </span>
+                            </div>
+                            <div
+                                class="absolute top-6 right-6 z-10 bg-white/95 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-xl">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-calendar-day text-blue-600"></i>
+                                    <span class="font-bold text-gray-900 text-sm">2023-24 Batch</span>
                                 </div>
                             </div>
-
-                            <p class="text-[0.95rem] text-gray-600 leading-7 mb-3">
-                                “The industry-oriented curriculum helped me gain confidence.”
+                        </div>
+                        <div class="p-8 lg:p-12">
+                            <h3
+                                class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 leading-tight line-clamp-2 hover:text-blue-600 transition-colors">
+                                Accurate Institute Achieves 100% Placement with 9,124 Offers & ₹85 LPA Highest Package
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed line-clamp-3 text-lg">
+                                Over 60 MNCs visited campus including international placements reaching ₹85 LPA (30%
+                                increase).
                             </p>
+                            <div class="flex items-center justify-between">
+                                <a href="https://www.accurate.in/placement/record/"
+                                    class="text-blue-600 font-semibold hover:text-blue-800 flex items-center">
+                                    View Placement Report <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                                <div class="text-sm text-gray-500">9,124 Offers</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                            <span
-                                class="px-3 py-1 rounded-full text-[0.78rem] font-semibold text-[#003c73] bg-[rgba(255,193,7,0.15)] border border-[rgba(255,193,7,0.7)]"
-                            >
-                                Genpact
+            <!-- CTA Section -->
+            <div class="pb-10 text-end">
+                <a href="https://www.accurate.in"
+                    class="inline-flex justify-end bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-12 rounded-3xl text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <i class="fas fa-arrow-right mr-3"></i>
+                    Visit accurate.in
+                </a>
+            </div>
+
+            <!-- News Grid - Accurate Institute Events -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 mb-20">
+                <!-- News Card 1: MBA 2026-28 Admissions Open -->
+                <div
+                    class="group relative overflow-hidden glass-effect rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] border border-white/50">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="MBA Admissions 2026"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            loading="lazy" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 gradient-2 text-white text-xs font-bold rounded-full">
+                                <i class="fas fa-graduation-cap mr-1"></i>Admissions
                             </span>
                         </div>
-
-                        <!-- CARD 2 -->
+                    </div>
+                    <div class="p-6">
                         <div
-                            class="testimonial-card bg-white rounded-2xl p-6 border border-gray-200 shadow-[0_10px_25px_rgba(0,60,115,0.08)] hover:-translate-y-1.5 hover:shadow-[0_18px_40px_rgba(0,60,115,0.18)] hover:border-[rgba(0,87,163,0.4)] transition-all duration-300"
-                        >
-                            <div class="flex items-center mb-4">
-                                <div
-                                    class="w-14 h-14 rounded-full bg-[linear-gradient(135deg,#0057a3,#ffc107)] flex items-center justify-center text-white font-bold text-lg mr-3"
-                                >
-                                    MK
-                                </div>
-                                <div>
-                                    <h3 class="text-[1.05rem] font-bold text-[#003c73] mb-0">Monika Kumar</h3>
-                                    <p class="text-[0.8rem] text-gray-500">MBA · Oppo India</p>
-                                </div>
-                            </div>
-
-                            <p class="text-[0.95rem] text-gray-600 leading-7 mb-3">
-                                “Training & mock interviews made my journey smooth.”
-                            </p>
-
-                            <span
-                                class="px-3 py-1 rounded-full text-[0.78rem] font-semibold text-[#003c73] bg-[rgba(255,193,7,0.15)] border border-[rgba(255,193,7,0.7)]"
-                            >
-                                Oppo India
-                            </span>
+                            class="flex items-center text-xs text-blue-600 font-semibold mb-3 uppercase tracking-wider">
+                            <i class="fas fa-calendar-alt mr-1"></i>04 Nov 2025
                         </div>
-
-                        <!-- CARD 3 -->
-                        <div
-                            class="testimonial-card bg-white rounded-2xl p-6 border border-gray-200 shadow-[0_10px_25px_rgba(0,60,115,0.08)] hover:-translate-y-1.5 hover:shadow-[0_18px_40px_rgba(0,60,115,0.18)] hover:border-[rgba(0,87,163,0.4)] transition-all duration-300"
-                        >
-                            <div class="flex items-center mb-4">
-                                <div
-                                    class="w-14 h-14 rounded-full bg-[linear-gradient(135deg,#0057a3,#ffc107)] flex items-center justify-center text-white font-bold text-lg mr-3"
-                                >
-                                    SR
-                                </div>
-                                <div>
-                                    <h3 class="text-[1.05rem] font-bold text-[#003c73] mb-0">Shobhika Rajput</h3>
-                                    <p class="text-[0.8rem] text-gray-500">BBA · FPC</p>
-                                </div>
+                        <h4
+                            class="font-bold text-lg mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors text-gray-900">
+                            Accurate Institute Opens MBA 2026-28 Admissions [web:77]
+                        </h4>
+                        <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                            Apply now at accurate.in for MBA program with excellent placement record.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <a href="https://www.accurate.in"
+                                class="text-blue-600 text-sm font-semibold hover:text-blue-800">
+                                Apply Now →
+                            </a>
+                            <div
+                                class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                <i class="fas fa-eye text-blue-600 text-xs"></i>
                             </div>
-
-                            <p class="text-[0.95rem] text-gray-600 leading-7 mb-3">
-                                “Internships helped me understand real business.”
-                            </p>
-
-                            <span
-                                class="px-3 py-1 rounded-full text-[0.78rem] font-semibold text-[#003c73] bg-[rgba(255,193,7,0.15)] border border-[rgba(255,193,7,0.7)]"
-                            >
-                                First Point Creations
-                            </span>
-                        </div>
-
-                        <!-- CARD 4 -->
-                        <div
-                            class="testimonial-card bg-white rounded-2xl p-6 border border-gray-200 shadow-[0_10px_25px_rgba(0,60,115,0.08)] hover:-translate-y-1.5 hover:shadow-[0_18px_40px_rgba(0,60,115,0.18)] hover:border-[rgba(0,87,163,0.4)] transition-all duration-300"
-                        >
-                            <div class="flex items-center mb-4">
-                                <div
-                                    class="w-14 h-14 rounded-full bg-[linear-gradient(135deg,#0057a3,#ffc107)] flex items-center justify-center text-white font-bold text-lg mr-3"
-                                >
-                                    YK
-                                </div>
-                                <div>
-                                    <h3 class="text-[1.05rem] font-bold text-[#003c73] mb-0">Yashika Kapoor</h3>
-                                    <p class="text-[0.8rem] text-gray-500">BCA, Batch 2022 · Capital Boon</p>
-                                </div>
-                            </div>
-
-                            <p class="text-[0.95rem] text-gray-600 leading-7 mb-3">
-                                “The mentoring from faculty and alumni gave me clarity about career options in finance
-                                and analytics.”
-                            </p>
-
-                            <span
-                                class="px-3 py-1 rounded-full text-[0.78rem] font-semibold text-[#003c73] bg-[rgba(255,193,7,0.15)] border border-[rgba(255,193,7,0.7)]"
-                            >
-                                Capital Boon
-                            </span>
-                        </div>
-
-                        <!-- CARD 5 -->
-                        <div
-                            class="testimonial-card bg-white rounded-2xl p-6 border border-gray-200 shadow-[0_10px_25px_rgba(0,60,115,0.08)] hover:-translate-y-1.5 hover:shadow-[0_18px_40px_rgba(0,60,115,0.18)] hover:border-[rgba(0,87,163,0.4)] transition-all duration-300"
-                        >
-                            <div class="flex items-center mb-4">
-                                <div
-                                    class="w-14 h-14 rounded-full bg-[linear-gradient(135deg,#0057a3,#ffc107)] flex items-center justify-center text-white font-bold text-lg mr-3"
-                                >
-                                    SK
-                                </div>
-                                <div>
-                                    <h3 class="text-[1.05rem] font-bold text-[#003c73] mb-0">Sanjeev Kumar</h3>
-                                    <p class="text-[0.8rem] text-gray-500">MBA · Oppo India</p>
-                                </div>
-                            </div>
-
-                            <p class="text-[0.95rem] text-gray-600 leading-7 mb-3">
-                                “From soft skills to group discussions, the training team prepared us thoroughly for
-                                company interviews.”
-                            </p>
-
-                            <span
-                                class="px-3 py-1 rounded-full text-[0.78rem] font-semibold text-[#003c73] bg-[rgba(255,193,7,0.15)] border border-[rgba(255,193,7,0.7)]"
-                            >
-                                Oppo India
-                            </span>
-                        </div>
-
-                        <!-- CARD 6 -->
-                        <div
-                            class="testimonial-card bg-white rounded-2xl p-6 border border-gray-200 shadow-[0_10px_25px_rgba(0,60,115,0.08)] hover:-translate-y-1.5 hover:shadow-[0_18px_40px_rgba(0,60,115,0.18)] hover:border-[rgba(0,87,163,0.4)] transition-all duration-300"
-                        >
-                            <div class="flex items-center mb-4">
-                                <div
-                                    class="w-14 h-14 rounded-full bg-[linear-gradient(135deg,#0057a3,#ffc107)] flex items-center justify-center text-white font-bold text-lg mr-3"
-                                >
-                                    KM
-                                </div>
-                                <div>
-                                    <h3 class="text-[1.05rem] font-bold text-[#003c73] mb-0">Komal Maurya</h3>
-                                    <p class="text-[0.8rem] text-gray-500">BCA, Batch 2022 · Genpact</p>
-                                </div>
-                            </div>
-
-                            <p class="text-[0.95rem] text-gray-600 leading-7 mb-3">
-                                “Accurate’s focus on practical learning, presentations and labs made me placement-ready
-                                by the final semester.”
-                            </p>
-
-                            <span
-                                class="px-3 py-1 rounded-full text-[0.78rem] font-semibold text-[#003c73] bg-[rgba(255,193,7,0.15)] border border-[rgba(255,193,7,0.7)]"
-                            >
-                                Genpact
-                            </span>
                         </div>
                     </div>
                 </div>
 
-                <!-- RIGHT BUTTON -->
-                <button
-                    id="nextBtn"
-                    class="absolute -right-10 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-[#dddddd] border border-[#6aa2d8] shadow-[0_0_20px_3px_rgba(255,255,255,0.7)] hover:shadow-[0_0_25px_6px_rgba(106,162,216,0.65)] hover:border-[#5b97d5] transition-all duration-300"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="w-5 h-5 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path d="M9 6l6 6-6 6" />
-                    </svg>
-                </button>
-            </div>
-        </section>
-        <!-- Testimonial Section Ends Here -->
+                <!-- News Card 2: Top 5 Placement Ranking -->
+                <div
+                    class="group relative overflow-hidden glass-effect rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] border border-white/50">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Placement Award"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            loading="lazy" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 gradient-3 text-white text-xs font-bold rounded-full">
+                                <i class="fas fa-trophy mr-1"></i>Award
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div
+                            class="flex items-center text-xs text-emerald-600 font-semibold mb-3 uppercase tracking-wider">
+                            <i class="fas fa-calendar-alt mr-1"></i>2025
+                        </div>
+                        <h4
+                            class="font-bold text-lg mb-3 line-clamp-2 group-hover:text-emerald-600 transition-colors text-gray-900">
+                            Ranked Top 5 in Placements Across India [web:81]
+                        </h4>
+                        <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                            Institution with Best Placements recognition for outstanding career outcomes.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <a href="https://www.accurate.in/awards/placement-in-india/"
+                                class="text-emerald-600 text-sm font-semibold hover:text-emerald-800">
+                                View Awards →
+                            </a>
+                            <div
+                                class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center group-hover:bg-emerald-200 transition-colors">
+                                <i class="fas fa-eye text-emerald-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Footer Section Starts Here -->
-        <footer class="bg-[#0052cc] text-white">
+                <!-- News Card 3: 60+ MNC Campus Recruitment -->
+                <div
+                    class="group relative overflow-hidden glass-effect rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] border border-white/50">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Campus Recruitment"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            loading="lazy" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 gradient-4 text-white text-xs font-bold rounded-full">
+                                <i class="fas fa-briefcase mr-1"></i>Recruitment
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div
+                            class="flex items-center text-xs text-purple-600 font-semibold mb-3 uppercase tracking-wider">
+                            <i class="fas fa-calendar-alt mr-1"></i>2023-24
+                        </div>
+                        <h4
+                            class="font-bold text-lg mb-3 line-clamp-2 group-hover:text-purple-600 transition-colors text-gray-900">
+                            60+ MNCs Visit for Campus Placements
+                        </h4>
+                        <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                            TCS, Deloitte, banks & more - 100% placement rate achieved.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <a href="https://www.accurate.in/placement/record/"
+                                class="text-purple-600 text-sm font-semibold hover:text-purple-800">
+                                Top Recruiters →
+                            </a>
+                            <div
+                                class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+                                <i class="fas fa-eye text-purple-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Card 4: Fee Structure 2025 Released -->
+                <div
+                    class="group relative overflow-hidden glass-effect rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] border border-white/50">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Fee Structure 2025"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            loading="lazy" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full">
+                                <i class="fas fa-file-invoice mr-1"></i>Fees
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div
+                            class="flex items-center text-xs text-orange-600 font-semibold mb-3 uppercase tracking-wider">
+                            <i class="fas fa-calendar-alt mr-1"></i>09 Mar 2025
+                        </div>
+                        <h4
+                            class="font-bold text-lg mb-3 line-clamp-2 group-hover:text-orange-600 transition-colors text-gray-900">
+                            Accurate Institute Fee Structure 2025 Released
+                        </h4>
+                        <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                            Complete fee details now available for all UG & PG programs.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <a href="https://www.accurate.in"
+                                class="text-orange-600 text-sm font-semibold hover:text-orange-800">
+                                Check Fees →
+                            </a>
+                            <div
+                                class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center group-hover:bg-orange-200 transition-colors">
+                                <i class="fas fa-eye text-orange-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+<section class="bg-white py-20 px-6 lg:px-20 relative overflow-hidden">
+    <div class="container mx-auto">
+        
+        <div class="flex items-center justify-between mb-12">
+            <div class="space-y-2">
+                <h2 class="text-4xl font-black text-[#1e40af]">Latest News</h2>
+                <div class="h-1.5 w-20 bg-blue-600 rounded-full"></div>
+            </div>
+            <button class="hidden md:block border-2 border-[#1e40af] text-[#1e40af] px-6 py-2 rounded-full font-bold hover:bg-[#1e40af] hover:text-white transition-all">
+                All News
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[600px]">
+            
+            <div class="lg:col-span-7 group relative overflow-hidden rounded-[2rem] shadow-xl bg-slate-900">
+                <img src="https://www.accurate.in/img/devi-award.webp" alt="Featured News" 
+                     class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700">
+                
+                <div class="absolute inset-0 p-8 lg:p-12 flex flex-col justify-end bg-gradient-to-t from-[#1e40af] via-transparent to-transparent">
+                    <span class="bg-red-600 text-white text-xs font-bold px-4 py-1.5 rounded-full w-fit mb-4">BREAKING NEWS</span>
+                    <h3 class="text-white text-3xl lg:text-5xl font-black leading-tight mb-4">
+                        Accurate Institute Receives Prestigious "DEVI Award" 2024
+                    </h3>
+                    <p class="text-white/80 text-lg line-clamp-2 max-w-2xl mb-6">
+                        In a landmark achievement, our Honorable Chairperson was recognized for excellence in education and women empowerment.
+                    </p>
+                    <div class="flex items-center gap-4 text-white/60 text-sm">
+                        <span>Dec 23, 2024</span>
+                        <span>•</span>
+                        <span>5 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 flex flex-col gap-6">
+                
+                <div class="group flex gap-4 bg-slate-50 p-4 rounded-3xl border border-slate-100 hover:bg-white hover:shadow-xl transition-all h-1/2">
+                    <div class="w-1/3 overflow-hidden rounded-2xl">
+                        <img src="https://www.accurate.in/img/global-immersion-program-2025.webp" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="w-2/3 flex flex-col justify-center">
+                        <span class="text-blue-600 text-[10px] font-black uppercase mb-1">International</span>
+                        <h4 class="text-lg font-bold text-[#1e40af] leading-snug group-hover:text-blue-500">
+                            Global Immersion Program 2025 Announced
+                        </h4>
+                        <p class="text-slate-500 text-xs mt-2 line-clamp-2">Exploring international business frontiers with our latest study tour.</p>
+                        <span class="text-slate-400 text-[10px] mt-3 uppercase font-bold">Jan 12, 2025</span>
+                    </div>
+                </div>
+
+                <div class="group flex gap-4 bg-slate-50 p-4 rounded-3xl border border-slate-100 hover:bg-white hover:shadow-xl transition-all h-1/2">
+                    <div class="w-1/3 overflow-hidden rounded-2xl">
+                        <img src="https://www.accurate.in/img/most-admired-law-college.webp" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="w-2/3 flex flex-col justify-center">
+                        <span class="text-blue-600 text-[10px] font-black uppercase mb-1">Rankings</span>
+                        <h4 class="text-lg font-bold text-[#1e40af] leading-snug group-hover:text-blue-500">
+                            Most Admired Law College Recognition
+                        </h4>
+                        <p class="text-slate-500 text-xs mt-2 line-clamp-2">Accurate Law College continues to lead in academic excellence.</p>
+                        <span class="text-slate-400 text-[10px] mt-3 uppercase font-bold">Feb 05, 2025</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <section class="py-20 px-6 lg:px-20 bg-white">
+        <div class="container mx-auto">
+           
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div class="lg:col-span-8 group relative overflow-hidden rounded-[2.5rem] shadow-2xl h-[500px]">
+                    <img src="https://www.accurate.in/images/media-logo/main-img.jpg" alt="Prabhu Chawla" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-10 text-white">
+                        <span class="bg-red-600 px-4 py-1 rounded-full text-xs font-bold mb-4 inline-block uppercase tracking-widest">Featured Session</span>
+                        <h3 class="text-3xl lg:text-4xl font-black leading-tight max-w-2xl">
+                            Padma Bhushan Prabhu Chawla Inspires Students at Accurate Institute Orientation
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-4 group relative overflow-hidden rounded-[2.5rem] shadow-xl h-[500px] border border-slate-100">
+                    <img src="https://www.accurate.in/images/media-logo/main-img.jpg" alt="Anand Kumar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 text-white">
+                        <h4 class="text-xl font-bold leading-snug">
+                            Padma Shri Anand Kumar Inspires Students at Accurate Orientation
+                        </h4>
+                        <button class="mt-4 text-sm font-bold border-b-2 border-white pb-1 hover:text-blue-200 transition-all">Read Story →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+<section class="bg-white text-slate-900 antialiased overflow-x-hidden">
+
+
+    <section class="max-w-[1440px] mx-auto px-6 py-20">
+        <div class="max-w-5xl mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-blue-950 mb-8 tracking-tight">
+                Global Minds, Global Markets: <br/>
+                <span class="text-blue-600">Student Expeditions</span>
+            </h1>
+            <p class="text-xl text-slate-500 leading-relaxed max-w-4xl">
+                Globalization has broadened the risks and opportunities for business. We facilitate expeditions to international territories like <b>Singapore, Malaysia, and New Zealand</b> to provide students with firsthand corporate exposure.
+            </p>
+        </div>
+
+        <div class="swiper mySwiper !overflow-visible">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide group">
+                    <div class="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <img src="https://www.accurate.in/img/international-exposure/malayasia-1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Malaysia">
+                        <div class="absolute inset-0 custom-gradient flex flex-col justify-end p-10 text-white">
+                            <h3 class="text-3xl font-bold">Malaysia</h3>
+                            <p class="text-blue-400 font-semibold tracking-wider text-sm mb-2 uppercase">Kuala Lumpur Visit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group">
+                    <div class="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <img src="https://www.accurate.in/img/international-exposure/singapore-3.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="New Zealand">
+                        <div class="absolute inset-0 custom-gradient flex flex-col justify-end p-10 text-white">
+                            <h3 class="text-3xl font-bold">New Zealand</h3>
+                            <p class="text-blue-400 font-semibold tracking-wider text-sm mb-2 uppercase">University of Auckland</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group">
+                    <div class="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <img src="https://www.accurate.in/img/international-exposure/university-of-auckland.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Singapore">
+                        <div class="absolute inset-0 custom-gradient flex flex-col justify-end p-10 text-white">
+                            <h3 class="text-3xl font-bold">Singapore</h3>
+                            <p class="text-blue-400 font-semibold tracking-wider text-sm mb-2 uppercase">Innovation Center</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group">
+                    <div class="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <img src="https://www.accurate.in/img/international-exposure/singapore-visit.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Australia">
+                        <div class="absolute inset-0 custom-gradient flex flex-col justify-end p-10 text-white">
+                            <h3 class="text-3xl font-bold">Australia</h3>
+                            <p class="text-blue-400 font-semibold tracking-wider text-sm mb-2 uppercase">Sydney Business Hub</p>
+                        </div>
+                    </div>
+                </div>
+                     <div class="swiper-slide group">
+                    <div class="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <img src="https://www.accurate.in/img/international-exposure/new-zealand-5.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Australia">
+                        <div class="absolute inset-0 custom-gradient flex flex-col justify-end p-10 text-white">
+                            <h3 class="text-3xl font-bold">Australia</h3>
+                            <p class="text-blue-400 font-semibold tracking-wider text-sm mb-2 uppercase">Sydney Business Hub</p>
+                        </div>
+                    </div>
+                </div>
+                     <div class="swiper-slide group">
+                    <div class="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <img src="https://www.accurate.in/img/international-exposure/malayasia-3.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Australia">
+                        <div class="absolute inset-0 custom-gradient flex flex-col justify-end p-10 text-white">
+                            <h3 class="text-3xl font-bold">Australia</h3>
+                            <p class="text-blue-400 font-semibold tracking-wider text-sm mb-2 uppercase">Sydney Business Hub</p>
+                        </div>
+                    </div>
+                </div>
+                     <div class="swiper-slide group">
+                    <div class="relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <img src="https://www.accurate.in/img/international-exposure/singapore-6.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="Australia">
+                        <div class="absolute inset-0 custom-gradient flex flex-col justify-end p-10 text-white">
+                            <h3 class="text-3xl font-bold">Australia</h3>
+                            <p class="text-blue-400 font-semibold tracking-wider text-sm mb-2 uppercase">Sydney Business Hub</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex items-center justify-center gap-8 mt-16">
+                <div class="swiper-button-prev-btn cursor-pointer group">
+                    <!-- <div class="p-4 rounded-full border border-slate-200 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </div> -->
+                </div>
+                <div class="swiper-pagination !static !w-auto"></div>
+                <div class="swiper-button-next-btn cursor-pointer group">
+                    <!-- <div class="p-4 rounded-full border border-slate-200 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+
+ 
+
+
+
+    <footer class="bg-[#0052cc] text-white">
             <div class="max-w-6xl mx-auto px-4 py-10">
                 <!-- Columns wrapper -->
                 <div class="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
@@ -1509,49 +1803,49 @@
                                 <div class="grid grid-cols-3 gap-3 bg-white/5 p-3 rounded">
                                     <!-- Replace src with your logo images -->
                                     <img
-                                        src="/logos/jagran-josh.png"
+                                        src="https://play-lh.googleusercontent.com/TGwiFIEAjHC2t_8HfiRavuOYLgh9hsW3YwevXQFBZVa-23it-1nm6vJCM--kSlfxHQ"
                                         alt="Jagran Josh"
                                         class="bg-white rounded object-contain h-12 w-full"
                                     />
                                     <img
-                                        src="/logos/assocham.png"
+                                        src="https://www.assocham.org/assets/images/Logo.jpg"
                                         alt="ASSOCHAM"
                                         class="bg-white rounded object-contain h-12 w-full"
                                     />
                                     <img
-                                        src="/logos/xyz.png"
+                                        src="https://www.accurate.in/img/new/awards-logo.webp?v=3"
                                         alt="Award"
                                         class="bg-white rounded object-contain h-12 w-full"
                                     />
 
                                     <img
-                                        src="/logos/education-post.png"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkBY6LjjKJVz0uo4zl2A9-m3TCQBU5Pnm3gA&s"
                                         alt="Education Post"
                                         class="bg-white rounded object-contain h-12 w-full"
                                     />
                                     <img
-                                        src="/logos/bw-businessworld.png"
+                                        src="https://bwevents.co.in/wp-content/uploads/2022/11/BW-Businessworld-1024x1024-280x280.png"
                                         alt="BW Businessworld"
                                         class="bg-white rounded object-contain h-12 w-full"
                                     />
                                     <img
-                                        src="/logos/another.png"
+                                        src="https://smcopharmacy.com/wp-content/uploads/2025/05/4-1.png"
                                         alt="Award"
                                         class="bg-white rounded object-contain h-12 w-full"
                                     />
 
-                                    <img
-                                        src="/logos/aiu.png"
-                                        alt="AIU"
+                                     <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkBY6LjjKJVz0uo4zl2A9-m3TCQBU5Pnm3gA&s"
+                                        alt="Education Post"
                                         class="bg-white rounded object-contain h-12 w-full"
                                     />
                                     <img
-                                        src="/logos/forbes.png"
-                                        alt="Forbes"
+                                        src="https://bwevents.co.in/wp-content/uploads/2022/11/BW-Businessworld-1024x1024-280x280.png"
+                                        alt="BW Businessworld"
                                         class="bg-white rounded object-contain h-12 w-full"
                                     />
                                     <img
-                                        src="/logos/other.png"
+                                        src="https://smcopharmacy.com/wp-content/uploads/2025/05/4-1.png"
                                         alt="Award"
                                         class="bg-white rounded object-contain h-12 w-full"
                                     />
@@ -1599,14 +1893,14 @@
                                     <div class="flex flex-wrap gap-4">
                                         <!-- Replace src with real badge images -->
                                         <img
-                                            src="/badges/100-placement.png"
+                                            src="https://www.accurate.in/img/placement-track-record.webp?v=3"
                                             alt="100% Placement"
-                                            class="h-20 object-contain"
+                                            class="h-50 object-contain"
                                         />
                                         <img
-                                            src="/badges/top-institute.png"
+                                            src="https://www.accurate.in/img/top-csr-campus.webp?v=3"
                                             alt="Top Institute"
-                                            class="h-20 object-contain"
+                                            class="h-50 object-contain"
                                         />
                                     </div>
                                 </div>
@@ -1624,315 +1918,64 @@
                 </section>
             </div>
         </footer>
-        <!-- Footer Section Ends Here -->
 
-        <!-- NavBar Scripts Starts Here -->
-        <script>
-            document.querySelectorAll(".submenu-item").forEach((item) => {
-                item.addEventListener("mouseenter", () => {
-                    const target = item.dataset.descTarget;
-                    const descBox = document.getElementById(target);
-                    const text = descBox.querySelector(".descText");
 
-                    descBox.classList.remove("hidden");
-                    text.innerText = item.dataset.desc;
-                });
-            });
-        </script>
-        <!-- NavBar Scripts Ends Here -->
 
-        <!-- Hero Scripts Starts Here -->
-        <script>
-            (function () {
-                const AUTO_INTERVAL = 7000;
-                const slides = Array.from(document.querySelectorAll("[data-index]"));
-                const indicators = Array.from(document.querySelectorAll("[data-slide-to]"));
-                const prevBtn = document.getElementById("prevBtn");
-                const nextBtn = document.getElementById("nextBtn");
 
-                let current = 0;
-                let timer = null;
-                let isHovered = false;
+<script>
+        const swiper = new Swiper(".mySwiper", {
+            // Infinite and Autoplay settings
+            loop: true,
+            speed: 1000, // Duration of transition between slides (in ms)
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false, // Keeps autoplay running even after user clicks
+                pauseOnMouseEnter: true,    // Pauses when user hovers mouse over slider
+            },
+            
+            // Layout settings
+            slidesPerView: 1.2,
+            centeredSlides: true,
+            spaceBetween: 40,
+            
+            // Interaction
+            grabCursor: true,
+            
+            // Navigation & Pagination
+            navigation: {
+                nextEl: ".swiper-button-next-btn",
+                prevEl: ".swiper-button-prev-btn",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            
+            // Responsive Breakpoints
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+                1440: { slidesPerView: 3.5 },
+            },
+        });
+    </script>
 
-                function showSlide(index) {
-                    index = (index + slides.length) % slides.length;
 
-                    slides.forEach((s, i) => {
-                        const active = i === index;
-                        s.style.zIndex = active ? 20 : 10;
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
 
-                        s.classList.toggle("opacity-100", active);
-                        s.classList.toggle("opacity-0", !active);
-                        s.classList.toggle("pointer-events-none", !active);
-
-                        s.style.transform = active ? "translateY(0)" : "translateY(8px)";
-                    });
-
-                    indicators.forEach((btn, i) => {
-                        btn.classList.toggle("bg-amber-400", i === index);
-                        btn.classList.toggle("bg-slate-400/40", i !== index);
-                    });
-
-                    current = index;
-                }
-
-                function next() {
-                    showSlide(current + 1);
-                    restartTimer();
-                }
-                function prev() {
-                    showSlide(current - 1);
-                    restartTimer();
-                }
-
-                function restartTimer() {
-                    clearInterval(timer);
-                    timer = setInterval(() => {
-                        if (!isHovered) next();
-                    }, AUTO_INTERVAL);
-                }
-
-                nextBtn.addEventListener("click", next);
-                prevBtn.addEventListener("click", prev);
-
-                indicators.forEach((btn) => {
-                    btn.addEventListener("click", () => {
-                        showSlide(Number(btn.getAttribute("data-slide-to")));
-                        restartTimer();
-                    });
-                });
-
-                const carousel = document.getElementById("heroCarousel");
-                carousel.addEventListener("mouseenter", () => (isHovered = true));
-                carousel.addEventListener("mouseleave", () => (isHovered = false));
-
-                window.addEventListener("keydown", (e) => {
-                    if (e.key === "ArrowRight") next();
-                    if (e.key === "ArrowLeft") prev();
-                });
-
-                showSlide(0);
-                restartTimer();
-            })();
-        </script>
-        <!-- Hero Scripts Ends Here -->
-
-        <!-- Alumni Section Script Starts Here -->
-        <script>
-            // ALUMNI DATA
-            const alumni = [
-                {
-                    name: "Monika Baghel",
-                    batch: "BCA Batch 2022",
-                    company: "First Point Creations",
-                    img: "./images/monika-baghel.png",
-                },
-                {
-                    name: "Shobhika Rajput",
-                    batch: "BCA Batch 2022",
-                    company: "Suwasthi Intense Healthcare Pvt. Ltd.",
-                    img: "./images/Shobhika Rajput2.jpeg",
-                },
-                {
-                    name: "Aman Kumar",
-                    batch: "BCA Batch 2022",
-                    company: "First Point Creations",
-                    img: "./images/Aman_BCA.png",
-                },
-                {
-                    name: "Deepak Pratap",
-                    batch: "BCA Batch 2022",
-                    company: "First Point Creations",
-                    img: "./images/DEEPAK-1.png",
-                },
-                { name: "Komal Maurya", batch: "BCA Batch 2022", company: "Genpact", img: "./images/komal-maurya.png" },
-            ];
-
-            // GROUP IN PAIRS
-            let slides = [];
-            for (let i = 0; i < alumni.length; i += 2) {
-                slides.push([alumni[i], alumni[i + 1] || alumni[0]]);
-            }
-
-            // Infinite loop
-            const loopSlides = [slides[slides.length - 1], ...slides, slides[0]];
-
-            const slider = document.getElementById("slider");
-
-            // RENDER SLIDES
-            loopSlides.forEach((pair) => {
-                const slide = document.createElement("div");
-                slide.className = "min-w-full flex flex-col md:flex-row md:gap-6";
-
-                slide.innerHTML = pair
-                    .map(
-                        (p) => `
-                <div class="alumni-card bg-white rounded-2xl p-6 shadow-sm border border-gray-200 flex items-start gap-6 w-full md:w-1/2 mb-6 md:mb-0 transition-all duration-300 ease-in-out hover:-translate-y-[6px] hover:shadow-[0_18px_30px_rgba(0,87,163,0.12)]">
-
-                    <img src="${p.img}" class="w-24 h-24 rounded-xl object-cover" />
-                    <div>
-                      <p class="text-xs uppercase text-gray-400">${p.batch}</p>
-                      <h3 class="text-xl font-semibold text-[#0057a3]">${p.name}</h3>
-                      <p class="text-gray-600 text-sm">
-                        Placed at <span class="text-[#0057a3] font-medium">${p.company}</span>
-                      </p>
-                      <div class="flex items-center gap-3 mt-2">
-                        <span class="px-4 py-1 text-sm border border-yellow-400 rounded-md text-yellow-600">Logo</span>
-                        <span class="text-gray-600 text-sm">${p.company}</span>
-                      </div>
-                    </div>
-                </div>
-            `
-                    )
-                    .join("");
-
-                slider.appendChild(slide);
-            });
-
-            // SLIDER LOGIC
-            let index = 1;
-            const total = loopSlides.length;
-            let slideWidth = 0;
-
-            function recalcWidth() {
-                slideWidth = slider.children[0].getBoundingClientRect().width;
-            }
-
-            window.addEventListener("load", () => {
-                recalcWidth();
-                slider.style.transform = `translateX(-${slideWidth * index}px)`;
-                attachHoverEvents(); // ensure listeners attached after DOM built
-                startAuto(); // start autoplay after listeners attached
-            });
-
-            window.addEventListener("resize", () => {
-                recalcWidth();
-                slider.style.transition = "none";
-                slider.style.transform = `translateX(-${slideWidth * index}px)`;
-            });
-
-            function moveToIndex() {
-                slider.style.transform = `translateX(-${slideWidth * index}px)`;
-            }
-
-            function moveNext() {
-                index++;
-                slider.style.transition = "700ms";
-                moveToIndex();
-
-                setTimeout(() => {
-                    if (index === total - 1) {
-                        slider.style.transition = "none";
-                        index = 1;
-                        moveToIndex();
-                    }
-                }, 700);
-            }
-
-            function movePrev() {
-                index--;
-                slider.style.transition = "700ms";
-                moveToIndex();
-
-                setTimeout(() => {
-                    if (index === 0) {
-                        slider.style.transition = "none";
-                        index = total - 2;
-                        moveToIndex();
-                    }
-                }, 700);
-            }
-
-            document.getElementById("nextBtn").onclick = () => {
-                moveNext();
-                // restart timer so user has full interval after manual nav
-                restartAutoIfRunning();
-            };
-            document.getElementById("prevBtn").onclick = () => {
-                movePrev();
-                restartAutoIfRunning();
-            };
-
-            // AUTOPLAY + PAUSE ON HOVER (idempotent)
-            let autoSlideId = null;
-            const AUTOPLAY_DELAY = 5000;
-
-            function startAuto() {
-                if (autoSlideId) return; // already running
-                autoSlideId = setInterval(moveNext, AUTOPLAY_DELAY);
-            }
-
-            function stopAuto() {
-                if (!autoSlideId) return;
-                clearInterval(autoSlideId);
-                autoSlideId = null;
-            }
-
-            function restartAutoIfRunning() {
-                // if it was running, restart interval so manual nav resets timer
-                if (autoSlideId) {
-                    stopAuto();
-                    startAuto();
-                }
-            }
-
-            function attachHoverEvents() {
-                // Attach to each card
-                const cards = document.querySelectorAll(".alumni-card");
-
-                // If no cards yet, retry shortly (defensive)
-                if (!cards || cards.length === 0) {
-                    setTimeout(attachHoverEvents, 50);
-                    return;
-                }
-
-                cards.forEach((card) => {
-                    card.addEventListener("mouseenter", stopAuto, { passive: true });
-                    card.addEventListener("mouseleave", startAuto, { passive: true });
-                });
-
-                // also pause when hovering the entire slider area (optional)
-                const track = slider.parentElement; // the overflow-hidden container
-                if (track) {
-                    track.addEventListener("mouseenter", stopAuto, { passive: true });
-                    track.addEventListener("mouseleave", startAuto, { passive: true });
-                }
-            }
-        </script>
-        <!-- Alumni Section Script Ends Here -->
-
-        <!-- Testimonials Section Script Starts Here -->
-        <script>
-            const track = document.getElementById("carouselTrack");
-            let cards = Array.from(track.children);
-
-            // DRAW FIRST 3 CARDS
-            function renderThree() {
-                track.innerHTML = "";
-                for (let i = 0; i < 3; i++) {
-                    track.appendChild(cards[i].cloneNode(true));
-                }
-            }
-
-            // NEXT
-            function next() {
-                cards.push(cards.shift());
-                renderThree();
-            }
-
-            // PREVIOUS
-            function prev() {
-                cards.unshift(cards.pop());
-                renderThree();
-            }
-
-            document.getElementById("nextBtn").onclick = next;
-            document.getElementById("prevBtn").onclick = prev;
-
-            setInterval(next, 3000);
-
-            renderThree();
-        </script>
-        <!-- Testimonials Section Script Ends Here -->
-    </body>
 </html>
