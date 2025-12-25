@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Accurate Group - Integrated Design</title>
+    <style>
+        .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+        .accordion-item { transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .active-thumb { border: 3px solid white; transform: scale(1.1); filter: grayscale(0); opacity: 1; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <div id="accordion" class="flex flex-col md:flex-row h-[500px] gap-2 overflow-hidden">
+            <div onclick="toggleAcc(this)" class="accordion-item w-full md:w-16 bg-white border rounded-xl flex flex-col items-center py-6 cursor-pointer hover:bg-gray-100 group">
+                <span class="text-blue-900 text-xl font-bold mb-auto">+</span>
+                <p class="vertical-text font-bold text-gray-600">Multicultural Campus</p>
+            </div>
+
+            <div onclick="toggleAcc(this)" class="accordion-item flex-grow relative rounded-2xl overflow-hidden cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-10 left-10 text-white max-w-lg">
+                    <h2 class="text-4xl font-bold mb-4">Language and Culture</h2>
+                    <div class="w-16 h-1 bg-red-600 mb-4"></div>
+                    <p class="text-gray-200 mb-6">Develop global communication skills in a culturally rich environment.</p>
+                    <button class="bg-red-600 hover:bg-red-700 px-6 py-2 rounded font-bold uppercase text-xs">View More →</button>
+                </div>
+            </div>
+
+            <div onclick="toggleAcc(this)" class="accordion-item w-full md:w-16 bg-white border rounded-xl flex flex-col items-center py-6 cursor-pointer hover:bg-gray-100">
+                <span class="text-blue-900 text-xl font-bold mb-auto">+</span>
+                <p class="vertical-text font-bold text-gray-600">International Research</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <div class="bg-white rounded-[40px] shadow-xl overflow-hidden flex flex-col lg:flex-row">
+            <div class="lg:w-[45%] bg-red-600 p-12 text-white flex flex-col justify-between">
+                <div>
+                    <p class="uppercase tracking-widest text-sm font-semibold opacity-80 mb-4">Students Speak</p>
+                    <h2 class="text-4xl font-bold leading-tight">Discover the inspiring stories <span class="italic font-light">and gain valuable insights</span></h2>
+                </div>
+                <div class="mt-12">
+                    <div class="flex gap-4 mb-8">
+                        <img src="https://i.pravatar.cc/150?u=1" class="active-thumb w-14 h-14 rounded-lg object-cover cursor-pointer">
+                        <img src="https://i.pravatar.cc/150?u=2" class="w-14 h-14 rounded-lg object-cover cursor-pointer opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
+                        <img src="https://i.pravatar.cc/150?u=3" class="w-14 h-14 rounded-lg object-cover cursor-pointer opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
+                    </div>
+                    <button class="bg-white text-black font-bold px-8 py-3 rounded-lg uppercase text-xs tracking-widest hover:bg-gray-200">Read All Reviews →</button>
+                </div>
+            </div>
+            <div class="lg:w-[55%] flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-12 flex flex-col justify-center">
+                    <span class="text-6xl text-red-600 font-serif mb-4">“</span>
+                    <h3 class="text-2xl font-bold mb-4">From an <span class="text-red-600">Aspiring Athlete</span> to International Cricketer</h3>
+                    <p class="text-gray-600 italic leading-relaxed">"Lots of credit goes to the faculty who helped me balance sports and studies."</p>
+                </div>
+                <div class="md:w-1/2 relative min-h-[400px]">
+                    <img src="https://i.pravatar.cc/800?u=1" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 text-white">
+                        <h4 class="text-2xl font-bold">Arshdeep Singh</h4>
+                        <p class="text-sm opacity-80">International Cricketer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <h2 class="text-center text-5xl font-light mb-12">News <span class="font-bold">and Events</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="md:col-span-3 flex flex-col gap-6">
+                <div class="flex gap-4 border-b pb-4">
+                    <img src="https://picsum.photos/100/100?random=1" class="w-20 h-20 rounded object-cover">
+                    <div>
+                        <p class="text-[10px] text-gray-400 uppercase">Campus News</p>
+                        <h4 class="text-sm font-bold leading-tight hover:text-red-600 cursor-pointer">Ambassadors Secure 1st Runner-Up at LinkedIn</h4>
+                    </div>
+                </div>
+                <div class="flex gap-4 border-b pb-4">
+                    <img src="https://picsum.photos/100/100?random=2" class="w-20 h-20 rounded object-cover">
+                    <div>
+                        <p class="text-[10px] text-gray-400 uppercase">Sports</p>
+                        <h4 class="text-sm font-bold leading-tight hover:text-red-600 cursor-pointer">Students clinch Bronze at Asia Rugby</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-6 bg-white rounded-xl shadow-lg overflow-hidden group">
+                <div class="relative overflow-hidden">
+                    <img src="https://picsum.photos/800/600?random=5" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute top-4 left-4 bg-cyan-500 text-white p-4 rounded-lg text-center leading-none">
+                        <span class="block text-3xl font-bold">70</span>
+                        <span class="text-[10px] uppercase font-bold">Offers</span>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-4">India's Highest 70 EPAM Placement Offers at 8 LPA!</h3>
+                    <button class="bg-red-600 text-white px-6 py-2 rounded font-bold text-xs">READ MORE →</button>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 flex flex-col gap-6">
+                <div class="bg-gray-100 rounded-xl overflow-hidden">
+                    <img src="https://picsum.photos/400/300?random=10" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <p class="text-[10px] text-gray-400 uppercase">Influencer Visit</p>
+                        <h4 class="font-bold text-sm">Flying Beast Speaks about Campus Life</h4>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-xl overflow-hidden">
+                    <img src="https://picsum.photos/400/300?random=11" class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <p class="text-[10px] text-gray-400 uppercase">Campus Visit</p>
+                        <h4 class="font-bold text-sm">Curly Tales Explores Local Food Scene</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleAcc(el) {
+            const items = document.querySelectorAll('.accordion-item');
+            items.forEach(item => {
+                item.classList.remove('flex-grow');
+                if(!item.classList.contains('md:w-16')) item.classList.add('md:w-16');
+            });
+            el.classList.add('flex-grow');
+            el.classList.remove('md:w-16');
+        }
+    </script>
+</body>
+</html>

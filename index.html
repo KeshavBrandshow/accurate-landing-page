@@ -8,6 +8,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<link href="fonts.googleapis.com" rel="stylesheet">
+
+
+   
 
     <style>
         /* Maintaining your specific font style */
@@ -61,6 +67,22 @@
             background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
         }
     </style>
+
+    <script>
+        // tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        // Define a custom utility name, e.g., 'heebo'
+        heebo: ['Heebo', 'sans-serif'], 
+      },
+    },
+  },
+  plugins: [],
+}
+
+    </script>
 </head>
 
 <body class="bg-slate-50 overflow-x-hidden">
@@ -559,8 +581,8 @@
 
             <div class="space-y-8 animate-fade-in">
                 <div class="space-y-4">
-                    <h1 class="text-4xl lg:text-6xl font-extrabold text-primary leading-tight">
-                        Discover Your Potential <br> <span class="text-blue-500">with Accurate</span>
+                    <h1 class="text-4xl lg:text-6xl font-heebo font-bold text-primary leading-tight">
+                        Discover Your Potential <br> <span class="text-blue-500 font-heebo font-bold">with Accurate</span>
                     </h1>
                     <p class="text-gray-600 text-lg max-w-lg leading-relaxed">
                         Unleash your potential with Accurate Institute. Choose from a diverse range of programs and
@@ -826,7 +848,7 @@
                             <span class="w-12 h-1 bg-blue-600 rounded-full"></span>
                             <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Our Legacy</span>
                         </div>
-                        <h2 class="text-5xl font-black text-[#1e40af] leading-tight">
+                        <h2 class="font-heebo text-5xl font-heebo font-bold text-[#1e40af] leading-tight">
                             Why Choose <br />
                             <span
                                 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">Accurate?</span>
@@ -1237,365 +1259,6 @@
 
 
 
-    <section class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <!-- Section Header -->
-            <div class="text-center mb-20">
-                <span
-                    class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-sm font-semibold uppercase tracking-wider mb-4 px-4 py-1 rounded-full bg-blue-50">
-                    <i class="fas fa-bolt mr-2"></i>Latest Updates
-                </span>
-                <h2
-                    class="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 bg-clip-text text-transparent mb-6">
-                    News & Events
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Stay updated with the latest achievements from Accurate Group of Institutions, Greater Noida
-                </p>
-            </div>
-
-            <!-- Featured News: Record Placements 2024 -->
-            <div class="mb-16">
-                <div class="relative group">
-                    <div
-                        class="glass-effect rounded-3xl shadow-2xl border border-white/50 overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
-                        <div class="relative h-64 lg:h-80 xl:h-96 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                                alt="Accurate Institute Placements 2024"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                loading="lazy" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
-                            </div>
-                            <div class="absolute top-6 left-6 z-10">
-                                <span class="px-4 py-2 gradient-1 text-white text-sm font-bold rounded-full shadow-lg">
-                                    <i class="fas fa-star mr-1"></i>Featured
-                                </span>
-                            </div>
-                            <div
-                                class="absolute top-6 right-6 z-10 bg-white/95 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-xl">
-                                <div class="flex items-center space-x-2">
-                                    <i class="fas fa-calendar-day text-blue-600"></i>
-                                    <span class="font-bold text-gray-900 text-sm">2023-24 Batch</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-8 lg:p-12">
-                            <h3
-                                class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 leading-tight line-clamp-2 hover:text-blue-600 transition-colors">
-                                Accurate Institute Achieves 100% Placement with 9,124 Offers & ₹85 LPA Highest Package
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed line-clamp-3 text-lg">
-                                Over 60 MNCs visited campus including international placements reaching ₹85 LPA (30%
-                                increase).
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <a href="https://www.accurate.in/placement/record/"
-                                    class="text-blue-600 font-semibold hover:text-blue-800 flex items-center">
-                                    View Placement Report <i class="fas fa-arrow-right ml-2"></i>
-                                </a>
-                                <div class="text-sm text-gray-500">9,124 Offers</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Section -->
-            <div class="pb-10 text-end">
-                <a href="https://www.accurate.in"
-                    class="inline-flex justify-end bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-12 rounded-3xl text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-                    <i class="fas fa-arrow-right mr-3"></i>
-                    Visit accurate.in
-                </a>
-            </div>
-
-            <!-- News Grid - Accurate Institute Events -->
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 mb-20">
-                <!-- News Card 1: MBA 2026-28 Admissions Open -->
-                <div
-                    class="group relative overflow-hidden glass-effect rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] border border-white/50">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                            alt="MBA Admissions 2026"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            loading="lazy" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        </div>
-                        <div class="absolute top-4 left-4">
-                            <span class="px-3 py-1 gradient-2 text-white text-xs font-bold rounded-full">
-                                <i class="fas fa-graduation-cap mr-1"></i>Admissions
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div
-                            class="flex items-center text-xs text-blue-600 font-semibold mb-3 uppercase tracking-wider">
-                            <i class="fas fa-calendar-alt mr-1"></i>04 Nov 2025
-                        </div>
-                        <h4
-                            class="font-bold text-lg mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors text-gray-900">
-                            Accurate Institute Opens MBA 2026-28 Admissions [web:77]
-                        </h4>
-                        <p class="text-sm text-gray-600 mb-4 line-clamp-2">
-                            Apply now at accurate.in for MBA program with excellent placement record.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <a href="https://www.accurate.in"
-                                class="text-blue-600 text-sm font-semibold hover:text-blue-800">
-                                Apply Now →
-                            </a>
-                            <div
-                                class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors">
-                                <i class="fas fa-eye text-blue-600 text-xs"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Card 2: Top 5 Placement Ranking -->
-                <div
-                    class="group relative overflow-hidden glass-effect rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] border border-white/50">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                            alt="Placement Award"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            loading="lazy" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        </div>
-                        <div class="absolute top-4 left-4">
-                            <span class="px-3 py-1 gradient-3 text-white text-xs font-bold rounded-full">
-                                <i class="fas fa-trophy mr-1"></i>Award
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div
-                            class="flex items-center text-xs text-emerald-600 font-semibold mb-3 uppercase tracking-wider">
-                            <i class="fas fa-calendar-alt mr-1"></i>2025
-                        </div>
-                        <h4
-                            class="font-bold text-lg mb-3 line-clamp-2 group-hover:text-emerald-600 transition-colors text-gray-900">
-                            Ranked Top 5 in Placements Across India [web:81]
-                        </h4>
-                        <p class="text-sm text-gray-600 mb-4 line-clamp-2">
-                            Institution with Best Placements recognition for outstanding career outcomes.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <a href="https://www.accurate.in/awards/placement-in-india/"
-                                class="text-emerald-600 text-sm font-semibold hover:text-emerald-800">
-                                View Awards →
-                            </a>
-                            <div
-                                class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center group-hover:bg-emerald-200 transition-colors">
-                                <i class="fas fa-eye text-emerald-600 text-xs"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Card 3: 60+ MNC Campus Recruitment -->
-                <div
-                    class="group relative overflow-hidden glass-effect rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] border border-white/50">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                            alt="Campus Recruitment"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            loading="lazy" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        </div>
-                        <div class="absolute top-4 left-4">
-                            <span class="px-3 py-1 gradient-4 text-white text-xs font-bold rounded-full">
-                                <i class="fas fa-briefcase mr-1"></i>Recruitment
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div
-                            class="flex items-center text-xs text-purple-600 font-semibold mb-3 uppercase tracking-wider">
-                            <i class="fas fa-calendar-alt mr-1"></i>2023-24
-                        </div>
-                        <h4
-                            class="font-bold text-lg mb-3 line-clamp-2 group-hover:text-purple-600 transition-colors text-gray-900">
-                            60+ MNCs Visit for Campus Placements
-                        </h4>
-                        <p class="text-sm text-gray-600 mb-4 line-clamp-2">
-                            TCS, Deloitte, banks & more - 100% placement rate achieved.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <a href="https://www.accurate.in/placement/record/"
-                                class="text-purple-600 text-sm font-semibold hover:text-purple-800">
-                                Top Recruiters →
-                            </a>
-                            <div
-                                class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-200 transition-colors">
-                                <i class="fas fa-eye text-purple-600 text-xs"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Card 4: Fee Structure 2025 Released -->
-                <div
-                    class="group relative overflow-hidden glass-effect rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] border border-white/50">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                            alt="Fee Structure 2025"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            loading="lazy" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        </div>
-                        <div class="absolute top-4 left-4">
-                            <span class="px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full">
-                                <i class="fas fa-file-invoice mr-1"></i>Fees
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div
-                            class="flex items-center text-xs text-orange-600 font-semibold mb-3 uppercase tracking-wider">
-                            <i class="fas fa-calendar-alt mr-1"></i>09 Mar 2025
-                        </div>
-                        <h4
-                            class="font-bold text-lg mb-3 line-clamp-2 group-hover:text-orange-600 transition-colors text-gray-900">
-                            Accurate Institute Fee Structure 2025 Released
-                        </h4>
-                        <p class="text-sm text-gray-600 mb-4 line-clamp-2">
-                            Complete fee details now available for all UG & PG programs.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <a href="https://www.accurate.in"
-                                class="text-orange-600 text-sm font-semibold hover:text-orange-800">
-                                Check Fees →
-                            </a>
-                            <div
-                                class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center group-hover:bg-orange-200 transition-colors">
-                                <i class="fas fa-eye text-orange-600 text-xs"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-
-
-
-
-
-
-<section class="bg-white py-20 px-6 lg:px-20 relative overflow-hidden">
-    <div class="container mx-auto">
-        
-        <div class="flex items-center justify-between mb-12">
-            <div class="space-y-2">
-                <h2 class="text-4xl font-black text-[#1e40af]">Latest News</h2>
-                <div class="h-1.5 w-20 bg-blue-600 rounded-full"></div>
-            </div>
-            <button class="hidden md:block border-2 border-[#1e40af] text-[#1e40af] px-6 py-2 rounded-full font-bold hover:bg-[#1e40af] hover:text-white transition-all">
-                All News
-            </button>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[600px]">
-            
-            <div class="lg:col-span-7 group relative overflow-hidden rounded-[2rem] shadow-xl bg-slate-900">
-                <img src="https://www.accurate.in/img/devi-award.webp" alt="Featured News" 
-                     class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700">
-                
-                <div class="absolute inset-0 p-8 lg:p-12 flex flex-col justify-end bg-gradient-to-t from-[#1e40af] via-transparent to-transparent">
-                    <span class="bg-red-600 text-white text-xs font-bold px-4 py-1.5 rounded-full w-fit mb-4">BREAKING NEWS</span>
-                    <h3 class="text-white text-3xl lg:text-5xl font-black leading-tight mb-4">
-                        Accurate Institute Receives Prestigious "DEVI Award" 2024
-                    </h3>
-                    <p class="text-white/80 text-lg line-clamp-2 max-w-2xl mb-6">
-                        In a landmark achievement, our Honorable Chairperson was recognized for excellence in education and women empowerment.
-                    </p>
-                    <div class="flex items-center gap-4 text-white/60 text-sm">
-                        <span>Dec 23, 2024</span>
-                        <span>•</span>
-                        <span>5 min read</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="lg:col-span-5 flex flex-col gap-6">
-                
-                <div class="group flex gap-4 bg-slate-50 p-4 rounded-3xl border border-slate-100 hover:bg-white hover:shadow-xl transition-all h-1/2">
-                    <div class="w-1/3 overflow-hidden rounded-2xl">
-                        <img src="https://www.accurate.in/img/global-immersion-program-2025.webp" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="w-2/3 flex flex-col justify-center">
-                        <span class="text-blue-600 text-[10px] font-black uppercase mb-1">International</span>
-                        <h4 class="text-lg font-bold text-[#1e40af] leading-snug group-hover:text-blue-500">
-                            Global Immersion Program 2025 Announced
-                        </h4>
-                        <p class="text-slate-500 text-xs mt-2 line-clamp-2">Exploring international business frontiers with our latest study tour.</p>
-                        <span class="text-slate-400 text-[10px] mt-3 uppercase font-bold">Jan 12, 2025</span>
-                    </div>
-                </div>
-
-                <div class="group flex gap-4 bg-slate-50 p-4 rounded-3xl border border-slate-100 hover:bg-white hover:shadow-xl transition-all h-1/2">
-                    <div class="w-1/3 overflow-hidden rounded-2xl">
-                        <img src="https://www.accurate.in/img/most-admired-law-college.webp" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="w-2/3 flex flex-col justify-center">
-                        <span class="text-blue-600 text-[10px] font-black uppercase mb-1">Rankings</span>
-                        <h4 class="text-lg font-bold text-[#1e40af] leading-snug group-hover:text-blue-500">
-                            Most Admired Law College Recognition
-                        </h4>
-                        <p class="text-slate-500 text-xs mt-2 line-clamp-2">Accurate Law College continues to lead in academic excellence.</p>
-                        <span class="text-slate-400 text-[10px] mt-3 uppercase font-bold">Feb 05, 2025</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-    <section class="py-20 px-6 lg:px-20 bg-white">
-        <div class="container mx-auto">
-           
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                <div class="lg:col-span-8 group relative overflow-hidden rounded-[2.5rem] shadow-2xl h-[500px]">
-                    <img src="https://www.accurate.in/images/media-logo/main-img.jpg" alt="Prabhu Chawla" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-10 text-white">
-                        <span class="bg-red-600 px-4 py-1 rounded-full text-xs font-bold mb-4 inline-block uppercase tracking-widest">Featured Session</span>
-                        <h3 class="text-3xl lg:text-4xl font-black leading-tight max-w-2xl">
-                            Padma Bhushan Prabhu Chawla Inspires Students at Accurate Institute Orientation
-                        </h3>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-4 group relative overflow-hidden rounded-[2.5rem] shadow-xl h-[500px] border border-slate-100">
-                    <img src="https://www.accurate.in/images/media-logo/main-img.jpg" alt="Anand Kumar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-8 text-white">
-                        <h4 class="text-xl font-bold leading-snug">
-                            Padma Shri Anand Kumar Inspires Students at Accurate Orientation
-                        </h4>
-                        <button class="mt-4 text-sm font-bold border-b-2 border-white pb-1 hover:text-blue-200 transition-all">Read Story →</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
 
 
 
@@ -1700,12 +1363,475 @@
             </div>
         </div>
     </section>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
 
-</body>
 
- 
+<section class="bg-gray-50 flex items-center justify-center min-h-screen p-4 py-16">
+
+    <div id="accordion-container" class="flex flex-col md:flex-row w-full max-w-8xl h-[700px] gap-3 overflow-hidden">
+         <div onclick="expandPanel(this)" class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            
+            <div class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden">
+                <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
+                <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">Global Collaborations</p>
+            </div>
+
+            <div class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden">
+                <h2 class="text-3xl font-bold mb-2">Global Collaborations</h2>
+                <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
+                <p class="text-gray-200 mb-6 max-w-md">Working with top-tier international universities and corporate partners.</p>
+                <button class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all">
+                    LEARN MORE <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+        <div onclick="expandPanel(this)" class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            
+            <div class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden">
+                <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
+                <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">Global Collaborations</p>
+            </div>
+
+            <div class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden">
+                <h2 class="text-3xl font-bold mb-2">Global Collaborations</h2>
+                <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
+                <p class="text-gray-200 mb-6 max-w-md">Working with top-tier international universities and corporate partners.</p>
+                <button class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all">
+                    LEARN MORE <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+        <div onclick="expandPanel(this)" class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            
+            <div class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden">
+                <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
+                <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">Global Collaborations</p>
+            </div>
+
+            <div class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden">
+                <h2 class="text-3xl font-bold mb-2">Global Collaborations</h2>
+                <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
+                <p class="text-gray-200 mb-6 max-w-md">Working with top-tier international universities and corporate partners.</p>
+                <button class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all">
+                    LEARN MORE <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+        <div onclick="expandPanel(this)" class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            
+            <div class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden">
+                <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
+                <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">Global Collaborations</p>
+            </div>
+
+            <div class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden">
+                <h2 class="text-3xl font-bold mb-2">Global Collaborations</h2>
+                <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
+                <p class="text-gray-200 mb-6 max-w-md">Working with top-tier international universities and corporate partners.</p>
+                <button class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all">
+                    LEARN MORE <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+        <div onclick="expandPanel(this)" class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            
+            <div class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden">
+                <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
+                <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">Global Collaborations</p>
+            </div>
+
+            <div class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden">
+                <h2 class="text-3xl font-bold mb-2">Global Collaborations</h2>
+                <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
+                <p class="text-gray-200 mb-6 max-w-md">Working with top-tier international universities and corporate partners.</p>
+                <button class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all">
+                    LEARN MORE <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+         <div onclick="expandPanel(this)" class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            
+            <div class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden">
+                <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
+                <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">Global Collaborations</p>
+            </div>
+
+            <div class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden">
+                <h2 class="text-3xl font-bold mb-2">Global Collaborations</h2>
+                <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
+                <p class="text-gray-200 mb-6 max-w-md">Working with top-tier international universities and corporate partners.</p>
+                <button class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all">
+                    LEARN MORE <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+
+        <div onclick="expandPanel(this)" class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            
+            <div class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden">
+                <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
+                <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">Research Projects</p>
+            </div>
+
+            <div class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden">
+                <h2 class="text-3xl font-bold mb-2">International Research</h2>
+                <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
+                <p class="text-gray-200 mb-6 max-w-md">Pushing boundaries through collaborative research in global innovation labs.</p>
+                <button class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all">
+                    DISCOVER <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+     <style>
+        .vertical-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+        /* Smooth width transition */
+        .accordion-item {
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* Hide content when collapsed */
+        .content-fade {
+            transition: opacity 0.3s ease;
+        }
+        .active .content-fade {
+            opacity: 1;
+            display: block;
+        }
+        .collapsed .content-fade {
+            opacity: 0;
+            display: none;
+        }
+    </style>
+
+    <script>
+        function expandPanel(selectedPanel) {
+            // Get all panels
+            const panels = document.querySelectorAll('.accordion-item');
+            
+            panels.forEach(panel => {
+                // Remove active classes and add collapsed classes
+                panel.classList.remove('active', 'flex-grow-[5]');
+                panel.classList.add('collapsed', 'flex-grow');
+            });
+
+            // Set the clicked panel to active
+            selectedPanel.classList.remove('collapsed', 'flex-grow');
+            selectedPanel.classList.add('active', 'flex-grow-[5]');
+        }
+    </script>
+
+</section>
+
+
+
+
+<section class="bg-gray-100 h-[65vh] flex p-4 mb-10">
+
+    <section class="w-full max-w-8xl bg-white rounded-[40px] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+        
+        <div class="w-full lg:w-[45%] bg-[#0052cc] p-10 lg:p-16 flex flex-col justify-between text-white relative">
+            <div>
+                <p class="text-sm font-semibold tracking-widest uppercase mb-4">Students Speak</p>
+                <h2 class="text-4xl lg:text-5xl font-bold leading-tight">
+                    Discover the inspiring stories <span class="font-light italic">and gain insights</span>
+                </h2>
+            </div>
+
+            <div class="mt-12">
+                <div class="flex gap-4 mb-8">
+                    <button onclick="prevSlide()" class="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center hover:bg-white hover:text-red-600 transition-all">←</button>
+                    <button onclick="nextSlide()" class="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center hover:bg-white hover:text-red-600 transition-all">→</button>
+                </div>
+
+                <div class="flex flex-wrap gap-6 mb-10">
+                    <div onclick="updateTestimonial(0)" class="cursor-pointer w-16">
+                        <img id="thumb-0" src="https://i.pravatar.cc/150?u=arsh" class="active-thumb w-16 h-16 rounded-lg object-cover grayscale opacity-70 transition-all">
+                        <div id="line-0" class="indicator-line bg-white w-full"></div>
+                        <p class="text-[10px] text-center mt-2 opacity-80">Arshdeep S.</p>
+                    </div>
+                    <div onclick="updateTestimonial(1)" class="cursor-pointer w-16">
+                        <img id="thumb-1" src="https://i.pravatar.cc/150?u=vandana" class="w-16 h-16 rounded-lg object-cover grayscale opacity-70 transition-all">
+                        <div id="line-1" class="indicator-line"></div>
+                        <p class="text-[10px] text-center mt-2 opacity-80">Vandana C.</p>
+                    </div>
+                    <div onclick="updateTestimonial(2)" class="cursor-pointer w-16">
+                        <img id="thumb-2" src="https://i.pravatar.cc/150?u=anand" class="w-16 h-16 rounded-lg object-cover grayscale opacity-70 transition-all">
+                        <div id="line-2" class="indicator-line"></div>
+                        <p class="text-[10px] text-center mt-2 opacity-80">Anand B.</p>
+                    </div>
+                </div>
+
+                <button class="bg-white text-black px-8 py-3 rounded-lg font-bold uppercase text-sm tracking-widest hover:bg-gray-200 transition-all">
+                    Read all reviews →
+                </button>
+            </div>
+        </div>
+
+        <div class="w-full lg:w-[55%] flex flex-col md:flex-row bg-white relative">
+            <div id="text-container" class="fade-in w-full md:w-1/2 p-10 lg:p-14 flex flex-col justify-center">
+                <span class="text-6xl text-[#0052cc] font-serif mb-2">“</span>
+                <h3 id="display-title" class="text-2xl font-bold text-gray-900 mb-6">From an <span class="text-[#0052cc]">Aspiring Athlete</span> to Cricketer</h3>
+                <p id="display-body" class="text-gray-600 italic text-lg leading-relaxed">"Lots of credit goes to the faculty who helped me balance sports and studies."</p>
+                
+                <div class="flex gap-2 mt-10 ">
+                    <div id="dot-0" class="w-3 h-3 rounded-full bg-[#0052cc] transition-all"></div>
+                    <div id="dot-1" class="w-3 h-3 rounded-full bg-gray-300 transition-all"></div>
+                    <div id="dot-2" class="w-3 h-3 rounded-full bg-gray-300 transition-all"></div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 relative min-h-[450px]">
+                <img id="display-image" src="https://i.pravatar.cc/800?u=arsh" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                <div id="name-container" class="fade-in absolute bottom-10 left-10 text-white">
+                    <h4 id="display-name" class="text-3xl font-bold">Arshdeep Singh</h4>
+                    <p id="display-role" class="text-sm uppercase tracking-widest opacity-80">International Cricketer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .active-thumb {
+            border: 3px solid white !important;
+            transform: scale(1.1);
+            filter: grayscale(0) !important;
+            opacity: 1 !important;
+        }
+        .indicator-line {
+            height: 4px;
+            width: 0%;
+            background-color: white;
+            transition: width 0.3s ease;
+            margin-top: 4px;
+            border-radius: 2px;
+        }
+        .active-thumb + .indicator-line {
+            width: 100%;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+    <script>
+        const testimonials = [
+            { title: 'From an <span class="text-[#0052cc]">Aspiring Athlete</span> to Cricketer', body: '"Lots of credit goes to the faculty who helped me balance sports and studies."', name: 'Arshdeep Singh', role: 'International Cricketer', img: 'https://i.pravatar.cc/800?u=arsh' },
+            { title: 'Excelling in <span class="text-[#0052cc]">Global Tech</span> Roles', body: '"The placement cell at Accurate provided me the platform to reach my goals."', name: 'Vandana Chawla', role: 'System Engineer', img: 'https://i.pravatar.cc/800?u=vandana' },
+            { title: 'Leading <span class="text-[#0052cc]">Business Growth</span>', body: '"The industry-focused curriculum made all the difference in my career path."', name: 'Anand Bisht', role: 'MBA Graduate', img: 'https://i.pravatar.cc/800?u=anand' }
+        ];
+
+        let currentIndex = 0;
+
+        function updateTestimonial(index) {
+            currentIndex = index;
+            const data = testimonials[index];
+            
+            // Update Text and Image
+            document.getElementById('display-title').innerHTML = data.title;
+            document.getElementById('display-body').innerText = data.body;
+            document.getElementById('display-name').innerText = data.name;
+            document.getElementById('display-role').innerText = data.role;
+            document.getElementById('display-image').src = data.img;
+
+            // Update All Indicators (Lines, Thumbnails, and Dots)
+            for (let i = 0; i < testimonials.length; i++) {
+                const thumb = document.getElementById(`thumb-${i}`);
+                const line = document.getElementById(`line-${i}`);
+                const dot = document.getElementById(`dot-${i}`);
+
+                if (i === index) {
+                    thumb.classList.add('active-thumb');
+                    line.style.width = "100%";
+                    dot.classList.replace('bg-gray-300', 'bg-[#0052cc]');
+                    dot.classList.add('w-6'); // Make active dot wider
+                } else {
+                    thumb.classList.remove('active-thumb');
+                    line.style.width = "0%";
+                    dot.classList.replace('bg-[#0052cc]', 'bg-gray-300');
+                    dot.classList.remove('w-6');
+                }
+            }
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            updateTestimonial(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            updateTestimonial(currentIndex);
+        }
+    </script>
+</section> 
+
+
+
+<section class="bg-gray-50 py-16">
+
+    <div class="w-full px-4 md:px-8 lg:px-16 max-w-[1600px] mx-auto">
+        <div class="mb-12 text-center">
+            <h2 class="text-4xl md:text-5xl font-light text-gray-800 tracking-tight">
+                News <span class="font-bold text-[#0052cc]">and Events</span>
+            </h2>
+            <div class="w-24 h-1 bg-[#0052cc] mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            
+            <div class="md:col-span-3 space-y-8">
+                <div class="flex gap-4 group cursor-pointer border-b border-gray-200 pb-6">
+                    <div class="shrink-0 overflow-hidden rounded-lg w-24 h-24">
+                        <img src="https://picsum.photos/200/200?random=1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="text-[10px] font-bold text-red-600 uppercase tracking-widest mb-1">Campus News</span>
+                        <h4 class="text-sm font-semibold text-gray-900 group-hover:text-[#0052cc] transition-colors leading-tight line-clamp-2">
+                            Ambassadors Secure 1st Runner-Up at LinkedIn Event
+                        </h4>
+                    </div>
+                </div>
+                <div class="flex gap-4 group cursor-pointer border-b border-gray-200 pb-6">
+                    <div class="shrink-0 overflow-hidden rounded-lg w-24 h-24">
+                        <img src="https://picsum.photos/200/200?random=2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-1">Sports</span>
+                        <h4 class="text-sm font-semibold text-gray-900 group-hover:text-[#0052cc] transition-colors leading-tight line-clamp-2">
+                            Students clinch Bronze at Asia Rugby U20 Championship
+                        </h4>
+                    </div>
+                </div>
+                <div class="flex gap-4 group cursor-pointer">
+                    <div class="shrink-0 overflow-hidden rounded-lg w-24 h-24">
+                        <img src="https://picsum.photos/200/200?random=3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="text-[10px] font-bold text-green-600 uppercase tracking-widest mb-1">Innovation</span>
+                        <h4 class="text-sm font-semibold text-gray-900 group-hover:text-[#0052cc] transition-colors leading-tight line-clamp-2">
+                            New Startup Launchpad Inaugurated on Campus
+                        </h4>
+                    </div>
+                </div>
+                <div class="flex gap-4 group cursor-pointer">
+                    <div class="shrink-0 overflow-hidden rounded-lg w-24 h-24">
+                        <img src="https://picsum.photos/200/200?random=3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="text-[10px] font-bold text-green-600 uppercase tracking-widest mb-1">Innovation</span>
+                        <h4 class="text-sm font-semibold text-gray-900 group-hover:text-[#0052cc] transition-colors leading-tight line-clamp-2">
+                            New Startup Launchpad Inaugurated on Campus
+                        </h4>
+                    </div>
+                </div>
+                <div class="flex gap-4 group cursor-pointer">
+                    <div class="shrink-0 overflow-hidden rounded-lg w-24 h-24">
+                        <img src="https://picsum.photos/200/200?random=3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="text-[10px] font-bold text-green-600 uppercase tracking-widest mb-1">Innovation</span>
+                        <h4 class="text-sm font-semibold text-gray-900 group-hover:text-[#0052cc] transition-colors leading-tight line-clamp-2">
+                            New Startup Launchpad Inaugurated on Campus
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-6">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col h-full group">
+                    <div class="relative overflow-hidden h-72 lg:h-[400px]">
+                        <img src="https://picsum.photos/800/600?random=10" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-6 left-6 bg-cyan-500 text-white p-4 rounded-xl shadow-lg backdrop-blur-md bg-opacity-90 text-center min-w-[100px]">
+                            <span class="block text-4xl font-bold">70</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest">Offers</span>
+                        </div>
+                    </div>
+                    <div class="p-8 lg:p-12 flex flex-col flex-grow bg-white">
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">November 14 | Placements</p>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6">
+                            Reaffirming Its Standing as the University With the Best Placements, Highest 70 Offers Secured!
+                        </h3>
+                        <div class="mt-auto">
+                            <button class="bg-[#0052cc] hover:bg-blue-900 text-white px-10 py-4 rounded-lg font-bold text-sm tracking-widest transition-all flex items-center gap-2 group">
+                                READ MORE 
+                                <span class="group-hover:translate-x-2 transition-transform">→</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 space-y-8">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group cursor-pointer">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://picsum.photos/400/300?random=20" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-md">
+                            <span class="text-[10px] font-bold text-gray-800 uppercase">Influencer Visit</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-gray-900 group-hover:text-[#0052cc] transition-colors">
+                            Flying Beast Speaks about Campus Life at University
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group cursor-pointer">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://picsum.photos/400/300?random=25" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-md">
+                            <span class="text-[10px] font-bold text-gray-800 uppercase">Campus Visit</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-gray-900 group-hover:text-[#0052cc] transition-colors">
+                            Curly Tales Explores Local Food Scene and Campus Infrastructure
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+         .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+    </style>
+
+</section>
+
+
+
 
 
 
@@ -1960,9 +2086,6 @@
             },
         });
     </script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
             loop: true,
