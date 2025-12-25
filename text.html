@@ -586,7 +586,142 @@
 
 
 
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
+<style>
+    :root {
+        --brand-blue: #2563eb;
+        --slate-900: #0f172a;
+        --slate-500: #64748b;
+    }
+    
+    .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    /* 1. Cinematic Parallax-ish Effect */
+    .gallery-card {
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .gallery-card img {
+        transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform;
+    }
+    .gallery-card:hover img {
+        transform: scale(1.1) rotate(1deg);
+    }
+
+    /* 2. Professional Glass Overlay */
+    .glass-overlay {
+        background: linear-gradient(to top, 
+            rgba(15, 23, 42, 0.9) 0%, 
+            rgba(15, 23, 42, 0.4) 50%, 
+            transparent 100%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    .gallery-card:hover .glass-overlay {
+        opacity: 1;
+    }
+
+    /* 3. Bento Grid Architecture */
+    .bento-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 220px;
+        gap: 1.5rem;
+    }
+
+    /* Column/Row Spanning */
+    .feature-large { grid-column: span 2; grid-row: span 2; }
+    .feature-tall { grid-column: span 1; grid-row: span 2; }
+    .feature-wide { grid-column: span 2; grid-row: span 1; }
+
+    @media (max-width: 1024px) {
+        .bento-container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 250px;
+        }
+        .feature-large, .feature-tall, .feature-wide {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .bento-container {
+            grid-template-columns: 1fr;
+            grid-auto-rows: 300px;
+        }
+    }
+</style>
+
+<section class="py-24 bg-white font-jakarta overflow-hidden">
+    <div class="container mx-auto px-6 lg:px-20">
+        
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-20">
+            <div class="max-w-2xl">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="h-px w-10 bg-blue-600"></span>
+                    <span class="text-xs font-bold uppercase tracking-[0.4em] text-blue-600">Institutional Portfolio</span>
+                </div>
+                <h2 class="text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.05]">
+                    Moments of <br/> 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 italic">Inspiration</span>
+                </h2>
+            </div>
+            <div class="max-w-sm">
+                <p class="text-lg text-slate-500 leading-relaxed border-l-4 border-blue-600 pl-6">
+                    A visual narrative of our A+ NAAC accredited campus, celebrating academic milestones and global student life.
+                </p>
+            </div>
+        </div>
+
+        <div class="bento-container">
+            
+            <div class="gallery-card feature-large relative overflow-hidden rounded-[3rem] shadow-2xl group cursor-pointer">
+                <img src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp" class="w-full h-full object-cover" alt="Orientation">
+                <div class="glass-overlay absolute inset-0 flex flex-col justify-end p-10">
+                    <span class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">Campus Culture</span>
+                    <h4 class="text-2xl font-bold text-white">Diksharambh Orientation</h4>
+                </div>
+            </div>
+
+            <div class="gallery-card feature-tall relative overflow-hidden rounded-[3rem] shadow-xl group cursor-pointer">
+                <img src="https://www.accurate.in/img/international-exposure/singapore-visit.webp" class="w-full h-full object-cover" alt="International Visit">
+                <div class="glass-overlay absolute inset-0 flex flex-col justify-end p-8">
+                    <h4 class="text-xl font-bold text-white">Global Exposure</h4>
+                </div>
+            </div>
+
+            <div class="gallery-card relative overflow-hidden rounded-[2.5rem] shadow-lg group cursor-pointer">
+                <img src="https://www.accurate.in/img/devi-award.webp" class="w-full h-full object-cover" alt="Awards">
+                <div class="absolute inset-0 bg-blue-600/10 group-hover:bg-transparent transition-colors"></div>
+            </div>
+
+            <div class="gallery-card relative overflow-hidden rounded-[2.5rem] shadow-lg group cursor-pointer">
+                <img src="https://www.accurate.in/img/most-admired-law-college.webp" class="w-full h-full object-cover" alt="Law Excellence">
+            </div>
+
+            <div class="gallery-card feature-wide relative overflow-hidden rounded-[3rem] shadow-xl group cursor-pointer">
+                <img src="https://www.accurate.in/img/accurate-naac-banner.webp" class="w-full h-full object-cover" alt="NAAC A+">
+                <div class="glass-overlay absolute inset-0 flex items-center justify-between px-10">
+                    <h4 class="text-xl font-bold text-white">NAAC A+ Rated Infrastructure</h4>
+                    <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-20 flex flex-col items-center">
+            <button class="group relative px-12 py-5 bg-slate-900 text-white font-bold rounded-2xl transition-all hover:bg-blue-600 hover:-translate-y-1 active:scale-95 shadow-2xl">
+                View Full Experience
+            </button>
+            <p class="mt-6 text-slate-400 text-sm italic">Experience the Accurate legacy through our lens</p>
+        </div>
+
+    </div>
+</section>
 
 </body>
 
