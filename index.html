@@ -848,7 +848,7 @@ module.exports = {
                             <span class="w-12 h-1 bg-blue-600 rounded-full"></span>
                             <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Our Legacy</span>
                         </div>
-                        <h2 class="font-heebo text-5xl font-heebo font-bold text-[#1e40af] leading-tight">
+                        <h2 class="font-heebo text-5xl  font-bold text-[#1e40af] leading-tight">
                             Why Choose <br />
                             <span
                                 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">Accurate?</span>
@@ -1251,13 +1251,8 @@ module.exports = {
         </div>
     </section>
     <!-- Placement Section Ends Here -->
-
-
-
-
-
-
-
+      
+    
 
 
 
@@ -1368,9 +1363,9 @@ module.exports = {
   
 
 
-<section class="bg-gray-50 flex items-center justify-center min-h-screen p-4 py-16">
+<section class="bg-gray-50 flex items-center justify-center h-[600px] p-4 py-16">
 
-    <div id="accordion-container" class="flex flex-col md:flex-row w-full max-w-8xl h-[700px] gap-3 overflow-hidden">
+    <div id="accordion-container" class="flex flex-col md:flex-row w-full max-w-8xl h-[500px] gap-3 overflow-hidden">
          <div onclick="expandPanel(this)" class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group">
             <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
@@ -1544,6 +1539,259 @@ module.exports = {
 
 
 
+   <section class="py-24 bg-[#f8fafc] overflow-hidden">
+    <div class="max-w-8xl mx-auto px-6 lg:px-20">
+        <div class="max-w-3xl mx-auto text-center mb-16 space-y-4">
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+                Academic <span class="text-blue-600">Excellence</span>
+            </h2>
+            <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+            <p class="text-slate-500 text-lg leading-relaxed">
+                Explore our diverse range of world-class programs designed to bridge the gap between academic theory and industry practice.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-3 lg:sticky lg:top-10 z-20">
+                <div class="flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible gap-2 pb-4 lg:pb-0 no-scrollbar">
+                    <button onclick="tabSwitch(event, 'pgdm')" class="prog-tab active px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 whitespace-nowrap lg:w-full">PGDM</button>
+                    <button onclick="tabSwitch(event, 'btech')" class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">B.Tech</button>
+                    <button onclick="tabSwitch(event, 'mba')" class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">MBA</button>
+                    <button onclick="tabSwitch(event, 'mca')" class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">MCA</button>
+                    <button onclick="tabSwitch(event, 'barch')" class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">B.Arch</button>
+                    <button onclick="tabSwitch(event, 'ug')" class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">BBA / BCA / B.Com</button>
+                    <button onclick="tabSwitch(event, 'pharmacy')" class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">Pharmacy</button>
+                    <button onclick="tabSwitch(event, 'law')" class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">Law</button>
+                    <button onclick="tabSwitch(event, 'polytechnic')" class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">Polytechnic</button>
+                </div>
+            </div>
+
+            <div class="lg:col-span-9">
+                <div id="pgdm" class="tab-pane block animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <div class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                        <div class="p-10 lg:p-14 space-y-6">
+                            <span class="px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold uppercase rounded-full tracking-widest">Management</span>
+                            <h3 class="text-3xl font-bold text-slate-900 leading-tight">Post Graduate Diploma in Management</h3>
+                            <p class="text-slate-500">Industry-integrated curriculum approved by AICTE with a focus on leadership and global business trends.</p>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                    <div class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</div>
+                                    International Study Tour
+                                </li>
+                                <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                    <div class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</div>
+                                    100% Placement Assurance
+                                </li>
+                            </ul>
+                            <button class="w-full py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all">Enroll Now</button>
+                        </div>
+                        <div class="bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="PGDM Students">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="btech" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <div class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                        <div class="p-10 lg:p-14 space-y-6">
+                            <span class="px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold uppercase rounded-full tracking-widest">Engineering</span>
+                            <h3 class="text-3xl font-bold text-slate-900 leading-tight">Bachelor of Technology</h3>
+                            <p class="text-slate-500">Advanced engineering labs and research-oriented teaching in CSE, IT, ME, and more.</p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-4 bg-slate-50 rounded-xl text-center">
+                                    <p class="text-2xl font-bold text-blue-600">Innovation</p>
+                                    <p class="text-xs text-slate-400">Hub Labs</p>
+                                </div>
+                                <div class="p-4 bg-slate-50 rounded-xl text-center">
+                                    <p class="text-2xl font-bold text-blue-600">Coding</p>
+                                    <p class="text-xs text-slate-400">Bootcamps</p>
+                                </div>
+                            </div>
+                            <button class="w-full py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-all">View Specializations</button>
+                        </div>
+                        <div class="bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="BTech Lab">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mba" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <div class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                        <div class="p-10 lg:p-14 space-y-8">
+                            <div class="space-y-3">
+                                <span class="inline-block px-4 py-1.5 bg-purple-50 text-purple-700 text-xs font-bold uppercase tracking-widest rounded-full">Postgraduate</span>
+                                <h3 class="text-3xl font-bold text-slate-900 leading-tight">Master of Business Administration</h3>
+                                <p class="text-slate-500 leading-relaxed">Dual-specialization program creating future-ready leaders in Marketing, Finance, HR, and IT.</p>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                                <div class="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center text-white shadow-lg">✓</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Corporate Mentorship</h4>
+                                    <p class="text-sm text-slate-500">Direct interaction with CXOs for career guidance.</p>
+                                </div>
+                            </div>
+                            <button class="w-full py-4 bg-purple-600 text-white font-bold rounded-2xl hover:bg-purple-700 transition-all">Apply for MBA</button>
+                        </div>
+                        <div class="bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="MBA Discussion">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mca" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <div class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                        <div class="p-10 lg:p-14 space-y-8">
+                            <div class="space-y-3">
+                                <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full">Technology</span>
+                                <h3 class="text-3xl font-bold text-slate-900 leading-tight">Master of Computer Applications</h3>
+                                <p class="text-slate-500 leading-relaxed">Focusing on Cloud Computing and AI to prepare students for top-tier IT roles.</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-4 rounded-2xl bg-blue-50 border border-blue-100 text-center">
+                                    <p class="text-lg font-bold text-slate-900">Full Stack</p>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-blue-50 border border-blue-100 text-center">
+                                    <p class="text-lg font-bold text-slate-900">AI & ML</p>
+                                </div>
+                            </div>
+                            <button class="w-full py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-all">Explore Curriculum</button>
+                        </div>
+                        <div class="bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="MCA Labs">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="barch" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <div class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                        <div class="p-10 lg:p-14 space-y-6">
+                            <span class="px-4 py-1.5 bg-orange-50 text-orange-700 text-xs font-bold uppercase rounded-full tracking-widest">Architecture</span>
+                            <h3 class="text-3xl font-bold text-slate-900 leading-tight">Bachelor of Architecture</h3>
+                            <p class="text-slate-500">Nurturing creative minds for sustainable design and urban planning with modern studio facilities.</p>
+                            <button class="w-full py-4 bg-orange-600 text-white font-bold rounded-2xl hover:bg-orange-700 transition-all">Download Brochure</button>
+                        </div>
+                        <div class="bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="BArch Studio">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ug" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <div class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                        <div class="p-10 lg:p-14 space-y-6">
+                            <span class="px-4 py-1.5 bg-sky-50 text-sky-700 text-xs font-bold uppercase rounded-full tracking-widest">Undergraduate</span>
+                            <h3 class="text-3xl font-bold text-slate-900 leading-tight">BBA / BCA / B.Com(H)</h3>
+                            <p class="text-slate-500">Foundation-building programs in business, technology, and commerce with 100% placement support.</p>
+                            <button class="w-full py-4 bg-sky-600 text-white font-bold rounded-2xl hover:bg-sky-700 transition-all">Explore UG Programs</button>
+                        </div>
+                        <div class="bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="UG Students">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pharmacy" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <div class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                        <div class="p-10 lg:p-14 space-y-6">
+                            <span class="px-4 py-1.5 bg-red-50 text-red-700 text-xs font-bold uppercase rounded-full tracking-widest">Health Sciences</span>
+                            <h3 class="text-3xl font-bold text-slate-900 leading-tight">B.Pharm / D.Pharm / M.Pharm</h3>
+                            <p class="text-slate-500">Offering advanced pharmaceutical research facilities and PCI-approved labs for medical excellence.</p>
+                            <button class="w-full py-4 bg-red-600 text-white font-bold rounded-2xl hover:bg-red-700 transition-all">Check Eligibility</button>
+                        </div>
+                        <div class="bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Pharmacy Lab">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="law" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <div class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                        <div class="p-10 lg:p-14 space-y-6">
+                            <span class="px-4 py-1.5 bg-amber-50 text-amber-700 text-xs font-bold uppercase rounded-full tracking-widest">Legal Studies</span>
+                            <h3 class="text-3xl font-bold text-slate-900 leading-tight">School of Law</h3>
+                            <p class="text-slate-500">Comprehensive legal education with Moot Court sessions and guidance from legal veterans.</p>
+                            <button class="w-full py-4 bg-amber-600 text-white font-bold rounded-2xl hover:bg-amber-700 transition-all">Apply for Law</button>
+                        </div>
+                        <div class="bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Moot Court">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="polytechnic" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <div class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                        <div class="p-10 lg:p-14 space-y-6">
+                            <span class="px-4 py-1.5 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full tracking-widest">Diploma</span>
+                            <h3 class="text-3xl font-bold text-slate-900 leading-tight">Diploma in Polytechnic</h3>
+                            <p class="text-slate-500">Skill-based technical training in various engineering trades with hands-on workshop experience.</p>
+                            <button class="w-full py-4 bg-indigo-600 text-white font-bold rounded-2xl hover:bg-indigo-700 transition-all">View Courses</button>
+                        </div>
+                        <div class="bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Polytechnic Workshop">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .prog-tab.active {
+            background-color: white;
+            color: #2563eb;
+            border-left-color: #2563eb;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Responsive Handling for mobile tab bar */
+        @media (max-width: 1024px) {
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+
+    <script>
+        function tabSwitch(event, id) {
+            // Hide all tab panes
+            document.querySelectorAll('.tab-pane').forEach(p => p.classList.add('hidden'));
+            
+            // Reset all buttons to default state
+            document.querySelectorAll('.prog-tab').forEach(b => {
+                b.classList.remove('active', 'bg-white', 'text-blue-600', 'border-blue-600');
+                b.classList.add('border-transparent', 'text-slate-400');
+            });
+
+            // Show target pane
+            const targetPane = document.getElementById(id);
+            if (targetPane) {
+                targetPane.classList.remove('hidden');
+            }
+
+            // Set current button to active
+            event.currentTarget.classList.add('active');
+            event.currentTarget.classList.remove('text-slate-400', 'border-transparent');
+            
+            // Smooth scroll to top of content area on mobile
+            if (window.innerWidth < 1024) {
+                targetPane.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+    </script>
+</section>
+
+    
+
+   
+
+
+
+
 
 <section class="bg-gray-100 h-[65vh] flex p-4 mb-10">
 
@@ -1551,7 +1799,7 @@ module.exports = {
         
         <div class="w-full lg:w-[45%] bg-[#0052cc] p-10 lg:p-16 flex flex-col justify-between text-white relative">
             <div>
-                <p class="text-sm font-semibold tracking-widest uppercase mb-4">Students Speak</p>
+                <p class="text-sm font-semibold tracking-widest uppercase mb-4">We Are Around The Globe</p>
                 <h2 class="text-4xl lg:text-5xl font-bold leading-tight">
                     Discover the inspiring stories <span class="font-light italic">and gain insights</span>
                 </h2>
@@ -1565,19 +1813,19 @@ module.exports = {
 
                 <div class="flex flex-wrap gap-6 mb-10">
                     <div onclick="updateTestimonial(0)" class="cursor-pointer w-16">
-                        <img id="thumb-0" src="https://i.pravatar.cc/150?u=arsh" class="active-thumb w-16 h-16 rounded-lg object-cover grayscale opacity-70 transition-all">
+                        <img id="thumb-0" src="https://www.accurate.in/img/student/student-12.png" class="active-thumb w-16 h-16 rounded-lg object-cover grayscale opacity-70 transition-all">
                         <div id="line-0" class="indicator-line bg-white w-full"></div>
-                        <p class="text-[10px] text-center mt-2 opacity-80">Arshdeep S.</p>
+                        <p class="text-[10px] text-center mt-2 opacity-80">Randhir K.</p>
                     </div>
                     <div onclick="updateTestimonial(1)" class="cursor-pointer w-16">
-                        <img id="thumb-1" src="https://i.pravatar.cc/150?u=vandana" class="w-16 h-16 rounded-lg object-cover grayscale opacity-70 transition-all">
+                        <img id="thumb-1" src="https://www.accurate.in/img/student/student-3.png" class="w-16 h-16 rounded-lg object-cover grayscale opacity-70 transition-all">
                         <div id="line-1" class="indicator-line"></div>
-                        <p class="text-[10px] text-center mt-2 opacity-80">Vandana C.</p>
+                        <p class="text-[10px] text-center mt-2 opacity-80">Saquib J.</p>
                     </div>
                     <div onclick="updateTestimonial(2)" class="cursor-pointer w-16">
-                        <img id="thumb-2" src="https://i.pravatar.cc/150?u=anand" class="w-16 h-16 rounded-lg object-cover grayscale opacity-70 transition-all">
+                        <img id="thumb-2" src="https://www.accurate.in/img/student/student-2.png" class="w-16 h-16 rounded-lg object-cover grayscale opacity-70 transition-all">
                         <div id="line-2" class="indicator-line"></div>
-                        <p class="text-[10px] text-center mt-2 opacity-80">Anand B.</p>
+                        <p class="text-[10px] text-center mt-2 opacity-80">Kalpana C.</p>
                     </div>
                 </div>
 
@@ -1590,7 +1838,7 @@ module.exports = {
         <div class="w-full lg:w-[55%] flex flex-col md:flex-row bg-white relative">
             <div id="text-container" class="fade-in w-full md:w-1/2 p-10 lg:p-14 flex flex-col justify-center">
                 <span class="text-6xl text-[#0052cc] font-serif mb-2">“</span>
-                <h3 id="display-title" class="text-2xl font-bold text-gray-900 mb-6">From an <span class="text-[#0052cc]">Aspiring Athlete</span> to Cricketer</h3>
+                <h3 id="display-title" class="text-2xl font-bold text-gray-900 mb-6">SAAS Group Dubai <span class="text-[#0052cc]">1.30₹CR</span></h3>
                 <p id="display-body" class="text-gray-600 italic text-lg leading-relaxed">"Lots of credit goes to the faculty who helped me balance sports and studies."</p>
                 
                 <div class="flex gap-2 mt-10 ">
@@ -1601,11 +1849,11 @@ module.exports = {
             </div>
 
             <div class="w-full md:w-1/2 relative min-h-[450px]">
-                <img id="display-image" src="https://i.pravatar.cc/800?u=arsh" class="absolute inset-0 w-full h-full object-cover">
+                <img id="display-image" src="https://www.accurate.in/img/student/student-12.png" class="absolute inset-0 w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div id="name-container" class="fade-in absolute bottom-10 left-10 text-white">
-                    <h4 id="display-name" class="text-3xl font-bold">Arshdeep Singh</h4>
-                    <p id="display-role" class="text-sm uppercase tracking-widest opacity-80">International Cricketer</p>
+                    <h4 id="display-name" class="text-3xl font-bold">Randhir Kumar</h4>
+                    <!-- <p id="display-role" class="text-sm uppercase tracking-widest opacity-80"></p> -->
                 </div>
             </div>
         </div>
@@ -1640,9 +1888,9 @@ module.exports = {
 
     <script>
         const testimonials = [
-            { title: 'From an <span class="text-[#0052cc]">Aspiring Athlete</span> to Cricketer', body: '"Lots of credit goes to the faculty who helped me balance sports and studies."', name: 'Arshdeep Singh', role: 'International Cricketer', img: 'https://i.pravatar.cc/800?u=arsh' },
-            { title: 'Excelling in <span class="text-[#0052cc]">Global Tech</span> Roles', body: '"The placement cell at Accurate provided me the platform to reach my goals."', name: 'Vandana Chawla', role: 'System Engineer', img: 'https://i.pravatar.cc/800?u=vandana' },
-            { title: 'Leading <span class="text-[#0052cc]">Business Growth</span>', body: '"The industry-focused curriculum made all the difference in my career path."', name: 'Anand Bisht', role: 'MBA Graduate', img: 'https://i.pravatar.cc/800?u=anand' }
+            { title: 'SAAS Group Dubai <span class="text-[#0052cc]">1.30₹CR</span>', body: '"Lots of credit goes to the faculty who helped me balance sports and studies."', name: 'Randhir Kumar', img: 'https://www.accurate.in/img/student/student-12.png' },
+            { title: 'Watermelon Dubai <span class="text-[#0052cc]">72₹LPA</span>', body: '"The placement cell at Accurate provided me the platform to reach my goals."', name: 'Saquib Jawed',img: 'https://www.accurate.in/img/student/student-3.png' },
+            { title: 'Hewlett PackardUnited Kingdom <span class="text-[#0052cc]">50₹LPA</span>', body: '"The industry-focused curriculum made all the difference in my career path."', name: 'Kalpana Chauhan', img: 'https://www.accurate.in/img/student/student-2.png' }
         ];
 
         let currentIndex = 0;
@@ -1655,7 +1903,6 @@ module.exports = {
             document.getElementById('display-title').innerHTML = data.title;
             document.getElementById('display-body').innerText = data.body;
             document.getElementById('display-name').innerText = data.name;
-            document.getElementById('display-role').innerText = data.role;
             document.getElementById('display-image').src = data.img;
 
             // Update All Indicators (Lines, Thumbnails, and Dots)
