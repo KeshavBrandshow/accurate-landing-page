@@ -705,6 +705,9 @@
     <!-- ----------------------------------------WHY ACCURETE SECTION ENDS---------------------------------------- -->
 
     <section class="bg-slate-50 py-20 px-6 lg:px-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.1] pointer-events-none"
+            style="background-image: linear-gradient(#0052cc 1px, transparent 1px), linear-gradient(90deg, #0052cc 1px, transparent 1px); background-size: 30px 30px;">
+        </div>
 
         <div class="absolute -top-20 -left-20 w-96 h-96 bg-blue-100 rounded-full blur-[120px] opacity-40"></div>
         <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-[100px] opacity-60">
@@ -721,9 +724,9 @@
                         </div>
                         <h2 class="font-heebo text-5xl  font-bold text-[#1e40af] leading-tight">
                             Why Choose <br />
-                            <span
-                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">Accurate?</span>
                         </h2>
+                        <span
+                            class="font-heebo text-5xl  font-bold text-[#1e40af] leading-tight   text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-500">Accurate?</span>
                         <p class="text-gray-600 leading-relaxed text-lg max-w-xl">
                             Nestled in a <span class="text-blue-700 font-semibold">16-acre green campus</span>, we offer
                             a tranquil environment for holistic learning. Our expert faculty blend theory with practical
@@ -812,6 +815,8 @@
                         <div
                             class="absolute -bottom-6 -right-6 w-24 h-24 bg-[radial-gradient(#2563eb_2px,transparent_2px)] [background-size:12px_12px] opacity-30">
                         </div>
+
+
                     </div>
                 </div>
 
@@ -1234,27 +1239,62 @@
             <div class="grid lg:grid-cols-12 gap-12 items-start">
                 <div class="lg:col-span-3 lg:sticky lg:top-10 z-20">
                     <div
-                        class="flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible gap-2 pb-4 lg:pb-0 no-scrollbar">
-                        <button onclick="tabSwitch(event, 'pgdm')"
-                            class="prog-tab active px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 whitespace-nowrap lg:w-full">PGDM</button>
-                        <button onclick="tabSwitch(event, 'btech')"
-                            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">B.Tech</button>
-                        <button onclick="tabSwitch(event, 'mba')"
-                            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">MBA</button>
-                        <button onclick="tabSwitch(event, 'mca')"
-                            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">MCA</button>
-                        <button onclick="tabSwitch(event, 'barch')"
-                            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">B.Arch</button>
-                        <button onclick="tabSwitch(event, 'ug')"
-                            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">BBA
-                            / BCA / B.Com</button>
-                        <button onclick="tabSwitch(event, 'pharmacy')"
-                            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">Pharmacy</button>
-                        <button onclick="tabSwitch(event, 'law')"
-                            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">Law</button>
-                        <button onclick="tabSwitch(event, 'polytechnic')"
-                            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-400 hover:bg-white hover:text-blue-600 whitespace-nowrap lg:w-full">Polytechnic</button>
+                        class="relative rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50/70 via-white to-blue-50/70 p-3 lg:p-4 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
+
+                        <!-- soft blue blur accent -->
+                        <div
+                            class="pointer-events-none absolute -top-10 -left-10 w-36 h-36 bg-blue-500/20 blur-3xl rounded-full">
+                        </div>
+
+                        <div
+                            class="relative flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible gap-2 pb-2 lg:pb-0 no-scrollbar">
+                            <button onclick="tabSwitch(event, 'pgdm')"
+                                class="prog-tab active px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-blue-600 bg-white text-blue-700 shadow-[0_10px_25px_rgba(37,99,235,0.25)] whitespace-nowrap lg:w-full">
+                                PGDM
+                            </button>
+
+                            <button onclick="tabSwitch(event, 'btech')"
+                                class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+                                B.Tech
+                            </button>
+
+                            <button onclick="tabSwitch(event, 'mba')"
+                                class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+                                MBA
+                            </button>
+
+                            <button onclick="tabSwitch(event, 'mca')"
+                                class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+                                MCA
+                            </button>
+
+                            <button onclick="tabSwitch(event, 'barch')"
+                                class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+                                B.Arch
+                            </button>
+
+                            <button onclick="tabSwitch(event, 'ug')"
+                                class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+                                BBA / BCA / B.Com
+                            </button>
+
+                            <button onclick="tabSwitch(event, 'pharmacy')"
+                                class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+                                Pharmacy
+                            </button>
+
+                            <button onclick="tabSwitch(event, 'law')"
+                                class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+                                Law
+                            </button>
+
+                            <button onclick="tabSwitch(event, 'polytechnic')"
+                                class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+                                Polytechnic
+                            </button>
+                        </div>
                     </div>
+
                 </div>
 
                 <div class="lg:col-span-9">
@@ -1523,7 +1563,13 @@
 
                 // Reset all buttons to default state
                 document.querySelectorAll('.prog-tab').forEach(b => {
-                    b.classList.remove('active', 'bg-white', 'text-blue-600', 'border-blue-600');
+                    b.classList.remove(
+                        'active',
+                        'bg-white',
+                        'text-blue-700',
+                        'border-blue-600',
+                        'shadow-[0_10px_25px_rgba(37,99,235,0.25)]'
+                    );
                     b.classList.add('border-transparent', 'text-slate-400');
                 });
 
@@ -1533,16 +1579,24 @@
                     targetPane.classList.remove('hidden');
                 }
 
-                // Set current button to active
-                event.currentTarget.classList.add('active');
-                event.currentTarget.classList.remove('text-slate-400', 'border-transparent');
+                // Set current button to active / highlighted
+                const btn = event.currentTarget;
+                btn.classList.add(
+                    'active',
+                    'bg-white',
+                    'text-blue-700',
+                    'border-blue-600',
+                    'shadow-[0_10px_25px_rgba(37,99,235,0.25)]'
+                );
+                btn.classList.remove('text-slate-400', 'border-transparent');
 
                 // Smooth scroll to top of content area on mobile
-                if (window.innerWidth < 1024) {
+                if (window.innerWidth < 1024 && targetPane) {
                     targetPane.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 }
             }
         </script>
+
     </section>
 
 
@@ -2064,263 +2118,219 @@
 
 
 
- <section class="py-16 bg-white font-jakarta overflow-hidden relative">
-    <!-- Background Vector 1: BOLD geometric pattern (top-left) -->
-    <!-- <div class="absolute top-8 left-4 w-96 h-96 opacity-[0.22] pointer-events-none">
-        <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none">
-            <defs>
-                <pattern id="geo-pattern" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
-                    <rect x="1" y="1" width="8" height="8" rx="3" fill="#2563eb" opacity="1"/>
-                    <rect x="10" y="6" width="6" height="6" rx="2" fill="#60a5fa" opacity="0.9"/>
-                    <circle cx="6" cy="14" r="4" fill="#2563eb" opacity="1"/>
-                    <circle cx="15" cy="4" r="3" fill="#60a5fa" opacity="0.9"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#geo-pattern)"></rect>
-        </svg>
-    </div> -->
+    <section class="py-16 bg-white font-jakarta overflow-hidden relative h-[100vh]">
 
-    <!-- Background Vector 2: BOLD floating gradient circles (top-right) -->
-    <div class="absolute top-12 right-8 w-80 h-80 opacity-[0.20] pointer-events-none">
-        <svg width="100%" height="100%" viewBox="0 0 120 120" fill="none">
-            <defs>
-                <radialGradient id="grad1" cx="50%" cy="50%">
-                    <stop offset="0%" stop-color="#2563eb" stop-opacity="1"/>
-                    <stop offset="50%" stop-color="#2563eb" stop-opacity="0.6"/>
-                    <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
-                </radialGradient>
-                <radialGradient id="grad2" cx="50%" cy="50%">
-                    <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.9"/>
-                    <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
-                </radialGradient>
-            </defs>
-            <circle cx="35" cy="25" r="30" fill="url(#grad1)" stroke="#2563eb" stroke-width="2"/>
-            <circle cx="85" cy="55" r="22" fill="url(#grad2)" stroke="#60a5fa" stroke-width="2"/>
-            <circle cx="15" cy="75" r="18" fill="#2563eb" opacity="0.8" stroke="#2563eb" stroke-width="2"/>
-            <circle cx="95" cy="25" r="13" fill="#60a5fa" opacity="0.8" stroke="#60a5fa" stroke-width="1.5"/>
-        </svg>
-    </div>
+  <!-- TOP-LEFT: bigger & brighter blue blob + dots -->
+  <div class="pointer-events-none absolute -top-40 -left-40 w-[720px] h-[720px] opacity-[1]">
+    <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none">
+      <defs>
+        <radialGradient id="cornerBlobTL" cx="30%" cy="30%">
+          <stop offset="0%" stop-color="#dbeafe" stop-opacity="1" />
+          <stop offset="55%" stop-color="#bfdbfe" stop-opacity="0.95" />
+          <stop offset="100%" stop-color="#dbeafe" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+      <circle cx="100" cy="100" r="110" fill="url(#cornerBlobTL)" />
+    </svg>
+  </div>
+  <div class="pointer-events-none absolute top-6 left-10 w-24 h-24 opacity-[0.95]">
+    <svg width="100%" height="100%" viewBox="0 0 48 48" fill="none">
+      <g fill="#60a5fa">
+        <!-- 4 x 4 dot grid (bigger dots) -->
+        <circle cx="6" cy="6" r="1.8" /><circle cx="18" cy="6" r="1.8" /><circle cx="30" cy="6" r="1.8" /><circle cx="42" cy="6" r="1.8" />
+        <circle cx="6" cy="18" r="1.8" /><circle cx="18" cy="18" r="1.8" /><circle cx="30" cy="18" r="1.8" /><circle cx="42" cy="18" r="1.8" />
+        <circle cx="6" cy="30" r="1.8" /><circle cx="18" cy="30" r="1.8" /><circle cx="30" cy="30" r="1.8" /><circle cx="42" cy="30" r="1.8" />
+        <circle cx="6" cy="42" r="1.8" /><circle cx="18" cy="42" r="1.8" /><circle cx="30" cy="42" r="1.8" /><circle cx="42" cy="42" r="1.8" />
+      </g>
+    </svg>
+  </div>
 
-    <!-- Background Vector 3: BOLD frame lines (bottom-left) -->
-    <div class="absolute bottom-12 left-4 w-[28rem] h-[28rem] opacity-[0.23] pointer-events-none">
-        <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none">
-            <rect x="5" y="5" width="90" height="90" rx="30" stroke="#2563eb" stroke-width="4" stroke-dasharray="12 6" opacity="1"/>
-            <rect x="15" y="15" width="70" height="70" rx="22" stroke="#60a5fa" stroke-width="3.5" stroke-dasharray="10 5" opacity="0.95"/>
-            <circle cx="75" cy="20" r="12" stroke="#2563eb" stroke-width="4" fill="none" stroke-dasharray="5 5" opacity="1"/>
-            <circle cx="25" cy="75" r="10" stroke="#60a5fa" stroke-width="3.5" fill="none" stroke-dasharray="4 4" opacity="0.95"/>
-        </svg>
-    </div>
+  <!-- TOP-RIGHT: bigger yellow corner ribbon blob -->
+  <div class="pointer-events-none absolute -top-40 -right-48 w-[720px] h-[720px] opacity-[1]">
+    <svg width="100%" height="100%" viewBox="0 0 220 220" fill="none">
+      <defs>
+        <radialGradient id="cornerBlobTR" cx="75%" cy="25%">
+          <stop offset="0%" stop-color="#fef3c7" stop-opacity="1" />
+          <stop offset="55%" stop-color="#feeaa5" stop-opacity="0.95" />
+          <stop offset="100%" stop-color="#fef3c7" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+      <circle cx="120" cy="80" r="110" fill="url(#cornerBlobTR)" />
+      <path
+        d="M210 20 C135 40 118 90 165 135"
+        stroke="#facc15"
+        stroke-width="14"
+        stroke-linecap="round"
+        opacity="0.95"
+      />
+      <path
+        d="M200 25 C145 45 132 90 168 130"
+        stroke="#fde68a"
+        stroke-width="6"
+        stroke-linecap="round"
+        opacity="0.95"
+      />
+    </svg>
+  </div>
 
-    <!-- Background Vector 4: BOLD connection lines (bottom-right) -->
-    <!-- <div class="absolute bottom-4 right-4 w-72 h-72 opacity-[0.24] pointer-events-none">
-        <svg width="100%" height="100%" viewBox="0 0 80 80" fill="none">
-            <path d="M10 10 L30 45 L50 22 L70 58" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
-            <path d="M15 25 L38 60 L55 32" stroke="#60a5fa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
-            <circle cx="30" cy="45" r="8" fill="#2563eb" stroke="#2563eb" stroke-width="3" opacity="1"/>
-            <circle cx="50" cy="22" r="7" fill="#60a5fa" stroke="#60a5fa" stroke-width="2.5" opacity="0.95"/>
-            <circle cx="70" cy="58" r="6" fill="#2563eb" stroke="#2563eb" stroke-width="2.5" opacity="0.9"/>
-        </svg>
-    </div> -->
 
-    <!-- Vector 5: BOLD diagonal wave pattern (top-center) -->
-    <!-- <div class="absolute top-24 left-1/4 w-56 h-56 opacity-[0.21] pointer-events-none">
-        <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none">
-            <defs>
-                <pattern id="wave-pattern" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse">
-                    <path d="M0 20 Q15 5 25 20" stroke="#2563eb" stroke-width="4" fill="none" opacity="1"/>
-                    <path d="M0 25 Q15 10 25 25" stroke="#60a5fa" stroke-width="3" fill="none" opacity="0.95"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#wave-pattern)"></rect>
-        </svg>
-    </div> -->
-
-    <!-- Vector 6: BOLD portfolio icons (center-left) -->
-    <!-- <div class="absolute top-[35%] left-2 w-48 h-48 opacity-[0.22] pointer-events-none">
-        <svg width="100%" height="100%" viewBox="0 0 60 60" fill="none">
-            <rect x="6" y="10" width="48" height="34" rx="5" fill="#2563eb" opacity="1" stroke="#2563eb" stroke-width="3"/>
-            <circle cx="30" cy="28" r="10" fill="white" opacity="1" stroke="#2563eb" stroke-width="2"/>
-            <circle cx="42" cy="16" r="14" fill="#60a5fa" opacity="0.95" stroke="#60a5fa" stroke-width="3"/>
-            <polygon points="42,4 48,12 36,12" fill="#60a5fa" opacity="1" stroke="#60a5fa" stroke-width="2"/>
-            <circle cx="18" cy="38" r="12" fill="#2563eb" opacity="0.95" stroke="#2563eb" stroke-width="3"/>
-            <polygon points="15,35 25,38 15,41" fill="white" opacity="1"/>
-        </svg>
-    </div> -->
-
-    <!-- Vector 7: BOLD grid connectors (center-right) -->
-    <!-- <div class="absolute top-[40%] right-12 w-60 h-60 opacity-[0.23] pointer-events-none">
-        <svg width="100%" height="100%" viewBox="0 0 80 80" fill="none">
-            <path d="M10 20 H40 M40 20 V50" stroke="#2563eb" stroke-width="4.5" stroke-linecap="round" opacity="1"/>
-            <path d="M60 10 V40 M60 40 H30" stroke="#60a5fa" stroke-width="4" stroke-linecap="round" opacity="0.95"/>
-            <circle cx="40" cy="20" r="8" fill="#2563eb" stroke="#2563eb" stroke-width="3" opacity="1"/>
-            <circle cx="60" cy="40" r="7" fill="#60a5fa" stroke="#60a5fa" stroke-width="3" opacity="0.95"/>
-            <rect x="25" y="55" width="15" height="10" rx="3" fill="#2563eb" stroke="#2563eb" stroke-width="2.5" opacity="0.9"/>
-        </svg>
-    </div> -->
-
-    <!-- Vector 8: BOLD starburst (bottom-center) -->
-    <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-44 h-44 opacity-[0.20] pointer-events-none">
-        <svg width="100%" height="100%" viewBox="0 0 80 80" fill="none">
-            <defs>
-                <radialGradient id="star-grad" cx="50%" cy="50%">
-                    <stop offset="0%" stop-color="#2563eb" stop-opacity="1"/>
-                    <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
-                </radialGradient>
-            </defs>
-            <path d="M40 8 L46 24 L64 24 L52 36 L58 52 L40 44 L22 52 L28 36 L16 24 L34 24 Z" fill="url(#star-grad)" stroke="#2563eb" stroke-width="3" opacity="1"/>
-            <circle cx="40" cy="40" r="15" fill="#60a5fa" opacity="0.9" stroke="#60a5fa" stroke-width="3"/>
-        </svg>
-    </div>
-
-    <div class="container mx-auto px-6 lg:px-20 relative z-10">
-        <!-- Header - Reduced spacing -->
-        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
-            <div class="max-w-xl">
-                <div class="flex items-center gap-4 mb-4">
-                    <span class="h-px w-10 bg-blue-600"></span>
-                    <span class="text-xs font-bold uppercase tracking-[0.4em] text-blue-600">Institutional Portfolio</span>
-                </div>
-                <h2 class="text-4xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.05]">
-                    Moments of <br />
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 italic">Inspiration</span>
-                </h2>
-            </div>
-            <div class="max-w-sm">
-                <p class="text-base text-slate-500 leading-relaxed border-l-4 border-blue-600 pl-6">
-                    A visual narrative of our A+ NAAC accredited campus, celebrating academic milestones and global student life.
-                </p>
-            </div>
+  <!-- MAIN CONTENT (same as before) -->
+  <div class="container mx-auto px-6 lg:px-20 relative z-10">
+    <!-- Header -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+      <div class="max-w-xl">
+        <div class="flex items-center gap-4 mb-4">
+          <span class="h-px w-10 bg-blue-600"></span>
+          <span class="text-xs font-bold uppercase tracking-[0.4em] text-blue-600">
+            Institutional Portfolio
+          </span>
         </div>
-
-        <!-- Bento Grid - Smaller rows -->
-        <div class="bento-container">
-            <div class="gallery-card feature-large relative overflow-hidden rounded-[3rem] shadow-2xl group cursor-pointer">
-                <img src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp" class="w-full h-full object-cover" alt="Orientation">
-                <div class="glass-overlay absolute inset-0 flex flex-col justify-end p-10">
-                    <span class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">Campus Culture</span>
-                    <h4 class="text-2xl font-bold text-white">Diksharambh Orientation</h4>
-                </div>
-            </div>
-
-            <div class="gallery-card feature-tall relative overflow-hidden rounded-[3rem] shadow-xl group cursor-pointer">
-                <img src="https://www.accurate.in/img/international-exposure/singapore-visit.webp" class="w-full h-full object-cover" alt="International Visit">
-                <div class="glass-overlay absolute inset-0 flex flex-col justify-end p-8">
-                    <h4 class="text-xl font-bold text-white">Global Exposure</h4>
-                </div>
-            </div>
-
-            <div class="gallery-card relative overflow-hidden rounded-[2.5rem] shadow-lg group cursor-pointer">
-                <img src="https://www.accurate.in/img/devi-award.webp" class="w-full h-full object-cover" alt="Awards">
-                <div class="absolute inset-0 bg-blue-600/10 group-hover:bg-transparent transition-colors"></div>
-            </div>
-
-            <div class="gallery-card relative overflow-hidden rounded-[2.5rem] shadow-lg group cursor-pointer">
-                <img src="https://www.accurate.in/img/most-admired-law-college.webp" class="w-full h-full object-cover" alt="Law Excellence">
-            </div>
-
-            <div class="gallery-card feature-wide relative overflow-hidden rounded-[3rem] shadow-xl group cursor-pointer">
-                <img src="https://www.accurate.in/img/accurate-naac-banner.webp" class="w-full h-full object-cover" alt="NAAC A+">
-                <div class="glass-overlay absolute inset-0 flex items-center justify-between px-10">
-                    <h4 class="text-xl font-bold text-white">NAAC A+ Rated Infrastructure</h4>
-                    <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CTA - Reduced spacing -->
-        <div class="mt-12 flex flex-col items-center">
-            <button class="group relative px-12 py-5 bg-slate-900 text-white font-bold rounded-2xl transition-all hover:bg-blue-600 hover:-translate-y-1 active:scale-95 shadow-2xl">
-                View Full Experience
-            </button>
-            <p class="mt-4 text-slate-400 text-sm italic">Experience the Accurate legacy through our lens</p>
-        </div>
+        <h2 class="text-4xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.05]">
+          Moments of <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 italic">
+            Inspiration
+          </span>
+        </h2>
+      </div>
+      <div class="max-w-sm">
+        <p class="text-base text-slate-500 leading-relaxed border-l-4 border-blue-600 pl-6">
+          A visual narrative of our A+ NAAC accredited campus, celebrating academic milestones and global
+          student life.
+        </p>
+      </div>
     </div>
 
-    <!-- Updated Styles - Reduced heights -->
-    <style>
-        :root {
-            --brand-blue: #2563eb;
-            --slate-900: #0f172a;
-            --slate-500: #64748b;
-        }
+    <!-- Bento Grid -->
+    <div class="bento-container">
+      <div
+        class="gallery-card feature-large relative overflow-hidden rounded-[2.6rem] shadow-[0_20px_55px_rgba(15,23,42,0.25)] group cursor-pointer bg-slate-900/5">
+        <img
+          src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"
+          class="w-full h-full object-cover"
+          alt="Orientation"
+        />
+        <div class="glass-overlay absolute inset-0 flex flex-col justify-end p-10">
+          <span class="text-blue-300 font-semibold text-xs uppercase tracking-[0.25em] mb-2">
+            Campus Culture
+          </span>
+          <h4 class="text-2xl font-bold text-white">Diksharambh Orientation</h4>
+        </div>
+      </div>
 
-        .font-jakarta {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
+      <div
+        class="gallery-card feature-tall relative overflow-hidden rounded-[2.6rem] shadow-[0_18px_45px_rgba(15,23,42,0.2)] group cursor-pointer bg-slate-900/5">
+        <img
+          src="https://www.accurate.in/img/international-exposure/singapore-visit.webp"
+          class="w-full h-full object-cover"
+          alt="International Visit"
+        />
+        <div class="glass-overlay absolute inset-0 flex flex-col justify-end p-8">
+          <h4 class="text-xl font-bold text-white">Global Exposure</h4>
+        </div>
+      </div>
 
-        .gallery-card {
-            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-        }
+      <div
+        class="gallery-card relative overflow-hidden rounded-[2.2rem] shadow-[0_16px_40px_rgba(15,23,42,0.18)] group cursor-pointer bg-slate-900/5">
+        <img
+          src="https://www.accurate.in/img/devi-award.webp"
+          class="w-full h-full object-cover"
+          alt="Awards"
+        />
+        <div class="absolute inset-0 bg-blue-600/12 group-hover:bg-transparent transition-colors"></div>
+      </div>
 
-        .gallery-card img {
-            transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
-            will-change: transform;
-        }
+      <div
+        class="gallery-card relative overflow-hidden rounded-[2.2rem] shadow-[0_16px_40px_rgba(15,23,42,0.18)] group cursor-pointer bg-slate-900/5">
+        <img
+          src="https://www.accurate.in/img/most-admired-law-college.webp"
+          class="w-full h-full object-cover"
+          alt="Law Excellence"
+        />
+      </div>
 
-        .gallery-card:hover img {
-            transform: scale(1.1) rotate(1deg);
-        }
+      <div
+        class="gallery-card feature-wide relative overflow-hidden rounded-[2.6rem] shadow-[0_18px_50px_rgba(15,23,42,0.22)] group cursor-pointer bg-slate-900/5">
+        <img
+          src="https://www.accurate.in/img/accurate-naac-banner.webp"
+          class="w-full h-full object-cover"
+          alt="NAAC A+"
+        />
+        <div class="glass-overlay absolute inset-0 flex items-center justify-between px-10">
+          <h4 class="text-xl font-bold text-white">NAAC A+ Rated Infrastructure</h4>
+          <div
+            class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        .glass-overlay {
-            background: linear-gradient(to top,
-                    rgba(15, 23, 42, 0.9) 0%,
-                    rgba(15, 23, 42, 0.4) 50%,
-                    transparent 100%);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
+    <!-- CTA -->
+    <div class="mt-12 flex flex-col items-center">
+      <button
+        class="group relative px-12 py-5 bg-slate-900 text-white font-bold rounded-2xl transition-all hover:bg-blue-600 hover:-translate-y-1 active:scale-95 shadow-2xl">
+        View Full Experience
+      </button>
+      <p class="mt-4 text-slate-400 text-sm italic">
+        Experience the Accurate legacy through our lens
+      </p>
+    </div>
+  </div>
 
-        .gallery-card:hover .glass-overlay {
-            opacity: 1;
-        }
-
-        .bento-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-auto-rows: 160px; /* Reduced from 220px */
-            gap: 1.25rem; /* Slightly reduced gap */
-        }
-
-        .feature-large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .feature-tall {
-            grid-column: span 1;
-            grid-row: span 2;
-        }
-
-        .feature-wide {
-            grid-column: span 2;
-            grid-row: span 1;
-        }
-
-        @media (max-width: 1024px) {
-            .bento-container {
-                grid-template-columns: repeat(2, 1fr);
-                grid-auto-rows: 180px; /* Reduced from 250px */
-            }
-
-            .feature-large,
-            .feature-tall,
-            .feature-wide {
-                grid-column: span 1;
-                grid-row: span 1;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .bento-container {
-                grid-template-columns: 1fr;
-                grid-auto-rows: 220px; /* Reduced from 300px */
-            }
-        }
-    </style>
+  <style>
+    :root {
+      --brand-blue: #2563eb;
+      --slate-900: #0f172a;
+      --slate-500: #64748b;
+    }
+    .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .gallery-card { transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+    .gallery-card img {
+      transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
+    }
+    .gallery-card:hover img { transform: scale(1.06) rotate(0.5deg); }
+    .glass-overlay {
+      background: linear-gradient(
+        to top,
+        rgba(15, 23, 42, 0.92) 0%,
+        rgba(15, 23, 42, 0.45) 50%,
+        transparent 100%
+      );
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .gallery-card:hover .glass-overlay { opacity: 1; }
+    .bento-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 160px;
+      gap: 1.25rem;
+    }
+    .feature-large { grid-column: span 2; grid-row: span 2; }
+    .feature-tall  { grid-column: span 1; grid-row: span 2; }
+    .feature-wide  { grid-column: span 2; grid-row: span 1; }
+    @media (max-width: 1024px) {
+      .bento-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+      }
+      .feature-large,
+      .feature-tall,
+      .feature-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+    }
+    @media (max-width: 640px) {
+      .bento-container {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+      }
+    }
+  </style>
 </section>
 
 
