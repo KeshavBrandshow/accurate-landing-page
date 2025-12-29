@@ -504,7 +504,7 @@
                 </div>
             </div>
         </div>
-        <div class="absolute top-0 right-0 w-1/2 h-full blue-blob  overflow-hidden">
+        <div class=" absolute hidden lg:block md:block top-0 right-0 w-1/2 h-full blue-blob  overflow-hidden">
             <!-- hidden lg:block -->
             <div class="absolute inset-0 z-10 pointer-events-none ">
             </div>
@@ -575,6 +575,9 @@
 
             </div>
         </div>
+
+
+
 
         <style>
             /* UPWARD MOTION: Travels from 0 to -50% (the height of one set) */
@@ -698,6 +701,102 @@
 
     </section>
 
+    <!-- mobile responsive slider  -->
+
+    <div class="lg:hidden w-full space-y-4 relative mt-1 mb-5">
+        <div class="absolute inset-0 bg-blue-50/40 -z-10 blur-2xl"></div>
+
+        <div class="overflow-hidden flex">
+            <div class="flex animate-marquee-mobile gap-4 whitespace-nowrap">
+                <img src="./images/hero/slider1.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider2.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider3.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider1.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider2.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider3.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+            </div>
+        </div>
+
+        <div class="overflow-hidden flex">
+            <div class="flex animate-marquee-mobile-reverse gap-4 whitespace-nowrap">
+                <img src="./images/hero/slider11.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider12.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider13.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider11.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider12.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider13.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes marquee-vertical {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        @keyframes marquee-vertical-reverse {
+            0% {
+                transform: translateY(-50%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* MOBILE HORIZONTAL ANIMATIONS */
+        @keyframes marquee-horizontal {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes marquee-horizontal-reverse {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animate-marquee-vertical {
+            animation: marquee-vertical 40s linear infinite;
+        }
+
+        .animate-marquee-vertical-reverse {
+            animation: marquee-vertical-reverse 40s linear infinite;
+        }
+
+        .animate-marquee-mobile {
+            animation: marquee-horizontal 30s linear infinite;
+        }
+
+        .animate-marquee-mobile-reverse {
+            animation: marquee-horizontal-reverse 30s linear infinite;
+        }
+
+        .animate-marquee-vertical:hover,
+        .animate-marquee-vertical-reverse:hover,
+        .animate-marquee-mobile:hover,
+        .animate-marquee-mobile-reverse:hover {
+            animation-play-state: paused;
+        }
+    </style>
+
+
+    <!-- mobile responsive slider ends -->
 
     <!-- ----------------------------------------HERO SECTION ENDS---------------------------------------- -->
 
@@ -722,7 +821,8 @@
                             <span class="w-12 h-1 bg-blue-600 rounded-full"></span>
                             <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Our Legacy</span>
                         </div>
-                        <h2 class="font-heebo text-5xl  font-bold text-[#1e40af] leading-tight">
+                        <h2 class="font-heebo text-5xl font-bold text-[#1e40af] leading-tight"
+                            style="text-shadow :0 0 0 #fff, 2px 2px 0 #fff, 1px 3px 0 #bfbfbf, 3px 3px 0 #bfbfbf, 3px 1px 0 #bfbfbf">
                             Why Choose <br />
                         </h2>
                         <span
@@ -1101,7 +1201,8 @@
     <!-- Awards Section Ends Here -->
 
     <!-- Placement Section Starts Here -->
-    <section class="bg-[#014b90] text-white py-16 md:py-24 relative overflow-hidden">
+
+ <section class="bg-[#014b90] text-white py-16 md:py-24 relative overflow-hidden">
 
         <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
             <svg width="100%" height="100%" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
@@ -1273,14 +1374,30 @@
                                 B.Arch
                             </button>
 
-                            <button onclick="tabSwitch(event, 'ug')"
+                            <button onclick="tabSwitch(event, 'bca')"
                                 class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
-                                BBA / BCA / B.Com
+                                BCA
+                            </button>
+                            <button onclick="tabSwitch(event, 'bba')"
+                                class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+                                BBA
+                            </button>
+                            <button onclick="tabSwitch(event, 'bcom')"
+                                class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+                                BCOM
                             </button>
 
-                            <button onclick="tabSwitch(event, 'pharmacy')"
+                            <button onclick="tabSwitch(event, 'bpharmacy')"
                                 class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
-                                Pharmacy
+                                B.Pharm
+                            </button>
+                            <button onclick="tabSwitch(event, 'dpharmacy')"
+                                class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+                                D.Pharm
+                            </button>
+                            <button onclick="tabSwitch(event, 'mpharmacy')"
+                                class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+                                M.Pharm
                             </button>
 
                             <button onclick="tabSwitch(event, 'law')"
@@ -1306,8 +1423,11 @@
                                     class="px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold uppercase rounded-full tracking-widest">Management</span>
                                 <h3 class="text-3xl font-bold text-slate-900 leading-tight">Post Graduate Diploma in
                                     Management</h3>
-                                <p class="text-slate-500">Industry-integrated curriculum approved by AICTE with a focus
-                                    on leadership and global business trends.</p>
+                                <p class="text-slate-500">Two Years Full Time Program Approved by AICTE, Ministry Of
+                                    HRD, Government of India.</p>
+                                <p class="text-slate-500">AIMT is continuously engaged in innovating curricula by
+                                    envisaging current and emerging challenges and opportunities in the business
+                                    environment.</p>
                                 <ul class="space-y-4">
                                     <li class="flex items-center gap-3 text-slate-700 font-medium">
                                         <div
@@ -1319,12 +1439,42 @@
                                         <div
                                             class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
                                             ✓</div>
+                                        Value Added Certification Programmes
+                                    </li>
+                                    <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div
+                                            class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
+                                            ✓</div>
+                                        Strong Industry Interface
+                                    </li>
+                                    <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div
+                                            class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
+                                            ✓</div>
                                         100% Placement Assurance
+                                    </li>
+                                    <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div
+                                            class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
+                                            ✓</div>
+                                        National + International Seminars/Conference
+                                    </li>
+                                    <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div
+                                            class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
+                                            ✓</div>
+                                        Support to Entrepreneur Ideas
+                                    </li>
+                                    <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div
+                                            class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
+                                            ✓</div>
+                                        Live Projects & Assignments
                                     </li>
                                 </ul>
                                 <button
-                                    class="w-full py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all">Enroll
-                                    Now</button>
+                                    class="w-full py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all">View
+                                    Program Details</button>
                             </div>
                             <div class="bg-slate-200">
                                 <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80"
@@ -1340,21 +1490,40 @@
                                 <span
                                     class="px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold uppercase rounded-full tracking-widest">Engineering</span>
                                 <h3 class="text-3xl font-bold text-slate-900 leading-tight">Bachelor of Technology</h3>
-                                <p class="text-slate-500">Advanced engineering labs and research-oriented teaching in
-                                    CSE, IT, ME, and more.</p>
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="p-4 bg-slate-50 rounded-xl text-center">
-                                        <p class="text-2xl font-bold text-blue-600">Innovation</p>
-                                        <p class="text-xs text-slate-400">Hub Labs</p>
-                                    </div>
-                                    <div class="p-4 bg-slate-50 rounded-xl text-center">
-                                        <p class="text-2xl font-bold text-blue-600">Coding</p>
-                                        <p class="text-xs text-slate-400">Bootcamps</p>
-                                    </div>
-                                </div>
+                                <p class="text-slate-500">Four Years Full Time Program Approved by AICTE, ministry of
+                                    HRD Govt. Of India & affiliated to AKTU Lucknow.</p>
+                                <p class="text-slate-500">The engineering course was introduced in the college in 2006
+                                    with four branches with 60 intakes in each, with overwhelming response to our
+                                    engineering course, the overall intake has now increased to 900.</p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div
+                                            class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
+                                            ✓</div>
+                                        BMW'S Engine is Part of Accurates Lab
+                                    </li>
+                                    <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div
+                                            class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
+                                            ✓</div>
+                                        100% Placement Track Record
+                                    </li>
+                                    <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div
+                                            class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
+                                            ✓</div>
+                                        Awarded as Best Engineering Institute in North India
+                                    </li>
+                                    <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div
+                                            class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
+                                            ✓</div>
+                                        National Level Engineering Competition Participation
+                                    </li>
+                                </ul>
                                 <button
                                     class="w-full py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-all">View
-                                    Specializations</button>
+                                    Program Details</button>
                             </div>
                             <div class="bg-slate-200">
                                 <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80"
@@ -1372,22 +1541,18 @@
                                         class="inline-block px-4 py-1.5 bg-purple-50 text-purple-700 text-xs font-bold uppercase tracking-widest rounded-full">Postgraduate</span>
                                     <h3 class="text-3xl font-bold text-slate-900 leading-tight">Master of Business
                                         Administration</h3>
-                                    <p class="text-slate-500 leading-relaxed">Dual-specialization program creating
-                                        future-ready leaders in Marketing, Finance, HR, and IT.</p>
+                                    <p class="text-slate-500 leading-relaxed">The MBA program at Accurate Institute of
+                                        Management and Technology is a two-year, full-time course that is designed to
+                                        prepare students for careers in business and management. The curriculum covers a
+                                        wide range of topics, including accounting, finance, marketing, human resources,
+                                        and operations management.</p>
+                                    <p class="text-slate-500 leading-relaxed">The program is accredited by the All India
+                                        Council for Technical Education (AICTE). and Affiliated to AKTU, Lucknow.</p>
                                 </div>
-                                <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                                    <div
-                                        class="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center text-white shadow-lg">
-                                        ✓</div>
-                                    <div>
-                                        <h4 class="font-bold text-slate-900">Corporate Mentorship</h4>
-                                        <p class="text-sm text-slate-500">Direct interaction with CXOs for career
-                                            guidance.</p>
-                                    </div>
-                                </div>
+
                                 <button
-                                    class="w-full py-4 bg-purple-600 text-white font-bold rounded-2xl hover:bg-purple-700 transition-all">Apply
-                                    for MBA</button>
+                                    class="w-full py-4 bg-purple-600 text-white font-bold rounded-2xl hover:bg-purple-700 transition-all">View
+                                    Program Details</button>
                             </div>
                             <div class="bg-slate-200">
                                 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
@@ -1405,20 +1570,25 @@
                                         class="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full">Technology</span>
                                     <h3 class="text-3xl font-bold text-slate-900 leading-tight">Master of Computer
                                         Applications</h3>
-                                    <p class="text-slate-500 leading-relaxed">Focusing on Cloud Computing and AI to
-                                        prepare students for top-tier IT roles.</p>
-                                </div>
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="p-4 rounded-2xl bg-blue-50 border border-blue-100 text-center">
-                                        <p class="text-lg font-bold text-slate-900">Full Stack</p>
-                                    </div>
-                                    <div class="p-4 rounded-2xl bg-blue-50 border border-blue-100 text-center">
-                                        <p class="text-lg font-bold text-slate-900">AI & ML</p>
-                                    </div>
+                                    <p class="text-slate-500 leading-relaxed">Technology is always changing, and there
+                                        are new job opportunities that weren't around even a few years ago. Many careers
+                                        involve computers and software in some capacity. The Masters of Computer
+                                        Application (MCA) program has 2 years of study and training. MCA program at
+                                        Accurate Institute of Technology, Greater Noida is affiliated to AKTU, Lucknow
+                                        and is approved by All India Council for Technical Education (AICTE). Our MCA
+                                        course has been ranked in top courses of the country year on year by various
+                                        authorities and media outlets. Several unique factors make it the best course
+                                        for pursuing MCA degree and getting good a head start in terms of career in
+                                        computer application. The institute provides 2 years MCA course in Accurate
+                                        institute of technology, Greater Noida. The course includes project work,
+                                        research, field study and industrial visits as an integral part of curriculum to
+                                        give you a holistic experience of being a professional software developer
+
+                                        View program details.</p>
                                 </div>
                                 <button
-                                    class="w-full py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-all">Explore
-                                    Curriculum</button>
+                                    class="w-full py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-all">View
+                                    Program Details</button>
                             </div>
                             <div class="bg-slate-200">
                                 <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80"
@@ -1435,11 +1605,19 @@
                                     class="px-4 py-1.5 bg-orange-50 text-orange-700 text-xs font-bold uppercase rounded-full tracking-widest">Architecture</span>
                                 <h3 class="text-3xl font-bold text-slate-900 leading-tight">Bachelor of Architecture
                                 </h3>
-                                <p class="text-slate-500">Nurturing creative minds for sustainable design and urban
-                                    planning with modern studio facilities.</p>
+                                <p class="text-slate-500">Architecture is called the study about the art and thus
+                                    resulting into designing the building or the other structure for human need. The
+                                    physical environment is created by the architecture, in which people live, but
+                                    architecture is not only limited to just built the environment but more than that,
+                                    its also a part of our culture which is a gift from our ancestors. It stands as a
+                                    representation of how we see ourselves, as well as how we see the world. The
+                                    Bachelor of Architecture is a bachelors degree required in the field of architecture
+                                    to satisfy the academic requirement of practising architecture in world. It is one
+                                    of the highest professional degrees for designing different buildings like
+                                    residences, hotels, commercials etc.</p>
                                 <button
-                                    class="w-full py-4 bg-orange-600 text-white font-bold rounded-2xl hover:bg-orange-700 transition-all">Download
-                                    Brochure</button>
+                                    class="w-full py-4 bg-orange-600 text-white font-bold rounded-2xl hover:bg-orange-700 transition-all">View
+                                    Program Details</button>
                             </div>
                             <div class="bg-slate-200">
                                 <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80"
@@ -1448,18 +1626,93 @@
                         </div>
                     </div>
 
-                    <div id="ug" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <div id="bca" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
                         <div
                             class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
                             <div class="p-10 lg:p-14 space-y-6">
                                 <span
-                                    class="px-4 py-1.5 bg-sky-50 text-sky-700 text-xs font-bold uppercase rounded-full tracking-widest">Undergraduate</span>
-                                <h3 class="text-3xl font-bold text-slate-900 leading-tight">BBA / BCA / B.Com(H)</h3>
-                                <p class="text-slate-500">Foundation-building programs in business, technology, and
-                                    commerce with 100% placement support.</p>
+                                    class="px-4 py-1.5 bg-sky-50 text-sky-700 text-xs font-bold uppercase rounded-full tracking-widest">BCA</span>
+                                <h3 class="text-3xl font-bold text-slate-900 leading-tight">Bachelor in computer
+                                    application</h3>
+                                <p class="text-slate-500">Bachelor in computer application (BCA) from accurate institute
+                                    of management and technology, greater Noida is a course which ensures that students
+                                    not only learn basics of computer application but also enables them to build a
+                                    rewarding and fulfilling career in the field. BCA program have facilitated 100%
+                                    placements to the students of their BCA program. average packages of placed students
+                                    was 4lac/annum.</p>
                                 <button
-                                    class="w-full py-4 bg-sky-600 text-white font-bold rounded-2xl hover:bg-sky-700 transition-all">Explore
-                                    UG Programs</button>
+                                    class="w-full py-4 bg-sky-600 text-white font-bold rounded-2xl hover:bg-sky-700 transition-all">View
+                                    Program Details</button>
+                            </div>
+                            <div class="bg-slate-200">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80"
+                                    class="w-full h-full object-cover" alt="UG Students">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bba" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                        <div
+                            class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                            <div class="p-10 lg:p-14 space-y-6">
+                                <span
+                                    class="px-4 py-1.5 bg-sky-50 text-sky-700 text-xs font-bold uppercase rounded-full tracking-widest">BBA</span>
+                                <h3 class="text-3xl font-bold text-slate-900 leading-tight">Bachelor in Business
+                                    Administration</h3>
+                                <p class="text-slate-500">Accurate Institute of Management and Technology is an
+                                    institute that provides quality education to students. The institution has provided
+                                    the best facilities and best infra-structure to their students to help them in their
+                                    study. Bachelors in business administration from Accurate institute of management
+                                    and technology, Greater Noida is an industry-oriented course with up-to-date
+                                    curriculum to create future business leaders. BBA course provides foundation for
+                                    careers in management streams like Marketing, finance, Human resources, Business
+                                    analytics etc.</p>
+                                <button
+                                    class="w-full py-4 bg-sky-600 text-white font-bold rounded-2xl hover:bg-sky-700 transition-all">View
+                                    Program Details</button>
+                            </div>
+                            <div class="bg-slate-200">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80"
+                                    class="w-full h-full object-cover" alt="UG Students">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bcom" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                        <div
+                            class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                            <div class="p-10 lg:p-14 space-y-6">
+                                <span
+                                    class="px-4 py-1.5 bg-sky-50 text-sky-700 text-xs font-bold uppercase rounded-full tracking-widest">BCOM
+                                    (H)</span>
+                                <h3 class="text-3xl font-bold text-slate-900 leading-tight">Bachelor of Commerce
+                                    (Honours)</h3>
+                                <p class="text-slate-500">Accurate Business School, Greater Noida is a renowned
+                                    educational institute which provides quality education specifically with industry in
+                                    mind. Our Bachelor of Commerce (Honors) course is an industry-oriented foundation
+                                    for a future career in finance and business management.</p>
+                                <ul class="space-y-4">
+                                    <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div
+                                            class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
+                                            ✓</div>
+                                        Complete your B.com honours degree with highly reputed college.
+                                    </li>
+                                    <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div
+                                            class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
+                                            ✓</div>
+                                        Get exposed to the world of finance and accounting with our up-to-date
+                                        curriculum and knowledgeable faculties.
+                                    </li>
+                                    <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                        <div
+                                            class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs">
+                                            ✓</div>
+                                        Education infrastructure is top notch and have enriched libraries.
+                                    </li>
+                                </ul>
+                                <button
+                                    class="w-full py-4 bg-sky-600 text-white font-bold rounded-2xl hover:bg-sky-700 transition-all">View
+                                    Program Details</button>
                             </div>
                             <div class="bg-slate-200">
                                 <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80"
@@ -1468,23 +1721,83 @@
                         </div>
                     </div>
 
-                    <div id="pharmacy" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                    <div id="bpharmacy" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
                         <div
                             class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
                             <div class="p-10 lg:p-14 space-y-6">
                                 <span
-                                    class="px-4 py-1.5 bg-red-50 text-red-700 text-xs font-bold uppercase rounded-full tracking-widest">Health
-                                    Sciences</span>
-                                <h3 class="text-3xl font-bold text-slate-900 leading-tight">B.Pharm / D.Pharm / M.Pharm
+                                    class="px-4 py-1.5 bg-red-50 text-red-700 text-xs font-bold uppercase rounded-full tracking-widest">B.Pharm
+                                </span>
+                                <h3 class="text-3xl font-bold text-slate-900 leading-tight">Bechalor of Pharmacy
                                 </h3>
-                                <p class="text-slate-500">Offering advanced pharmaceutical research facilities and
-                                    PCI-approved labs for medical excellence.</p>
+                                <p class="text-slate-500">B.Pharm. program from accurate college of pharmacy is a
+                                    four-year undergraduate course which covers all aspects related to the field of
+                                    pharmacy. B.pharma. program from accurate college of pharmacy is the best way to get
+                                    into the pharmaceutical industry. The college offers a four-year degree program that
+                                    covers all aspects of the pharmaceutical field, from manufacturing and quality
+                                    control to sales and marketing. Graduates of the program are well-prepared for
+                                    careers in the industry, and many go on to pursue advanced degrees.</p>
                                 <button
-                                    class="w-full py-4 bg-red-600 text-white font-bold rounded-2xl hover:bg-red-700 transition-all">Check
-                                    Eligibility</button>
+                                    class="w-full py-4 bg-red-600 text-white font-bold rounded-2xl hover:bg-red-700 transition-all">View
+                                    Program Details</button>
                             </div>
                             <div class="bg-slate-200">
-                                <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?auto=format&fit=crop&q=80"
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80"
+                                    class="w-full h-full object-cover" alt="Pharmacy Lab">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="dpharmacy" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                        <div
+                            class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                            <div class="p-10 lg:p-14 space-y-6">
+                                <span
+                                    class="px-4 py-1.5 bg-red-50 text-red-700 text-xs font-bold uppercase rounded-full tracking-widest">D.Pharm
+                                </span>
+                                <h3 class="text-3xl font-bold text-slate-900 leading-tight">Diploma of Pharmacy
+                                </h3>
+                                <p class="text-slate-500">D.Pharm. is a pharmacist with basic education on formulation,
+                                    standardization, rational use and dispensing of medicine. They are also educated in
+                                    modern and traditional medicines, as well as prescription drugs. This opens up
+                                    several opportunities for D.Pharm. Holders.</p>
+                                <p class="text-slate-500">D. Pharm. course from Accurate College of Pharmacy which is a
+                                    pioneer institute in the field of pharmacy education is one of the best ways to
+                                    pursue your career in pharmacy. This course has emerged as a result of the growing
+                                    need for qualified pharmacists to meet the demands of an evolving health care
+                                    system...</p>
+                                <button
+                                    class="w-full py-4 bg-red-600 text-white font-bold rounded-2xl hover:bg-red-700 transition-all">View
+                                    Program Details</button>
+                            </div>
+                            <div class="bg-slate-200">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80"
+                                    class="w-full h-full object-cover" alt="Pharmacy Lab">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mpharmacy" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+                        <div
+                            class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden grid md:grid-cols-2">
+                            <div class="p-10 lg:p-14 space-y-6">
+                                <span
+                                    class="px-4 py-1.5 bg-red-50 text-red-700 text-xs font-bold uppercase rounded-full tracking-widest">M.Pharm
+                                </span>
+                                <h3 class="text-3xl font-bold text-slate-900 leading-tight">Master of Pharmacy
+                                </h3>
+                                <p class="text-slate-500">The M. Pharm Program is one of the most trending one which
+                                    brings to expertness in various emerging fields of markets. After M. Pharm, students
+                                    can opt for multiple job in various sectors like Manufacturing, Research, Clinical
+                                    pharmacy, Regulatory affairs, Pharmacovigilance, Medical coding and many more.
+                                    Regular interplay with pharma companies for academic, conferences and placements are
+                                    a special feature during the course.</p>
+                                <button
+                                    class="w-full py-4 bg-red-600 text-white font-bold rounded-2xl hover:bg-red-700 transition-all">View
+                                    Program Details</button>
+                            </div>
+                            <div class="bg-slate-200">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80"
                                     class="w-full h-full object-cover" alt="Pharmacy Lab">
                             </div>
                         </div>
@@ -1498,11 +1811,14 @@
                                     class="px-4 py-1.5 bg-amber-50 text-amber-700 text-xs font-bold uppercase rounded-full tracking-widest">Legal
                                     Studies</span>
                                 <h3 class="text-3xl font-bold text-slate-900 leading-tight">School of Law</h3>
-                                <p class="text-slate-500">Comprehensive legal education with Moot Court sessions and
-                                    guidance from legal veterans.</p>
+                                <p class="text-slate-500">Accurate College of Law, Greater Noida is recognized by CCS
+                                    University Meerut and also approved by Bar Council of India under the vision of
+                                    AERS. The college is committed to develop competitive International environment,
+                                    through global legal consciousness in the community for realization of justice to
+                                    the mass and objectives embodied in the Constitution of India.</p>
                                 <button
-                                    class="w-full py-4 bg-amber-600 text-white font-bold rounded-2xl hover:bg-amber-700 transition-all">Apply
-                                    for Law</button>
+                                    class="w-full py-4 bg-amber-600 text-white font-bold rounded-2xl hover:bg-amber-700 transition-all">View
+                                    Program Details</button>
                             </div>
                             <div class="bg-slate-200">
                                 <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80"
@@ -1519,11 +1835,17 @@
                                 <span
                                     class="px-4 py-1.5 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full tracking-widest">Diploma</span>
                                 <h3 class="text-3xl font-bold text-slate-900 leading-tight">Diploma in Polytechnic</h3>
-                                <p class="text-slate-500">Skill-based technical training in various engineering trades
-                                    with hands-on workshop experience.</p>
+                                <p class="text-slate-500">When it comes to technical and professional education
+                                    institutes in Greater Noida, Accurate group of Institutes gets mention in top lists.
+                                    Accurate group of institutes have extended their industry appreciated and well
+                                    recognized technical education offerings to diploma levels as well. With Accurate
+                                    Institute of Polytechnic now aspirants have one more option to be industry ready and
+                                    enter into government and private engineering jobs as well as innovate with acquired
+                                    knowledge. Polytechnic courses offered by Accurate Institute of polytechnic are
+                                    affiliated to Board of technical education Lucknow.</p>
                                 <button
                                     class="w-full py-4 bg-indigo-600 text-white font-bold rounded-2xl hover:bg-indigo-700 transition-all">View
-                                    Courses</button>
+                                    Program Details</button>
                             </div>
                             <div class="bg-slate-200">
                                 <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80"
@@ -2120,218 +2442,234 @@
 
     <section class="py-16 bg-white font-jakarta overflow-hidden relative h-[100vh]">
 
-  <!-- TOP-LEFT: bigger & brighter blue blob + dots -->
-  <div class="pointer-events-none absolute -top-40 -left-40 w-[720px] h-[720px] opacity-[1]">
-    <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none">
-      <defs>
-        <radialGradient id="cornerBlobTL" cx="30%" cy="30%">
-          <stop offset="0%" stop-color="#dbeafe" stop-opacity="1" />
-          <stop offset="55%" stop-color="#bfdbfe" stop-opacity="0.95" />
-          <stop offset="100%" stop-color="#dbeafe" stop-opacity="0" />
-        </radialGradient>
-      </defs>
-      <circle cx="100" cy="100" r="110" fill="url(#cornerBlobTL)" />
-    </svg>
-  </div>
-  <div class="pointer-events-none absolute top-6 left-10 w-24 h-24 opacity-[0.95]">
-    <svg width="100%" height="100%" viewBox="0 0 48 48" fill="none">
-      <g fill="#60a5fa">
-        <!-- 4 x 4 dot grid (bigger dots) -->
-        <circle cx="6" cy="6" r="1.8" /><circle cx="18" cy="6" r="1.8" /><circle cx="30" cy="6" r="1.8" /><circle cx="42" cy="6" r="1.8" />
-        <circle cx="6" cy="18" r="1.8" /><circle cx="18" cy="18" r="1.8" /><circle cx="30" cy="18" r="1.8" /><circle cx="42" cy="18" r="1.8" />
-        <circle cx="6" cy="30" r="1.8" /><circle cx="18" cy="30" r="1.8" /><circle cx="30" cy="30" r="1.8" /><circle cx="42" cy="30" r="1.8" />
-        <circle cx="6" cy="42" r="1.8" /><circle cx="18" cy="42" r="1.8" /><circle cx="30" cy="42" r="1.8" /><circle cx="42" cy="42" r="1.8" />
-      </g>
-    </svg>
-  </div>
-
-  <!-- TOP-RIGHT: bigger yellow corner ribbon blob -->
-  <div class="pointer-events-none absolute -top-40 -right-48 w-[720px] h-[720px] opacity-[1]">
-    <svg width="100%" height="100%" viewBox="0 0 220 220" fill="none">
-      <defs>
-        <radialGradient id="cornerBlobTR" cx="75%" cy="25%">
-          <stop offset="0%" stop-color="#fef3c7" stop-opacity="1" />
-          <stop offset="55%" stop-color="#feeaa5" stop-opacity="0.95" />
-          <stop offset="100%" stop-color="#fef3c7" stop-opacity="0" />
-        </radialGradient>
-      </defs>
-      <circle cx="120" cy="80" r="110" fill="url(#cornerBlobTR)" />
-      <path
-        d="M210 20 C135 40 118 90 165 135"
-        stroke="#facc15"
-        stroke-width="14"
-        stroke-linecap="round"
-        opacity="0.95"
-      />
-      <path
-        d="M200 25 C145 45 132 90 168 130"
-        stroke="#fde68a"
-        stroke-width="6"
-        stroke-linecap="round"
-        opacity="0.95"
-      />
-    </svg>
-  </div>
-
-
-  <!-- MAIN CONTENT (same as before) -->
-  <div class="container mx-auto px-6 lg:px-20 relative z-10">
-    <!-- Header -->
-    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
-      <div class="max-w-xl">
-        <div class="flex items-center gap-4 mb-4">
-          <span class="h-px w-10 bg-blue-600"></span>
-          <span class="text-xs font-bold uppercase tracking-[0.4em] text-blue-600">
-            Institutional Portfolio
-          </span>
-        </div>
-        <h2 class="text-4xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.05]">
-          Moments of <br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 italic">
-            Inspiration
-          </span>
-        </h2>
-      </div>
-      <div class="max-w-sm">
-        <p class="text-base text-slate-500 leading-relaxed border-l-4 border-blue-600 pl-6">
-          A visual narrative of our A+ NAAC accredited campus, celebrating academic milestones and global
-          student life.
-        </p>
-      </div>
-    </div>
-
-    <!-- Bento Grid -->
-    <div class="bento-container">
-      <div
-        class="gallery-card feature-large relative overflow-hidden rounded-[2.6rem] shadow-[0_20px_55px_rgba(15,23,42,0.25)] group cursor-pointer bg-slate-900/5">
-        <img
-          src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"
-          class="w-full h-full object-cover"
-          alt="Orientation"
-        />
-        <div class="glass-overlay absolute inset-0 flex flex-col justify-end p-10">
-          <span class="text-blue-300 font-semibold text-xs uppercase tracking-[0.25em] mb-2">
-            Campus Culture
-          </span>
-          <h4 class="text-2xl font-bold text-white">Diksharambh Orientation</h4>
-        </div>
-      </div>
-
-      <div
-        class="gallery-card feature-tall relative overflow-hidden rounded-[2.6rem] shadow-[0_18px_45px_rgba(15,23,42,0.2)] group cursor-pointer bg-slate-900/5">
-        <img
-          src="https://www.accurate.in/img/international-exposure/singapore-visit.webp"
-          class="w-full h-full object-cover"
-          alt="International Visit"
-        />
-        <div class="glass-overlay absolute inset-0 flex flex-col justify-end p-8">
-          <h4 class="text-xl font-bold text-white">Global Exposure</h4>
-        </div>
-      </div>
-
-      <div
-        class="gallery-card relative overflow-hidden rounded-[2.2rem] shadow-[0_16px_40px_rgba(15,23,42,0.18)] group cursor-pointer bg-slate-900/5">
-        <img
-          src="https://www.accurate.in/img/devi-award.webp"
-          class="w-full h-full object-cover"
-          alt="Awards"
-        />
-        <div class="absolute inset-0 bg-blue-600/12 group-hover:bg-transparent transition-colors"></div>
-      </div>
-
-      <div
-        class="gallery-card relative overflow-hidden rounded-[2.2rem] shadow-[0_16px_40px_rgba(15,23,42,0.18)] group cursor-pointer bg-slate-900/5">
-        <img
-          src="https://www.accurate.in/img/most-admired-law-college.webp"
-          class="w-full h-full object-cover"
-          alt="Law Excellence"
-        />
-      </div>
-
-      <div
-        class="gallery-card feature-wide relative overflow-hidden rounded-[2.6rem] shadow-[0_18px_50px_rgba(15,23,42,0.22)] group cursor-pointer bg-slate-900/5">
-        <img
-          src="https://www.accurate.in/img/accurate-naac-banner.webp"
-          class="w-full h-full object-cover"
-          alt="NAAC A+"
-        />
-        <div class="glass-overlay absolute inset-0 flex items-center justify-between px-10">
-          <h4 class="text-xl font-bold text-white">NAAC A+ Rated Infrastructure</h4>
-          <div
-            class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-              <path d="M5 12h14M12 5l7 7-7 7" />
+        <!-- TOP-LEFT: bigger & brighter blue blob + dots -->
+        <div class="pointer-events-none absolute -top-40 -left-40 w-[720px] h-[720px] opacity-[1]">
+            <svg width="100%" height="100%" viewBox="0 0 200 200" fill="none">
+                <defs>
+                    <radialGradient id="cornerBlobTL" cx="30%" cy="30%">
+                        <stop offset="0%" stop-color="#dbeafe" stop-opacity="1" />
+                        <stop offset="55%" stop-color="#bfdbfe" stop-opacity="0.95" />
+                        <stop offset="100%" stop-color="#dbeafe" stop-opacity="0" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="100" r="110" fill="url(#cornerBlobTL)" />
             </svg>
-          </div>
         </div>
-      </div>
-    </div>
+        <div class="pointer-events-none absolute top-6 left-10 w-24 h-24 opacity-[0.95]">
+            <svg width="100%" height="100%" viewBox="0 0 48 48" fill="none">
+                <g fill="#60a5fa">
+                    <!-- 4 x 4 dot grid (bigger dots) -->
+                    <circle cx="6" cy="6" r="1.8" />
+                    <circle cx="18" cy="6" r="1.8" />
+                    <circle cx="30" cy="6" r="1.8" />
+                    <circle cx="42" cy="6" r="1.8" />
+                    <circle cx="6" cy="18" r="1.8" />
+                    <circle cx="18" cy="18" r="1.8" />
+                    <circle cx="30" cy="18" r="1.8" />
+                    <circle cx="42" cy="18" r="1.8" />
+                    <circle cx="6" cy="30" r="1.8" />
+                    <circle cx="18" cy="30" r="1.8" />
+                    <circle cx="30" cy="30" r="1.8" />
+                    <circle cx="42" cy="30" r="1.8" />
+                    <circle cx="6" cy="42" r="1.8" />
+                    <circle cx="18" cy="42" r="1.8" />
+                    <circle cx="30" cy="42" r="1.8" />
+                    <circle cx="42" cy="42" r="1.8" />
+                </g>
+            </svg>
+        </div>
 
-    <!-- CTA -->
-    <div class="mt-12 flex flex-col items-center">
-      <button
-        class="group relative px-12 py-5 bg-slate-900 text-white font-bold rounded-2xl transition-all hover:bg-blue-600 hover:-translate-y-1 active:scale-95 shadow-2xl">
-        View Full Experience
-      </button>
-      <p class="mt-4 text-slate-400 text-sm italic">
-        Experience the Accurate legacy through our lens
-      </p>
-    </div>
-  </div>
+        <!-- TOP-RIGHT: bigger yellow corner ribbon blob -->
+        <div class="pointer-events-none absolute -top-40 -right-48 w-[720px] h-[720px] opacity-[1]">
+            <svg width="100%" height="100%" viewBox="0 0 220 220" fill="none">
+                <defs>
+                    <radialGradient id="cornerBlobTR" cx="75%" cy="25%">
+                        <stop offset="0%" stop-color="#fef3c7" stop-opacity="1" />
+                        <stop offset="55%" stop-color="#feeaa5" stop-opacity="0.95" />
+                        <stop offset="100%" stop-color="#fef3c7" stop-opacity="0" />
+                    </radialGradient>
+                </defs>
+                <circle cx="120" cy="80" r="110" fill="url(#cornerBlobTR)" />
+                <path d="M210 20 C135 40 118 90 165 135" stroke="#facc15" stroke-width="14" stroke-linecap="round"
+                    opacity="0.95" />
+                <path d="M200 25 C145 45 132 90 168 130" stroke="#fde68a" stroke-width="6" stroke-linecap="round"
+                    opacity="0.95" />
+            </svg>
+        </div>
 
-  <style>
-    :root {
-      --brand-blue: #2563eb;
-      --slate-900: #0f172a;
-      --slate-500: #64748b;
-    }
-    .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .gallery-card { transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
-    .gallery-card img {
-      transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
-      will-change: transform;
-    }
-    .gallery-card:hover img { transform: scale(1.06) rotate(0.5deg); }
-    .glass-overlay {
-      background: linear-gradient(
-        to top,
-        rgba(15, 23, 42, 0.92) 0%,
-        rgba(15, 23, 42, 0.45) 50%,
-        transparent 100%
-      );
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    .gallery-card:hover .glass-overlay { opacity: 1; }
-    .bento-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 160px;
-      gap: 1.25rem;
-    }
-    .feature-large { grid-column: span 2; grid-row: span 2; }
-    .feature-tall  { grid-column: span 1; grid-row: span 2; }
-    .feature-wide  { grid-column: span 2; grid-row: span 1; }
-    @media (max-width: 1024px) {
-      .bento-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 180px;
-      }
-      .feature-large,
-      .feature-tall,
-      .feature-wide {
-        grid-column: span 1;
-        grid-row: span 1;
-      }
-    }
-    @media (max-width: 640px) {
-      .bento-container {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 220px;
-      }
-    }
-  </style>
-</section>
+
+        <!-- MAIN CONTENT (same as before) -->
+        <div class="container mx-auto px-6 lg:px-20 relative z-10">
+            <!-- Header -->
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+                <div class="max-w-xl">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="h-px w-10 bg-blue-600"></span>
+                        <span class="text-xs font-bold uppercase tracking-[0.4em] text-blue-600">
+                            Institutional Portfolio
+                        </span>
+                    </div>
+                    <h2 class="text-4xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.05]">
+                        Moments of <br />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 italic">
+                            Inspiration
+                        </span>
+                    </h2>
+                </div>
+                <div class="max-w-sm">
+                    <p class="text-base text-slate-500 leading-relaxed border-l-4 border-blue-600 pl-6">
+                        A visual narrative of our A+ NAAC accredited campus, celebrating academic milestones and global
+                        student life.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="bento-container">
+                <div
+                    class="gallery-card feature-large relative overflow-hidden rounded-[2.6rem] shadow-[0_20px_55px_rgba(15,23,42,0.25)] group cursor-pointer bg-slate-900/5">
+                    <img src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"
+                        class="w-full h-full object-cover" alt="Orientation" />
+                    <div class="glass-overlay absolute inset-0 flex flex-col justify-end p-10">
+                        <span class="text-blue-300 font-semibold text-xs uppercase tracking-[0.25em] mb-2">
+                            Campus Culture
+                        </span>
+                        <h4 class="text-2xl font-bold text-white">Diksharambh Orientation</h4>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-card feature-tall relative overflow-hidden rounded-[2.6rem] shadow-[0_18px_45px_rgba(15,23,42,0.2)] group cursor-pointer bg-slate-900/5">
+                    <img src="https://www.accurate.in/img/international-exposure/singapore-visit.webp"
+                        class="w-full h-full object-cover" alt="International Visit" />
+                    <div class="glass-overlay absolute inset-0 flex flex-col justify-end p-8">
+                        <h4 class="text-xl font-bold text-white">Global Exposure</h4>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-card relative overflow-hidden rounded-[2.2rem] shadow-[0_16px_40px_rgba(15,23,42,0.18)] group cursor-pointer bg-slate-900/5">
+                    <img src="https://www.accurate.in/img/devi-award.webp" class="w-full h-full object-cover"
+                        alt="Awards" />
+                    <div class="absolute inset-0 bg-blue-600/12 group-hover:bg-transparent transition-colors"></div>
+                </div>
+
+                <div
+                    class="gallery-card relative overflow-hidden rounded-[2.2rem] shadow-[0_16px_40px_rgba(15,23,42,0.18)] group cursor-pointer bg-slate-900/5">
+                    <img src="https://www.accurate.in/img/most-admired-law-college.webp"
+                        class="w-full h-full object-cover" alt="Law Excellence" />
+                </div>
+
+                <div
+                    class="gallery-card feature-wide relative overflow-hidden rounded-[2.6rem] shadow-[0_18px_50px_rgba(15,23,42,0.22)] group cursor-pointer bg-slate-900/5">
+                    <img src="https://www.accurate.in/img/accurate-naac-banner.webp" class="w-full h-full object-cover"
+                        alt="NAAC A+" />
+                    <div class="glass-overlay absolute inset-0 flex items-center justify-between px-10">
+                        <h4 class="text-xl font-bold text-white">NAAC A+ Rated Infrastructure</h4>
+                        <div
+                            class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-12 flex flex-col items-center">
+                <button
+                    class="group relative px-12 py-5 bg-slate-900 text-white font-bold rounded-2xl transition-all hover:bg-blue-600 hover:-translate-y-1 active:scale-95 shadow-2xl">
+                    View Full Experience
+                </button>
+                <p class="mt-4 text-slate-400 text-sm italic">
+                    Experience the Accurate legacy through our lens
+                </p>
+            </div>
+        </div>
+
+        <style>
+            :root {
+                --brand-blue: #2563eb;
+                --slate-900: #0f172a;
+                --slate-500: #64748b;
+            }
+
+            .font-jakarta {
+                font-family: 'Plus Jakarta Sans', sans-serif;
+            }
+
+            .gallery-card {
+                transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+
+            .gallery-card img {
+                transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+                will-change: transform;
+            }
+
+            .gallery-card:hover img {
+                transform: scale(1.06) rotate(0.5deg);
+            }
+
+            .glass-overlay {
+                background: linear-gradient(to top,
+                        rgba(15, 23, 42, 0.92) 0%,
+                        rgba(15, 23, 42, 0.45) 50%,
+                        transparent 100%);
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+
+            .gallery-card:hover .glass-overlay {
+                opacity: 1;
+            }
+
+            .bento-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-auto-rows: 160px;
+                gap: 1.25rem;
+            }
+
+            .feature-large {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+            .feature-tall {
+                grid-column: span 1;
+                grid-row: span 2;
+            }
+
+            .feature-wide {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            @media (max-width: 1024px) {
+                .bento-container {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-auto-rows: 180px;
+                }
+
+                .feature-large,
+                .feature-tall,
+                .feature-wide {
+                    grid-column: span 1;
+                    grid-row: span 1;
+                }
+            }
+
+            @media (max-width: 640px) {
+                .bento-container {
+                    grid-template-columns: 1fr;
+                    grid-auto-rows: 220px;
+                }
+            }
+        </style>
+    </section>
 
 
 

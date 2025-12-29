@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Heebo', sans-serif; overflow-x: hidden; }
+
+        /* DESKTOP VERTICAL ANIMATIONS */
+        @keyframes marquee-vertical {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        @keyframes marquee-vertical-reverse {
+            0% { transform: translateY(-50%); }
+            100% { transform: translateY(0); }
+        }
+
+        /* MOBILE HORIZONTAL ANIMATIONS */
+        @keyframes marquee-horizontal {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes marquee-horizontal-reverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        .animate-marquee-vertical { animation: marquee-vertical 40s linear infinite; }
+        .animate-marquee-vertical-reverse { animation: marquee-vertical-reverse 40s linear infinite; }
+        
+        .animate-marquee-mobile { animation: marquee-horizontal 30s linear infinite; }
+        .animate-marquee-mobile-reverse { animation: marquee-horizontal-reverse 30s linear infinite; }
+
+        .animate-marquee-vertical:hover, 
+        .animate-marquee-vertical-reverse:hover,
+        .animate-marquee-mobile:hover,
+        .animate-marquee-mobile-reverse:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+<section class="relative min-h-screen flex flex-col lg:flex-row items-center pt-16 lg:pt-0 pb-12 px-6 lg:px-20 overflow-hidden">
+    
+    <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-20">
+        
+        <div class="space-y-8 text-center lg:text-left">
+            <div class="space-y-4">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+                    Discover Your Potential <br> 
+                    <span class="text-blue-600">with Accurate</span>
+                </h1>
+                <p class="text-gray-600 text-lg max-w-lg leading-relaxed mx-auto lg:mx-0">
+                    Unleash your potential with Accurate Institute. Choose from a diverse range of programs and
+                    discover endless opportunities.
+                </p>
+            </div>
+
+            <div class="relative w-full max-w-md mx-auto lg:mx-0 group">
+                <div class="relative flex items-center bg-white border border-gray-200 rounded-full p-1.5 shadow-xl focus-within:ring-2 ring-blue-400">
+                    <input type="text" placeholder="Search courses..." class="w-full pl-6 pr-2 py-3 bg-transparent outline-none text-gray-700">
+                    <button class="bg-blue-600 text-white p-3 md:p-4 rounded-full hover:bg-blue-700 transition-all shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
+                <button class="w-full sm:w-auto bg-blue-600 text-white px-10 py-4 rounded-lg font-bold shadow-xl hover:bg-blue-800 transition-all">
+                    Call Now
+                </button>
+                <div class="text-sm text-gray-500">
+                    <p class="font-semibold text-gray-700">Feel free to call</p>
+                    <p>any time</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden lg:block relative h-[650px] overflow-hidden">
+            <div class="absolute inset-0 bg-blue-50/50 rounded-3xl -z-10 transform rotate-2"></div>
+            <div class="flex justify-center h-full gap-4 px-4">
+                
+                <div class="w-44 overflow-hidden bg-white/40 backdrop-blur-sm border-x border-slate-100">
+                    <div class="animate-marquee-vertical flex flex-col gap-4 py-4">
+                        <img src="./images/hero/slider1.webp" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                        <img src="./images/hero/slider2.webp" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                        <img src="./images/hero/slider3.webp" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                        <img src="./images/hero/slider1.webp" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                        <img src="./images/hero/slider2.webp" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                        <img src="./images/hero/slider3.webp" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                    </div>
+                </div>
+
+                <div class="w-44 overflow-hidden bg-white/40 backdrop-blur-sm border-x border-slate-100 pt-16">
+                    <div class="animate-marquee-vertical-reverse flex flex-col gap-4 py-4">
+                        <img src="./images/hero/slider11.webp" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                        <img src="./images/hero/slider12.webp" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                        <img src="./images/hero/slider13.webp" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                        <img src="./images/hero/slider11.webp" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                        <img src="./images/hero/slider12.webp" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                        <img src="./images/hero/slider13.webp" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="lg:hidden mt-12 w-full space-y-4 relative">
+        <div class="absolute inset-0 bg-blue-50/40 -z-10 blur-2xl"></div>
+
+        <div class="overflow-hidden flex">
+            <div class="flex animate-marquee-mobile gap-4 whitespace-nowrap">
+                <img src="./images/hero/slider1.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider2.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider3.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider1.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider2.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider3.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+            </div>
+        </div>
+
+        <div class="overflow-hidden flex">
+            <div class="flex animate-marquee-mobile-reverse gap-4 whitespace-nowrap">
+                <img src="./images/hero/slider11.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider12.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider13.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider11.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider12.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+                <img src="./images/hero/slider13.webp" class="w-40 h-28 object-cover rounded-xl shadow-md">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+<section class="bg-gradient-to-br from-slate-50 to-white py-20 lg:py-32 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Enhanced Header -->
+    <div class="text-center mb-20 lg:mb-28 max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-3 px-6 py-3 bg-blue-600/5 text-blue-700 text-sm font-semibold rounded-2xl border border-blue-100 mb-8 backdrop-blur-sm">
+        <div class="w-2.5 h-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full animate-pulse"></div>
+        🌍 International Student Expeditions
+      </div>
+      
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight tracking-tight">
+        Global Minds,<br class="hidden lg:block">
+        <span class="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent font-black">
+          Global Markets
+        </span>
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-slate-600 font-medium max-w-3xl mx-auto leading-relaxed">
+        Hands-on corporate exposure through expeditions to <strong class="text-blue-900">Singapore, Malaysia, New Zealand</strong> 
+        and beyond. Bridging classroom theory with real-world business practice.
+      </p>
+    </div>
+
+    <!-- Multi-Card Carousel -->
+    <div class="relative">
+      
+      <!-- Cards Container -->
+      <div class="carousel-container overflow-hidden rounded-3xl shadow-2xl bg-white/50 backdrop-blur-sm border border-white/60">
+        <div class="carousel-track flex gap-4 p-4 lg:p-6 transition-transform duration-700 ease-in-out h-[420px] lg:h-[480px]">
+          
+          <!-- Malaysia -->
+          <div class="carousel-card flex-shrink-0 w-80 lg:w-96 h-full rounded-3xl overflow-hidden shadow-2xl group hover:shadow-3xl hover:-translate-y-3 transition-all duration-700 cursor-grab active:cursor-grabbing">
+            <div class="relative h-full">
+              <img 
+                src="https://www.accurate.in/img/international-exposure/malayasia-1.webp"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                alt="Malaysia - Kuala Lumpur Corporate Visit"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent/0"></div>
+              
+              <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                  <span class="text-blue-300 font-bold uppercase tracking-widest text-xs">Malaysia</span>
+                </div>
+                <h3 class="text-3xl lg:text-4xl font-black mb-2 drop-shadow-2xl">Kuala Lumpur</h3>
+                <p class="text-blue-100 font-semibold text-sm lg:text-base mb-6 max-w-sm leading-relaxed">
+                  Corporate HQ tours & market immersion programs
+                </p>
+                <div class="flex items-center gap-4 text-xs lg:text-sm opacity-90">
+                  <span class="flex items-center gap-1 text-blue-200">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    150+ Students
+                  </span>
+                  <span class="flex items-center gap-1 text-blue-200">⏱️ 7 Days</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Singapore -->
+          <div class="carousel-card flex-shrink-0 w-80 lg:w-96 h-full rounded-3xl overflow-hidden shadow-2xl group hover:shadow-3xl hover:-translate-y-3 transition-all duration-700 cursor-grab active:cursor-grabbing">
+            <div class="relative h-full">
+              <img 
+                src="https://www.accurate.in/img/international-exposure/singapore-3.webp"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                alt="Singapore Innovation Center"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent/0"></div>
+              
+              <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                  <span class="text-emerald-300 font-bold uppercase tracking-widest text-xs">Singapore</span>
+                </div>
+                <h3 class="text-3xl lg:text-4xl font-black mb-2 drop-shadow-2xl">Innovation Hub</h3>
+                <p class="text-emerald-100 font-semibold text-sm lg:text-base mb-6 max-w-sm leading-relaxed">
+                  Fintech ecosystem & startup ecosystem exposure
+                </p>
+                <div class="flex items-center gap-4 text-xs lg:text-sm opacity-90">
+                  <span class="flex items-center gap-1 text-emerald-200">👥 200+ Students</span>
+                  <span class="flex items-center gap-1 text-emerald-200">⏱️ 5 Days</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- New Zealand -->
+          <div class="carousel-card flex-shrink-0 w-80 lg:w-96 h-full rounded-3xl overflow-hidden shadow-2xl group hover:shadow-3xl hover:-translate-y-3 transition-all duration-700 cursor-grab active:cursor-grabbing">
+            <div class="relative h-full">
+              <img 
+                src="https://www.accurate.in/img/international-exposure/university-of-auckland.webp"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                alt="University of Auckland"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent/0"></div>
+              
+              <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+                  <span class="text-purple-300 font-bold uppercase tracking-widest text-xs">New Zealand</span>
+                </div>
+                <h3 class="text-3xl lg:text-4xl font-black mb-2 drop-shadow-2xl">University of Auckland</h3>
+                <p class="text-purple-100 font-semibold text-sm lg:text-base mb-6 max-w-sm leading-relaxed">
+                  Academic exchange & research collaborations
+                </p>
+                <div class="flex items-center gap-4 text-xs lg:text-sm opacity-90">
+                  <span class="flex items-center gap-1 text-purple-200">🎓 University Visit</span>
+                  <span class="flex items-center gap-1 text-purple-200">⏱️ 10 Days</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Australia -->
+          <div class="carousel-card flex-shrink-0 w-80 lg:w-96 h-full rounded-3xl overflow-hidden shadow-2xl group hover:shadow-3xl hover:-translate-y-3 transition-all duration-700 cursor-grab active:cursor-grabbing">
+            <div class="relative h-full">
+              <img 
+                src="https://www.accurate.in/img/international-exposure/singapore-visit.webp"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                alt="Australia Sydney Business Hub"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent/0"></div>
+              
+              <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
+                  <span class="text-orange-300 font-bold uppercase tracking-widest text-xs">Australia</span>
+                </div>
+                <h3 class="text-3xl lg:text-4xl font-black mb-2 drop-shadow-2xl">Sydney Business Hub</h3>
+                <p class="text-orange-100 font-semibold text-sm lg:text-base mb-6 max-w-sm leading-relaxed">
+                  APAC headquarters & business networking
+                </p>
+                <div class="flex items-center gap-4 text-xs lg:text-sm opacity-90">
+                  <span class="flex items-center gap-1 text-orange-200">🏢 Corporate Visits</span>
+                  <span class="flex items-center gap-1 text-orange-200">⏱️ 8 Days</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate cards for infinite scroll effect -->
+          <!-- Copy first 3 cards here to create seamless loop -->
+
+        </div>
+      </div>
+
+      <!-- Navigation Controls -->
+      <div class="flex items-center justify-center gap-6 mt-12 lg:mt-16">
+        <button class="carousel-prev w-14 h-14 lg:w-16 lg:h-16 bg-white/90 hover:bg-white shadow-xl hover:shadow-2xl rounded-3xl flex items-center justify-center transition-all duration-400 hover:scale-110 border border-slate-200 hover:border-blue-300 group">
+          <svg class="w-6 h-6 text-slate-700 group-hover:text-blue-600 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+
+        <div class="flex items-center gap-2 p-3 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-slate-200 min-w-[120px] justify-center">
+          <span class="text-sm text-slate-600 font-medium">Slide</span>
+          <div class="flex gap-2">
+            <div class="carousel-dot w-2.5 h-2.5 rounded-full bg-blue-600 shadow-sm transition-all duration-300 scale-125" data-slide="0"></div>
+            <div class="carousel-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-slate-400 shadow-sm transition-all duration-300 hover:scale-125" data-slide="1"></div>
+            <div class="carousel-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-slate-400 shadow-sm transition-all duration-300 hover:scale-125" data-slide="2"></div>
+          </div>
+        </div>
+
+        <button class="carousel-next w-14 h-14 lg:w-16 lg:h-16 bg-white/90 hover:bg-white shadow-xl hover:shadow-2xl rounded-3xl flex items-center justify-center transition-all duration-400 hover:scale-110 border border-slate-200 hover:border-blue-300 group">
+          <svg class="w-6 h-6 text-slate-700 group-hover:text-blue-600 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Impact Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mt-24 lg:mt-32">
+      <div class="group p-8 lg:p-10 bg-white/70 backdrop-blur-sm rounded-3xl border border-slate-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
+        <div class="text-4xl lg:text-5xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform">7+</div>
+        <div class="text-slate-800 font-semibold text-lg">Countries Visited</div>
+      </div>
+      <div class="group p-8 lg:p-10 bg-white/70 backdrop-blur-sm rounded-3xl border border-slate-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
+        <div class="text-4xl lg:text-5xl font-black bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform">500+</div>
+        <div class="text-slate-800 font-semibold text-lg">Students Trained</div>
+      </div>
+      <div class="group p-8 lg:p-10 bg-white/70 backdrop-blur-sm rounded-3xl border border-slate-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
+        <div class="text-4xl lg:text-5xl font-black bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform">25+</div>
+        <div class="text-slate-800 font-semibold text-lg">Corporate Partners</div>
+      </div>
+      <div class="group p-8 lg:p-10 bg-white/70 backdrop-blur-sm rounded-3xl border border-slate-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
+        <div class="text-4xl lg:text-5xl font-black bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform">3+</div>
+        <div class="text-slate-800 font-semibold text-lg">Years Running</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.carousel-card');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    let currentIndex = 0;
+    const maxIndex = cards.length - 3; // Show 3 cards at a time
+    
+    function updateCarousel() {
+      const translateX = -(currentIndex * (100 / 3)); // 33.33% per card
+      track.style.transform = `translateX(${translateX}%)`;
+    }
+    
+    function updateDots() {
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('bg-blue-600', index === currentIndex);
+        dot.classList.toggle('bg-slate-300', index !== currentIndex);
+      });
+    }
+    
+    prevBtn.addEventListener('click', () => {
+      currentIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
+      updateCarousel();
+      updateDots();
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      currentIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
+      updateCarousel();
+      updateDots();
+    });
+    
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+        updateDots();
+      });
+    });
+    
+    // Auto-play every 4 seconds
+    setInterval(() => {
+      nextBtn.click();
+    }, 4000);
+    
+    // Pause on hover
+    document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
+      clearInterval(window.autoPlayInterval);
+    });
+    document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
+      window.autoPlayInterval = setInterval(() => nextBtn.click(), 4000);
+    });
+  </script>
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accurate Group of Institutions</title>
+
+  <!-- Tailwind CDN (for quick use; in production, use a build setup) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @font-face {
+      font-family: 'bookman';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Bookman'), url('https://www.accurate.in/fonts/BOOKOS.TTF') format('truetype');
+      font-display: swap;
+    }
+
+    @keyframes zoom123 {
+      from { transform: scale(0); }
+      to { transform: scale(1); }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(-100%) translateY(-50%); opacity: 0; }
+      to { transform: translateX(0) translateY(-50%); opacity: 1; }
+    }
+
+    .font-bookman { font-family: 'bookman', serif; }
+    .animate-zoom123 { animation: zoom123 0.6s; }
+    .animate-slideIn { animation: slideIn 0.4s ease; }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Header -->
+  <header id="header" class="py-3 shadow-sm bg-white sticky top-0 z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="/" class="flex gap-2 items-center no-underline">
+        <img src="/img/accurate-logo.webp" width="60" height="60" alt="Logo" />
+        <div class="leading-[22px] m-0">
+          <span class="block text-[35px] uppercase font-bold text-[#074da2] font-bookman">
+            Accurate
+          </span>
+          <span class="block text-[15.6px] uppercase text-[#074da2] font-bookman">
+            Group of Institutions
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex gap-4 items-center">
+        <div class="relative group">
+          <button class="font-bold text-gray-800 flex items-center gap-1">
+            About
+            <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <ul class="hidden group-hover:block absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded shadow">
+            <li><a class="block px-4 py-2 hover:bg-gray-100" href="/about-us.asp">About Group</a></li>
+            <li><a class="block px-4 py-2 hover:bg-gray-100" href="/know-us.asp">Know Us</a></li>
+          </ul>
+        </div>
+
+        <div class="relative group">
+          <button class="font-bold text-gray-800 flex items-center gap-1">
+            Programs
+            <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <ul class="hidden group-hover:block absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded shadow">
+            <li><a class="block px-4 py-2 hover:bg-gray-100" href="/program/management/pgdm/">PGDM</a></li>
+            <li><a class="block px-4 py-2 hover:bg-gray-100" href="/program/engineering/btech/">B.Tech</a></li>
+          </ul>
+        </div>
+
+        <a href="/placement/record/" class="font-bold text-gray-800">
+          Placements
+        </a>
+
+        <a href="tel:+919899569090"
+           class="bg-[#ffdb56] text-[#323232] rounded px-4 py-2 font-bold no-underline">
+          Helpline: +91 98995 69090
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Announcement Button -->
+  <button
+    class="bg-[#ffdb56] fixed z-[99991] bottom-4 left-[50px] flex items-center text-[#323232] border-none shadow rounded-none max-[768px]:hidden">
+    <span class="text-[18px] font-bold px-4 py-2 bg-gradient-to-tr from-[#f1a917] to-[#e3292d] text-white">
+      Announcement
+    </span>
+    <marquee scrollamount="5" class="w-[400px] py-2 px-4">
+      • Admissions Open 2026-28 • Special scholarships for girl child • अमित गुप्ता LIVE at Freshers' Party 2025!
+    </marquee>
+  </button>
+
+  <!-- NAAC Badge -->
+  <div
+    class="stickyNaacBadge fixed bottom-[75px] left-5 w-[130px] h-[130px] bg-[#1c46bc] border-2 border-[#ffcc00] rounded-full flex items-center justify-center z-[9999] transition-transform duration-700 [transform-style:preserve-3d] max-[768px]:w-20 max-[768px]:h-20">
+    <img src="/img/naac-logo.png" alt="NAAC Logo" class="w-20 h-20 rounded-full max-[768px]:w-[50px] max-[768px]:h-[50px]" />
+  </div>
+
+  <!-- Enquiry Panel -->
+  <div
+    id="unique-enquiry-button"
+    class="fixed top-1/2 left-0 origin-top-left rotate-90 -translate-x-1/2 -translate-y-full bg-gradient-to-br from-[#1d4ed8] to-[#3b82f6] text-white px-6 py-2 font-bold rounded-t-lg cursor-pointer z-[1001]">
+    Enquiry Now
+  </div>
+
+  <div
+    id="unique-enquiry-overlay"
+    class="fixed inset-0 bg-black/50 hidden z-[1000]">
+  </div>
+
+  <div
+    id="unique-enquiry-panel"
+    class="fixed top-1/2 left-0 -translate-y-1/2 bg-white px-5 py-6 shadow-2xl rounded-r-xl hidden flex-col gap-4 z-[1002] w-[280px] animate-slideIn">
+    <h5 class="text-center font-bold text-lg">Quick Enquiry</h5>
+
+    <a href="https://wa.me/919311456494/" target="_blank"
+       class="bg-[#25d366] text-white py-3 rounded-lg no-underline text-center font-bold flex items-center justify-center gap-2">
+      <i class="fab fa-whatsapp"></i>
+      WhatsApp
+    </a>
+
+    <a href="tel:+919899569090"
+       class="bg-[#1e3a8a] text-white py-3 rounded-lg no-underline text-center font-bold flex items-center justify-center gap-2">
+      <i class="fas fa-phone-alt"></i>
+      Call Helpline
+    </a>
+
+    <a href="https://admissions.accurate.in/"
+       class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-center no-underline">
+      Apply Online
+    </a>
+  </div>
+
+  <!-- Online Application Fixed Button -->
+  <a href="https://admissions.accurate.in/" target="_blank"
+     class="fixed top-1/2 right-0 origin-top-right -rotate-90 translate-x-1/2 -translate-y-full bg-gradient-to-br from-[#1e40af] to-[#2563eb] text-white px-6 py-2 font-bold rounded-t-lg shadow z-[1001] no-underline">
+    Online Application
+  </a>
+
+  <!-- Back to Top Button -->
+  <button
+    id="myBtn"
+    class="hidden fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-[99]">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Font Awesome (same as original) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <script>
+    // Enquiry Toggle
+    const enquiryBtn = document.getElementById('unique-enquiry-button');
+    const enquiryPanel = document.getElementById('unique-enquiry-panel');
+    const overlay = document.getElementById('unique-enquiry-overlay');
+
+    function togglePanel() {
+      const isVisible = enquiryPanel.classList.contains('flex');
+      if (isVisible) {
+        enquiryPanel.classList.remove('flex');
+        enquiryPanel.classList.add('hidden');
+        overlay.classList.add('hidden');
+      } else {
+        enquiryPanel.classList.remove('hidden');
+        enquiryPanel.classList.add('flex');
+        overlay.classList.remove('hidden');
+      }
+    }
+
+    enquiryBtn.addEventListener('click', togglePanel);
+    overlay.addEventListener('click', togglePanel);
+
+    // NAAC Scroll Effect + Back to top
+    const badge = document.querySelector('.stickyNaacBadge');
+    const btt = document.getElementById('myBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= 50) {
+        badge.classList.add('transform', 'rotate-y-360', 'scale-90');
+        // fallback custom transform if needed:
+        badge.style.transform = 'rotateY(360deg) scale(0.9)';
+      } else {
+        badge.classList.remove('transform', 'rotate-y-360', 'scale-90');
+        badge.style.transform = '';
+      }
+
+      if (window.scrollY > 300) {
+        btt.classList.remove('hidden');
+      } else {
+        btt.classList.add('hidden');
+      }
+    });
+
+    btt.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  </script>
+</body>
+</html>
