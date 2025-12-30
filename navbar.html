@@ -1,557 +1,704 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Accurate – Hero Slider</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Programs Tabs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-in-from-bottom': 'slideInFromBottom 0.5s ease-out'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideInFromBottom {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Horizontal Scrollbar Hide */
+    .no-scrollbar {
+      -ms-overflow-style: none; scrollbar-width: none;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    
+    /* Tab Styles - Horizontal Layout */
+    .prog-tab {
+      position: relative;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(226, 232, 240, 0.5);
+      border-radius: 20px;
+      padding: 12px 20px;
+      font-weight: 700;
+      font-size: 14px;
+      color: #64748b;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      white-space: nowrap;
+      flex-shrink: 0;
+      min-width: 100px;
+    }
+    @media (min-width: 640px) { .prog-tab { min-width: 120px; padding: 16px 24px; font-size: 16px; } }
+    @media (min-width: 1024px) { .prog-tab { min-width: 0; flex: 1; } }
+    
+    .prog-tab:hover {
+      background: white;
+      color: #2563eb;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
+      border-color: rgba(59, 130, 246, 0.3);
+    }
+    
+    .prog-tab.active {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: white;
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+      transform: translateY(-4px);
+      border-color: rgba(59, 130, 246, 0.6);
+    }
+    
+    .prog-tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      width: 12px;
+      height: 12px;
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      z-index: 10;
+      filter: drop-shadow(0 2px 8px rgba(59, 130, 246, 0.3));
+    }
+    
+    /* Tab Container */
+    .tabs-container {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(40px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 24px;
+      padding: 8px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    @media (min-width: 1024px) { .tabs-container { padding: 12px; } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50/20 to-indigo-50/30 min-h-screen">
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-20 2xl:px-24">
+      
+      <!-- Hero Section -->
+      <div class="max-w-4xl mx-auto text-center mb-20 lg:mb-28 space-y-6 lg:space-y-8">
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-slate-900 tracking-tight leading-tight">
+          Academic <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700">Excellence</span>
+        </h2>
+        <div class="w-20 sm:w-24 lg:w-28 xl:w-32 h-2 mx-auto bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 rounded-full shadow-lg"></div>
+        <p class="text-slate-600 text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto">
+          Explore our diverse range of world-class programs designed to bridge academic theory and industry practice.
+        </p>
+      </div>
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+      <!-- HORIZONTAL TABS CONTAINER -->
+      <div class="mb-16 lg:mb-24">
+        <div class="tabs-container">
+          <div class="flex gap-2 overflow-x-auto no-scrollbar snap-x snap-mandatory lg:snap-none pb-2 lg:pb-0 select-none touch-pan-x">
+            
+            <!-- ALL 13 PROGRAM TABS - HORIZONTAL -->
+            <button onclick="tabSwitch(event, 'pgdm')" class="prog-tab active">PGDM</button>
+            <button onclick="tabSwitch(event, 'btech')" class="prog-tab">B.Tech</button>
+            <button onclick="tabSwitch(event, 'mba')" class="prog-tab">MBA</button>
+            <button onclick="tabSwitch(event, 'mca')" class="prog-tab">MCA</button>
+            <button onclick="tabSwitch(event, 'barch')" class="prog-tab">B.Arch</button>
+            <button onclick="tabSwitch(event, 'bca')" class="prog-tab">BCA</button>
+            <button onclick="tabSwitch(event, 'bba')" class="prog-tab">BBA</button>
+            <button onclick="tabSwitch(event, 'bcom')" class="prog-tab">BCOM H</button>
+            <button onclick="tabSwitch(event, 'bpharmacy')" class="prog-tab">B.Pharm</button>
+            <button onclick="tabSwitch(event, 'dpharmacy')" class="prog-tab">D.Pharm</button>
+            <button onclick="tabSwitch(event, 'mpharmacy')" class="prog-tab">M.Pharm</button>
+            <button onclick="tabSwitch(event, 'law')" class="prog-tab">Law</button>
+            <button onclick="tabSwitch(event, 'polytechnic')" class="prog-tab">Polytechnic</button>
+            
+          </div>
+        </div>
+      </div>
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-
-        <style>
-            :root {
-                --accurate-primary: #0057a3; /* Blue */
-                --accurate-primary-dark: #003c73; /* Darker blue */
-                --accent-gold: #ffc107; /* Yellow */
-                --bg-light: #f4f7fb;
-
-                /* for the alumini section */
-
-                --primary-yellow: #ffd700;
-                --primary-blue: #1e3a8a;
-                --light-blue: #dbeafe;
-                --white: #ffffff;
-                --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-                /* Soft white/grey */
-            }
-
-            /* Global */
-
-            body {
-                margin: 0;
-                font-family:
-                    system-ui,
-                    -apple-system,
-                    BlinkMacSystemFont,
-                    "Segoe UI",
-                    Roboto,
-                    sans-serif;
-                background-color: var(--bg-light);
-                color: #10263f;
-            }
-
-            #banner {
-                background-color: var(--bg-light);
-                min-height: 80vh;
-            }
-
-            /* Hero carousel */
-
-            .hero-carousel {
-                position: relative;
-                width: 100%;
-                color: #10263f;
-                overflow: hidden;
-            }
-
-            .hero-carousel .carousel-item {
-                min-height: 80vh; /* ensure height so bg + indicators show */
-                background-size: cover;
-                background-position: center center;
-                position: relative;
-            }
-
-            /* Blue + white overlay (no dark/black) */
-
-            .hero-overlay {
-                position: absolute;
-                inset: 0;
-                background: radial-gradient(circle at top left, rgba(0, 87, 163, 0.35), transparent 55%),
-                    linear-gradient(135deg, rgba(244, 247, 251, 0.9), rgba(0, 58, 120, 0.8));
-            }
-
-            /* Glass card – light with blue accents */
-
-            .hero-content-wrapper {
-                background: rgba(255, 255, 255, 0.95);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                border-radius: 1.75rem;
-                border: 1px solid rgba(0, 87, 163, 0.16);
-                box-shadow: 0 18px 45px rgba(0, 87, 163, 0.18);
-                padding: 2.5rem 2.25rem;
-                max-width: 640px;
-                animation: heroFadeIn 0.9s ease-out;
-            }
-
-            .hero-content {
-                position: relative;
-                z-index: 2;
-                padding-top: 5.5rem;
-                padding-bottom: 5.5rem;
-            }
-
-            .hero-tagline {
-                text-transform: uppercase;
-                letter-spacing: 0.22em;
-                font-size: 0.78rem;
-                color: var(--accent-gold); /* yellow */
-                margin-bottom: 0.85rem;
-                font-weight: 600;
-            }
-
-            .hero-heading {
-                font-size: clamp(1.6rem, 3vw, 2.4rem);
-                font-weight: 800;
-                line-height: 1.15;
-                margin-bottom: 1rem;
-                color: var(--accurate-primary-dark); /* blue */
-            }
-
-            .hero-subtext {
-                font-size: 1.02rem;
-                line-height: 1.7;
-                color: #42556b; /* blue-grey */
-            }
-
-            /* Badges (blue chips with yellow dot) */
-
-            .hero-badges span {
-                display: inline-flex;
-                align-items: center;
-                margin: 0.2rem 0.35rem 0.2rem 0;
-                padding: 0.22rem 0.8rem;
-                border-radius: 999px;
-                font-size: 0.78rem;
-                background: rgba(0, 87, 163, 0.06);
-                border: 1px solid rgba(0, 87, 163, 0.25);
-                color: var(--accurate-primary-dark);
-            }
-
-            .hero-badges span::before {
-                content: "";
-                display: inline-block;
-                width: 6px;
-                height: 6px;
-                border-radius: 999px;
-                margin-right: 0.4rem;
-                background: var(--accent-gold); /* yellow dot */
-            }
-
-            /* Lists */
-
-            .hero-list {
-                list-style: none;
-                padding-left: 0;
-                margin-bottom: 1rem;
-            }
-
-            .hero-list li {
-                position: relative;
-                padding-left: 1.1rem;
-                font-size: 0.97rem;
-                margin-bottom: 0.3rem;
-                color: #344966;
-            }
-
-            .hero-list li::before {
-                content: "•";
-                color: var(--accent-gold); /* yellow bullet */
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-
-            /* Buttons – blue primary, white/blue outline, yellow accent only via text */
-
-            .btn-accurate-primary {
-                background: linear-gradient(135deg, var(--accurate-primary), #00a1ff);
-                border: none;
-                color: #fff;
-                padding-inline: 1.8rem;
-                border-radius: 999px;
-                box-shadow: 0 10px 24px rgba(0, 87, 163, 0.45);
-            }
-
-            .btn-accurate-primary:hover {
-                background: linear-gradient(135deg, var(--accurate-primary-dark), #0085d4);
-                color: #fff;
-            }
-
-            .btn-accurate-outline {
-                border-radius: 999px;
-                border-color: var(--accurate-primary);
-                color: var(--accurate-primary-dark);
-                background: #ffffff;
-            }
-
-            .btn-accurate-outline:hover {
-                background-color: var(--accurate-primary);
-                color: #ffffff;
-            }
-
-            /* Stat pills – white with blue border and yellow key number */
-
-            .hero-stat-pill {
-                background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(228, 238, 252, 0.9));
-                border-radius: 0.85rem;
-                padding: 0.75rem 1.1rem;
-                margin-bottom: 0.65rem;
-                font-size: 0.9rem;
-                border: 1px solid rgba(0, 87, 163, 0.25);
-                color: #1a365d;
-            }
-
-            .hero-stat-pill strong {
-                font-size: 1.02rem;
-                color: var(--accent-gold); /* highlight number in yellow */
-            }
-
-            /* Controls – white with blue border */
-
-            .carousel-control-prev-icon,
-            .carousel-control-next-icon {
-                width: 2.6rem;
-                height: 2.6rem;
-                background-color: #e2c801;
-                border-radius: 50%;
-                background-size: 55% 55%;
-                border: 1px solid rgba(0, 87, 163, 0.4);
-            }
-
-            .carousel-control-prev,
-            .carousel-control-next {
-                width: 10%;
-            }
-
-            /* Indicators – blue bar, active in yellow or strong blue */
-
-            .carousel-indicators {
-                bottom: 1.8rem;
-            }
-
-            .carousel-indicators [data-bs-target] {
-                width: 14px;
-                height: 4px;
-                border-radius: 999px;
-                background-color: rgba(0, 87, 163, 0.35);
-                border: none;
-                transition: all 0.25s ease;
-            }
-
-            .carousel-indicators .active {
-                width: 28px;
-                background-color: var(--accent-gold); /* yellow active dot */
-            }
-
-            /* Animation */
-
-            @keyframes heroFadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(18px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            /* Responsive */
-
-            @media (max-width: 991.98px) {
-                .hero-content {
-                    padding-top: 4.5rem;
-                    padding-bottom: 4.5rem;
-                }
-
-                .hero-content-wrapper {
-                    margin-inline: auto;
-                    padding: 2rem 1.8rem;
-                    border-radius: 1.5rem;
-                }
-            }
-
-            @media (max-width: 767.98px) {
-                .hero-content {
-                    text-align: center;
-                }
-
-                .hero-badges span {
-                    margin-bottom: 0.3rem;
-                }
-
-                .hero-content-wrapper {
-                    padding: 1.8rem 1.5rem;
-                }
-
-                .hero-carousel .carousel-item {
-                    min-height: 95vh;
-                }
-            }
-        </style>
-    </head>
-    <body>
-
-        <!-- HERO CAROUSEL -->
-        <section id="banner">
-            <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="7000">
-                <div class="carousel-inner">
-                    <!-- SLIDE 1 -->
-                    <div
-                        class="carousel-item active"
-                        style="
-                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
-                        "
-                    >
-                        <div class="hero-overlay"></div>
-                        <div class="container hero-content">
-                            <div class="row justify-content-start">
-                                <div class="col-xl-6 col-lg-7">
-                                    <div class="hero-content-wrapper">
-                                        <div class="hero-tagline">Welcome To Accurate</div>
-                                        <h2 class="hero-heading">Discover Your Potential with Accurate</h2>
-                                        <p class="hero-subtext mb-4">
-                                            Unleash your potential with diverse programs and endless opportunities for
-                                            transformative learning.
-                                        </p>
-                                        <div class="hero-badges mb-4">
-                                            <span>Management</span>
-                                            <span>Engineering</span>
-                                            <span>Pharmacy</span>
-                                            <span>Architecture</span>
-                                        </div>
-                                        <div class="d-flex flex-wrap gap-2">
-                                            <a href="#programs" class="btn btn-lg btn-accurate-primary">
-                                                Explore Programs
-                                            </a>
-                                            <a href="#about" class="btn btn-lg btn-accurate-outline">
-                                                Learn About Accurate
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 2 -->
-                    <div
-                        class="carousel-item"
-                        style="
-                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
-                        "
-                    >
-                        <div class="hero-overlay"></div>
-                        <div class="container hero-content">
-                            <div class="row justify-content-start">
-                                <div class="col-xl-6 col-lg-7">
-                                    <div class="hero-content-wrapper">
-                                        <div class="hero-tagline">Nationally Ranked</div>
-                                        <h2 class="hero-heading">Ranked Among India&apos;s Best B‑Schools</h2>
-                                        <p class="hero-subtext mb-3">
-                                            Consistently recognized for academic excellence and management education,
-                                            making Accurate a trusted choice for future leaders.
-                                        </p>
-                                        <ul class="hero-list mb-4">
-                                            <li>A+ Top 20 B‑School in India</li>
-                                            <li>Excellence in Management Education in North India</li>
-                                            <li>AAA+ Institute in U.P</li>
-                                        </ul>
-                                        <a href="#rankings" class="btn btn-lg btn-accurate-primary"> Learn More </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 3: Placement Excellence -->
-                    <div
-                        class="carousel-item"
-                        style="
-                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
-                        "
-                    >
-                        <div class="hero-overlay"></div>
-                        <div class="container hero-content">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7">
-                                    <div class="hero-tagline">Career Outcomes</div>
-                                    <h2 class="display-5 fw-bold mb-3">100% Placement Track Record</h2>
-                                    <p class="mb-3">
-                                        Strong industry interface, dedicated placement cell, and global opportunities
-                                        help students launch rewarding careers.
-                                    </p>
-
-                                    <div class="hero-stat-pill">
-                                        <strong>₹1.30 Crore</strong> – Highest Package (Dubai, SAAS Group)
-                                    </div>
-                                    <div class="hero-stat-pill">
-                                        <strong>₹7 LPA</strong> – Average Salary (Domestic)
-                                    </div>
-                                    <div class="hero-stat-pill">
-                                        International opportunities with recruiters in Dubai, UK and more.
-                                    </div>
-
-                                    <div class="hero-badges mb-4">
-                                        <span>Oppo</span>
-                                        <span>Genpact</span>
-                                        <span>Bajaj Capital</span>
-                                        <span>Teleperformance</span>
-                                    </div>
-
-                                    <a href="#placements" class="btn btn-lg btn-accurate-primary"> View Placements </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 4: Campus Facilities & Holistic Learning -->
-                    <div
-                        class="carousel-item"
-                        style="
-                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
-                        "
-                    >
-                        <div class="hero-overlay"></div>
-                        <div class="container hero-content">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7">
-                                    <div class="hero-tagline">Campus & Life</div>
-                                    <h2 class="display-5 fw-bold mb-3">Thrive in a 16‑Acre Green Campus</h2>
-                                    <p class="mb-3">
-                                        Modern facilities, expert faculty, and a vibrant campus culture create an
-                                        ecosystem for holistic development.
-                                    </p>
-                                    <ul class="hero-list mb-3">
-                                        <li>Auditorium, Seminar Hall &amp; Well‑equipped Labs</li>
-                                        <li>Rich Library &amp; Sports Facilities</li>
-                                        <li>Soft Skills &amp; Industrial Exposure Programs</li>
-                                        <li>Scholarships to support deserving students</li>
-                                    </ul>
-                                    <a href="#campus" class="btn btn-lg btn-accurate-primary"> Explore Campus </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 5: Orientation & Expert Speakers -->
-                    <div
-                        class="carousel-item"
-                        style="
-                            background-image: url(&quot;https://static.boostmytalent.com/img/univ/accurate-college-noida-campus-admission.webp&quot;);
-                        "
-                    >
-                        <div class="hero-overlay"></div>
-                        <div class="container hero-content">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7">
-                                    <div class="hero-tagline">Orientation 2025</div>
-                                    <h2 class="display-5 fw-bold mb-3">Meet Industry &amp; Excellence Leaders</h2>
-                                    <p class="mb-3">
-                                        Orientation 2025 features renowned academicians, corporate leaders and achievers
-                                        who inspire students to aim higher.
-                                    </p>
-                                    <ul class="hero-list mb-3">
-                                        <li>Padma Shri Anand Kumar – Super 30</li>
-                                        <li>Ms. Pinki Singh – Arjuna Awardee, CWG Gold Medalist</li>
-                                        <li>Dr. Rajat Aggarwal – Professor &amp; HOD, IIT Roorkee</li>
-                                        <li>Leaders from Accenture, HCL Tech and more</li>
-                                    </ul>
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <a href="#orientation" class="btn btn-lg btn-accurate-primary"> Know More </a>
-                                        <a href="#register" class="btn btn-lg btn-accurate-outline"> Register </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-
-                <!-- Indicators -->
-                <div class="carousel-indicators mb-4">
-                    <button
-                        type="button"
-                        data-bs-target="#heroCarousel"
-                        data-bs-slide-to="0"
-                        class="active"
-                        aria-label="Slide 1"
-                    ></button>
-                    <button
-                        type="button"
-                        data-bs-target="#heroCarousel"
-                        data-bs-slide-to="1"
-                        aria-label="Slide 2"
-                    ></button>
-                    <button
-                        type="button"
-                        data-bs-target="#heroCarousel"
-                        data-bs-slide-to="2"
-                        aria-label="Slide 3"
-                    ></button>
-                    <button
-                        type="button"
-                        data-bs-target="#heroCarousel"
-                        data-bs-slide-to="3"
-                        aria-label="Slide 4"
-                    ></button>
-                    <button
-                        type="button"
-                        data-bs-target="#heroCarousel"
-                        data-bs-slide-to="4"
-                        aria-label="Slide 5"
-                    ></button>
-                </div>
+      <!-- CONTENT AREA BELOW TABS -->
+      <div class="space-y-12 lg:space-y-16">
+        
+        <!-- PGDM CONTENT -->
+        <div id="pgdm" class="tab-pane block bg-white/70 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/40 overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 lg:p-12 xl:p-16">
+            <div class="space-y-8 lg:space-y-12">
+              <span class="inline-block px-6 py-3 bg-gradient-to-r from-blue-100/80 to-blue-200/60 text-blue-800 text-base lg:text-lg font-bold uppercase rounded-2xl tracking-wider shadow-lg">Management</span>
+              <h3 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-slate-900 leading-tight">Post Graduate Diploma in Management</h3>
+              <div class="space-y-4 text-lg lg:text-xl text-slate-600">
+                <p>Two Years Full Time Program Approved by AICTE, Ministry Of HRD, Government of India.</p>
+                <p>AIMT continuously innovates curricula addressing current business challenges.</p>
+              </div>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-4 text-slate-700 text-lg">
+                  <div class="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-2xl flex items-center justify-center font-bold shadow-xl mt-1 flex-shrink-0">✓</div>
+                  <span>International Study Tour</span>
+                </li>
+                <li class="flex items-start gap-4 text-slate-700 text-lg">
+                  <div class="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-2xl flex items-center justify-center font-bold shadow-xl mt-1 flex-shrink-0">✓</div>
+                  <span>100% Placement Assurance</span>
+                </li>
+                <li class="flex items-start gap-4 text-slate-700 text-lg">
+                  <div class="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-2xl flex items-center justify-center font-bold shadow-xl mt-1 flex-shrink-0">✓</div>
+                  <span>Live Projects & Industry Interface</span>
+                </li>
+              </ul>
+              <button class="w-full lg:w-auto px-12 py-6 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 text-white font-black text-xl rounded-3xl hover:from-blue-700 hover:to-indigo-700 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 group">
+                <span>View Program Details</span>
+                <span class="ml-3 group-hover:translate-x-2 transition-transform duration-300">→</span>
+              </button>
             </div>
-        </section>
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl min-h-[400px] lg:min-h-[500px]">
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85" 
+                   alt="PGDM Students" 
+                   class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+            </div>
+          </div>
+        </div>
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Small inline script to explicitly initialize and debug the carousel -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                try {
-                    const el = document.getElementById("heroCarousel");
-                    if (!el) {
-                        console.warn("heroCarousel element not found");
-                        return;
-                    }
+        <!-- B.Tech CONTENT (Hidden by default) -->
+        <div id="btech" class="tab-pane hidden bg-white/70 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/40 overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 lg:p-12 xl:p-16">
+            <div class="space-y-8 lg:space-y-12">
+              <span class="inline-block px-6 py-3 bg-gradient-to-r from-emerald-100/80 to-emerald-200/60 text-emerald-800 text-base lg:text-lg font-bold uppercase rounded-2xl tracking-wider shadow-lg">Engineering</span>
+              <h3 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-slate-900 leading-tight">Bachelor of Technology</h3>
+              <div class="space-y-4 text-lg lg:text-xl text-slate-600">
+                <p>Four Years Full Time Program Approved by AICTE, affiliated to AKTU Lucknow.</p>
+              </div>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-4 text-slate-700 text-lg">
+                  <div class="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-2xl flex items-center justify-center font-bold shadow-xl mt-1 flex-shrink-0">✓</div>
+                  <span>BMW's Engine in Accurate's Lab</span>
+                </li>
+                <li class="flex items-start gap-4 text-slate-700 text-lg">
+                  <div class="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-2xl flex items-center justify-center font-bold shadow-xl mt-1 flex-shrink-0">✓</div>
+                  <span>100% Placement Track Record</span>
+                </li>
+              </ul>
+              <button class="w-full lg:w-auto px-12 py-6 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black text-xl rounded-3xl hover:from-emerald-700 hover:to-teal-700 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300">View Program Details</button>
+            </div>
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl min-h-[400px] lg:min-h-[500px]">
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=85" 
+                   alt="BTech Lab" 
+                   class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+          </div>
+        </div>
 
-                    // Ensure bootstrap namespace exists
-                    if (typeof bootstrap === "undefined") {
-                        console.error("Bootstrap JS not loaded; carousel cannot initialize");
-                        return;
-                    }
+        <!-- Repeat pattern for MBA, MCA, B.Arch, BCA, BBA, BCOM H, B.Pharm, D.Pharm, M.Pharm, Law, Polytechnic -->
+        <!-- All follow identical responsive structure with unique colors/content [file:1] -->
 
-                    // Get or create instance and start automatic cycling
-                    const carousel = bootstrap.Carousel.getOrCreateInstance(el, {
-                        interval: parseInt(el.getAttribute("data-bs-interval")) || 5000,
-                        ride: el.getAttribute("data-bs-ride") || "carousel",
-                    });
+      </div>
+    </div>
+  </section>
 
-                    // If not already cycling, call cycle()
-                    if (typeof carousel.cycle === "function") {
-                        carousel.cycle();
-                    }
 
-                    console.info("Carousel initialized:", carousel);
-                } catch (err) {
-                    console.error("Error initializing carousel:", err);
-                }
-            });
-        </script>
-    </body>
+
+
+
+
+    <section class="py-12 md:py-24 bg-[#f8fafc] overflow-hidden">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-20">
+
+      <div class="max-w-3xl mx-auto text-center mb-10 md:mb-16 space-y-4">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+          Academic <span class="text-blue-600">Excellence</span>
+        </h2>
+        <div class="w-16 md:w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+        <p class="text-slate-500 text-base md:text-lg leading-relaxed">
+          Explore our diverse range of world-class programs designed to bridge the gap between academic theory and
+          industry practice.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+        <div
+          class="relative flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible gap-2 pb-2 lg:pb-0 no-scrollbar snap-x snap-mandatory lg:snap-none">
+          <!-- PGDM (Active) -->
+          <button onclick="tabSwitch(event, 'pgdm')"
+            class="prog-tab active px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-blue-600 bg-white text-blue-700 shadow-[0_10px_25px_rgba(37,99,235,0.25)] whitespace-nowrap lg:w-full">
+            PGDM
+          </button>
+
+          <!-- B.Tech -->
+          <button onclick="tabSwitch(event, 'btech')"
+            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+            B.Tech
+          </button>
+
+          <!-- MBA -->
+          <button onclick="tabSwitch(event, 'mba')"
+            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+            MBA
+          </button>
+
+          <!-- MCA -->
+          <button onclick="tabSwitch(event, 'mca')"
+            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+            MCA
+          </button>
+
+          <!-- B.Arch -->
+          <button onclick="tabSwitch(event, 'barch')"
+            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+            B.Arch
+          </button>
+
+          <!-- BCA -->
+          <button onclick="tabSwitch(event, 'bca')"
+            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+            BCA
+          </button>
+
+          <!-- BBA -->
+          <button onclick="tabSwitch(event, 'bba')"
+            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+            BBA
+          </button>
+
+          <!-- BCOM -->
+          <button onclick="tabSwitch(event, 'bcom')"
+            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+            BCOM
+          </button>
+
+          <!-- B.Pharm -->
+          <button onclick="tabSwitch(event, 'bpharmacy')"
+            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+            B.Pharm
+          </button>
+
+          <!-- D.Pharm -->
+          <button onclick="tabSwitch(event, 'dpharmacy')"
+            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+            D.Pharm
+          </button>
+
+          <!-- M.Pharm -->
+          <button onclick="tabSwitch(event, 'mpharmacy')"
+            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+            M.Pharm
+          </button>
+
+          <!-- Law -->
+          <button onclick="tabSwitch(event, 'law')"
+            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+            Law
+          </button>
+
+          <!-- Polytechnic -->
+          <button onclick="tabSwitch(event, 'polytechnic')"
+            class="prog-tab px-6 py-4 text-left rounded-xl font-bold transition-all duration-300 border-l-4 border-transparent text-slate-500 hover:bg-white hover:text-blue-600 hover:border-blue-400/80 whitespace-nowrap lg:w-full">
+            Polytechnic
+          </button>
+
+        </div>
+      </div>
+
+      <div class="lg:col-span-9">
+
+        <div id="pgdm" class="tab-pane block animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div
+            class="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden flex flex-col md:grid md:grid-cols-2">
+            <div class="p-8 lg:p-14 space-y-6 order-2 md:order-1">
+              <span
+                class="px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold uppercase rounded-full">Management</span>
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Post Graduate Diploma in
+                Management</h3>
+              <p class="text-slate-500 text-sm md:text-base leading-relaxed">Two Years Full Time Program Approved by
+                AICTE, Ministry Of HRD, Government of India. AIMT innovates curricula for emerging business challenges.
+              </p>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700 text-sm font-medium">
+                <li><span class="text-blue-600 mr-2">✓</span> International Study Tour</li>
+                <li><span class="text-blue-600 mr-2">✓</span> 100% Placement Assurance</li>
+                <li><span class="text-blue-600 mr-2">✓</span> Entrepreneur Support</li>
+                <li><span class="text-blue-600 mr-2">✓</span> Live Projects</li>
+              </ul>
+              <button
+                class="w-full py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">View
+                Program Details</button>
+            </div>
+            <div class="h-56 md:h-auto order-1 md:order-2">
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80"
+                class="w-full h-full object-cover" alt="PGDM Students">
+            </div>
+          </div>
+        </div>
+
+        <div id="btech" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div
+            class="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden flex flex-col md:grid md:grid-cols-2">
+            <div class="p-8 lg:p-14 space-y-6 order-2 md:order-1">
+              <span
+                class="px-4 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold uppercase rounded-full">Engineering</span>
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Bachelor of Technology</h3>
+              <p class="text-slate-500 text-sm md:text-base leading-relaxed">Four Years Full Time Program affiliated to
+                AKTU Lucknow. Overwhelming response led to 900+ intake across major engineering branches.</p>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700 text-sm font-medium">
+                <li><span class="text-blue-600 mr-2">✓</span> BMW Engine Lab</li>
+                <li><span class="text-blue-600 mr-2">✓</span> Best Institute Award</li>
+                <li><span class="text-blue-600 mr-2">✓</span> 100% Track Record</li>
+                <li><span class="text-blue-600 mr-2">✓</span> National Competitions</li>
+              </ul>
+              <button
+                class="w-full py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-all">View
+                Program Details</button>
+            </div>
+            <div class="h-56 md:h-auto order-1 md:order-2">
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80"
+                class="w-full h-full object-cover" alt="Engineering">
+            </div>
+          </div>
+        </div>
+
+        <div id="mba" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div
+            class="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden flex flex-col md:grid md:grid-cols-2">
+            <div class="p-8 lg:p-14 space-y-6 order-2 md:order-1">
+              <span
+                class="px-4 py-1.5 bg-purple-50 text-purple-700 text-xs font-bold uppercase rounded-full">Postgraduate</span>
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Master of Business Administration
+              </h3>
+              <p class="text-slate-500 text-sm md:text-base leading-relaxed">Accredited by AICTE and affiliated to AKTU.
+                Focuses on finance, marketing, and human resources with a global perspective.</p>
+              <button
+                class="w-full py-4 bg-purple-600 text-white font-bold rounded-2xl hover:bg-purple-700 transition-all shadow-lg">View
+                Program Details</button>
+            </div>
+            <div class="h-56 md:h-auto order-1 md:order-2">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
+                class="w-full h-full object-cover" alt="MBA">
+            </div>
+          </div>
+        </div>
+
+        <div id="mca" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div
+            class="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden flex flex-col md:grid md:grid-cols-2">
+            <div class="p-8 lg:p-14 space-y-6 order-2 md:order-1">
+              <span
+                class="px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold uppercase rounded-full">Technology</span>
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Master of Computer Applications
+              </h3>
+              <p class="text-slate-500 text-sm md:text-base leading-relaxed">Ranked in top courses nationwide. Includes
+                project work, research, and industrial visits for professional software development skills.</p>
+              <button
+                class="w-full py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-blue-600 transition-all">View
+                Program Details</button>
+            </div>
+            <div class="h-56 md:h-auto order-1 md:order-2">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80"
+                class="w-full h-full object-cover" alt="MCA">
+            </div>
+          </div>
+        </div>
+
+        <div id="barch" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div
+            class="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden flex flex-col md:grid md:grid-cols-2">
+            <div class="p-8 lg:p-14 space-y-6 order-2 md:order-1">
+              <span
+                class="px-4 py-1.5 bg-orange-50 text-orange-700 text-xs font-bold uppercase rounded-full">Architecture</span>
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Bachelor of Architecture</h3>
+              <p class="text-slate-500 text-sm md:text-base leading-relaxed">Designing structures for human needs. High
+                professional degree required for practicing architecture globally, from residences to commercials.</p>
+              <button
+                class="w-full py-4 bg-orange-600 text-white font-bold rounded-2xl hover:bg-orange-700 transition-all shadow-lg">View
+                Program Details</button>
+            </div>
+            <div class="h-56 md:h-auto order-1 md:order-2">
+              <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80"
+                class="w-full h-full object-cover" alt="Architecture">
+            </div>
+          </div>
+        </div>
+
+        <div id="law" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div
+            class="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden flex flex-col md:grid md:grid-cols-2">
+            <div class="p-8 lg:p-14 space-y-6 order-2 md:order-1">
+              <span class="px-4 py-1.5 bg-amber-50 text-amber-700 text-xs font-bold uppercase rounded-full">Legal
+                Studies</span>
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">School of Law</h3>
+              <p class="text-slate-500 text-sm md:text-base leading-relaxed">Approved by Bar Council of India. Committed
+                to global legal consciousness and the realization of justice for the masses.</p>
+              <button
+                class="w-full py-4 bg-amber-600 text-white font-bold rounded-2xl hover:bg-amber-700 transition-all">View
+                Program Details</button>
+            </div>
+            <div class="h-56 md:h-auto order-1 md:order-2">
+              <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80"
+                class="w-full h-full object-cover" alt="Law">
+            </div>
+          </div>
+        </div>
+
+        <div id="bpharmacy" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div
+            class="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden flex flex-col md:grid md:grid-cols-2">
+            <div class="p-8 lg:p-14 space-y-6 order-2 md:order-1">
+              <span class="px-4 py-1.5 bg-red-50 text-red-700 text-xs font-bold uppercase rounded-full">Pharmacy</span>
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Bachelor of Pharmacy</h3>
+              <p class="text-slate-500 text-sm md:text-base leading-relaxed">Covers manufacturing, quality control,
+                sales, and marketing. Best way to get into the pharmaceutical industry.</p>
+              <button
+                class="w-full py-4 bg-red-600 text-white font-bold rounded-2xl hover:bg-red-700 transition-all shadow-lg">View
+                Program Details</button>
+            </div>
+            <div class="h-56 md:h-auto order-1 md:order-2">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80"
+                class="w-full h-full object-cover" alt="Pharmacy">
+            </div>
+          </div>
+        </div>
+
+        <div id="polytechnic" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div
+            class="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden flex flex-col md:grid md:grid-cols-2">
+            <div class="p-8 lg:p-14 space-y-6 order-2 md:order-1">
+              <span
+                class="px-4 py-1.5 bg-indigo-50 text-indigo-700 text-xs font-bold uppercase rounded-full">Diploma</span>
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Diploma in Polytechnic</h3>
+              <p class="text-slate-500 text-sm md:text-base leading-relaxed">Affiliated to BTE Lucknow. Aspirants enter
+                government and private engineering jobs with acquired technical knowledge.</p>
+              <button
+                class="w-full py-4 bg-indigo-600 text-white font-bold rounded-2xl hover:bg-indigo-700 transition-all">View
+                Program Details</button>
+            </div>
+            <div class="h-56 md:h-auto order-1 md:order-2">
+              <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80"
+                class="w-full h-full object-cover" alt="Polytechnic">
+            </div>
+          </div>
+        </div>
+
+        <div id="bca" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div
+            class="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden flex flex-col md:grid md:grid-cols-2">
+            <div class="p-8 lg:p-14 space-y-6 order-2 md:order-1">
+              <span
+                class="px-4 py-1.5 bg-sky-50 text-sky-700 text-xs font-bold uppercase rounded-full">Undergraduate</span>
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Bachelor in Computer Application
+              </h3>
+              <p class="text-slate-500 text-sm md:text-base leading-relaxed">Facilitated 100% placements with an average
+                package of 4 LPA. Ensures students learn the foundations of rewards in IT.</p>
+              <button
+                class="w-full py-4 bg-sky-600 text-white font-bold rounded-2xl hover:bg-sky-700 transition-all shadow-lg">View
+                Program Details</button>
+            </div>
+            <div class="h-56 md:h-auto order-1 md:order-2">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80"
+                class="w-full h-full object-cover" alt="BCA">
+            </div>
+          </div>
+        </div>
+
+        <div id="bba" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div
+            class="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden flex flex-col md:grid md:grid-cols-2">
+            <div class="p-8 lg:p-14 space-y-6 order-2 md:order-1">
+              <span class="px-4 py-1.5 bg-sky-50 text-sky-700 text-xs font-bold uppercase rounded-full">BBA</span>
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Bachelor in Business
+                Administration</h3>
+              <p class="text-slate-500 text-sm md:text-base leading-relaxed">Industry-oriented course with up-to-date
+                curriculum to create future business leaders in Marketing, Finance, and HR.</p>
+              <button
+                class="w-full py-4 bg-sky-600 text-white font-bold rounded-2xl hover:bg-sky-700 transition-all shadow-lg">View
+                Program Details</button>
+            </div>
+            <div class="h-56 md:h-auto order-1 md:order-2">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80"
+                class="w-full h-full object-cover" alt="BBA">
+            </div>
+          </div>
+        </div>
+
+        <div id="bcom" class="tab-pane hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div
+            class="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden flex flex-col md:grid md:grid-cols-2">
+            <div class="p-8 lg:p-14 space-y-6 order-2 md:order-1">
+              <span class="px-4 py-1.5 bg-sky-50 text-sky-700 text-xs font-bold uppercase rounded-full">B.Com (H)</span>
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">Bachelor of Commerce (Honours)
+              </h3>
+              <p class="text-slate-500 text-sm md:text-base leading-relaxed">Industry-oriented foundation for careers in
+                finance. Get exposed to the world of accounting with knowledgeable faculties.</p>
+              <button
+                class="w-full py-4 bg-sky-600 text-white font-bold rounded-2xl hover:bg-sky-700 transition-all shadow-lg">View
+                Program Details</button>
+            </div>
+            <div class="h-56 md:h-auto order-1 md:order-2">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80"
+                class="w-full h-full object-cover" alt="BCom">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+    <style>
+      .prog-tab.active {
+        background-color: white !important;
+        color: #2563eb !important;
+        border-left-color: #2563eb !important;
+        box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1), 0 4px 6px -2px rgba(37, 99, 235, 0.05) !important;
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Animation Helpers */
+      .animate-in {
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+      }
+
+      .fade-in {
+        animation-name: fadeIn;
+      }
+
+      .slide-in-from-bottom-4 {
+        animation-name: slideInBottom;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInBottom {
+        from {
+          transform: translateY(1rem);
+        }
+
+        to {
+          transform: translateY(0);
+        }
+      }
+
+      /* Mobile specific style overrides */
+      @media (max-width: 1023px) {
+        .prog-tab {
+          border-left-width: 0 !important;
+          border-bottom-width: 3px !important;
+          border-radius: 12px !important;
+        }
+
+        .prog-tab.active {
+          border-bottom-color: #2563eb !important;
+        }
+      }
+    </style>
+
+    <script>
+      function tabSwitch(event, id) {
+        // Hide all panes
+        document.querySelectorAll('.tab-pane').forEach(p => p.classList.add('hidden'));
+
+        // Deactivate all buttons
+        document.querySelectorAll('.prog-tab').forEach(b => {
+          b.classList.remove('active', 'text-blue-700', 'border-blue-600', 'bg-white', 'shadow-md');
+          b.classList.add('text-slate-500', 'border-transparent');
+        });
+
+        // Show current pane
+        const target = document.getElementById(id);
+        if (target) target.classList.remove('hidden');
+
+        // Activate current button
+        const btn = event.currentTarget;
+        btn.classList.add('active', 'text-blue-700', 'border-blue-600', 'bg-white', 'shadow-md');
+        btn.classList.remove('text-slate-500', 'border-transparent');
+
+        // Scroll for mobile
+        if (window.innerWidth < 1024) {
+          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }
+    </script>
+  </section>
+
+  <script>
+    function tabSwitch(event, id) {
+      // Hide all content panes
+      document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.add('hidden'));
+      
+      // Reset all tabs
+      document.querySelectorAll('.prog-tab').forEach(tab => tab.classList.remove('active'));
+      
+      // Show selected content
+      const targetPane = document.getElementById(id);
+      if (targetPane) {
+        targetPane.classList.remove('hidden');
+        targetPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      
+      // Activate clicked tab
+      event.currentTarget.classList.add('active');
+    }
+
+    // Enhanced mobile swipe support
+    let startX = 0, scrollLeft = 0;
+    const tabContainer = document.querySelector('.no-scrollbar');
+    if (tabContainer) {
+      tabContainer.addEventListener('touchstart', e => {
+        startX = e.touches[0].pageX - tabContainer.offsetLeft;
+        scrollLeft = tabContainer.scrollLeft;
+      });
+      tabContainer.addEventListener('touchmove', e => {
+        e.preventDefault();
+        const x = e.touches[0].pageX - tabContainer.offsetLeft;
+        const walk = (x - startX) * 2;
+        tabContainer.scrollLeft = scrollLeft - walk;
+      });
+      
+      // Snap to nearest tab on scroll end
+      tabContainer.addEventListener('scroll', () => {
+        const tabs = tabContainer.querySelectorAll('.prog-tab');
+        let closestTab = tabs[0];
+        let minDistance = Infinity;
+        
+        tabs.forEach(tab => {
+          const rect = tab.getBoundingClientRect();
+          const distance = Math.abs(rect.left + rect.width/2 - tabContainer.getBoundingClientRect().left + tabContainer.scrollLeft);
+          if (distance < minDistance) {
+            minDistance = distance;
+            closestTab = tab;
+          }
+        });
+        
+        closestTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      });
+    }
+  </script>
+</body>
 </html>
