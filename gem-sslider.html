@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Secret Getaways</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        .bg-custom-gradient { background: linear-gradient(135deg, #e0e7e1 0%, #f3f4f6 100%); }
+        .btn-gradient { background: linear-gradient(90deg, #ff3366 0%, #ff6b50 100%); }
+    </style>
+</head>
+<body class="bg-custom-gradient min-h-screen flex flex-col justify-between">
+
+    <main class="flex-grow flex items-center px-6 py-12 lg:px-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 w-full max-w-[1600px] mx-auto items-center">
+            
+            <div class="lg:col-span-4 space-y-6">
+                <h1 class="text-6xl md:text-8xl font-extrabold text-[#0f1035] leading-[0.9] tracking-tighter">
+                    Secret<br>Getaways
+                </h1>
+                <p class="text-gray-600 text-lg max-w-sm">
+                    Discover hidden gems across the globe with our curated expeditions.
+                </p>
+                <button class="btn-gradient px-12 py-4 text-white font-bold rounded-2xl shadow-xl hover:scale-105 transition-transform">
+                    Explore
+                </button>
+            </div>
+
+            <div class="lg:col-span-8 relative">
+                <div id="slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4">
+                    <div class="slide-item snap-start shrink-0 w-[280px] md:w-[320px] h-[450px] md:h-[550px] rounded-xl overflow-hidden relative shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1527333656061-ca7adf608ae1?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 text-white">
+                            <h3 class="text-3xl font-bold">Vágar</h3>
+                            <p class="text-xs font-bold text-white/70 uppercase mt-2 tracking-widest"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Faroe Islands</p>
+                        </div>
+                    </div>
+
+                    <div class="slide-item snap-start shrink-0 w-[280px] md:w-[320px] h-[450px] md:h-[550px] rounded-xl overflow-hidden relative shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 text-white">
+                            <h3 class="text-3xl font-bold">Mancora</h3>
+                            <p class="text-xs font-bold text-white/70 uppercase mt-2 tracking-widest"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Peru</p>
+                        </div>
+                    </div>
+
+                    <div class="slide-item snap-start shrink-0 w-[280px] md:w-[320px] h-[450px] md:h-[550px] rounded-xl overflow-hidden relative shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1580834311184-dfd48f0bc192?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 text-white">
+                            <h3 class="text-3xl font-bold">Petra</h3>
+                            <p class="text-xs font-bold text-white/70 uppercase mt-2 tracking-widest"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Jordan</p>
+                        </div>
+                    </div>
+                    <div class="slide-item snap-start shrink-0 w-[280px] md:w-[320px] h-[450px] md:h-[550px] rounded-xl overflow-hidden relative shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1527333656061-ca7adf608ae1?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 text-white">
+                            <h3 class="text-3xl font-bold">Vágar</h3>
+                            <p class="text-xs font-bold text-white/70 uppercase mt-2 tracking-widest"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Faroe Islands</p>
+                        </div>
+                    </div>
+
+                    <div class="slide-item snap-start shrink-0 w-[280px] md:w-[320px] h-[450px] md:h-[550px] rounded-xl overflow-hidden relative shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 text-white">
+                            <h3 class="text-3xl font-bold">Mancora</h3>
+                            <p class="text-xs font-bold text-white/70 uppercase mt-2 tracking-widest"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Peru</p>
+                        </div>
+                    </div>
+
+                    <div class="slide-item snap-start shrink-0 w-[280px] md:w-[320px] h-[450px] md:h-[550px] rounded-xl overflow-hidden relative shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1580834311184-dfd48f0bc192?auto=format&fit=crop&q=80&w=800" class="absolute inset-0 w-full h-full object-cover" alt="">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 text-white">
+                            <h3 class="text-3xl font-bold">Petra</h3>
+                            <p class="text-xs font-bold text-white/70 uppercase mt-2 tracking-widest"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Jordan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="px-6 lg:px-20 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-[10px] uppercase tracking-[0.4em] font-bold text-gray-400">Unique Destinations</div>
+        
+        <div class="flex items-center gap-8">
+            <div class="text-sm font-bold tracking-widest text-[#0f1035]">
+                <span id="current-index">01</span> 
+                <span class="text-gray-300 mx-2">/</span> 
+                <span id="total-count">03</span>
+            </div>
+            
+            <div class="flex gap-2">
+                <button onclick="scrollSlider('prev')" class="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white transition-all active:scale-90">
+                    <i class="fa-solid fa-chevron-left text-xs text-gray-600"></i>
+                </button>
+                <button onclick="scrollSlider('next')" class="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white transition-all active:scale-90">
+                    <i class="fa-solid fa-chevron-right text-xs text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const slider = document.getElementById('slider');
+        const currentIndexEl = document.getElementById('current-index');
+        const totalCountEl = document.getElementById('total-count');
+        const slides = document.querySelectorAll('.slide-item');
+
+        // 1. Initialize Total Count
+        const totalSlides = slides.length;
+        totalCountEl.innerText = totalSlides.toString().padStart(2, '0');
+
+        function scrollSlider(dir) {
+            // Calculate width dynamically (first slide width + gap)
+            const slideWidth = slides[0].offsetWidth + 24; 
+            slider.scrollBy({ 
+                left: dir === 'next' ? slideWidth : -slideWidth, 
+                behavior: 'smooth' 
+            });
+        }
+
+        // 2. Update Current Index on Scroll
+        slider.addEventListener('scroll', () => {
+            const slideWidth = slides[0].offsetWidth + 24;
+            // Calculate which slide is currently in view
+            const index = Math.round(slider.scrollLeft / slideWidth) + 1;
+            
+            // Ensure index stays within bounds [1, totalSlides]
+            const safeIndex = Math.min(Math.max(index, 1), totalSlides);
+            currentIndexEl.innerText = safeIndex.toString().padStart(2, '0');
+        });
+    </script>
+</body>
+</html>
