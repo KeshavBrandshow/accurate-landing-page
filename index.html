@@ -4111,264 +4111,157 @@
       </section>
     </section>
 
-    <section
-      class="bg-gray-50 flex items-center justify-center h-[750px] p-4 py-16"
-    >
-      <div
-        id="accordion-container"
-        class="flex flex-col md:flex-row w-full max-w-7xl h-[700px] gap-3 overflow-hidden"
-      >
-        <div
-          onclick="expandPanel(this)"
-          class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800"
-            class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
-          ></div>
-          <div
-            class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden"
-          >
-            <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
-            <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">
-              Global Collaborations
-            </p>
-          </div>
-          <div
-            class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden"
-          >
-            <h2 class="text-3xl font-bold mb-2">Global Collaborations</h2>
-            <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
-            <p class="text-gray-200 mb-6 max-w-md">
-              Working with top-tier international universities.
-            </p>
-            <button
-              class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all"
-            >
-              LEARN MORE <span>&rarr;</span>
-            </button>
-          </div>
-        </div>
-        <div
-          onclick="expandPanel(this)"
-          class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group"
-        >
-          <img
-            src="https://www.accurate.in/img/diksharambh-orientation-event-collage.webp"
-            class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
-          ></div>
-          <div
-            class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden"
-          >
-            <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
-            <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">
-              Global Collaborations
-            </p>
-          </div>
-          <div
-            class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden"
-          >
-            <h2 class="text-3xl font-bold mb-2">Global Collaborations</h2>
-            <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
-            <p class="text-gray-200 mb-6 max-w-md">
-              Working with top-tier international universities.
-            </p>
-            <button
-              class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all"
-            >
-              LEARN MORE <span>&rarr;</span>
-            </button>
-          </div>
-        </div>
+    <section class="bg-gray-100 p-4 md:p-10">
 
-        <div
-          onclick="expandPanel(this)"
-          class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group"
-        >
-          <img
-            src="https://www.accurate.in/images/media-logo/anadk.jpg"
-            class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
-          ></div>
-          <div
-            class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden"
-          >
-            <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
-            <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">
-              Global Collaborations
-            </p>
-          </div>
-          <div
-            class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden"
-          >
-            <h2 class="text-3xl font-bold mb-2">Global Collaborations</h2>
-            <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
-            <p class="text-gray-200 mb-6 max-w-md">
-              Working with top-tier international universities.
-            </p>
-            <button
-              class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all"
-            >
-              LEARN MORE <span>&rarr;</span>
-            </button>
-          </div>
+    <div id="accordion-container" class="flex flex-row w-full h-[650px] gap-2 overflow-hidden">
+        
+        <div class="accordion-item flex-[0.5] relative bg-white border border-gray-200 cursor-pointer overflow-hidden group rounded-xl">
+            <div class="vertical-title absolute inset-0 flex flex-col items-center pt-6 group-[.active]:hidden">
+                <span class="text-blue-700 text-2xl font-bold mb-4">+</span>
+                <h3 class="vertical-text font-medium text-gray-700 tracking-wide uppercase text-sm">Multicultural Campus</h3>
+            </div>
+            <div class="expanded-content hidden group-[.active]:flex h-full w-full bg-cover bg-center items-end p-10 relative" style="background-image: url('https://images.unsplash.com/photo-1523050853064-dbad350e02ee?q=80&w=1000');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="relative z-10">
+                    <h2 class="text-white text-3xl font-bold mb-2">Multicultural Campus</h2>
+                    <p class="text-gray-200 mb-6 max-w-md">Experience a vibrant campus life with students from over 50 countries.</p>
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-sm font-bold flex items-center gap-2 hover:bg-red-700 transition">
+                        VIEW MORE <span>→</span>
+                    </button>
+                </div>
+            </div>
         </div>
-
-        <div
-          onclick="expandPanel(this)"
-          class="accordion-item active flex-grow-[5] relative min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group"
-        >
-          <img
-            src="https://www.accurate.in/images/media-logo/main-img.jpg"
-            class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
-          ></div>
-
-          <div
-            class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden"
-          >
-            <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
-            <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">
-              Global Collaborations
-            </p>
-          </div>
-
-          <div
-            class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden"
-          >
-            <h2 class="text-3xl font-bold mb-2">Global Collaborations</h2>
-            <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
-            <p class="text-gray-200 mb-6 max-w-md">
-              Working with top-tier international universities and corporate
-              partners.
-            </p>
-            <button
-              class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all"
-            >
-              LEARN MORE <span>&rarr;</span>
-            </button>
-          </div>
+ <div class="accordion-item flex-[0.5] relative bg-white border border-gray-200 cursor-pointer overflow-hidden group rounded-xl">
+            <div class="vertical-title absolute inset-0 flex flex-col items-center pt-6 group-[.active]:hidden">
+                <span class="text-blue-700 text-2xl font-bold mb-4">+</span>
+                <h3 class="vertical-text font-medium text-gray-700 tracking-wide uppercase text-sm">International Faculty</h3>
+            </div>
+            <div class="expanded-content hidden group-[.active]:flex h-full w-full bg-cover bg-center items-end p-10 relative" style="background-image: url('https://images.unsplash.com/photo-1544531585-9847b68c8c86?q=80&w=1000');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="relative z-10">
+                    <h2 class="text-white text-3xl font-bold mb-2">International Faculty</h2>
+                    <p class="text-gray-200 mb-6 max-w-md">Learn from global experts and researchers from top institutions.</p>
+                    <button class="bg-red-600 text-white px-6 py-2 rounded-sm font-bold flex items-center gap-2 hover:bg-red-700 transition">
+                        VIEW MORE <span>→</span>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div
-          onclick="expandPanel(this)"
-          class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800"
-            class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
-          ></div>
-          <div
-            class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden"
-          >
-            <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
-            <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">
-              Global Collaborations
-            </p>
-          </div>
-          <div
-            class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden"
-          >
-            <h2 class="text-3xl font-bold mb-2">Global Collaborations</h2>
-            <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
-            <p class="text-gray-200 mb-6 max-w-md">
-              Working with top-tier international universities.
-            </p>
-            <button
-              class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all"
-            >
-              LEARN MORE <span>&rarr;</span>
-            </button>
-          </div>
+         <div class="accordion-item flex-[0.5] relative bg-white border border-gray-200 cursor-pointer overflow-hidden group rounded-xl">
+            <div class="vertical-title absolute inset-0 flex flex-col items-center pt-6 group-[.active]:hidden">
+                <span class="text-blue-700 text-2xl font-bold mb-4">+</span>
+                <h3 class="vertical-text font-medium text-gray-700 tracking-wide uppercase text-sm">International Faculty</h3>
+            </div>
+            <div class="expanded-content hidden group-[.active]:flex h-full w-full bg-cover bg-center items-end p-10 relative" style="background-image: url('https://images.unsplash.com/photo-1544531585-9847b68c8c86?q=80&w=1000');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="relative z-10">
+                    <h2 class="text-white text-3xl font-bold mb-2">International Faculty</h2>
+                    <p class="text-gray-200 mb-6 max-w-md">Learn from global experts and researchers from top institutions.</p>
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-sm font-bold flex items-center gap-2 hover:bg-red-700 transition">
+                        VIEW MORE <span>→</span>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div
-          onclick="expandPanel(this)"
-          class="accordion-item collapsed relative flex-grow min-w-[80px] bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md group"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800"
-            class="absolute inset-0 w-full h-full object-cover group-[.collapsed]:opacity-40"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
-          ></div>
-          <div
-            class="absolute inset-0 flex flex-col items-center py-8 label-only group-[.active]:hidden"
-          >
-            <span class="text-[#1a3668] text-2xl font-bold mb-auto">+</span>
-            <p class="vertical-text font-bold text-gray-700 whitespace-nowrap">
-              Global Collaborations
-            </p>
-          </div>
-          <div
-            class="absolute bottom-10 left-10 right-10 text-white content-fade group-[.collapsed]:hidden"
-          >
-            <h2 class="text-3xl font-bold mb-2">Global Collaborations</h2>
-            <div class="w-12 h-1 bg-[#0052cc] mb-4"></div>
-            <p class="text-gray-200 mb-6 max-w-md">
-              Working with top-tier international universities.
-            </p>
-            <button
-              class="bg-[#0052cc] hover:bg-blue-900 text-white px-6 py-2 rounded font-bold text-sm flex items-center gap-2 transition-all"
-            >
-              LEARN MORE <span>&rarr;</span>
-            </button>
-          </div>
+        
+        <div class="accordion-item active flex-[5] relative bg-white border border-gray-200 cursor-pointer overflow-hidden group rounded-xl">
+            <div class="vertical-title absolute inset-0 flex flex-col items-center pt-6 group-[.active]:hidden">
+                <span class="text-blue-700 text-2xl font-bold mb-4">+</span>
+                <h3 class="vertical-text font-medium text-gray-700 tracking-wide uppercase text-sm">Padma Bhushan Prabhu Chawla</h3>
+            </div>
+            <div class="expanded-content hidden group-[.active]:flex h-full w-full bg-cover bg-center items-end p-10 relative" style="background-image: url('https://www.accurate.in/images/media-logo/main-img.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="relative z-10">
+                    <h2 class="text-white text-3xl font-bold mb-2 text-shadow-lg">Padma Bhushan Prabhu Chawla Inspires Students at Accurate Institute Orientation</h2>
+                    <!-- <p class="text-gray-200 mb-6 max-w-md">Develop global communication skills in a culturally rich environment.</p> -->
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-sm font-bold flex items-center gap-2 hover:bg-red-700 transition">
+                        VIEW MORE <span>→</span>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
+        
+       
 
-      <style>
+        <div class="accordion-item flex-[0.5] relative bg-white border border-gray-200 cursor-pointer overflow-hidden group rounded-xl">
+            <div class="vertical-title absolute inset-0 flex flex-col items-center pt-6 group-[.active]:hidden">
+                <span class="text-blue-700 text-2xl font-bold mb-4">+</span>
+                <h3 class="vertical-text font-medium text-gray-700 tracking-wide uppercase text-sm">Padma Shri Anand Kumar</h3>
+            </div>
+            <div class="expanded-content hidden group-[.active]:flex h-full w-full bg-cover bg-center items-end p-10 relative" style="background-image: url('./images/home/anadk.jpg');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="relative z-10">
+                    <h2 class="text-white text-3xl font-bold mb-2">Padma Shri Anand Kumar Inspires Students at Accurate Orientation</h2>
+                    <!-- <p class="text-gray-200 mb-6 max-w-md">Learn from global experts and researchers from top institutions.</p> -->
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-sm font-bold flex items-center gap-2 hover:bg-red-700 transition">
+                        VIEW MORE <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+         <div class="accordion-item flex-[0.5] relative bg-white border border-gray-200 cursor-pointer overflow-hidden group rounded-xl">
+            <div class="vertical-title absolute inset-0 flex flex-col items-center pt-6 group-[.active]:hidden">
+                <span class="text-blue-700 text-2xl font-bold mb-4">+</span>
+                <h3 class="vertical-text font-medium text-gray-700 tracking-wide uppercase text-sm">International Faculty</h3>
+            </div>
+            <div class="expanded-content hidden group-[.active]:flex h-full w-full bg-cover bg-center items-end p-10 relative" style="background-image: url('https://images.unsplash.com/photo-1544531585-9847b68c8c86?q=80&w=1000');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="relative z-10">
+                    <h2 class="text-white text-3xl font-bold mb-2">International Faculty</h2>
+                    <p class="text-gray-200 mb-6 max-w-md">Learn from global experts and researchers from top institutions.</p>
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-sm font-bold flex items-center gap-2 hover:bg-red-700 transition">
+                        VIEW MORE <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+ <div class="accordion-item flex-[0.5] relative bg-white border border-gray-200 cursor-pointer overflow-hidden group rounded-xl">
+            <div class="vertical-title absolute inset-0 flex flex-col items-center pt-6 group-[.active]:hidden">
+                <span class="text-blue-700 text-2xl font-bold mb-4">+</span>
+                <h3 class="vertical-text font-medium text-gray-700 tracking-wide uppercase text-sm">International Faculty</h3>
+            </div>
+            <div class="expanded-content hidden group-[.active]:flex h-full w-full bg-cover bg-center items-end p-10 relative" style="background-image: url('https://images.unsplash.com/photo-1544531585-9847b68c8c86?q=80&w=1000');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="relative z-10">
+                    <h2 class="text-white text-3xl font-bold mb-2">International Faculty</h2>
+                    <p class="text-gray-200 mb-6 max-w-md">Learn from global experts and researchers from top institutions.</p>
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-sm font-bold flex items-center gap-2 hover:bg-red-700 transition">
+                        VIEW MORE <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <style>
+        /* Custom class for vertical text orientation */
         .vertical-text {
-          writing-mode: vertical-rl;
-          transform: rotate(180deg);
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
         }
-
+        /* Smooth transition for the flex-grow property */
         .accordion-item {
-          transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: flex 0.7s cubic-bezier(0.4, 0, 0.2, 1);
         }
+    </style>
 
-        .content-fade {
-          transition: opacity 0.3s ease;
-        }
+    <script>
+        const panels = document.querySelectorAll('.accordion-item');
 
-        /* Using the group classes defined in your HTML */
-        .group.active .content-fade {
-          opacity: 1;
-          display: block;
-        }
-
-        .group.collapsed .content-fade {
-          opacity: 0;
-          display: none;
-        }
-      </style>
-
-      <script>
-        function expandPanel(selectedPanel) {
-          const panels = document.querySelectorAll(".accordion-item");
-
-          panels.forEach((panel) => {
-            panel.classList.remove("active", "flex-grow-[5]");
-            panel.classList.add("collapsed", "flex-grow");
-          });
-
-          selectedPanel.classList.remove("collapsed", "flex-grow");
-          selectedPanel.classList.add("active", "flex-grow-[5]");
-        }
-      </script>
-    </section>
+        panels.forEach(panel => {
+            panel.addEventListener('click', () => {
+                // Remove active class and reset flex
+                panels.forEach(p => {
+                    p.classList.remove('active', 'flex-[5]');
+                    p.classList.add('flex-[0.5]');
+                });
+                
+                // Add active class and expand clicked panel
+                panel.classList.add('active', 'flex-[5]');
+                panel.classList.remove('flex-[0.5]');
+            });
+        });
+    </script>
+</section>
 
   <section class="bg-gray-100 lg:h-[65vh] flex p-4 mb-10">
   <section
